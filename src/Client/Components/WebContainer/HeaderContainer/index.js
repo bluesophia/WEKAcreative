@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../../../Assets/Images/logo.svg';
 import Bg from '../../../../Assets/Images/header.png';
 import loginIcon from '../../../../Assets/Images/login.svg';
+import Menu from '../../../../Assets/Images/login.svg';
 
 class HeaderContainer extends Component {
 	render(){

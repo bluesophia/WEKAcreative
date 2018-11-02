@@ -53,6 +53,6 @@ class HomeScreen extends Component{
     }
 }
 const Section0102 = styled.div`
-    background-color:${Themes.colors.veryLightGrey};
+    // background-color:${Themes.colors.veryLightGrey};
 `
 export default HomeScreen;

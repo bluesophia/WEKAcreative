@@ -21,11 +21,12 @@ Button01.propTypes = {
     value: PropTypes.string
   };
 const ButtonStyle = styled.button`
-    background:linear-gradient(${Themes.colors.yellow},${Themes.colors.orange});
+    background:${Themes.colors.w_orange};
     width:100%; 
     height:auto;
     color:white;
-    font-size:20px;
+    text-shadow: 0 0 3px grey;
+    font-size:17px;
     border:0;
     margin:0 auto;
     border-radius:50px;

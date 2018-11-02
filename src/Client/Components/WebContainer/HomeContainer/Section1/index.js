@@ -7,7 +7,6 @@ import Button01 from '../../../Common/Button/Button01';
 import { Link } from 'react-router-dom';
 
 /** Images **/
-import HomeSection01BgSm from '../../../../../Assets/Images/HomeSection01BgSm.png';
 import HomeSection01BgMd from '../../../../../Assets/Images/HomeSection01BgMd.png';
 import mainImage from '../../../../../Assets/Images/mainImage.svg';
 
@@ -42,7 +41,6 @@ class Section1 extends Component{
 
 const Section01 = styled.div`
     margin:0;
-    background: url('${HomeSection01BgSm}');
     background-position:center top;
     background-repeat:no-repeat;
     background-size:100% 100%;
@@ -54,7 +52,7 @@ const Section01 = styled.div`
     `}
 `
 const Container = styled.div`
-    padding:18% 5%;
+    padding: 14% 10%;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -97,7 +95,8 @@ const Section01__TitleDiv = styled.div`
 `;
 const StyledTitle = styled.div`
         ${BigTitle};
-        color:white;
+        color:${Themes.colors.black};
+        font-weight:${Themes.fontWeight.black};
         margin: 1em 0;
         text-align:center;
         ${breakpoint('md')`

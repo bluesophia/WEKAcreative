@@ -19,6 +19,7 @@ const Themes = {
         w_darkgreen: '#848170',
         w_mint: '#F4FAF6',
         w_yellow: '#FBD865',
+        w_orange: '#FF9800',
         w_red: '#F06557'
 
     },
