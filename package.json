@@ -1,0 +1,57 @@
+{
+  "name": "easyformsfnd",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@brainhubeu/react-carousel": "^1.3.0",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
+    "@fortawesome/free-brands-svg-icons": "^5.1.0",
+    "@fortawesome/free-regular-svg-icons": "^5.1.0-11",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0",
+    "@fortawesome/react-fontawesome": "0.1.0-11",
+    "@material-ui/core": "^1.3.1",
+    "@material-ui/icons": "^1.1.0",
+    "antd": "^3.7.3",
+    "antd-init": "^2.0.6",
+    "normalize.css": "^8.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-carousel": "^4.3.0",
+    "react-dimensions": "^1.3.1",
+    "react-dom": "^16.4.1",
+    "react-dropzone": "^4.2.13",
+    "react-google-maps": "^9.4.5",
+    "react-input-forms": "^1.6.4",
+    "react-modal": "^3.5.1",
+    "react-router-dom": "^4.3.1",
+    "react-sanfona": "^1.2.2",
+    "react-scripts": "1.1.4",
+    "react-slick": "^0.23.1",
+    "redux": "^4.0.0",
+    "styled-components": "^3.3.3",
+    "styled-components-breakpoint": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && mv build server",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "react-redux": "^5.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluesophia/EasyFormsFrontEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluesophia/EasyFormsFrontEnd/issues"
+  },
+  "homepage": "https://easyforms.byethost31.com/"
+}
