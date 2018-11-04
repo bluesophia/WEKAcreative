@@ -21,15 +21,16 @@ Button01.propTypes = {
     value: PropTypes.string
   };
 const ButtonStyle = styled.button`
-    background:${Themes.colors.w_orange};
+    background:${Themes.colors.white};
     width:100%; 
     height:auto;
-    color:white;
-    text-shadow: 0 0 3px grey;
+    color:${Themes.colors.black};
+    font-weight:${Themes.fontWeight.black};
+    // text-shadow: 0 0 3px grey;
     font-size:17px;
-    border:0;
+    border:2px solid ${Themes.colors.black};
     margin:0 auto;
-    border-radius:50px;
+    // border-radius:50px;
     padding:11px 22px;
     letter-spacing:1px;
     outline: none;

@@ -21,12 +21,13 @@ export default class CompanyNameInput extends Component {
       <ThemeProvider theme={Themes}>
       <Container>
       <Label_Div>  
-      <Label>Your Company Name</Label><P>Required</P><br />
+      <Label>Company Name</Label><P>Required</P><br />
       </Label_Div> 
         <Input
           value={this.state.value}
           name="input-text"
           label="Company Name"
+          placeholder="WEKAcreative"
           onChange={this._handleChange}
         />
       </Container>
@@ -51,14 +52,14 @@ const Label_Div = styled.div`
 `
 const Label = styled.label`
   font-size: ${Themes.fontsize.p2}
-  font-weight: ${Themes.fontWeight.bold}
-  color: ${Themes.colors.blueLight};
+  font-weight: ${Themes.fontWeight.black}
+  color: ${Themes.colors.black};
   `;
 
 const P = styled.p`
-  font-size: ${Themes.fontsize.p3};
-  font-weight: ${Themes.fontWeight.light};
-  color: ${Themes.colors.grey};
+  font-size: ${Themes.fontsize.p4};
+  font-weight: ${Themes.fontWeight.bold};
+  color: ${Themes.colors.w_red};
   margin: 0;
   margin-left: 10px;
   padding:0;

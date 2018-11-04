@@ -28,7 +28,7 @@ class Section1 extends Component{
                             </Section01__Text>
                             <ButtonDiv>
                                 <ButtonLink to='/contact'>
-                                    <Button01 value={'Contact our Software Experts'}/>
+                                    <Button01 value={'Contact us'}/>
                                 </ButtonLink>
                             </ButtonDiv>
                         </Section01__TitleDiv>
@@ -124,7 +124,7 @@ const Section01__Text = styled.div`
         `}
 `
 const ButtonDiv = styled.div`
-    width:100%;
+    width:64%;
     ${breakpoint('md')`
         margin-left:-5px;
     `}

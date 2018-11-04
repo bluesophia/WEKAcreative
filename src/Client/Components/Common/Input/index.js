@@ -5,6 +5,5 @@ export { default as MessageInput } from './MessageInput'
 export { default as UploadInput } from './UploadInput'
 export { default as UserIdInput } from './UserIdInput'
 export { default as PasswordInput } from './PasswordInput'
-
-
-
+export { default as PhoneNumberInput } from './PhoneNumberInput'
+export { default as SupportTypeInput } from './SupportTypeInput'
