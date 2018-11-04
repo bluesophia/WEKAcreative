@@ -6,8 +6,8 @@ const BigTitle = css`
     text-align:center;
     font-size:${Themes.fontsize.h2};
     line-height:40px;
-    font-weight:${Themes.fontWeight.bold};
-    color:${Themes.colors.blue};
+    font-weight:${Themes.fontWeight.black};
+    color:${Themes.colors.black};
         ${breakpoint('lg')`
         font-size:${Themes.fontsize.h1};
         line-height:50px;

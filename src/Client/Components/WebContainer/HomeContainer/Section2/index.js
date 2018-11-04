@@ -8,13 +8,17 @@ import BigTitle from '../../../Common/Title/BigTitle';
 /** Images **/
 import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
 import HomeSection02Image from '../../../../../Assets/Images/HomeSection02Image.png';
-import WhyUs01 from '../../../../../Assets/Images/whyicon01.png';
-import WhyUs02 from '../../../../../Assets/Images/whyicon02.png';
-import WhyUs03 from '../../../../../Assets/Images/whyicon03.png';
+import AI from '../../../../../Assets/Images/ai.svg';
+import MachineLearning from '../../../../../Assets/Images/machinelearning.svg';
+import Blockchain from '../../../../../Assets/Images/blockchain.svg';
+import ArgumentedReality from '../../../../../Assets/Images/argumentedreality.svg';
+import GPS from '../../../../../Assets/Images/gps.svg';
+import Automation from '../../../../../Assets/Images/automation.svg';
 import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
 /** Components **/
 import Text from '../../../Common/Text';
+import YellowSpan from '../../../Common/YellowSpan';
 
 const Shadow = css`
     box-shadow : 0 0 8px rgba(50, 50, 93, 0.23);
@@ -26,33 +30,48 @@ class Section2 extends Component{
                 <Container>
                     <Section02__LeftDiv>
                         <Section02__TitleDiv>
-                            <Section02__Title>Why Easyforms?</Section02__Title>
+                            <Section02__Title>How we can help</Section02__Title>
+                            <YellowSpan />
+                            <Section02__Text>We design software to service a variety of needs and 
+                                help you work across a range of environments and platforms.</Section02__Text>
                         </Section02__TitleDiv>
                         <Section02__Contents>
                             <Section02__ContentDiv>
-                                <Section02__Image src={WhyUs01} />
+                                <Section02__Image src={AI} />
                                 <div>
-                                    <Section02__Subtitle>Customised to your needs</Section02__Subtitle>
-                                    <Section02__Text>Our solutions can be designed 
-                                    specifically to your business needs. </Section02__Text>
+                                    <Section02_ImgText>AI</Section02_ImgText>
                                 </div>
                             </Section02__ContentDiv>
                             <Section02__ContentDiv>
-                                <Section02__Image src={WhyUs02} />
+                                <Section02__Image src={MachineLearning} />
                                 <div>
-                                    <Section02__Subtitle>Streamline your processes</Section02__Subtitle>
-                                    <Section02__Text>Our app-based solution means 
-                                    you can wave goodbye to stacks of paperwork, 
-                                    inefficiencies, double handling + much more.</Section02__Text>
+                                    <Section02_ImgText>Machine learning</Section02_ImgText>
                                 </div>
                             </Section02__ContentDiv>
                             <Section02__ContentDiv>
-                                <Section02__Image src={WhyUs03}/>
+                                <Section02__Image src={Blockchain} />
                                 <div>
-                                <Section02__Subtitle>User friendly designs</Section02__Subtitle>
-                                <Section02__Text>Our solutions are easy-to-use and user friendly.</Section02__Text>
+                                    <Section02_ImgText>Blockchain</Section02_ImgText>
                                 </div>
                             </Section02__ContentDiv>
+                            <Section02__ContentDiv>
+                                <Section02__Image src={ArgumentedReality} />
+                                <div>
+                                    <Section02_ImgText>Argumented reality</Section02_ImgText>
+                                </div>
+                            </Section02__ContentDiv>
+                            <Section02__ContentDiv>
+                                <Section02__Image src={GPS} />
+                                <div>
+                                    <Section02_ImgText>GPS integration</Section02_ImgText>
+                                </div>
+                            </Section02__ContentDiv>
+                            <Section02__ContentDiv>
+                                <Section02__Image src={Automation} />
+                                <div>
+                                    <Section02_ImgText>Advanced automation</Section02_ImgText>
+                                </div>
+                            </Section02__ContentDiv>  
                         </Section02__Contents>
                     </Section02__LeftDiv>
                 </Container>
@@ -66,7 +85,7 @@ class Section2 extends Component{
 /**** Section 02 ****/
 
 const Section02 = styled.div`
-    padding: 18% 8% 60px;
+    padding: 0 8% 60px;
     ${breakpoint('md')`
     padding: 60px 20%;
     `}
@@ -98,6 +117,8 @@ const Section02__LeftDivContainer = styled.div`
 `
 const Section02__TitleDiv = styled.div`
     margin:0 auto;
+    padding: 10%;
+    padding-bottom: 0;
     ${breakpoint('lg')`
         margin-left:auto;
         margin-bottom:100px;
@@ -105,7 +126,8 @@ const Section02__TitleDiv = styled.div`
 `
 const Section02__Title = styled.div`
     ${BigTitle};
-    color:${Themes.colors.blue};
+    color:${Themes.colors.black};
+    font-weight:${Themes.fontWeight.black};
     ${breakpoint('lg')`
         text-align:left;
     `}
@@ -124,8 +146,9 @@ const Section02__ContentDiv = styled.div`
         `}
 `
 const Section02__Image = styled.img`
-    width:60px;
+    width:169px;
     height:auto;
+    margin-bottom:10px;
 `
 const Section02__Subtitle = styled.p`
     margin-top:20px;
@@ -145,6 +168,19 @@ const Section02__Text = styled.div`
     margin-top:9px;
     ${Text};
     color:${Themes.colors.grey};
+    text-align:center;
+        ${breakpoint('lg')`
+            text-align:left;
+            max-width:400px;
+            margin: 9px 0 0 35px;
+            font-size:${Themes.fontsize.p2}
+            line-height:20px;
+        `}
+`
+const Section02_ImgText = styled.div`
+    margin-top:9px;
+    font-size:${Themes.fontsize.p2};
+    color:${Themes.colors.black};
     text-align:center;
         ${breakpoint('lg')`
             text-align:left;

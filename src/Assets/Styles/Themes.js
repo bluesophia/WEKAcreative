@@ -15,12 +15,14 @@ const Themes = {
         formGrey: '#8D8D8D',
         veryLightGrey: '#F8F8F8',
         white: '#fff',
+        // WEKA creative themes
         w_lightYellow:'#F7F5AB',
         w_darkgreen: '#848170',
         w_mint: '#F4FAF6',
         w_yellow: '#FBD865',
         w_orange: '#FF9800',
-        w_red: '#F06557'
+        w_red: '#F06557',
+        w_lightOrange: '#FEFDF6'
 
     },
     fontsize: {
