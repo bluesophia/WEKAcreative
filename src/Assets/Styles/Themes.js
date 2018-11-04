@@ -21,9 +21,9 @@ const Themes = {
         w_mint: '#F4FAF6',
         w_yellow: '#FBD865',
         w_orange: '#FF9800',
+        w_lightOrange: '#FEFDF6',
         w_red: '#F06557',
-        w_lightOrange: '#FEFDF6'
-
+        
     },
     fontsize: {
         h1: "38px",

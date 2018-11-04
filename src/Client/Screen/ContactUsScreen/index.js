@@ -16,11 +16,11 @@ import EmailInput from '../../Components/Common/Input/EmailInput';
 import MessageInput from '../../Components/Common/Input/MessageInput';
 import Button01 from '../../Components/Common/Button/Button01';
 import Button02 from '../../Components/Common/Button/Button02';
-import MyMapComponent from './map';
+// import MyMapComponent from './map';
 
 /** Images **/
 import Bg from '../../../Assets/Images/ContactSection01Bg.png';
-import Image from '../../../Assets/Images/ContactSection01Image.png';
+import Image from '../../../Assets/Images/ContactSection01Image.svg';
 
 class ContactUsScreen extends Component {
   render(){
@@ -29,25 +29,20 @@ class ContactUsScreen extends Component {
         <Container>
           <TopBgImg src={Bg}/>
           <Header>
-            <Header__ImageDiv>
-              <Header__Image src={Image}/>
-            </Header__ImageDiv>
             <Header__Content>
             <TitleDiv>
               <TitleDiv__Title>Get In Touch</TitleDiv__Title>
-              <TitleDiv__Text>Get in touch with us today to find out how we can help your business
-                work smarter and more efficiently.</TitleDiv__Text>
+              <Header__ImageDiv>
+                <Header__Image src={Image}/>
+                <TitleDiv__Textsm>Get in touch with us today to find out how we can help your business
+                work smarter and more efficiently.</TitleDiv__Textsm>
+              </Header__ImageDiv>
             </TitleDiv>
-            <CallUsDiv>
-              <Icon src={CallUsIcon} />
-              <CallUs>Call Us</CallUs>
-              <PhoneNo>0800-3279-36767</PhoneNo>
-            </CallUsDiv> 
             </Header__Content>
           </Header>
           
           <Contents>
-            <MapDiv>
+            {/* <MapDiv>
               <MyMapComponent
                 isMarkerShown
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-p5WQ9NQSErSYZB-U2anOUNKEGzWh-hU&v=3.exp&libraries=geometry,drawing,places"
@@ -55,7 +50,7 @@ class ContactUsScreen extends Component {
                 containerElement={<div style={{ height: `100%` }} />}
                 mapElement={<div style={{ height: `100%` }} />}
               />
-            </MapDiv>
+            </MapDiv> */}
             <FormDiv>
               <Form>
                 <InputDiv>
@@ -82,12 +77,13 @@ class ContactUsScreen extends Component {
   }
 }
 const Container = styled.div`
-  background-color:${Themes.colors.veryLightGrey};
+  // background-color:${Themes.colors.veryLightGrey};
 `
 const Header = styled.div`
-  padding:60px 1em 40px 1em;
+  padding:60px 1em 18px 1em;
   background:url(${Bg});
   background-size:100% 100%;
+  box-shadow: 0 5px 8px -4px rgba(0,0,0,0.2);
     ${breakpoint('lg')`
     background:none;
     display:flex;
@@ -100,8 +96,9 @@ const Header = styled.div`
     `}
 `
 const Header__ImageDiv = styled.div`
-  display:none;
+  // display:none;
   z-index:1;
+  transform: scale(0.9);
     ${breakpoint('lg')`
       display:block;
     `}
@@ -139,8 +136,6 @@ const TitleDiv = styled.div`
 `
 const TitleDiv__Title = styled.div`
   ${BigTitle};
-  color:white;
-  font-weight:${Themes.fontWeight.regular};
   margin-bottom:10px;
   ${breakpoint('md')`
     ${BigTitle};
@@ -149,7 +144,7 @@ const TitleDiv__Title = styled.div`
   `}
 `
 const TitleDiv__Text = styled.div`
-  display:none;
+  // display:none;
   ${breakpoint('lg')`
     display:block;
     color:white;
@@ -159,6 +154,27 @@ const TitleDiv__Text = styled.div`
     width:470px;
   `}
 `
+const TitleDiv__Textsm = styled.div`
+    color:${Themes.colors.grey};
+    text-align: center;
+    font-size:${Themes.fontsize.h4};
+    padding: 4%;
+    margin-top:22px;
+    line-height:26px;
+    ${breakpoint('md')`
+    display:block;
+    color:white;
+    font-size:${Themes.fontsize.p3};
+    line-height:18px;
+    font-weight:${Themes.fontWeight.light};
+    text-align:left;
+    `}
+    ${breakpoint('lg')`
+    font-size:${Themes.fontsize.p2} !important;
+    line-height:25px;  
+    padding:0 3%;
+    `}
+ `   
 const CallUsDiv = styled.div`
   display:flex;
   align-items:center;
@@ -195,7 +211,7 @@ const FormDiv = styled.div`
 const Form = styled.div`
   height:auto;
   background-color:white;
-  box-shadow:0 0 20px rgba(0,0,0,0.2);
+  margin-top:10px;
   padding:60px 8%;
     ${breakpoint('md')`
       padding:60px 15%;
@@ -229,8 +245,8 @@ const ButtonDiv = styled.div`
   `}
 `
 const Form__Text = styled.div`
-  margin:25px auto 10px auto;
-  color:${Themes.colors.blue};
+  margin:20px auto 20px auto;
+  color:${Themes.colors.black};
   font-size:${Themes.fontsize.p2};
   font-weight:${Themes.fontWeight.black};
 `
