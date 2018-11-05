@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const index = require('./routes/index');
 const about = require('./routes/about');
 const support = require('./routes/support');
-const blog = require('./routes/blog');
+const casestudy = require('./routes/casestudy');
 const contact = require('./routes/contact');
 
 
@@ -35,7 +35,7 @@ app.set('view engine', 'jade');
 app.use('/api', index);
 app.use('/about', about);
 app.use('/support', support);
-app.use('/blog', blog);
+app.use('/casestudy', casestudy);
 app.use('/contact', contact);
 app.get('*', (req, res) => {
   res.sendFile('build/index.html', { root: global });

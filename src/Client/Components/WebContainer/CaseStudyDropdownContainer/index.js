@@ -3,15 +3,13 @@ import Accordion from '../../CommonModule/Accordion'
 import '../../CommonModule/Accordion/toggle.css'
 
 
-export default class BlogToggleSec1 extends Component {  
+export default class CaseStudyDropdownContainer extends Component {  
     constructor (props) {
       super(props);
       this.state = {
         block1: false,
         block2: false,
         block3: false,
-        block4: false,
-        block5: false,
       };
     }
     
@@ -38,7 +36,7 @@ export default class BlogToggleSec1 extends Component {
       }
       const accordionList = [
       { id:0,
-        title: 'Would you like to eliminate timesheet ambiguity?',
+        title: 'The challenge',
         content: "Whether your business is currently using paper-based timesheets,\
         or a job management system, EasyForms helps you achieve the new \"best practice\”. \
         EasyForms allows both staff and management to effectively and precisely log and track \
@@ -73,20 +71,6 @@ export default class BlogToggleSec1 extends Component {
          or lost pieces of paper scribbled with hours, or merely forgetting total hours spent on a job, or on \
          multiple jobs after a long day at work are all too common."
       },
-      { id:3,
-        title: 'How We Can Help',
-        content: "EasyForms solutions address these issues and alleviate the headaches associated with timesheet theft.\
-        We have auto time stamping capabilities and GPS tracking which can track hours and minutes accurately,\
-        removing human error, mistakes and double handling. Our solutions can integrate with most accounting\
-        packages and output data can be sent to a multitude of locations and different people (internally\
-        or externally, whether it’s to the client, back into your in-house system, or people within\
-        your organisation) instantly. This means, in most cases staff only need to enter the data once.\
-        EasyForms gives you peace of mind when it comes to timesheet theft and job and workflow management,\
-        so you can focus on the things you need to." },
-      { id:4,
-        title: 'We can help your business:',
-        content: contentList01()
-       },
     ];
       
 

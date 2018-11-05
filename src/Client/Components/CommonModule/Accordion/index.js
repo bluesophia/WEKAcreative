@@ -14,6 +14,7 @@ class Accordion extends Component {
       return (
         <ThemeProvider theme={Themes}>
             <Container>
+                <Section1>
                 <QuestionDiv>
                     <Question className={expand ? 'title is-expanded' : 'title'} onClick={onClick}>
                         {title}
@@ -22,7 +23,8 @@ class Accordion extends Component {
                 </QuestionDiv>
                     <dd className={expand ? 'content is-expanded' : 'content'} onClick={onClick}>
                         <p>{content}</p>
-                    </dd>    
+                    </dd> 
+                </Section1>          
             </Container>  
         </ThemeProvider>
       );
@@ -31,10 +33,12 @@ class Accordion extends Component {
 
 const Container = styled.div`
 `
+const Section1 = styled.div`
+`
 const QuestionDiv = styled.div`
   height:80px;
   width:250px;
-  background-color:${Themes.colors.veryLightGrey};
+//   background-color:${Themes.colors.veryLightGrey};
   padding:0 8%;
   display:flex;
   justify-content:space-between;
@@ -50,11 +54,11 @@ const QuestionDiv = styled.div`
     `}
 `
 const Question = styled.div`
-    font-size:${Themes.fontsize.p2};
+    font-size:${Themes.fontsize.h1};
     text-align:left;
     line-height:25px;
-    color:${Themes.colors.blue};
-    font-weight:${Themes.fontWeight.bold};
+    color:${Themes.colors.black};
+    font-weight:${Themes.fontWeight.black};
         ${breakpoint('md')`
             font-size:${Themes.fontsize.p1};
         `}
