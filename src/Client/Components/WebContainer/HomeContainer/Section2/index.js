@@ -19,6 +19,7 @@ import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 /** Components **/
 import Text from '../../../Common/Text';
 import YellowSpan from '../../../Common/YellowSpan';
+import FeaturesCarousel from '../../../Common/FeaturesCarousel';
 
 const Shadow = css`
     box-shadow : 0 0 8px rgba(50, 50, 93, 0.23);
@@ -28,81 +29,47 @@ class Section2 extends Component{
         return(
             <Section02>
                 <Container>
-                    <Section02__LeftDiv>
-                        <Section02__TitleDiv>
-                            <Section02__Title>How we can help</Section02__Title>
-                            <YellowSpan />
-                            <Section02__Text>We design software to service a variety of needs and 
-                                help you work across a range of environments and platforms.</Section02__Text>
-                        </Section02__TitleDiv>
-                        <Section02__Contents>
-                            <Section02__ContentDiv>
-                                <Section02__Image src={AI} />
-                                <div>
-                                    <Section02_ImgText>AI</Section02_ImgText>
-                                </div>
-                            </Section02__ContentDiv>
-                            <Section02__ContentDiv>
-                                <Section02__Image src={MachineLearning} />
-                                <div>
-                                    <Section02_ImgText>Machine learning</Section02_ImgText>
-                                </div>
-                            </Section02__ContentDiv>
-                            <Section02__ContentDiv>
-                                <Section02__Image src={Blockchain} />
-                                <div>
-                                    <Section02_ImgText>Blockchain</Section02_ImgText>
-                                </div>
-                            </Section02__ContentDiv>
-                            <Section02__ContentDiv>
-                                <Section02__Image src={ArgumentedReality} />
-                                <div>
-                                    <Section02_ImgText>Argumented reality</Section02_ImgText>
-                                </div>
-                            </Section02__ContentDiv>
-                            <Section02__ContentDiv>
-                                <Section02__Image src={GPS} />
-                                <div>
-                                    <Section02_ImgText>GPS integration</Section02_ImgText>
-                                </div>
-                            </Section02__ContentDiv>
-                            <Section02__ContentDiv>
-                                <Section02__Image src={Automation} />
-                                <div>
-                                    <Section02_ImgText>Advanced automation</Section02_ImgText>
-                                </div>
-                            </Section02__ContentDiv>  
-                        </Section02__Contents>
-                    </Section02__LeftDiv>
+                    <Section02__Container>
+                        <Section02__Title>How we can help</Section02__Title>
+                        <YellowSpan />
+                        <Section02__Text>We design software to service a variety of needs and 
+                         help you work across a range of environments and platforms.</Section02__Text>
+                        <FeaturesCarousel />
+                    </Section02__Container>
                 </Container>
-                <Section02__RightDiv>
-                </Section02__RightDiv>
             </Section02>
         )
     }
 }
 
+
 /**** Section 02 ****/
 
 const Section02 = styled.div`
-    padding: 0 8% 60px;
-    ${breakpoint('md')`
-    padding: 60px 20%;
-    `}
-    ${breakpoint('lg')`
-        padding:0;
-        background:url(${HomeSection02BgMd}) no-repeat right bottom;
-        background-size:100%;
-        height:768px;
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        grid-column-gap:40px;
-    `}
+    padding: 0 10%;
 `
 const Container = styled.div`
     margin:0 auto;
     ${breakpoint('lg')`
         margin:auto 0 auto auto;
+    `}
+`
+const Section02__Container = styled.div`
+    margin:0 auto;
+    padding: 18% 0 10%;
+    ${breakpoint('sm')`
+        padding: 18% 8%;
+    `}
+    ${breakpoint('md')`
+        padding: 18% 10%;
+    `}
+    ${breakpoint('lg')`
+        padding: 80px 10%;
+        height:768px;
+        max-width: 1366px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     `}
 `
 const Section02__LeftDiv = styled.div`

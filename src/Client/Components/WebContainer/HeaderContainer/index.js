@@ -88,7 +88,7 @@ class HeaderContainer extends Component {
 
 const Nav = styled.div`
 	height:auto;
-	background-color: ${Themes.colors.white};
+	background-color: none;
 	overflow: hidden;
 	padding: 1.25em 10% 0.625em;
 	a {

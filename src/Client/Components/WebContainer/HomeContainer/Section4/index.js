@@ -3,27 +3,81 @@ import styled, { injectGlobal, css, ThemeProvider } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../../Assets/Styles/Themes';
 import HeaderLine from '../../../Common/HeaderLine';
-import Title from '../../../Common/Title/Title';
+import BigTitle from '../../../Common/Title/BigTitle';
 
-import Section04BgSm from '../../../../../Assets/Images/easyform-functions_mobileBg.png';
-import Section04BgLg from '../../../../../Assets/Images/easyform-functions_webBg.png';
-import Section04Md from '../../../../../Assets/Images/easyform-functions_tablet.png';
-import Section04ImageSm from '../../../../../Assets/Images/easyform-functions_mobileImage.png';
-import Section04ImageMd from '../../../../../Assets/Images/easyform-functions_tabletImage.png';
-import Section04ImageLg from '../../../../../Assets/Images/easyform-functions_webImage.png';
+/** Images **/
+import Section04BgSm from '../../../../../Assets/Images/Section04BgSm.png';
+import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
+import HomeSection02Image from '../../../../../Assets/Images/HomeSection02Image.png';
+import AI from '../../../../../Assets/Images/ai.svg';
+import MachineLearning from '../../../../../Assets/Images/machinelearning.svg';
+import Blockchain from '../../../../../Assets/Images/blockchain.svg';
+import ArgumentedReality from '../../../../../Assets/Images/argumentedreality.svg';
+import GPS from '../../../../../Assets/Images/gps.svg';
+import Automation from '../../../../../Assets/Images/automation.svg';
+import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
+/** Components **/
+import Text from '../../../Common/Text';
+import YellowSpan from '../../../Common/YellowSpan';
+
+const Shadow = css`
+    box-shadow : 0 0 8px rgba(50, 50, 93, 0.23);
+`
 class Section4 extends Component{
     render(){
         return(
             <Section04>
-                <Section04__TitleDiv>
-                    <Section04__Title>Easyforms Function</Section04__Title>
-                </Section04__TitleDiv>
-                <Section04__ImageDiv>
-                    <Section04__ImageSm src={Section04ImageSm} />
-                    <Section04__ImageMd src={Section04ImageMd} />
-                    <Section04__ImageLg src={Section04ImageLg} />
-                </Section04__ImageDiv>
+                <Container>
+                    <Section04__LeftDiv>
+                        <Section04__TitleDiv>
+                            <Section04__Title>Leverage the future</Section04__Title>
+                            <YellowSpan />
+                            <Section04__Text>Use our expertise to keep your business on the cutting
+                            edge of new technology</Section04__Text>
+                        </Section04__TitleDiv>
+                        <Section04__Contents>
+                            <Section04__ContentDiv>
+                                <Section04__Image src={AI} />
+                                <div>
+                                    <Section04_ImgText>AI</Section04_ImgText>
+                                </div>
+                            </Section04__ContentDiv>
+                            <Section04__ContentDiv>
+                                <Section04__Image src={MachineLearning} />
+                                <div>
+                                    <Section04_ImgText>Machine learning</Section04_ImgText>
+                                </div>
+                            </Section04__ContentDiv>
+                            <Section04__ContentDiv>
+                                <Section04__Image src={Blockchain} />
+                                <div>
+                                    <Section04_ImgText>Blockchain</Section04_ImgText>
+                                </div>
+                            </Section04__ContentDiv>
+                            <Section04__ContentDiv>
+                                <Section04__Image src={ArgumentedReality} />
+                                <div>
+                                    <Section04_ImgText>Argumented reality</Section04_ImgText>
+                                </div>
+                            </Section04__ContentDiv>
+                            <Section04__ContentDiv>
+                                <Section04__Image src={GPS} />
+                                <div>
+                                    <Section04_ImgText>GPS integration</Section04_ImgText>
+                                </div>
+                            </Section04__ContentDiv>
+                            <Section04__ContentDiv>
+                                <Section04__Image src={Automation} />
+                                <div>
+                                    <Section04_ImgText>Advanced automation</Section04_ImgText>
+                                </div>
+                            </Section04__ContentDiv>  
+                        </Section04__Contents>
+                    </Section04__LeftDiv>
+                </Container>
+                <Section04__RightDiv>
+                </Section04__RightDiv>
             </Section04>
         )
     }
@@ -32,71 +86,117 @@ class Section4 extends Component{
 /**** Section 04 ****/
 
 const Section04 = styled.div`
-    background: url('${Section04BgSm}') no-repeat center bottom;
-    background-size:100% 100%;
-    height:1100px;
-    position:relative;
-    margin-bottom:150px;
-        ${breakpoint('md')`
-        height:720px;
-        margin-bottom:120px;
-        `}
-        ${breakpoint('lg')`
-        background: url('${Section04BgLg}') no-repeat;
-        background-position: center bottom;
-        background-size:100% 100%;
+    background:url(${Section04BgSm}) no-repeat left top;
+    // padding: 0 8% 60px;
+    ${breakpoint('md')`
+    padding: 60px 20%;
+    `}
+    ${breakpoint('lg')`
+        padding:0;
+        background:url(${HomeSection02BgMd}) no-repeat right bottom;
+        background-size:100%;
+        height:768px;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-column-gap:40px;
     `}
 `
-const Section04__TitleDiv = styled.div`
+const Container = styled.div`
+    margin:0 auto;
     ${breakpoint('lg')`
-        height:30%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
+        margin:auto 0 auto auto;
+    `}
+`
+const Section04__LeftDiv = styled.div`
+    ${breakpoint('lg')`
+        margin-right:0;
+    `}
+    ${breakpoint('xl')`
+        width:683px;
+    `}
+`
+const Section04__LeftDivContainer = styled.div`
+`
+const Section04__TitleDiv = styled.div`
+    margin:0 auto;
+    padding: 10%;
+    padding-bottom: 0;
+    ${breakpoint('lg')`
+        margin-left:auto;
+        margin-bottom:100px;
     `}
 `
 const Section04__Title = styled.div`
-   ${Title};
-   color:white;
-   padding-top:100px;
+    ${BigTitle};
+    color:${Themes.colors.black};
+    font-weight:${Themes.fontWeight.black};
     ${breakpoint('lg')`
-        padding-top:150px;
+        text-align:left;
     `}
 `
-const Section04__ImageDiv = styled.div`
-    margin:0 auto;
+const Section04__Contents = styled.div`
 `
-const Section04__ImageSm = styled.img`
-    display:block;
-    position:absolute;
-    bottom:-170px;
-    left:50%;
-    transform:translateX(-50%);
-    ${breakpoint('md')`
-        display:none;
+const Section04__ContentDiv = styled.div`
+    margin:60px auto 0 auto;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+        ${breakpoint('lg')`
+        flex-direction:row;
+        align-items:flex-start;
+        `}
+`
+const Section04__Image = styled.img`
+    width:169px;
+    height:auto;
+    margin-bottom:10px;
+`
+const Section04__Subtitle = styled.p`
+    margin-top:20px;
+    margin-bottom:0;
+    color:${Themes.colors.blue};
+    font-size:${Themes.fontsize.h3};
+    font-weight:${Themes.fontWeight.bold};
+    text-align:center;
+    padding:0;
+    ${breakpoint('lg')`
+      margin: 0 0 0 35px;   
+      line-height:30px;
+      text-align:left; 
     `}
 `
-const Section04__ImageMd = styled.img`
+const Section04__Text = styled.div`
+    margin-top:9px;
+    ${Text};
+    color:${Themes.colors.grey};
+    text-align:center;
+        ${breakpoint('lg')`
+            text-align:left;
+            max-width:400px;
+            margin: 9px 0 0 35px;
+            font-size:${Themes.fontsize.p2}
+            line-height:20px;
+        `}
+`
+const Section04_ImgText = styled.div`
+    margin-top:9px;
+    font-size:${Themes.fontsize.p2};
+    color:${Themes.colors.black};
+    text-align:center;
+        ${breakpoint('lg')`
+            text-align:left;
+            max-width:400px;
+            margin: 9px 0 0 35px;
+            font-size:${Themes.fontsize.p2}
+            line-height:20px;
+        `}
+`
+const Section04__RightDiv = styled.div`
     display:none;
-    ${breakpoint('md')`
-        display:block;
-        position:absolute;
-        bottom:-170px;
-        left:50%;
-        transform:translateX(-50%);   
-    `}
-    ${breakpoint('lg')`
-        display:none;
-    `}
-`
-const Section04__ImageLg = styled.img`
-    display:none;
     ${breakpoint('lg')`
         display:block;
-        position:absolute;
-        bottom:-170px;
-        left:50%;
-        transform:translateX(-50%);   
+        background:url(${HomeSection02Image}) no-repeat left bottom;
     `}
 `
 export default Section4;

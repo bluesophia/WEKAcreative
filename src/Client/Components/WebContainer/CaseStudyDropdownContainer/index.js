@@ -80,7 +80,7 @@ export default class CaseStudyDropdownContainer extends Component {
             accordionList.map((item, index) => (
               <Accordion 
                 key={accordionList.id} 
-                title={item.title} 
+                // title={item.title} 
                 content={item.content} 
                 onClick={this.toggle(index + 1)} 
                 expand={this.state[`block${index+1}`]} 
