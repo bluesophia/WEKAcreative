@@ -58,7 +58,7 @@ const Section02__Container = styled.div`
     margin:0 auto;
     padding: 18% 0 10%;
     ${breakpoint('sm')`
-        padding: 18% 8%;
+        // padding: 18% 8%;
     `}
     ${breakpoint('md')`
         padding: 18% 10%;

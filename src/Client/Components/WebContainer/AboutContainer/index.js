@@ -5,9 +5,10 @@ import Themes from '../../../../Assets/Styles/Themes';
 import Text from '../../Common/Text';
 
 /** Images **/
-import AboutSection01BgMd from '../../../../Assets/Images/AboutSection01Bg.png';
+import AboutSectionBgMd from '../../../../Assets/Images/AboutSectionBgMd.png';
 import HomeSection01BgSm from '../../../../Assets/Images/HomeSection01BgSm.png';
 import mainImage from '../../../../Assets/Images/AboutSection01Image.svg';
+import mainImage2 from '../../../../Assets/Images/AboutSection01Image2.svg';
 
 /** components **/
 import Title from '../../Common/Title/Title';
@@ -24,7 +25,8 @@ class AboutContainer extends Component {
                     <Section01__Title>Global clients around Us</Section01__Title>
                     <Section01__Text>Over 4 years, EasyForms has acquired clients across the globe, in New Zealand, Australia, the Pacific Islands, Canada, The United Kingdom, Ireland and Korea. </Section01__Text>
                 </Section01__TitleDiv>
-                <Section01__Image><MainImage src={mainImage}/></Section01__Image> 
+                <Section01__Image><MainImage src={mainImage}/></Section01__Image>
+                <Section01__Image2><MainImage2 src={mainImage2}/></Section01__Image2> 
               </Section01__Container>
             </Section01>
             <Section02>
@@ -98,10 +100,10 @@ const Section01 = styled.div`
   background-repeat:no-repeat;
   background-size:100% 100%;
   ${breakpoint('md')`
-      background: url('${AboutSection01BgMd}');
+      background: url('${AboutSectionBgMd}');
       background-position:left top;
       background-repeat:no-repeat;
-      background-size:100% 100%;     
+      background-size:100% 168%;     
   `}
   ${breakpoint('lg')`
       background-size:100% 90%;
@@ -113,10 +115,7 @@ const Section01__Container = styled.div`
   flex-direction:column;
   align-items:center;
       ${breakpoint('md')`
-          padding:5% 10% 8% 10%;
-          justify-content:space-between;
-          flex-direction:row;
-          align-items:flex-start;           
+          padding:10% 17%;
       `}
       ${breakpoint('lg')`
           max-width: 1366px;
@@ -128,13 +127,42 @@ const Section01__Container = styled.div`
 const Section01__Image = styled.div`
     width:100%;
         ${breakpoint('md')`
-            margin-left:0;
+            display: none;
+        `}
+        ${breakpoint('lg')`
+            display: none;
         `}
 `
 const MainImage = styled.img`
     width:inherit;
     height:auto;
+    ${breakpoint('md')`
+            display: none;
+        `}
+        ${breakpoint('lg')`
+            display: none;
+        `}
+    
 `
+const Section01__Image2 = styled.div`
+    display: none;
+        ${breakpoint('md')`
+          display: flex;
+          margin-left:0;
+          margin-top: 130px;
+        `}
+`
+const MainImage2 = styled.img`
+    display: none;
+    ${breakpoint('md')`
+      display: flex;
+      transform: scale(2.3);
+      width: 100%;
+        `}
+    // width:inherit;
+    // height:auto;
+`
+
 const Section01__TitleDiv = styled.div`
   display:flex;
   align-items:center;
@@ -142,9 +170,7 @@ const Section01__TitleDiv = styled.div`
   justify-content:center;
   margin:0 auto;
     ${breakpoint('md')`
-      align-items:flex-start;
       width:100%;
-      margin:0 40px 0 0;
     `}
     ${breakpoint('lg')`
       margin-top:50px;
@@ -156,8 +182,9 @@ const Section01__Title = styled.div`
   text-align:center;
   margin:0 10% 40px 10%;
     ${breakpoint('md')`
-        text-align:left;
-        margin:0px 20px 20px 0px;     
+        text-align:center; 
+        font-size: 40px;
+        margin:0 0 40px 0;  
     `}
     ${breakpoint('lg')`
     `}
@@ -165,12 +192,13 @@ const Section01__Title = styled.div`
 const Section01__Text = styled.div`
   display:none;
     ${breakpoint('md')`
-      display:block;
+      display:flex;
       ${Text};
       font-size:${Themes.fontsize.p2} !important;
       line-height:22px !important;
-      color:white;
+      color:${Themes.colors.grey};
       font-weight:${Themes.fontWeight.light};
+      text-align: center;
     `}
     ${breakpoint('lg')`
       font-size:${Themes.fontsize.p1} !important;

@@ -10,7 +10,9 @@ import YellowSpan from '../../../Common/YellowSpan';
 
 /** Logos **/
 import LogosSm from '../../../../../Assets/Images/LogosSm.svg';
-
+import LogosLg from '../../../../../Assets/Images/LogosLg.svg';
+/** Images**/
+import HomeSection05BgMd from '../../../../../Assets/Images/HomeSection05BgMd.png';
 
 class Section5 extends Component{
     render(){
@@ -18,7 +20,7 @@ class Section5 extends Component{
             <ThemeProvider theme={Themes}>
                 <Section05>
                     <Section05__TitleDiv>
-                            <Section05__Title>We can <br />integrate with</Section05__Title>
+                            <Section05__Title>We can <Br />integrate with</Section05__Title>
                             <YellowSpan />
                             <Section05__Text>Our software experts are well placed to integrate with existing systems. These are some of our current integrations.
                             </Section05__Text>
@@ -26,6 +28,7 @@ class Section5 extends Component{
                     <Section05__Logos>
                         <Section05__LogosDiv01>
                             <Section05__Logo src={LogosSm}/>
+                            <Section05__Logo1 src={LogosLg}/>
                         </Section05__LogosDiv01>
                     </Section05__Logos>
                 </Section05>
@@ -35,12 +38,18 @@ class Section5 extends Component{
 }
 
 /**** Section 05 ****/
-
+const Br = styled.br`
+${breakpoint('md')`
+    display: none;
+`}
+`
 const Section05 = styled.div`
     padding:0 10%;
     padding-bottom: 50px;
     ${breakpoint('md')`
-        padding:18% 18% 10% 18%;
+        background:url(${HomeSection05BgMd}) no-repeat;
+        padding:0 10%;
+        padding-bottom: 140px;
     `}
     ${breakpoint('lg')`
        padding:10% 18%; 
@@ -48,7 +57,6 @@ const Section05 = styled.div`
        margin:0 auto;
     `}
 `
-
 const Section05__TitleDiv = styled.div`
     margin:0 auto;
     padding: 50px 10%;
@@ -114,6 +122,27 @@ const Section05__Logo = styled.img`
     transform: scale(2);
     ${breakpoint('sm')`
         width:146px;
+    `}
+    ${breakpoint('md')`
+        display: none;
+    `}
+    ${breakpoint('lg')`
+        display: none;
+    `}
+`
+const Section05__Logo1 = styled.img`
+    display: none;
+    ${breakpoint('md')`
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    margin-top: 120px; 
+    transform: scale(2);
+    z-index: -1;
+    display: block;
+    `}
+    ${breakpoint('lg')`
+        display: block;
     `}
 `
 

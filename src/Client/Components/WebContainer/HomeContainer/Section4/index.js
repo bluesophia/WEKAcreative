@@ -15,6 +15,7 @@ import Blockchain from '../../../../../Assets/Images/blockchain.svg';
 import ArgumentedReality from '../../../../../Assets/Images/argumentedreality.svg';
 import GPS from '../../../../../Assets/Images/gps.svg';
 import Automation from '../../../../../Assets/Images/automation.svg';
+import LeveragetheFuture from '../../../../../Assets/Images/LeveragetheFuture.png';
 import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
 /** Components **/
@@ -74,6 +75,9 @@ class Section4 extends Component{
                                 </div>
                             </Section04__ContentDiv>  
                         </Section04__Contents>
+                        <Section04__Contents2>
+                                <Section04__Image src={LeveragetheFuture} />
+                        </Section04__Contents2>
                     </Section04__LeftDiv>
                 </Container>
                 <Section04__RightDiv>
@@ -89,6 +93,7 @@ const Section04 = styled.div`
     background:url(${Section04BgSm}) no-repeat left top;
     // padding: 0 8% 60px;
     ${breakpoint('md')`
+    background:url(${HomeSection02BgMd}) no-repeat top left;
     padding: 60px 20%;
     `}
     ${breakpoint('lg')`
@@ -110,6 +115,11 @@ const Container = styled.div`
 const Section04__LeftDiv = styled.div`
     ${breakpoint('lg')`
         margin-right:0;
+    `}
+    ${breakpoint('md')`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     `}
     ${breakpoint('xl')`
         width:683px;
@@ -135,6 +145,18 @@ const Section04__Title = styled.div`
     `}
 `
 const Section04__Contents = styled.div`
+    ${breakpoint('md')`
+        display: none;
+    `}
+    ${breakpoint('lg')`
+        display: none;
+    `}
+`
+const Section04__Contents2 = styled.div`
+    display: none;
+    ${breakpoint('md')`
+        display: block;
+    `}
 `
 const Section04__ContentDiv = styled.div`
     margin:60px auto 0 auto;
@@ -151,6 +173,12 @@ const Section04__Image = styled.img`
     width:169px;
     height:auto;
     margin-bottom:10px;
+    ${breakpoint('md')`
+        width: 100%;
+        transform: scale(1.2);
+        margin-top: 70px;
+        margin-bottom: 10px;
+        `}
 `
 const Section04__Subtitle = styled.p`
     margin-top:20px;

@@ -34,6 +34,10 @@ const ButtonStyle = styled.button`
     padding:11px 22px;
     letter-spacing:1px;
     outline: none;
+        ${breakpoint('md')`
+            font-size: 25px;
+            margin-top: 30px;
+        `}
         ${breakpoint('lg')`
             font-size:20px;
         `}

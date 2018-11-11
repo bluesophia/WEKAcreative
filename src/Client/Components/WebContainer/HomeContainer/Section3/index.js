@@ -26,10 +26,14 @@ class Section3 extends Component{
                     </Section03__Text>
                 </Section03__Container>
                 <Section03__Container__image>
-                    <Section03__Image src={SomeofOurWorkPassafe} />
-                    <Section03__Image src={SomeofOurWorkRugdoctor} />
-                    <Section03__Image src={SomeofOurWorkMethTesting} />
-                    <Section03__Image src={SomeofOurWorkToyota} />
+                    <Section03__Container__imageSm>   
+                        <Section03__Image src={SomeofOurWorkPassafe} />
+                        <Section03__Image src={SomeofOurWorkRugdoctor} />
+                    </Section03__Container__imageSm> 
+                    <Section03__Container__imageSm> 
+                        <Section03__Image src={SomeofOurWorkMethTesting} />
+                        <Section03__Image src={SomeofOurWorkToyota} />
+                    </Section03__Container__imageSm> 
                 </Section03__Container__image>
             </Section03>
         )
@@ -37,6 +41,9 @@ class Section3 extends Component{
 }
 
 const Section03 = styled.div`
+    ${breakpoint('md')`
+    margin-bottom: 150px;
+    `}
 `
 const Section03__Container = styled.div`
     margin:0 auto;
@@ -45,7 +52,7 @@ const Section03__Container = styled.div`
         padding: 0 10%;
     `}
     ${breakpoint('md')`
-        padding: 18% 10%;
+        padding: 0 10%;
     `}
     ${breakpoint('lg')`
         padding: 80px 10%;
@@ -62,7 +69,10 @@ const Section03__Container__image = styled.div`
         // padding: 0 10%;
     `}
     ${breakpoint('md')`
-        padding: 18% 10%;
+        padding-top: 60px;
+        margin-bottom: 80px;
+        position: relative;
+        transform: scale(1.4);
     `}
     ${breakpoint('lg')`
         padding: 80px 10%;
@@ -73,7 +83,13 @@ const Section03__Container__image = styled.div`
         justify-content: center;
     `}
 `
-
+const Section03__Container__imageSm = styled.div`
+    ${breakpoint('md')`
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    `}
+`
 const Section03__Title = styled.div`
     ${BigTitle};
     color:${Themes.colors.black};
@@ -88,6 +104,9 @@ const Section03__Text = styled.div`
     ${Text};
     color:${Themes.colors.grey};
     text-align:center;
+        ${breakpoint('md')`
+            padding: 0 10%;
+        `}
         ${breakpoint('lg')`
             text-align:left;
             max-width:400px;

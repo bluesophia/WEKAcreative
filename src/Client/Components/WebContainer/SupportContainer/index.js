@@ -10,7 +10,7 @@ import BigTitle from '../../Common/Title/BigTitle.js';
 
 /** Images **/
 import HomeSection02BgSm from '../../../../Assets/Images/HomeSection02BgSm.svg';
-import Section01Bg from '../../../../Assets/Images/SupportSection01Bg.png';
+import Section01Bg from '../../../../Assets/Images/AboutSectionBgMd.png';
 import Image from '../../../../Assets/Images/SupportSection01Image.svg';
 
 import {  CompanyNameInput,
@@ -47,6 +47,8 @@ class SupportContainer extends Component{
         <ThemeProvider theme={Themes}>
           <Support>
               <Container>
+                  {/* Image div */}
+                  <Section01>
                   <TitleDiv>
                     <TitleDiv__Title>Submit a support ticket</TitleDiv__Title>
                     <TitleDiv__Text>Please complete the form below which will direct your request to the appropriate member of the team. 
@@ -55,12 +57,15 @@ class SupportContainer extends Component{
                       We aim to respond to support requests within 24 hours on regular business days, however, 
                       depending on the scale of your request this could take slightly longer.</TitleDiv__Text>
                   </TitleDiv>
+                  </Section01>
                   <ImageDiv>
                     <TopBgImg src={Image}/>
                     <TitleDiv__Textsm>Please complete the form below which will direct 
                         your request to the appropriate member of the team. This ensures greater efficiency around response times and 
                         also ensures processes are followed.</TitleDiv__Textsm>
                   </ImageDiv>
+                  {/* Form div */}
+                  <Section02>
                   <FormDiv>
                     <Form onSubmit={this._handleSubmit}>
                       <InputDiv>
@@ -80,6 +85,7 @@ class SupportContainer extends Component{
                       </ButtonDiv>      
                     </Form>
                   </FormDiv>
+                  </Section02>
               </Container>
             </Support>
           </ThemeProvider>
@@ -94,34 +100,38 @@ const Support = styled.div`
     background-size: 107% auto;
     padding:18% 8%;
     ${breakpoint('md')`
-      background: url('${Section01Bg}');
-      background-position:left top;
-      background-repeat:no-repeat;
-      background-size:100% 32%; 
-      background-color:${Themes.colors.veryLightGrey}; 
-      padding:5% 10% 8% 10%;  
+    background: url('${Section01Bg}');
+    background-position:left top;
+    background-repeat:no-repeat;
+    background-size:100% 79%;  
+    padding:10% 10%;   
     `}
     ${breakpoint('lg')`
-    background-size:100% 50%;   
-    `}  
+        background-size:100% 90%;
+    `}
 `
 const Container = styled.div`
     ${breakpoint('md')`
-      max-width:1366px;
-      display:grid;
-      grid-template-columns:40% 60%;
-      margin:0 auto;
+      // max-width:1366px;
+      // display:grid;
+      // grid-template-columns:40% 60%;
+      // margin:0 auto;
+      disply:flex;
+      flex-direction: column;
     `}
+`
+const Section01 = styled.div`
+      ${breakpoint('md')`
+        display: flex;
+        flex-direction: column;
+      `}
+`
+const Section02 = styled.div`
 `
 const ImageDiv = styled.div`
   margin-bottom:40px;
     ${breakpoint('md')`
-    padding:0 20% 0 0;
-    order:1;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start; 
-    justify-content:center;
+    margin-bottom:0;
     `}
     ${breakpoint('lg')`
     grid-row: 1 / 3;
@@ -134,7 +144,10 @@ const TopBgImg = styled.img`
   margin-left:22px;
     ${breakpoint('md')`
     margin:0 auto;
+    margin-top: 30px;
+    margin-left: 45px;
     text-align:center;
+    transform: scale(0.9);
   `}
 `
 const TitleDiv = styled.div`
@@ -142,7 +155,6 @@ const TitleDiv = styled.div`
     order:2;  
     display:flex;
     flex-direction:column;
-    align-items:flex-start;   
   `}
   ${breakpoint('lg')`
     margin:0 auto;
@@ -153,7 +165,7 @@ const TitleDiv__Title = styled.div`
   font-size:29px;
   margin-bottom:40px;
   ${breakpoint('md')`
-    text-align:left;
+    text-align:center;
     margin:0px 20px 20px 0px; 
   `}
   ${breakpoint('lg')`
@@ -163,12 +175,13 @@ const TitleDiv__Title = styled.div`
 const TitleDiv__Text = styled.div`
   display:none;
   ${breakpoint('md')`
-    display:block;
-    color:white;
-    font-size:${Themes.fontsize.p3};
-    line-height:18px;
-    font-weight:${Themes.fontWeight.light};
-    text-align:left;
+    display:flex;
+    color:${Themes.colors.grey};
+    font-size:${Themes.fontsize.h4};
+    line-height:25px;
+    font-weight:${Themes.fontWeight.regular};
+    text-align:center;
+    padding: 0 24px;
   `}
   ${breakpoint('lg')`
     font-size:${Themes.fontsize.p2} !important;
@@ -182,7 +195,7 @@ const TitleDiv__Textsm = styled.div`
     font-size:${Themes.fontsize.h4};
     padding: 4%;
     ${breakpoint('md')`
-    display:block;
+    display:none;
     color:white;
     font-size:${Themes.fontsize.p3};
     line-height:18px;
@@ -214,6 +227,9 @@ const Form = styled.div`
   height:auto;
   padding:30px 8% 30px 8%;
   border-radius:25px;
+    ${breakpoint('md')`
+      padding-top: 0;
+      `}
     ${breakpoint('lg')`
     margin-top:30px;
     //   background-color:white;

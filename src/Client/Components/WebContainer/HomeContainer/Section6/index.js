@@ -11,7 +11,9 @@ import YellowSpan from '../../../Common/YellowSpan';
 
 /** Images **/
 import OurProductSiteScops from '../../../../../Assets/Images/OurProductSiteScops.svg';
+import OurProductSiteScops2 from '../../../../../Assets/Images/OurProductSiteScops2.svg';
 import OurProductSiteUnify from '../../../../../Assets/Images/OurProductSiteUnify.svg';
+import OurProductSiteUnify2 from '../../../../../Assets/Images/OurProductSiteUnify2.svg';
 
 class Section6 extends Component{
     render(){
@@ -25,8 +27,14 @@ class Section6 extends Component{
                             Explore some of our in-house solutions.</Section06__Text>
                     </Section06__TitleDiv>
                     <Section06__Div>
-                        <Seciton06__Image src={OurProductSiteUnify}/>
-                        <Seciton06__Image src={OurProductSiteScops}/>
+                        <Section06__Div__Image1>
+                            <Seciton06__Image src={OurProductSiteUnify}/>
+                            <Seciton06__Image src={OurProductSiteScops}/>
+                        </Section06__Div__Image1>
+                        <Section06__Div__Image2>
+                            <Seciton06__Image2 src={OurProductSiteUnify2}/>
+                            <Seciton06__Image2 src={OurProductSiteScops2}/>
+                        </Section06__Div__Image2>
                     </Section06__Div>
                 </Section06>
             </ThemeProvider>
@@ -38,7 +46,7 @@ const Section06 = styled.div`
     padding-top:18%;
     padding-bottom:40px;
     ${breakpoint('md')`
-        padding-top:10%;
+        padding-top:7%;
         padding-bottom:8%;
     `}
 `
@@ -46,6 +54,9 @@ const Section06__TitleDiv = styled.div`
     margin:0 auto;
     padding: 50px 10%;
     padding-bottom: 0;
+    ${breakpoint('md')`
+        padding: 0 10%;
+    `}
     ${breakpoint('lg')`
         margin-left:auto;
         margin-bottom:100px;
@@ -77,18 +88,34 @@ const Section06__Div = styled.div`
     padding: 0 15%;
     max-width:1366px;
 `
+const Section06__Div__Image1 = styled.div`
+    padding: 0 15%;
+    max-width:1366px;
+    ${breakpoint('md')`
+            display:none;
+        `}
+    ${breakpoint('lg')`
+        display:none;
+    `}
+`
+const Section06__Div__Image2 = styled.div`
+    display:none;
+    ${breakpoint('md')`
+        display:flex;
+        transform: scale(0.7);
+        justify-content: center;
+    `}
+    ${breakpoint('lg')`
+        display:flex;
+    `}
+`
 
 const Seciton06__Image = styled.img`
     margin: 30px auto;
 `
-// const Section06__Title = styled.div`
-//     ${Title};
-//     color:white;
-//     padding-bottom:60px;
-//         ${breakpoint('md')`
-//         margin:0 auto;
-//         `}
-// `
+const Seciton06__Image2 = styled.img`
+    padding: 10%;
+`
 const StyledCarousel = styled(CardCarousel)`
     margin:0 auto;
 `

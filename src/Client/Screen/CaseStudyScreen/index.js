@@ -15,9 +15,12 @@ import SectionBg02 from '../../../Assets/Images/BlogSection02Bg.png';
 import Image01 from '../../../Assets/Images/BlogSection01Image.png';
 import Challenge from '../../../Assets/Images/challenge.svg';
 import Solution from '../../../Assets/Images/solution.svg';
+import Solution2 from '../../../Assets/Images/solution2.svg';
 import Result from '../../../Assets/Images/result.svg';
+import Result2 from '../../../Assets/Images/result2.svg';
 import Toyota from '../../../Assets/Images/toyota.png';
 import MethTesting from '../../../Assets/Images/methtesting.png';
+
 
 class CaseStudyScreen extends Component {
   render(){
@@ -53,16 +56,30 @@ class CaseStudyScreen extends Component {
                       <Section02__Title2>The challenge</Section02__Title2>
                       <YellowSpan />
                       <Section__Image src={Challenge}/>
+                      <Section03__Text>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ultricies mi eget mauris pharetra et ultrices. A iaculis at erat pellentesque. Semper eget duis at tellus at urna condimentum mattis. 
+                      Dignissim diam quis enim lobortis. Sed libero enim sed faucibus turpis in eu. In hendrerit gravida rutrum quisque non. Sed vulputate odio ut enim blandit. Risus sed vulputate odio ut enim blandit volutpat maecenas. Vel fringilla est ullamcorper eget. Egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices. Sed faucibus turpis in eu. Tempor nec feugiat nisl pretium fusce.
+                      </Section03__Text>
                   </Section03__TitleDiv>
                   <Section03__TitleDiv>
                       <Section02__Title2>The solution</Section02__Title2>
                       <YellowSpan />
                       <Section__Image src={Solution}/>
+                      <Section03__Text>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ultricies mi eget mauris pharetra et ultrices. A iaculis at erat pellentesque. Semper eget duis at tellus at urna condimentum mattis. 
+                      Dignissim diam quis enim lobortis. Sed libero enim sed faucibus turpis in eu. In hendrerit gravida rutrum quisque non. Sed vulputate odio ut enim blandit. Risus sed vulputate odio ut enim blandit volutpat maecenas. Vel fringilla est ullamcorper eget. Egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices. Sed faucibus turpis in eu. Tempor nec feugiat nisl pretium fusce.
+                      </Section03__Text>
+                      {/* <Section__Image2 src={Solution2}/> */}
                   </Section03__TitleDiv>
                   <Section03__TitleDiv>
                       <Section02__Title2>The result</Section02__Title2>
                       <YellowSpan />
                       <Section__Image src={Result}/>
+                      <Section03__Text>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ultricies mi eget mauris pharetra et ultrices. A iaculis at erat pellentesque. Semper eget duis at tellus at urna condimentum mattis. 
+                      Dignissim diam quis enim lobortis. Sed libero enim sed faucibus turpis in eu. In hendrerit gravida rutrum quisque non. Sed vulputate odio ut enim blandit. Risus sed vulputate odio ut enim blandit volutpat maecenas. Vel fringilla est ullamcorper eget. Egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices. Sed faucibus turpis in eu. Tempor nec feugiat nisl pretium fusce.
+                      </Section03__Text>
+                      {/* <Section__Image2 src={Result2}/> */}
                   </Section03__TitleDiv>
                   {/* <CaseStudyDropdownContainer />  */}
                 </Section__Contents>
@@ -221,6 +238,14 @@ const Section__ImageDivsm = styled.div`
 const Section__Image = styled.img`
     transform: scale(0.53);
     margin-top: -60px;
+    margin-bottom: -60px;
+   ${breakpoint('md')`
+   `}
+`
+const Section__Image2 = styled.img`
+    transform: scale(0.53);
+    margin-top: -60px;
+    margin-bottom: -60px;
    ${breakpoint('md')`
    `}
 `
@@ -291,6 +316,21 @@ const Section02__Title2 = styled.div`
     ${breakpoint('lg')`
         text-align:left;
     `}
+`
+const Section03__Text = styled.div`
+    margin-top:9px;
+    margin-bottom: 30px;
+    padding: 0 10%;
+    ${Text};
+    color:${Themes.colors.grey};
+    text-align:center;
+        ${breakpoint('lg')`
+            text-align:left;
+            max-width:400px;
+            margin: 9px 0 0 35px;
+            font-size:${Themes.fontsize.p2}
+            line-height:20px;
+        `}
 `
 const Section04__Title = styled.div`
     ${BigTitle};

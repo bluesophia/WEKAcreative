@@ -8,6 +8,10 @@ import Logo from '../../../../Assets/Images/logo.svg';
 import Bg from '../../../../Assets/Images/header.png';
 import loginIcon from '../../../../Assets/Images/login.svg';
 import Menu from '../../../../Assets/Images/login.svg';
+import PropTypes from "prop-types";
+import { withRouter } from "react-router";
+
+
 
 class HeaderContainer extends Component {
 	render(){
@@ -91,6 +95,7 @@ const Nav = styled.div`
 	background-color: none;
 	overflow: hidden;
 	padding: 1.25em 10% 0.625em;
+	position: sticky;
 	a {
 		color: #707070;
 	};
@@ -126,6 +131,7 @@ const NavNarrow = styled.div`
  const NavWide = styled.div`
 	display: none;
 		@media (min-width: 768px) {
+			display:none;
 			display: flex;
 			justify-content:flex-end;
 		}
@@ -226,6 +232,7 @@ const NarrowLinks = styled.div`
 		position: static;
 		display: none;
 		margin: 3.5em 0 0;
+		
 `;
 
 const NarrowStyledLink = styled(Link)`
