@@ -21,7 +21,7 @@ Button01.propTypes = {
     value: PropTypes.string
   };
 const ButtonStyle = styled.button`
-    background:${Themes.colors.white};
+    background: rgba(255,255,255, 0);
     width:100%; 
     height:auto;
     color:${Themes.colors.black};
