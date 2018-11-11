@@ -10,7 +10,7 @@ import BigTitle from '../../Components/Common/Title/BigTitle';
 import TopBg from '../../../Assets/Images/contactUsBg.png';
 import CallUsIcon from '../../../Assets/Images/phone.png';
 
-import CompanyNameInput from '../../Components/Common/Input/CompanyNameInput';
+import PhoneNumberInput from '../../Components/Common/Input/PhoneNumberInput';
 import FullNameInput from '../../Components/Common/Input/FullNameInput';
 import EmailInput from '../../Components/Common/Input/EmailInput';
 import MessageInput from '../../Components/Common/Input/MessageInput';
@@ -55,8 +55,8 @@ class ContactUsScreen extends Component {
               <Form>
                 <InputDiv>
                   <InputDiv__Left>
-                    <CompanyNameInput />
                     <FullNameInput />
+                    <PhoneNumberInput />
                     <EmailInput />
                   </InputDiv__Left>
                   <InputDiv__Right>
@@ -99,11 +99,19 @@ const Header__ImageDiv = styled.div`
   // display:none;
   z-index:1;
   transform: scale(0.9);
+    ${breakpoint('md')`
+    display: flex;
+    flex-direction: column-reverse;
+  `}
     ${breakpoint('lg')`
       display:block;
     `}
 `
 const Header__Image = styled.img`
+    ${breakpoint('md')`
+      margin-top: 40px;
+      transform: scale(0.9);
+    `}
 `
 const Header__Content = styled.div`
   display:flex;
@@ -138,9 +146,6 @@ const TitleDiv__Title = styled.div`
   ${BigTitle};
   margin-bottom:10px;
   ${breakpoint('md')`
-    ${BigTitle};
-    font-weight:${Themes.fontWeight.regular};
-    color:white;
   `}
 `
 const TitleDiv__Text = styled.div`
@@ -163,11 +168,12 @@ const TitleDiv__Textsm = styled.div`
     line-height:26px;
     ${breakpoint('md')`
     display:block;
-    color:white;
-    font-size:${Themes.fontsize.p3};
-    line-height:18px;
+    font-size:${Themes.fontsize.h4};
+    line-height:25px;
     font-weight:${Themes.fontWeight.light};
-    text-align:left;
+    text-align:center;
+    margin:0;
+    padding: 0 10% 4% 10%;
     `}
     ${breakpoint('lg')`
     font-size:${Themes.fontsize.p2} !important;

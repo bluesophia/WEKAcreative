@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 /** Images **/
 import HomeSection01BgMd from '../../../../../Assets/Images/HomeSection01BgMd.png';
+import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
 import mainImage from '../../../../../Assets/Images/mainImage.svg';
 
 /** components **/
@@ -49,6 +50,12 @@ const Section01 = styled.div`
         background-repeat:no-repeat;
         background-size:120% 120%;
     `}
+    ${breakpoint('lg')`
+        background: url('${HomeSection02BgMd}');
+        background-position:center top;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+    `}
 `
 const Container = styled.div`
     padding: 14% 10%;
@@ -62,6 +69,7 @@ const Container = styled.div`
             // align-items:center;
         `}
         ${breakpoint('lg')`
+            flex-direction:row;
             max-width: 1366px;
             margin:0 auto;
             padding: 70px 8% 30px 8%;
@@ -87,7 +95,6 @@ const Section01__TitleDiv = styled.div`
         align-items:flex-start;
     `}
     ${breakpoint('lg')`
-        margin-left:2em;
         height:250px;
     `}
 `;
@@ -102,7 +109,6 @@ const StyledTitle = styled.div`
             margin:0;
         `}
         ${breakpoint('lg')`
-            margin: 0 25% 0 0;
         `}
     `
 const Section01__Text = styled.div`
@@ -121,7 +127,6 @@ const Section01__Text = styled.div`
             text-align: center;
         `}
         ${breakpoint('lg')`
-           margin: 20px 15% 20px 0;
         `}
 `
 const ButtonDiv = styled.div`

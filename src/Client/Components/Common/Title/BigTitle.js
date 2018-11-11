@@ -8,6 +8,9 @@ const BigTitle = css`
     line-height:40px;
     font-weight:${Themes.fontWeight.black};
     color:${Themes.colors.black};
+        ${breakpoint('md')`
+        font-size:${Themes.fontsize.h1};
+        `}
         ${breakpoint('lg')`
         font-size:${Themes.fontsize.h1};
         line-height:50px;

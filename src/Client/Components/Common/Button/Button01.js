@@ -40,6 +40,7 @@ const ButtonStyle = styled.button`
         `}
         ${breakpoint('lg')`
             font-size:20px;
+            margin-top: 100px;
         `}
 `
 const Text = styled.p`

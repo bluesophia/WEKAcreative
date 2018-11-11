@@ -5,6 +5,7 @@ import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../Assets/Styles/Themes';
 import { Link } from 'react-router-dom';
 import Logo from '../../../../Assets/Images/logo.svg';
+import LogoColor from '../../../../Assets/Images/logo_color.png';
 import Bg from '../../../../Assets/Images/header.png';
 import loginIcon from '../../../../Assets/Images/login.svg';
 import Menu from '../../../../Assets/Images/login.svg';
@@ -103,7 +104,8 @@ const Nav = styled.div`
 		color: #FF9800;
 	}
 		${breakpoint('md')`
-			padding: 3.25em 10% 0.625em;
+			// padding: 3.25em 10% 0.625em;
+			padding: 3%;
 		`}
 	`
 const Container = styled.div`
@@ -199,11 +201,15 @@ const LogoImg = styled.img`
 	float:left;
 	position:absolute;
 	${breakpoint('lg')`
-		width:160px;
+		content: url(${LogoColor});
+		width:120px;
 	`}
 `
 const LinkedLogo = styled(Link)`
 	height:32px;
+	${breakpoint('lg')`
+		margin-top: -40px;
+	`}
 `
 const icon = {
 	float:'right',
