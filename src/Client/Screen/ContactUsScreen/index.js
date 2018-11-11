@@ -32,25 +32,13 @@ class ContactUsScreen extends Component {
             <Header__Content>
             <TitleDiv>
               <TitleDiv__Title>Get In Touch</TitleDiv__Title>
-              <Header__ImageDiv>
                 <Header__Image src={Image}/>
                 <TitleDiv__Textsm>Get in touch with us today to find out how we can help your business
                 work smarter and more efficiently.</TitleDiv__Textsm>
-              </Header__ImageDiv>
             </TitleDiv>
             </Header__Content>
           </Header>
-          
           <Contents>
-            {/* <MapDiv>
-              <MyMapComponent
-                isMarkerShown
-                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-p5WQ9NQSErSYZB-U2anOUNKEGzWh-hU&v=3.exp&libraries=geometry,drawing,places"
-                loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `100%` }} />}
-                mapElement={<div style={{ height: `100%` }} />}
-              />
-            </MapDiv> */}
             <FormDiv>
               <Form>
                 <InputDiv>
@@ -86,13 +74,14 @@ const Header = styled.div`
   box-shadow: 0 5px 8px -4px rgba(0,0,0,0.2);
     ${breakpoint('lg')`
     background:none;
-    display:flex;
-    flex-direction:row;
+    // display:flex;
+    // flex-direction:row;
     justify-content:center;
     align-items:center;
     padding:70px 0 55px 0;
     max-width:1366px;
     margin:0 auto;
+    box-shadow: 0 0 0 0;
     `}
 `
 const Header__ImageDiv = styled.div`
@@ -104,7 +93,9 @@ const Header__ImageDiv = styled.div`
     flex-direction: column-reverse;
   `}
     ${breakpoint('lg')`
-      display:block;
+      // display:block;
+      // // flex-direction: row;
+      // flex-direction: column-reverse;
     `}
 `
 const Header__Image = styled.img`
@@ -112,14 +103,24 @@ const Header__Image = styled.img`
       margin-top: 40px;
       transform: scale(0.9);
     `}
+    ${breakpoint('lg')`
+    transform: scale(0.7);
+    width: 84%;
+    margin-bottom: 30%;
+    margin-right: 50%;
+    margin-left: -20%;
+    margin-top: -24%;
+    `}
 `
 const Header__Content = styled.div`
   display:flex;
   align-items:center;
   flex-direction:column;
   ${breakpoint('lg')`
-    align-items:flex-start;
-    margin-left:60px;
+    // align-items:flex-start;
+    // // margin-left:60px;
+    // display: grid;
+    // grid-template-rows:25% 75%;
   `}
 `
 
@@ -128,7 +129,7 @@ const TopBgImg = styled.img`
     ${breakpoint('lg')`
       display:block;
       width:100vw;
-      height:648px;
+      height:580px;
       position:absolute;
       top:120;
     `}
@@ -138,14 +139,19 @@ const TitleDiv = styled.div`
   flex-direction:column;
   z-index:1;
   ${breakpoint('lg')`
-    align-items:flex-start;
-    margin-bottom:100px;
+    // flex-direction: row;
+    // align-items:flex-start;
+    // flex-direction:row-reverse;
   `}
 `
 const TitleDiv__Title = styled.div`
   ${BigTitle};
   margin-bottom:10px;
-  ${breakpoint('md')`
+  ${breakpoint('lg')`
+  display: block;
+    margin-top: 10%;
+    margin-left: 62%;
+    display:flex;
   `}
 `
 const TitleDiv__Text = styled.div`
@@ -176,9 +182,15 @@ const TitleDiv__Textsm = styled.div`
     padding: 0 10% 4% 10%;
     `}
     ${breakpoint('lg')`
-    font-size:${Themes.fontsize.p2} !important;
-    line-height:25px;  
-    padding:0 3%;
+    font-size: 16px !important;
+    line-height: 25px;
+    padding: 0 3%;
+    text-align: left;
+    margin-left: 59%;
+    margin-top: -63%;
+    margin-bottom: 20%;
+    width: 51%;
+}
     `}
  `   
 const CallUsDiv = styled.div`
@@ -210,7 +222,7 @@ const Contents = styled.div`
 const FormDiv = styled.div`
   ${breakpoint('lg')`
     z-index:1;
-    width:1050px;
+    width:787px;
     margin:0 auto 100px auto;
   `}
 `
@@ -225,6 +237,11 @@ const Form = styled.div`
     ${breakpoint('lg')`
       padding:60px 8%;
       border-radius:50px;
+
+    // margin-top:30px;
+    // padding: 30px 20% 30px 20%;
+    background-color:white;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
     `}
 `
 const InputDiv = styled.div`
@@ -237,7 +254,6 @@ const InputDiv__Left = styled.div`
   display:flex;
   flex-direction:column;
   ${breakpoint('lg')`
-  margin-bottom:50px;  
 `}
 `
 const InputDiv__Right = styled.div``
