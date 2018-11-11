@@ -15,9 +15,11 @@ import SectionBg02 from '../../../Assets/Images/BlogSection02Bg.png';
 import Image01 from '../../../Assets/Images/BlogSection01Image.png';
 import Challenge from '../../../Assets/Images/challenge.svg';
 import Solution from '../../../Assets/Images/solution.svg';
+import SolutionTablet from '../../../Assets/Images/casestudy_solution.jpg';
 import Solution2 from '../../../Assets/Images/solution2.svg';
 import Result from '../../../Assets/Images/result.svg';
 import Result2 from '../../../Assets/Images/result2.svg';
+import ResultTablet from '../../../Assets/Images/casestudy_result.png';
 import Toyota from '../../../Assets/Images/toyota.png';
 import MethTesting from '../../../Assets/Images/methtesting.png';
 
@@ -65,6 +67,7 @@ class CaseStudyScreen extends Component {
                       <Section02__Title2>The solution</Section02__Title2>
                       <YellowSpan />
                       <Section__Image src={Solution}/>
+                      <Section__Image__tablet src={SolutionTablet}/>
                       <Section03__Text>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ultricies mi eget mauris pharetra et ultrices. A iaculis at erat pellentesque. Semper eget duis at tellus at urna condimentum mattis. 
                       Dignissim diam quis enim lobortis. Sed libero enim sed faucibus turpis in eu. In hendrerit gravida rutrum quisque non. Sed vulputate odio ut enim blandit. Risus sed vulputate odio ut enim blandit volutpat maecenas. Vel fringilla est ullamcorper eget. Egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices. Sed faucibus turpis in eu. Tempor nec feugiat nisl pretium fusce.
@@ -75,6 +78,7 @@ class CaseStudyScreen extends Component {
                       <Section02__Title2>The result</Section02__Title2>
                       <YellowSpan />
                       <Section__Image src={Result}/>
+                      <Section__Image__tablet src={ResultTablet}/>
                       <Section03__Text>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ultricies mi eget mauris pharetra et ultrices. A iaculis at erat pellentesque. Semper eget duis at tellus at urna condimentum mattis. 
                       Dignissim diam quis enim lobortis. Sed libero enim sed faucibus turpis in eu. In hendrerit gravida rutrum quisque non. Sed vulputate odio ut enim blandit. Risus sed vulputate odio ut enim blandit volutpat maecenas. Vel fringilla est ullamcorper eget. Egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices. Sed faucibus turpis in eu. Tempor nec feugiat nisl pretium fusce.
@@ -129,7 +133,9 @@ const Section__Header01 = styled.div`
   padding:18% 0;
   background-position: top right;
   ${breakpoint('md')`
-    padding:8% 0;
+    // padding:8% 0;
+    background-size:768px;
+    background-position: top left;
   `}
   ${breakpoint('lg')`
     padding:5% 10% 0 10%;
@@ -214,6 +220,8 @@ const Section__Titlesm = styled.div`
  const Section__ImageDiv = styled.div`  
     display:none;
     ${breakpoint('md')`
+      display:block;
+      margin-bottom:-140px;
      `}
      ${breakpoint('lg')`
      display:block;
@@ -226,6 +234,7 @@ const Section__ImageDiv2 = styled.div`
     align-items: center;
     flex-direction: column;
     ${breakpoint('md')`
+    flex-direction: row;
     `}
     ${breakpoint('lg')`
     display:block;
@@ -234,13 +243,23 @@ const Section__ImageDiv2 = styled.div`
 `
 const Section__ImageDivsm = styled.div`
     margin-bottom: 10px;
+    ${breakpoint('md')`
+    transform: scale(0.8);
+   `}
 `
 const Section__Image = styled.img`
     transform: scale(0.53);
     margin-top: -60px;
     margin-bottom: -60px;
    ${breakpoint('md')`
+    display: none;
    `}
+`
+const Section__Image__tablet = styled.img`
+    display: none;
+    ${breakpoint('md')`
+      display: block;
+    `}
 `
 const Section__Image2 = styled.img`
     transform: scale(0.53);
@@ -283,6 +302,10 @@ padding: 0 0 3%;
 ${breakpoint('lg')`
     margin-left:auto;
     margin-bottom:100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `}
 `
 
@@ -303,6 +326,10 @@ const Section02__Title1 = styled.div`
     font-weight:${Themes.fontWeight.black};
     font-size: 24px;
     line-height: 32px;
+    ${breakpoint('md')`
+        font-size: ${Themes.fontsize.h1};
+        line-height: 42px;
+    `}
     ${breakpoint('lg')`
         text-align:left;
     `}
