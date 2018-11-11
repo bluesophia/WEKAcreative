@@ -58,8 +58,6 @@ const Section06__TitleDiv = styled.div`
         padding: 0 10%;
     `}
     ${breakpoint('lg')`
-        margin-left:auto;
-        margin-bottom:100px;
     `}
 `
 const Section06__Title = styled.div`
@@ -67,7 +65,6 @@ const Section06__Title = styled.div`
     color:${Themes.colors.black};
     font-weight:${Themes.fontWeight.black};
     ${breakpoint('lg')`
-        text-align:left;
     `}
 `
 const Section06__Text = styled.div`
@@ -76,9 +73,6 @@ const Section06__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
-            margin: 9px 0 0 35px;
             font-size:${Themes.fontsize.p2}
             line-height:20px;
         `}
@@ -107,6 +101,7 @@ const Section06__Div__Image2 = styled.div`
     `}
     ${breakpoint('lg')`
         display:flex;
+        transform: scale(1);
     `}
 `
 

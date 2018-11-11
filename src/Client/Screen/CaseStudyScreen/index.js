@@ -138,8 +138,8 @@ const Section__Header01 = styled.div`
     background-position: top left;
   `}
   ${breakpoint('lg')`
-    padding:5% 10% 0 10%;
-    background-size:cover 100%;
+    // padding:5% 10% 0 10%;
+    background-size:100% 100%;
   `}
 `
 const Section__Header02 = styled.div`
@@ -196,8 +196,9 @@ const Section__Title = styled.div`
       color:white;
     `}
     ${breakpoint('lg')`
-      text-align:left;
-      width:90%;
+      font-size: 46px;
+      font-weight:${Themes.fontWeight.black};
+      text-shadow: 2px 2px ${Themes.colors.black};
     `}
   `
 
@@ -212,8 +213,9 @@ const Section__Titlesm = styled.div`
     color:white;
   `}
   ${breakpoint('lg')`
-    text-align:left;
-    width:90%;
+    font-size:${Themes.fontsize.h3};
+    font-weight:${Themes.fontWeight.black};
+    text-shadow: 2px 2px ${Themes.colors.black};
   `}
 `
 
@@ -237,7 +239,8 @@ const Section__ImageDiv2 = styled.div`
     flex-direction: row;
     `}
     ${breakpoint('lg')`
-    display:block;
+    display:flex;
+    flex-direction: row;
     margin-bottom:-140px;
     `}
 `
@@ -245,6 +248,10 @@ const Section__ImageDivsm = styled.div`
     margin-bottom: 10px;
     ${breakpoint('md')`
     transform: scale(0.8);
+   `}
+   ${breakpoint('lg')`
+    transform: scale(1.1);
+    margin: 5%;
    `}
 `
 const Section__Image = styled.img`
@@ -281,8 +288,7 @@ const Section__Contents = styled.div`
     padding:30px 10% 100px 10%;
      `}
      ${breakpoint('lg')`
-     width:60%;
-     padding:30px 0 100px 0;
+     padding: 0;
      margin:0 auto 0 0;
    `}
  `
@@ -293,31 +299,32 @@ const Section__Contents = styled.div`
     padding-bottom: 60px;
     ${breakpoint('lg')`
         margin-left:auto;
+        padding: 10% 18%;
         margin-bottom:100px;
     `}
 `
 const Section03__TitleDiv = styled.div`
-margin:0 auto;
-padding: 0 0 3%;
-${breakpoint('lg')`
-    margin-left:auto;
-    margin-bottom:100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`}
+    margin:0 auto;
+    padding: 0 0 3%;
+    ${breakpoint('lg')`
+        margin-left:auto;
+        margin-bottom:100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    `}
 `
 
 const Section04__TitleDiv = styled.div`
-margin:0 auto;
-padding: 12%;
-padding-top: 0;
-padding-bottom: 0;
-${breakpoint('lg')`
-    margin-left:auto;
-    margin-bottom:100px;
-`}
+    margin:0 auto;
+    padding: 12%;
+    padding-top: 0;
+    padding-bottom: 0;
+    ${breakpoint('lg')`
+        padding: 0;
+        margin-left:auto;
+    `}
 `
 
 const Section02__Title1 = styled.div`
@@ -331,7 +338,7 @@ const Section02__Title1 = styled.div`
         line-height: 42px;
     `}
     ${breakpoint('lg')`
-        text-align:left;
+        // text-align:left;
     `}
 `
 const Section02__Title2 = styled.div`
@@ -352,11 +359,9 @@ const Section03__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
-            margin: 9px 0 0 35px;
-            font-size:${Themes.fontsize.p2}
-            line-height:20px;
+            padding: 0;
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
         `}
 `
 const Section04__Title = styled.div`
@@ -375,11 +380,11 @@ const Section04__Text = styled.div`
     font-weight: ${Themes.fontWeight.black};
     text-align:center;
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
-            margin: 9px 0 0 35px;
-            font-size:${Themes.fontsize.p2}
-            line-height:20px;
+        text-align: center;
+        max-width: 400px;
+        /* margin: 9px 0 0 35px; */
+        font-size: 16px;
+        line-height: 20px;
         `}
 `
 const Section04__Textsm = styled.div`
@@ -389,9 +394,7 @@ const Section04__Textsm = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
-            margin: 9px 0 0 35px;
+            text-align:center;
             font-size:${Themes.fontsize.p2}
             line-height:20px;
         `}
@@ -411,12 +414,9 @@ const Section02__Text = styled.div`
     ${Text};
     color:${Themes.colors.grey};
     text-align:center;
-        ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
-            margin: 9px 0 0 35px;
-            font-size:${Themes.fontsize.p2}
-            line-height:20px;
-        `}
+      ${breakpoint('lg')`
+      font-size:${Themes.fontsize.p1}
+      line-height:26px;
+  `}
 `
 export default CaseStudyScreen;

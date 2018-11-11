@@ -6,6 +6,9 @@ import breakpoint from 'styled-components-breakpoint';
 import Logo from '../../../../Assets/Images/logo_color.png';
 import { Link } from 'react-router-dom';
 
+//component
+import Button01 from '../../../Components/Common/Button/Button01';
+
 class FooterContainer extends Component {
     render() {
       return (
@@ -13,7 +16,12 @@ class FooterContainer extends Component {
         <Footer>
           <Container>
             <FooterTop>
-              <FooterBox1>
+              <ButtonDiv>
+                <ButtonLink to='/contact'>
+                    <Button01 value={'Contact us'}/>
+                </ButtonLink>
+                </ButtonDiv>
+                <FooterBox1>
                 <FooterRightContainer>
                   {/* Logo & SNS */}
                   <FooterBox3>
@@ -74,7 +82,10 @@ class FooterContainer extends Component {
       justify-content: center;
       ${breakpoint('md')`
       // justify-content: flex-start;
-  `};
+      `};
+      ${breakpoint('lg')`
+      // justify-content: flex-end;
+      `};
   `;
   
   const Sns = styled.a`
@@ -117,8 +128,10 @@ flex-direction: column;
   
   ${breakpoint('md')`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  `};
+  ${breakpoint('lg')`
+  padding-top:none;
   `};
 `;
 
@@ -127,8 +140,10 @@ const FooterBox1 = styled.div`
 // flex-direction: column;
 
 ${breakpoint('md')`
-flex-direction: row;
-order:1;
+// flex-direction: row;
+`};
+${breakpoint('lg')`
+// flex-direction: row;
 `};
 `;
 
@@ -152,7 +167,10 @@ const FooterRightContainer = styled.div`
 text-align:center;
 
 ${breakpoint('md')`
-text-align:left;
+`};
+${breakpoint('lg')`
+  margin-top: 35px;
+  float: left;
 `};
 `;
 
@@ -164,16 +182,15 @@ margin: 0.5em 0 0.5em 0;
 
 color: ${Themes.colors.yellow};
 
-${breakpoint('md')`
-font-size: 0.8em;
-margin: 0 1em 0 0;
-text-align:left;
-  `};
-${breakpoint('lg')`
-margin: 0 1em 0 0;
-text-align:left;
-  `};
-`;
+  ${breakpoint('md')`
+  font-size: 0.8em;
+  margin: 0 1em 0 0;
+  text-align:left;
+    `};
+  ${breakpoint('lg')`
+  display: none;
+    `};
+  `;
 
 const FooterTitleDisplay = FooterTitle.extend`
 display:none;
@@ -219,7 +236,6 @@ const FooterBottom = styled.div`
   padding-top: 1.5em;
   text-align: center;
   ${breakpoint('md')`
-  flex-direction: row;
   justify-content: space-between;
   `};
 `;
@@ -232,5 +248,21 @@ text-align: center;
 padding: 0;
 color: ${Themes.colors.grey};
 `;
+
+//button
+const ButtonDiv = styled.div`
+  transform: scale(0.9);
+  padding: 10%;
+    ${breakpoint('md')`
+        margin: 0 auto;
+    `}
+    ${breakpoint('lg')`
+        width:30%;
+    `}
+`
+const ButtonLink = styled(Link)`
+        cursor:'pointer';
+`
+
 
 export default FooterContainer;

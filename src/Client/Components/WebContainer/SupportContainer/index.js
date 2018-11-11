@@ -10,6 +10,7 @@ import BigTitle from '../../Common/Title/BigTitle.js';
 
 /** Images **/
 import HomeSection02BgSm from '../../../../Assets/Images/HomeSection02BgSm.svg';
+import SupportSection01BgLg from '../../../../Assets/Images/SupportSection01BgLg.png';
 import Section01Bg from '../../../../Assets/Images/AboutSectionBgMd.png';
 import Image from '../../../../Assets/Images/SupportSection01Image.svg';
 
@@ -48,15 +49,16 @@ class SupportContainer extends Component{
           <Support>
               <Container>
                   {/* Image div */}
+                  <Section01__Div>
                   <Section01>
-                  <TitleDiv>
-                    <TitleDiv__Title>Submit a support ticket</TitleDiv__Title>
-                    <TitleDiv__Text>Please complete the form below which will direct your request to the appropriate member of the team. 
-                      This ensures greater efficiency around response times and also ensures processes are followed.
-                      <br /><br />
-                      We aim to respond to support requests within 24 hours on regular business days, however, 
-                      depending on the scale of your request this could take slightly longer.</TitleDiv__Text>
-                  </TitleDiv>
+                    <TitleDiv>
+                      <TitleDiv__Title>Submit a support ticket</TitleDiv__Title>
+                      <TitleDiv__Text>Please complete the form below which will direct your request to the appropriate member of the team. 
+                        This ensures greater efficiency around response times and also ensures processes are followed.
+                        <br /><br />
+                        We aim to respond to support requests within 24 hours on regular business days, however, 
+                        depending on the scale of your request this could take slightly longer.</TitleDiv__Text>
+                    </TitleDiv>
                   </Section01>
                   <ImageDiv>
                     <TopBgImg src={Image}/>
@@ -64,6 +66,7 @@ class SupportContainer extends Component{
                         your request to the appropriate member of the team. This ensures greater efficiency around response times and 
                         also ensures processes are followed.</TitleDiv__Textsm>
                   </ImageDiv>
+                  </Section01__Div>
                   {/* Form div */}
                   <Section02>
                   <FormDiv>
@@ -74,11 +77,9 @@ class SupportContainer extends Component{
                           <CompanyNameInput />
                           <PhoneNumberInput />
                           <EmailInput />
+                          <MessageInput />
                           {/* <SupportTypeInput /> */}
                         </InputDiv__Left>
-                        <InputDiv__Right>
-                            <MessageInput />
-                        </InputDiv__Right>
                       </InputDiv>
                       <ButtonDiv>
                         <Button01 value="SUBMIT"/>
@@ -107,7 +108,10 @@ const Support = styled.div`
     padding:10% 10%;   
     `}
     ${breakpoint('lg')`
-        background-size:100% 90%;
+        background: url('${SupportSection01BgLg}');
+        background-position:center top;
+        background-repeat:no-repeat;
+        background-size:100% 55%;
     `}
 `
 const Container = styled.div`
@@ -119,17 +123,30 @@ const Container = styled.div`
       disply:flex;
       flex-direction: column;
     `}
+    ${breakpoint('lg')`
+        flex-direction: row;
+      `}
 `
 const Section01 = styled.div`
       ${breakpoint('md')`
         display: flex;
         flex-direction: column;
       `}
+      // ${breakpoint('lg')`
+      //   display: flex;
+      //   flex-direction: row;
+       `}
+`
+const Section01__Div = styled.div`
+      ${breakpoint('lg')`
+      display: flex;
+      flex-direction: row-reverse;
+      `}
 `
 const Section02 = styled.div`
 `
 const ImageDiv = styled.div`
-  margin-bottom:40px;
+    margin-bottom:40px;
     ${breakpoint('md')`
     margin-bottom:0;
     `}
@@ -144,11 +161,26 @@ const TopBgImg = styled.img`
   margin-left:22px;
     ${breakpoint('md')`
     margin:0 auto;
+    // margin-top: 100px;
+    // margin-left: 177px;
+    transform: scale(1.5);
     margin-top: 30px;
     margin-left: 45px;
     text-align:center;
     transform: scale(0.9);
   `}
+    ${breakpoint('lg')`
+    // margin-top: 91px;
+    // margin-left: 76px;
+    // text-align: center;
+    // transform: scale(3.5);
+    margin-top: 91px;
+    margin-left: 120px;
+    text-align: center;
+    -webkit-transform: scale(3.5);
+    -ms-transform: scale(3.5);
+    transform: scale(2.9);
+    `}
 `
 const TitleDiv = styled.div`
   ${breakpoint('md')`
@@ -158,6 +190,7 @@ const TitleDiv = styled.div`
   `}
   ${breakpoint('lg')`
     margin:0 auto;
+    margin-left: 200px;
   `}
 `
 const TitleDiv__Title = styled.div`
@@ -185,6 +218,7 @@ const TitleDiv__Text = styled.div`
   `}
   ${breakpoint('lg')`
     font-size:${Themes.fontsize.p2} !important;
+    text-align:left;
     line-height:25px;  
     padding:0 3%;
   `}
@@ -215,12 +249,16 @@ const FormDiv = styled.div`
     flex-direction:column;
     margin:0 -5%;
     ${breakpoint('md')`
-    order:3;  
-    grid-column:1/3;
+    // order:3;  
+    // grid-column:1/2;
     margin:0;
     `}
       ${breakpoint('lg')`
-        grid-column:unset;
+        // grid-column:unset;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
     `}
 `
 const Form = styled.div`
@@ -231,19 +269,26 @@ const Form = styled.div`
       padding-top: 0;
       `}
     ${breakpoint('lg')`
-    margin-top:30px;
-    //   background-color:white;
-    //   box-shadow:0 0 10px rgba(0,0,0,0.2);
+    // margin-top:30px;
+    // padding: 30px 20% 30px 20%;
+    width: 45%
+    background-color:white;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    margin-top: 10%;
   `}
 `
 const InputDiv = styled.div`
   margin-bottom:50px;
   display:flex;
   flex-direction:column;
+  ${breakpoint('lg')`
+        margin-bottom:0;
+ `}
 `
 const InputDiv__Left = styled.div`
    ${breakpoint('lg')`
-        margin-bottom:50px;
+        // margin-bottom:50px;
+        margin-top: 10%;
  `}
 `
 const InputDiv__Right = styled.div``

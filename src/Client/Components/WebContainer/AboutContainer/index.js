@@ -7,8 +7,11 @@ import Text from '../../Common/Text';
 /** Images **/
 import AboutSectionBgMd from '../../../../Assets/Images/AboutSectionBgMd.png';
 import HomeSection01BgSm from '../../../../Assets/Images/HomeSection01BgSm.png';
+import AboutSectionBglg from '../../../../Assets/Images/AboutSectionBglg.svg';
 import mainImage from '../../../../Assets/Images/AboutSection01Image.svg';
 import mainImage2 from '../../../../Assets/Images/AboutSection01Image2.svg';
+import mainImage2_1 from '../../../../Assets/Images/AboutSection01Image2_1.svg';
+import mainImage3 from '../../../../Assets/Images/AboutSection01Image3.svg';
 
 /** components **/
 import Title from '../../Common/Title/Title';
@@ -20,6 +23,7 @@ class AboutContainer extends Component {
       <ThemeProvider theme={Themes}>   
       <div>
             <Section01>
+            {/* <Section01__ImageTop><MainImageBackground src={mainImage2_1}/></Section01__ImageTop> */}
               <Section01__Container>             
                 <Section01__TitleDiv>
                     <Section01__Title>Global clients around Us</Section01__Title>
@@ -106,8 +110,12 @@ const Section01 = styled.div`
       background-size:100% 168%;     
   `}
   ${breakpoint('lg')`
-      background-size:100% 90%;
+      background: url('${AboutSectionBglg}');
+      background-repeat:no-repeat;
+      // background-size:100% 114%; 
   `}
+`
+const MainImageBackground = styled.img`
 `
 const Section01__Container = styled.div`
   padding:18% 8% 10% 8%;
@@ -120,9 +128,20 @@ const Section01__Container = styled.div`
       ${breakpoint('lg')`
           max-width: 1366px;
           margin:0 auto;
-          padding: 70px 8% 30px 8%;
+          padding:5% 10% 10%;
           align-items:flex-start; 
+          flex-direction:row;
       `}
+`
+const Section01__ImageTop = styled.div`
+  display: none;
+    ${breakpoint('md')`
+    display: none;
+  `}
+    ${breakpoint('lg')`
+    display: block;
+    z-index: -10;
+`}
 `
 const Section01__Image = styled.div`
     width:100%;
@@ -151,6 +170,11 @@ const Section01__Image2 = styled.div`
           margin-left:0;
           margin-top: 130px;
         `}
+        ${breakpoint('lg')`
+          content: url(${mainImage3});
+          transform: scale(2);
+          margin-right: 10%;
+        `}
 `
 const MainImage2 = styled.img`
     display: none;
@@ -163,6 +187,7 @@ const MainImage2 = styled.img`
     // height:auto;
 `
 
+
 const Section01__TitleDiv = styled.div`
   display:flex;
   align-items:center;
@@ -174,6 +199,8 @@ const Section01__TitleDiv = styled.div`
     `}
     ${breakpoint('lg')`
       margin-top:50px;
+      align-items:flex-start;
+      justify-content:flex-start;
     `}
 `
 const Section01__Title = styled.div`
@@ -201,8 +228,10 @@ const Section01__Text = styled.div`
       text-align: center;
     `}
     ${breakpoint('lg')`
+      max-width: 400px;
       font-size:${Themes.fontsize.p1} !important;
-      line-height:28px !important;  
+      line-height:28px !important; 
+      text-align: left; 
     `}
 `
 const Section02 = styled.div`
@@ -232,6 +261,9 @@ const Section__Text = styled.div`
   font-size:${Themes.fontsize.p3};
   line-height:23px;
   text-align: center;
+  ${breakpoint('lg')`
+    text-align:left;
+  `}
 `
 
 export default AboutContainer;

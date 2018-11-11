@@ -15,7 +15,7 @@ class Button01 extends Component {
             </ThemeProvider>
         );
     }
-}
+}   
 
 Button01.propTypes = {
     value: PropTypes.string
@@ -40,7 +40,7 @@ const ButtonStyle = styled.button`
         `}
         ${breakpoint('lg')`
             font-size:20px;
-            margin-top: 100px;
+            margin-top: 0;
         `}
 `
 const Text = styled.p`

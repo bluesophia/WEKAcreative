@@ -49,7 +49,8 @@ const Themes = {
         sm: 375,
         md: 768,
         lg: 1000,
-        xl: 1980
+        xl: 1366,
+        xxl: 1980
       }
 }
 

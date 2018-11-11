@@ -109,6 +109,7 @@ const StyledTitle = styled.div`
             margin:0;
         `}
         ${breakpoint('lg')`
+            text-align:left;
         `}
     `
 const Section01__Text = styled.div`
@@ -127,6 +128,7 @@ const Section01__Text = styled.div`
             text-align: center;
         `}
         ${breakpoint('lg')`
+            text-align: left;
         `}
 `
 const ButtonDiv = styled.div`
@@ -137,6 +139,7 @@ const ButtonDiv = styled.div`
     `}
     ${breakpoint('lg')`
         width:70%;
+        margin-top: 30%;
         // margin-left:0;
     `}
 `

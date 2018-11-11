@@ -58,6 +58,12 @@ const Section05__Card = styled.div`
     background-color:white;
     padding: 40px 15px 30px 15px;
     box-sizing: border-box;
+    ${breakpoint('lg')`
+        width:175px;
+        height:400px;
+    padding: 40px 15px 30px 15px;
+    box-sizing: border-box;
+    `}
 `
 const Section05__CardCircle = styled.div`
     // width:87px;

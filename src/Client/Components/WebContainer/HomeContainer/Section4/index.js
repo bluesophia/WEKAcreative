@@ -97,13 +97,8 @@ const Section04 = styled.div`
     padding: 60px 20%;
     `}
     ${breakpoint('lg')`
-        padding:0;
-        background:url(${HomeSection02BgMd}) no-repeat right bottom;
         background-size:100%;
         height:768px;
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        grid-column-gap:40px;
     `}
 `
 const Container = styled.div`
@@ -132,8 +127,6 @@ const Section04__TitleDiv = styled.div`
     padding: 10%;
     padding-bottom: 0;
     ${breakpoint('lg')`
-        margin-left:auto;
-        margin-bottom:100px;
     `}
 `
 const Section04__Title = styled.div`
@@ -141,7 +134,6 @@ const Section04__Title = styled.div`
     color:${Themes.colors.black};
     font-weight:${Themes.fontWeight.black};
     ${breakpoint('lg')`
-        text-align:left;
     `}
 `
 const Section04__Contents = styled.div`
@@ -165,8 +157,6 @@ const Section04__ContentDiv = styled.div`
     flex-direction:column;
     align-items:center;
         ${breakpoint('lg')`
-        flex-direction:row;
-        align-items:flex-start;
         `}
 `
 const Section04__Image = styled.img`
@@ -179,6 +169,9 @@ const Section04__Image = styled.img`
         margin-top: 70px;
         margin-bottom: 10px;
         `}
+    ${breakpoint('lg')`
+        margin-top:100px;
+    `}    
 `
 const Section04__Subtitle = styled.p`
     margin-top:20px;
@@ -200,9 +193,6 @@ const Section04__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
-            margin: 9px 0 0 35px;
             font-size:${Themes.fontsize.p2}
             line-height:20px;
         `}
@@ -223,8 +213,7 @@ const Section04_ImgText = styled.div`
 const Section04__RightDiv = styled.div`
     display:none;
     ${breakpoint('lg')`
-        display:block;
-        background:url(${HomeSection02Image}) no-repeat left bottom;
+        
     `}
 `
 export default Section4;

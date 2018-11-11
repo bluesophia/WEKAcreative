@@ -55,8 +55,6 @@ const Section03__Container = styled.div`
         padding: 0 10%;
     `}
     ${breakpoint('lg')`
-        padding: 80px 10%;
-        height:768px;
         max-width: 1366px;
         display: flex;
         flex-direction: column;
@@ -75,9 +73,8 @@ const Section03__Container__image = styled.div`
         transform: scale(1.4);
     `}
     ${breakpoint('lg')`
-        padding: 80px 10%;
-        height:768px;
         max-width: 1366px;
+        margin-bottom:0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -95,7 +92,6 @@ const Section03__Title = styled.div`
     color:${Themes.colors.black};
     font-weight:${Themes.fontWeight.black};
     ${breakpoint('lg')`
-        text-align:left;
     `}
 `
 const Section03__Text = styled.div`
@@ -108,9 +104,6 @@ const Section03__Text = styled.div`
             padding: 0 10%;
         `}
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
-            margin: 9px 0 0 35px;
             font-size:${Themes.fontsize.p2}
             line-height:20px;
         `}

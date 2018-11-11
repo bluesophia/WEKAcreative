@@ -19,18 +19,20 @@ class Section5 extends Component{
         return(
             <ThemeProvider theme={Themes}>
                 <Section05>
-                    <Section05__TitleDiv>
-                            <Section05__Title>We can <Br />integrate with</Section05__Title>
-                            <YellowSpan />
-                            <Section05__Text>Our software experts are well placed to integrate with existing systems. These are some of our current integrations.
-                            </Section05__Text>
-                    </Section05__TitleDiv>
-                    <Section05__Logos>
-                        <Section05__LogosDiv01>
-                            <Section05__Logo src={LogosSm}/>
-                            <Section05__Logo1 src={LogosLg}/>
-                        </Section05__LogosDiv01>
-                    </Section05__Logos>
+                    <Section05__Div>
+                        <Section05__TitleDiv>
+                                <Section05__Title>We can <Br />integrate with</Section05__Title>
+                                <YellowSpan />
+                                <Section05__Text>Our software experts are well placed to integrate with existing systems. These are some of our current integrations.
+                                </Section05__Text>
+                        </Section05__TitleDiv>
+                        <Section05__Logos>
+                            <Section05__LogosDiv01>
+                                <Section05__Logo src={LogosSm}/>
+                                <Section05__Logo1 src={LogosLg}/>
+                            </Section05__LogosDiv01>
+                        </Section05__Logos>
+                    </Section05__Div>    
                 </Section05>
             </ThemeProvider>
         )
@@ -52,9 +54,12 @@ const Section05 = styled.div`
         padding-bottom: 140px;
     `}
     ${breakpoint('lg')`
-       padding:10% 18%; 
-       max-width:1366px;
-       margin:0 auto;
+        background-size: 100%;
+    `}
+`
+const Section05__Div = styled.div`
+    ${breakpoint('lg')`
+        margin-top: 30px;
     `}
 `
 const Section05__TitleDiv = styled.div`
@@ -62,8 +67,6 @@ const Section05__TitleDiv = styled.div`
     padding: 50px 10%;
     padding-bottom: 0;
     ${breakpoint('lg')`
-        margin-left:auto;
-        margin-bottom:100px;
     `}
 `
 const Section05__Title = styled.div`
@@ -71,7 +74,7 @@ const Section05__Title = styled.div`
     color:${Themes.colors.black};
     font-weight:${Themes.fontWeight.black};
     ${breakpoint('lg')`
-        text-align:left;
+        margin-top: 90px;
     `}
 `
 const Section05__Text = styled.div`
@@ -80,9 +83,6 @@ const Section05__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
-            margin: 9px 0 0 35px;
             font-size:${Themes.fontsize.p2}
             line-height:20px;
         `}
@@ -142,7 +142,8 @@ const Section05__Logo1 = styled.img`
     display: block;
     `}
     ${breakpoint('lg')`
-        display: block;
+    transform: scale(0.8);
+    margin-top: 0;
     `}
 `
 

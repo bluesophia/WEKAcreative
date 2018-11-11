@@ -96,7 +96,6 @@ const Section02__Title = styled.div`
     color:${Themes.colors.black};
     font-weight:${Themes.fontWeight.black};
     ${breakpoint('lg')`
-        text-align:left;
     `}
 `
 const Section02__Contents = styled.div`
@@ -109,7 +108,7 @@ const Section02__ContentDiv = styled.div`
     align-items:center;
         ${breakpoint('lg')`
         flex-direction:row;
-        align-items:flex-start;
+        // align-items:flex-start;
         `}
 `
 const Section02__Image = styled.img`
@@ -137,9 +136,6 @@ const Section02__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
-            margin: 9px 0 0 35px;
             font-size:${Themes.fontsize.p2}
             line-height:20px;
         `}
@@ -150,8 +146,6 @@ const Section02_ImgText = styled.div`
     color:${Themes.colors.black};
     text-align:center;
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
             margin: 9px 0 0 35px;
             font-size:${Themes.fontsize.p2}
             line-height:20px;
