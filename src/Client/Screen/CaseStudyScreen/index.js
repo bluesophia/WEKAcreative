@@ -192,6 +192,7 @@ const Section__Title = styled.div`
     font-size: 32px;
     color:white;
     font-weight:${Themes.fontWeight.black};
+    text-shadow: 2px 2px ${Themes.colors.black};
     ${breakpoint('md')`
       ${BigTitle};
       font-weight:${Themes.fontWeight.regular};
@@ -209,6 +210,7 @@ const Section__Titlesm = styled.div`
   font-size: 20px;
   color:white;
   font-weight:${Themes.fontWeight.black};
+  text-shadow: 2px 2px ${Themes.colors.black};
   ${breakpoint('md')`
     ${BigTitle};
     font-weight:${Themes.fontWeight.regular};

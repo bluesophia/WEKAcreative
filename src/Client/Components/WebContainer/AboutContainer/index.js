@@ -262,7 +262,7 @@ const Section__Text = styled.div`
   ${Text};
   font-size:${Themes.fontsize.p3};
   line-height:23px;
-  text-align: center;
+  text-align: justify;
   ${breakpoint('lg')`
     text-align:left;
   `}

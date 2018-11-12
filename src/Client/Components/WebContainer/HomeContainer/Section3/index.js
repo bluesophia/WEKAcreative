@@ -101,7 +101,7 @@ const Section03__Text = styled.div`
     margin-bottom: 30px;
     ${Text};
     color:${Themes.colors.grey};
-    text-align:center;
+    text-align:justify;
         ${breakpoint('md')`
             padding: 0 10%;
         `}

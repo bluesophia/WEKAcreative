@@ -63,7 +63,7 @@ class SupportContainer extends Component{
                   <ImageDiv>
                     <TopBgImg src={Image}/>
                     <TitleDiv__Textsm>Please complete the form below which will direct 
-                        your request to the appropriate member of the team. This ensures greater efficiency around response times and 
+                        your request to the appropriate member of the team. <Br />This ensures greater efficiency around response times and 
                         also ensures processes are followed.</TitleDiv__Textsm>
                   </ImageDiv>
                   </Section01__Div>
@@ -235,7 +235,7 @@ const TitleDiv__Text = styled.div`
 `
 const TitleDiv__Textsm = styled.div`
     color:${Themes.colors.grey};
-    text-align: center;
+    text-align: justify;
     font-size:${Themes.fontsize.h4};
     // padding: 4%;
     line-height: 25px;
