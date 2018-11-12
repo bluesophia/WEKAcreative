@@ -48,6 +48,9 @@ class Section2 extends Component{
 const Section02 = styled.div`
     // padding: 0 10%;
     padding: ${Themes.paddings.mobile};
+    ${breakpoint('md')`
+        padding: ${Themes.paddings.tablet};
+    `}
 `
 const Container = styled.div`
     margin:0 auto;
@@ -57,12 +60,9 @@ const Container = styled.div`
 `
 const Section02__Container = styled.div`
     margin:0 auto;
-    // padding: 18% 0 10%;
     ${breakpoint('sm')`
-        // padding: 18% 8%;
     `}
     ${breakpoint('md')`
-        padding: 18% 10%;
     `}
     ${breakpoint('lg')`
         padding: 80px 10%;
@@ -137,6 +137,9 @@ const Section02__Text = styled.div`
     ${Text};
     color:${Themes.colors.grey};
     text-align:center;
+        ${breakpoint('md')`
+            margin-bottom: -10px;
+        `}
         ${breakpoint('lg')`
             font-size:${Themes.fontsize.p2}
             line-height:20px;

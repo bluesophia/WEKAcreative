@@ -4,9 +4,12 @@
  *********************************************/
 const Themes = {
     paddings: {
-        mobileTop: '10% 10% 0 10%;',
-        mobileBottomMargin: '10% 10% 10% 10%;',
-        mobile:'15% 10% 0 10%'
+        mobileTop: '10% 10% 0 10%',
+        mobileTopNone: '0 10% 0 10%',
+        mobileBottomMargin: '10% 10% 10% 10%',
+        mobile:'15% 10% 0 10%',
+        tabletTop: '10% 10% 0 10%',
+        tablet: '10% 10% 0 10%'
         // tablet:
         // desktop:
     },

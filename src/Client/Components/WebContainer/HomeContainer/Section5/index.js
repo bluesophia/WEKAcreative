@@ -50,8 +50,9 @@ const Section05 = styled.div`
     padding-bottom: 50px;
     ${breakpoint('md')`
         background:url(${HomeSection05BgMd}) no-repeat;
-        padding:0 10%;
-        padding-bottom: 140px;
+        // padding:0 10%;
+        padding: '20% 10% 0 10%';
+        padding-bottom: 90px;
     `}
     ${breakpoint('lg')`
         background-size: 100%;
@@ -80,6 +81,9 @@ const Section05__Text = styled.div`
     ${Text};
     color:${Themes.colors.grey};
     text-align:center;
+        ${breakpoint('md')`
+            margin-bottom: 10%;
+        `}
         ${breakpoint('lg')`
             font-size:${Themes.fontsize.p2}
             line-height:20px;
@@ -135,8 +139,8 @@ const Section05__Logo1 = styled.img`
     width:100%;
     height:auto;
     margin:0 auto;
-    margin-top: 120px; 
-    transform: scale(2);
+    margin-top: 30%;
+    transform: scale(2.3);
     z-index: -1;
     display: block;
     `}

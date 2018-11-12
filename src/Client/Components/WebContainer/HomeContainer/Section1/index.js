@@ -63,7 +63,8 @@ const Container = styled.div`
     flex-direction:column;
     align-items:center;
         ${breakpoint('md')`
-            padding: 10% 14% 0 14%;
+            padding: ${Themes.paddings.mobileTopNone};
+            // padding: 10% 14% 0 14%;
             // padding: 70px 8%;
             // justify-content:space-between;
             // align-items:center;

@@ -44,17 +44,14 @@ const Section03 = styled.div`
     // padding: ${Themes.paddings.mobile};
     padding: 15% 10% 10% 10%;
     ${breakpoint('md')`
+    padding: ${Themes.paddings.tablet};
     margin-bottom: 150px;
     `}
 `
 const Section03__Container = styled.div`
-    // margin:0 auto;
-    // padding: 18% 0 10%;
     ${breakpoint('sm')`
-        // padding: 0 10%;
     `}
     ${breakpoint('md')`
-        padding: 0 10%;
     `}
     ${breakpoint('lg')`
         max-width: 1366px;
@@ -69,8 +66,8 @@ const Section03__Container__image = styled.div`
         // padding: 0 10%;
     `}
     ${breakpoint('md')`
-        padding-top: 60px;
-        margin-bottom: 80px;
+        padding-top: 8%;
+        margin-bottom: 10%;
         position: relative;
         transform: scale(1.4);
     `}
@@ -96,14 +93,14 @@ const Section03__Title = styled.div`
     ${breakpoint('lg')`
     `}
 `
-const Section03__Text = styled.div`
+const   Section03__Text = styled.div`
     margin-top:9px;
     margin-bottom: 30px;
     ${Text};
     color:${Themes.colors.grey};
     text-align:justify;
         ${breakpoint('md')`
-            padding: 0 10%;
+            margin-bottom: 10%;
         `}
         ${breakpoint('lg')`
             font-size:${Themes.fontsize.p2}

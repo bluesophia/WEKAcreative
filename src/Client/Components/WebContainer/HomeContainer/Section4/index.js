@@ -94,7 +94,7 @@ const Section04 = styled.div`
     padding: ${Themes.paddings.mobile};
     ${breakpoint('md')`
     background:url(${HomeSection02BgMd}) no-repeat top left;
-    padding: 60px 20%;
+    padding: ${Themes.paddings.tablet};
     `}
     ${breakpoint('lg')`
         background-size:100%;
@@ -163,9 +163,8 @@ const Section04__Image = styled.img`
     margin-bottom:10px;
     ${breakpoint('md')`
         width: 100%;
-        transform: scale(1.2);
-        margin-top: 70px;
-        margin-bottom: 10px;
+        transform: scale(1);
+        margin-bottom: 10%;
         `}
     ${breakpoint('lg')`
         margin-top:100px;
@@ -190,6 +189,9 @@ const Section04__Text = styled.div`
     ${Text};
     color:${Themes.colors.grey};
     text-align:center;
+        ${breakpoint('md')`
+            margin-bottom: 10%;
+        `}
         ${breakpoint('lg')`
             font-size:${Themes.fontsize.p2}
             line-height:20px;

@@ -45,8 +45,7 @@ class Section6 extends Component{
 const Section06 = styled.div`
     padding: 0 10% 0 10%;
     ${breakpoint('md')`
-        padding-top:7%;
-        padding-bottom:8%;
+        padding: ${Themes.paddings.tablet};
     `}
 `
 const Section06__TitleDiv = styled.div`
@@ -54,7 +53,7 @@ const Section06__TitleDiv = styled.div`
     padding: 20% 0; 
     padding-bottom: 0;
     ${breakpoint('md')`
-        padding: 0 10%;
+        padding: 0;
     `}
     ${breakpoint('lg')`
     `}
@@ -96,7 +95,7 @@ const Section06__Div__Image2 = styled.div`
     display:none;
     ${breakpoint('md')`
         display:flex;
-        transform: scale(0.7);
+        transform: scale(0.8);
         justify-content: center;
     `}
     ${breakpoint('lg')`
@@ -110,6 +109,10 @@ const Seciton06__Image = styled.img`
 `
 const Seciton06__Image2 = styled.img`
     padding: 10%;
+    ${breakpoint('md')`
+    padding: 10%;
+    padding-top: 0;
+    `}
 `
 const StyledCarousel = styled(CardCarousel)`
     margin:0 auto;
