@@ -92,7 +92,7 @@ class CaseStudyScreen extends Component {
               <Section__Container>
                 <Section__Contents>
                   <Section04__TitleDiv>
-                      <Section04__Title>Browse more of our work</Section04__Title>
+                      <Section04__Title>Browse more of <Br />our work</Section04__Title>
                       <YellowSpan />
                   </Section04__TitleDiv>    
                     <Section__ImageDiv2>
@@ -116,6 +116,8 @@ class CaseStudyScreen extends Component {
   }
 }
 
+const Br = styled.br`
+`
 const Container = styled.div`
     position:relative;
 `
@@ -295,8 +297,9 @@ const Section__Contents = styled.div`
 
  const Section02__TitleDiv = styled.div`
     margin:0 auto;
-    padding: 10%;
-    padding-bottom: 60px;
+    // padding: 10%;
+    padding: ${Themes.paddings.mobileTop};
+    // padding-bottom: 60px;
     ${breakpoint('lg')`
         margin-left:auto;
         padding: 10% 18%;
@@ -305,7 +308,8 @@ const Section__Contents = styled.div`
 `
 const Section03__TitleDiv = styled.div`
     margin:0 auto;
-    padding: 0 0 3%;
+    // padding: 0 0 3%;
+    padding: ${Themes.paddings.mobile};
     ${breakpoint('lg')`
         margin-left:auto;
         margin-bottom:100px;
@@ -318,9 +322,10 @@ const Section03__TitleDiv = styled.div`
 
 const Section04__TitleDiv = styled.div`
     margin:0 auto;
-    padding: 12%;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: ${Themes.paddings.mobileTop};
+    // padding: 12%;
+    // padding-top: 0;
+    // padding-bottom: 0;
     ${breakpoint('lg')`
         padding: 0;
         margin-left:auto;
@@ -352,12 +357,12 @@ const Section02__Title2 = styled.div`
     `}
 `
 const Section03__Text = styled.div`
-    margin-top:9px;
-    margin-bottom: 30px;
-    padding: 0 10%;
+    margin-top:10%;
+    margin-bottom: 10%;
+    // padding: 0 10%;
     ${Text};
     color:${Themes.colors.grey};
-    text-align:center;
+    text-align:justify;
         ${breakpoint('lg')`
             padding: 0;
             font-size:${Themes.fontsize.p1}
@@ -413,7 +418,7 @@ const Section02__Text = styled.div`
     margin-top:9px;
     ${Text};
     color:${Themes.colors.grey};
-    text-align:center;
+    text-align:justify;
       ${breakpoint('lg')`
       font-size:${Themes.fontsize.p1}
       line-height:26px;
