@@ -52,7 +52,7 @@ class SupportContainer extends Component{
                   <Section01__Div>
                   <Section01>
                     <TitleDiv>
-                      <TitleDiv__Title>Submit a support ticket</TitleDiv__Title>
+                      <TitleDiv__Title>Submit <Br />a support ticket</TitleDiv__Title>
                       <TitleDiv__Text>Please complete the form below which will direct your request to the appropriate member of the team. 
                         This ensures greater efficiency around response times and also ensures processes are followed.
                         <br /><br />
@@ -93,13 +93,22 @@ class SupportContainer extends Component{
           )
         }
       }
+
+const Br = styled.br`
+  ${breakpoint('md')`
+      display:none;
+  `}
+  ${breakpoint('lg')`
+      display:none;
+  `}
+`
 const Support = styled.div`
     margin:0;
     background: url('${HomeSection02BgSm}');
     background-position:center top;
     background-repeat:no-repeat;
-    background-size: 107% auto;
-    padding:18% 8%;
+    background-size: 100% auto;
+    // padding:18% 8%;
     ${breakpoint('md')`
     background: url('${Section01Bg}');
     background-position:left top;
@@ -115,6 +124,7 @@ const Support = styled.div`
     `}
 `
 const Container = styled.div`
+      padding: ${Themes.paddings.mobileTop};
     ${breakpoint('md')`
       // max-width:1366px;
       // display:grid;
@@ -196,7 +206,7 @@ const TitleDiv = styled.div`
 const TitleDiv__Title = styled.div`
   ${BigTitle};
   font-size:29px;
-  margin-bottom:40px;
+  margin-bottom:10%;
   ${breakpoint('md')`
     text-align:center;
     margin:0px 20px 20px 0px; 
@@ -227,7 +237,8 @@ const TitleDiv__Textsm = styled.div`
     color:${Themes.colors.grey};
     text-align: center;
     font-size:${Themes.fontsize.h4};
-    padding: 4%;
+    // padding: 4%;
+    line-height: 25px;
     ${breakpoint('md')`
     display:none;
     color:white;
@@ -263,7 +274,7 @@ const FormDiv = styled.div`
 `
 const Form = styled.div`
   height:auto;
-  padding:30px 8% 30px 8%;
+  padding:10% 8% 30px 8%;
   border-radius:25px;
     ${breakpoint('md')`
       padding-top: 0;
@@ -278,7 +289,7 @@ const Form = styled.div`
   `}
 `
 const InputDiv = styled.div`
-  margin-bottom:50px;
+  // margin-bottom:50px;
   display:flex;
   flex-direction:column;
   ${breakpoint('lg')`
@@ -297,6 +308,7 @@ const ButtonDiv = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
+  margin-bottom: 10%;
   ${breakpoint('lg')`
     width:60%;  
     margin:0 auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
