@@ -58,7 +58,7 @@ const Section01 = styled.div`
     `}
 `
 const Container = styled.div`
-    padding: 10% 10% 0 10%;
+    padding: ${Themes.paddings.mobileTop};
     display:flex;
     flex-direction:column;
     align-items:center;

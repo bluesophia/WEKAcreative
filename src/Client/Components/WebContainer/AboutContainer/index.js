@@ -118,7 +118,8 @@ const Section01 = styled.div`
 const MainImageBackground = styled.img`
 `
 const Section01__Container = styled.div`
-  padding:18% 8% 10% 8%;
+  // padding:18% 8% 10% 8%;
+  padding: ${Themes.paddings.mobileTop};
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -242,7 +243,8 @@ const Section03 = styled.div`
 const Container = styled.div`
   max-width:1366px;
   margin:0 auto;
-  padding:70px 14%;
+  // padding:70px 14%;
+  padding: ${Themes.paddings.mobileBottomMargin}
   ${breakpoint('lg')`
     padding:70px 15%;
     display:grid;
@@ -251,7 +253,7 @@ const Container = styled.div`
 `
 const Section__Title = styled.div`
   ${BigTitle};
-  margin-bottom:40px;
+  margin-bottom:10%;
   ${breakpoint('lg')`
     text-align:left;
   `}
