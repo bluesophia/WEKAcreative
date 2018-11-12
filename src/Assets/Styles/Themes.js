@@ -3,6 +3,11 @@
  * GLOBAL STYLES
  *********************************************/
 const Themes = {
+    paddings: {
+        mobile:'15% 10% 0 10%'
+        // tablet:
+        // desktop:
+    },
     colors: {
         blue:'#18225A',
         blueLight:'#1d4b93',

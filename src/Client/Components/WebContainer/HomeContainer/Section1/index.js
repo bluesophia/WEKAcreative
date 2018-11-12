@@ -58,7 +58,7 @@ const Section01 = styled.div`
     `}
 `
 const Container = styled.div`
-    padding: 14% 10%;
+    padding: 10% 10% 0 10%;
     display:flex;
     flex-direction:column;
     align-items:center;

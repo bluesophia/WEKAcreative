@@ -46,7 +46,8 @@ class Section2 extends Component{
 /**** Section 02 ****/
 
 const Section02 = styled.div`
-    padding: 0 10%;
+    // padding: 0 10%;
+    padding: ${Themes.paddings.mobile};
 `
 const Container = styled.div`
     margin:0 auto;
@@ -56,7 +57,7 @@ const Container = styled.div`
 `
 const Section02__Container = styled.div`
     margin:0 auto;
-    padding: 18% 0 10%;
+    // padding: 18% 0 10%;
     ${breakpoint('sm')`
         // padding: 18% 8%;
     `}
@@ -132,6 +133,7 @@ const Section02__Subtitle = styled.p`
 `
 const Section02__Text = styled.div`
     margin-top:9px;
+    margin-bottom: -10%;
     ${Text};
     color:${Themes.colors.grey};
     text-align:center;

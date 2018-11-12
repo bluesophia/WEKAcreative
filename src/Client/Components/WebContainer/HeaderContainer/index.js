@@ -10,7 +10,7 @@ import Bg from '../../../../Assets/Images/header.png';
 import loginIcon from '../../../../Assets/Images/login.svg';
 import Menu from '../../../../Assets/Images/login.svg';
 import PropTypes from "prop-types";
-import { withRouter } from "react-router";
+
 
 
 
@@ -23,7 +23,7 @@ class HeaderContainer extends Component {
 				<LinkedLogo to='/'><LogoImg src={Logo}/></LinkedLogo>
 				<NavWide>
 					<WideDiv>
-						<StyledLink to='/'>Home</StyledLink>
+						<StyledLink to='/'  className="navHome">Home</StyledLink>
 						<StyledLink to='/about'>About</StyledLink>
 						<StyledLink to='/support'>Support</StyledLink>
 						<StyledLink to='/casestudy'>Casestudy</StyledLink>
@@ -50,9 +50,9 @@ class HeaderContainer extends Component {
 				<NavNarrow>
 				<FontAwesomeIcon style={icon} icon='bars' onClick={this.burgerToggle} size="2x"/>
 					<NarrowLinks className="narrowLinks">
-						<NarrowStyledLink onClick={this.burgerToggle} to='/'>Home</NarrowStyledLink>
+						<NarrowStyledLink onClick={function(event){ this.burgerToggle; this.navColorChange}} to='/' className="navHome">Home</NarrowStyledLink>
 						<NarrowStyledLink onClick={this.burgerToggle} to='/about'>About</NarrowStyledLink>
-						<NarrowStyledLink onClick={this.burgerToggle} to='/support'>Support</NarrowStyledLink>
+						<NarrowStyledLink onClick={this.burgerToggle} to='/support' >Support</NarrowStyledLink>
 						<NarrowStyledLink onClick={this.burgerToggle} to='/casestudy'>Casestudy</NarrowStyledLink>
 						<NarrowStyledLink onClick={this.burgerToggle} to='/contact'>Contact Us</NarrowStyledLink>
 						<Box>
@@ -89,11 +89,17 @@ class HeaderContainer extends Component {
 			linksEl.style.flexDirection = 'column';
 		}
 	}
+	navColorChange = () => {
+		let navHome = document.querySelector('.navHome');
+		if(navHome) {
+			document.querySelector('.navbar').style.backgroundColor="red";
+		}
+	}
 }
 
 const Nav = styled.div`
 	height:auto;
-	background-color: none;
+	background-color: ${Themes.colors.w_mint};
 	overflow: hidden;
 	padding: 1.25em 10% 0.625em;
 	position: sticky;
@@ -142,6 +148,7 @@ const NavNarrow = styled.div`
 const WideDiv = styled.div`
 display:flex;
 align-items: flex-end;
+
 `;
 const Box = styled.div`
     display: flex;
@@ -238,6 +245,9 @@ const NarrowLinks = styled.div`
 		position: static;
 		display: none;
 		margin: 3.5em 0 0;
+		${breakpoint('md')`
+		display: none;
+	`}
 		
 `;
 

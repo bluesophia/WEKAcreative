@@ -46,7 +46,7 @@ ${breakpoint('md')`
 `}
 `
 const Section05 = styled.div`
-    padding:0 10%;
+    padding: ${Themes.paddings.mobile};
     padding-bottom: 50px;
     ${breakpoint('md')`
         background:url(${HomeSection05BgMd}) no-repeat;
@@ -64,8 +64,6 @@ const Section05__Div = styled.div`
 `
 const Section05__TitleDiv = styled.div`
     margin:0 auto;
-    padding: 50px 10%;
-    padding-bottom: 0;
     ${breakpoint('lg')`
     `}
 `
@@ -100,6 +98,7 @@ const Section05__Logos = styled.div`
 const Section05__LogosDiv01 = styled.div`
     display:flex;
     flex-direction:column;
+    margin-bottom: 10%;
         ${breakpoint('lg')`
             flex-direction:row;
             align-items:center;

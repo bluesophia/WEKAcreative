@@ -7,7 +7,7 @@ import Logo from '../../../../Assets/Images/logo_color.png';
 import { Link } from 'react-router-dom';
 
 //component
-import Button01 from '../../../Components/Common/Button/Button01';
+import Button03 from '../../../Components/Common/Button/Button03';
 
 class FooterContainer extends Component {
     render() {
@@ -18,7 +18,7 @@ class FooterContainer extends Component {
             <FooterTop>
               <ButtonDiv>
                 <ButtonLink to='/contact'>
-                    <Button01 value={'Contact us'}/>
+                    <Button03 value={'Contact us'}/>
                 </ButtonLink>
                 </ButtonDiv>
                 <FooterBox1>
@@ -107,7 +107,7 @@ class FooterContainer extends Component {
       padding: 0 1.1em;
       `};
       ${breakpoint('lg')`
-      padding: 0 0.8em;
+      padding: 0 1.5em;
       `};
   `;
 
@@ -187,8 +187,8 @@ ${breakpoint('md')`
   text-align:left;
 `};
 ${breakpoint('lg')`
-  margin-top: 35px;
   float: left;
+  width: 100%;
 `};
 `;
 
@@ -302,7 +302,6 @@ const ButtonDiv = styled.div`
       padding: 5% 10% 5% 10%;
     `}
     ${breakpoint('lg')`
-        width:30%;
     `}
 `
 const ButtonLink = styled(Link)`

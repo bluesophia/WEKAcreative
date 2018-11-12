@@ -91,7 +91,7 @@ class Section4 extends Component{
 
 const Section04 = styled.div`
     background:url(${Section04BgSm}) no-repeat left top;
-    // padding: 0 8% 60px;
+    padding: ${Themes.paddings.mobile};
     ${breakpoint('md')`
     background:url(${HomeSection02BgMd}) no-repeat top left;
     padding: 60px 20%;
@@ -124,8 +124,6 @@ const Section04__LeftDivContainer = styled.div`
 `
 const Section04__TitleDiv = styled.div`
     margin:0 auto;
-    padding: 10%;
-    padding-bottom: 0;
     ${breakpoint('lg')`
     `}
 `
@@ -151,7 +149,7 @@ const Section04__Contents2 = styled.div`
     `}
 `
 const Section04__ContentDiv = styled.div`
-    margin:60px auto 0 auto;
+    margin:50px auto 0 auto;
     width:100%;
     display:flex;
     flex-direction:column;
@@ -160,7 +158,7 @@ const Section04__ContentDiv = styled.div`
         `}
 `
 const Section04__Image = styled.img`
-    width:169px;
+    width:120px;
     height:auto;
     margin-bottom:10px;
     ${breakpoint('md')`

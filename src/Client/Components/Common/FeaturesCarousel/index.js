@@ -63,8 +63,8 @@ const ArrowStyle = styled.img`
   ${breakpoint('sm')`
   width:14px;
   height:28px;
-  left: ${props => props.left ? '-40px' : 'inherit'};  
-  right: ${props => props.right ? '-40px' : 'inherit'};
+  left: ${props => props.left ? '-10px' : 'inherit'};  
+  right: ${props => props.right ? '-10px' : 'inherit'};
   `}
   ${breakpoint('md')`
   width:14px;

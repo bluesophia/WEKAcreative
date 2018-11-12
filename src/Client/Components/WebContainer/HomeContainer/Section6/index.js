@@ -43,8 +43,7 @@ class Section6 extends Component{
 }
 
 const Section06 = styled.div`
-    padding-top:18%;
-    padding-bottom:40px;
+    padding: 0 10% 0 10%;
     ${breakpoint('md')`
         padding-top:7%;
         padding-bottom:8%;
@@ -52,7 +51,7 @@ const Section06 = styled.div`
 `
 const Section06__TitleDiv = styled.div`
     margin:0 auto;
-    padding: 50px 10%;
+    padding: 20% 0; 
     padding-bottom: 0;
     ${breakpoint('md')`
         padding: 0 10%;
@@ -69,6 +68,7 @@ const Section06__Title = styled.div`
 `
 const Section06__Text = styled.div`
     margin-top:9px;
+    margin-bottom: 10%;
     ${Text};
     color:${Themes.colors.grey};
     text-align:center;
@@ -79,7 +79,7 @@ const Section06__Text = styled.div`
 `
 
 const Section06__Div = styled.div`
-    padding: 0 15%;
+    
     max-width:1366px;
 `
 const Section06__Div__Image1 = styled.div`
@@ -106,7 +106,7 @@ const Section06__Div__Image2 = styled.div`
 `
 
 const Seciton06__Image = styled.img`
-    margin: 30px auto;
+    margin-bottom: 15%;
 `
 const Seciton06__Image2 = styled.img`
     padding: 10%;

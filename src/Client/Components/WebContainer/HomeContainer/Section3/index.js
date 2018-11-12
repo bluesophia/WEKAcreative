@@ -41,15 +41,17 @@ class Section3 extends Component{
 }
 
 const Section03 = styled.div`
+    // padding: ${Themes.paddings.mobile};
+    padding: 15% 10% 10% 10%;
     ${breakpoint('md')`
     margin-bottom: 150px;
     `}
 `
 const Section03__Container = styled.div`
-    margin:0 auto;
-    padding: 18% 0 10%;
+    // margin:0 auto;
+    // padding: 18% 0 10%;
     ${breakpoint('sm')`
-        padding: 0 10%;
+        // padding: 0 10%;
     `}
     ${breakpoint('md')`
         padding: 0 10%;
