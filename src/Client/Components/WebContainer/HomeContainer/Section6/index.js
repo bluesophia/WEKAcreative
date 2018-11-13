@@ -47,6 +47,9 @@ const Section06 = styled.div`
     ${breakpoint('md')`
         padding: ${Themes.paddings.tablet};
     `}
+    ${breakpoint('lg')`
+        padding: 10% 10% 3% 10%;
+    `}
 `
 const Section06__TitleDiv = styled.div`
     margin:0 auto;
@@ -71,9 +74,9 @@ const Section06__Text = styled.div`
     ${Text};
     color:${Themes.colors.grey};
     text-align:center;
-        ${breakpoint('lg')`
-            font-size:${Themes.fontsize.p2}
-            line-height:20px;
+        ${breakpoint('md')`
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
         `}
 `
 

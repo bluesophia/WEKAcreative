@@ -33,7 +33,7 @@ class Section2 extends Component{
                         <Section02__Title>How we can help</Section02__Title>
                         <YellowSpan />
                         <Section02__Text>We design software to service a variety of needs and 
-                         help you work across a range of environments and platforms.</Section02__Text>
+                         help you work across <Br />a range of environments and platforms.</Section02__Text>
                         <FeaturesCarousel />
                     </Section02__Container>
                 </Container>
@@ -44,12 +44,23 @@ class Section2 extends Component{
 
 
 /**** Section 02 ****/
-
+const Br = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:block;
+    `}
+    ${breakpoint('lg')`
+    display:block;
+    `}
+`
 const Section02 = styled.div`
     // padding: 0 10%;
-    padding: ${Themes.paddings.mobile};
+        padding: ${Themes.paddings.mobile};
     ${breakpoint('md')`
         padding: ${Themes.paddings.tablet};
+    `}
+    ${breakpoint('lg')`
+        padding:${Themes.paddings.desktop};
     `}
 `
 const Container = styled.div`
@@ -65,12 +76,6 @@ const Section02__Container = styled.div`
     ${breakpoint('md')`
     `}
     ${breakpoint('lg')`
-        padding: 80px 10%;
-        height:768px;
-        max-width: 1366px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     `}
 `
 const Section02__LeftDiv = styled.div`
@@ -138,11 +143,13 @@ const Section02__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('md')`
-            margin-bottom: -10px;
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
+            margin-bottom: -10px;   
         `}
         ${breakpoint('lg')`
-            font-size:${Themes.fontsize.p2}
-            line-height:20px;
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
         `}
 `
 const Section02_ImgText = styled.div`

@@ -225,8 +225,8 @@ const Section01__Text = styled.div`
       font-size:${Themes.fontsize.p2} !important;
       line-height:22px !important;
       color:${Themes.colors.grey};
-      font-weight:${Themes.fontWeight.light};
-      text-align: center;
+      font-weight:${Themes.fontWeight.regular};
+      text-align: justify;
     `}
     ${breakpoint('lg')`
       max-width: 400px;
@@ -264,7 +264,8 @@ const Section__Text = styled.div`
   line-height:23px;
   text-align: justify;
   ${breakpoint('lg')`
-    text-align:left;
+    // text-align:left;
+    text-align: justify;
   `}
 `
 

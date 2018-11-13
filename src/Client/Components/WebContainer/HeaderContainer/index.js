@@ -207,13 +207,21 @@ const LogoImg = styled.img`
 	width:30px;
 	float:left;
 	position:absolute;
-	${breakpoint('lg')`
+	${breakpoint('md')`
 		content: url(${LogoColor});
 		width:120px;
+	`}
+	${breakpoint('lg')`
+		content: url(${LogoColor});
+		width:100px;
 	`}
 `
 const LinkedLogo = styled(Link)`
 	height:32px;
+	${breakpoint('md')`
+		margin-top: -20px;
+		height:50px;
+	`}
 	${breakpoint('lg')`
 		margin-top: -40px;
 	`}

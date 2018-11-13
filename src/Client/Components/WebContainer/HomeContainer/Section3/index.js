@@ -22,7 +22,7 @@ class Section3 extends Component{
                 <Section03__Container>
                     <Section03__Title>Some of our work</Section03__Title>
                     <YellowSpan />
-                    <Section03__Text>Big or small it doesn’t matter - the companies we support have fantastic people and ideas to guide them.Big or small it doesn’t matter - the companies we support have fantastic people and ideas to guide them.
+                    <Section03__Text>Big or small it doesn’t matter - the companies we support have fantastic people and ideas to guide them. <Br />Big or small it doesn’t matter - the companies we support have fantastic people and ideas to guide them.
                     </Section03__Text>
                 </Section03__Container>
                 <Section03__Container__image>
@@ -39,7 +39,15 @@ class Section3 extends Component{
         )
     }
 }
-
+const Br = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:block;
+    `}
+    ${breakpoint('lg')`
+    display:block;
+    `}
+`
 const Section03 = styled.div`
     // padding: ${Themes.paddings.mobile};
     padding: 15% 10% 10% 10%;
@@ -47,23 +55,16 @@ const Section03 = styled.div`
     padding: ${Themes.paddings.tablet};
     margin-bottom: 150px;
     `}
+    ${breakpoint('lg')`
+        padding: ${Themes.paddings.desktop};
+        margin-bottom: 20%;
+    `}
 `
 const Section03__Container = styled.div`
-    ${breakpoint('sm')`
-    `}
-    ${breakpoint('md')`
-    `}
-    ${breakpoint('lg')`
-        max-width: 1366px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    `}
 `
 const Section03__Container__image = styled.div`
     margin:0 auto;
     ${breakpoint('sm')`
-        // padding: 0 10%;
     `}
     ${breakpoint('md')`
         padding-top: 8%;
@@ -72,11 +73,8 @@ const Section03__Container__image = styled.div`
         transform: scale(1.4);
     `}
     ${breakpoint('lg')`
-        max-width: 1366px;
-        margin-bottom:0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        margin-bottom: 0;
+        transform: scale(1.8);
     `}
 `
 const Section03__Container__imageSm = styled.div`
@@ -100,11 +98,12 @@ const   Section03__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:justify;
         ${breakpoint('md')`
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
             margin-bottom: 10%;
         `}
         ${breakpoint('lg')`
-            font-size:${Themes.fontsize.p2}
-            line-height:20px;
+            
         `}
 `
 

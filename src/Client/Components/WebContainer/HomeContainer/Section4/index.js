@@ -97,8 +97,9 @@ const Section04 = styled.div`
     padding: ${Themes.paddings.tablet};
     `}
     ${breakpoint('lg')`
-        background-size:100%;
-        height:768px;
+        // background-size:100%;
+        // height:768px;
+        padding: ${Themes.paddings.desktop};
     `}
 `
 const Container = styled.div`
@@ -167,7 +168,6 @@ const Section04__Image = styled.img`
         margin-bottom: 10%;
         `}
     ${breakpoint('lg')`
-        margin-top:100px;
     `}    
 `
 const Section04__Subtitle = styled.p`
@@ -191,10 +191,10 @@ const Section04__Text = styled.div`
     text-align:center;
         ${breakpoint('md')`
             margin-bottom: 10%;
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
         `}
         ${breakpoint('lg')`
-            font-size:${Themes.fontsize.p2}
-            line-height:20px;
         `}
 `
 const Section04_ImgText = styled.div`

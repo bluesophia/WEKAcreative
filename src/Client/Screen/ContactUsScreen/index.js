@@ -32,9 +32,11 @@ class ContactUsScreen extends Component {
             <Header__Content>
             <TitleDiv>
               <TitleDiv__Title>Get In Touch</TitleDiv__Title>
-                <Header__Image src={Image}/>
-                <TitleDiv__Textsm>Get in touch with us today to find out how we can help your business
-                work smarter and more efficiently.</TitleDiv__Textsm>
+                <TitleDiv__Sm>
+                  <Header__Image src={Image}/>
+                  <TitleDiv__Textsm>Get in touch with us today to find out how we can help your business
+                  work smarter and more efficiently.</TitleDiv__Textsm>
+                </TitleDiv__Sm>
             </TitleDiv>
             </Header__Content>
           </Header>
@@ -73,13 +75,16 @@ const Header = styled.div`
   background:url(${Bg});
   background-size:100% 100%;
   box-shadow: 0 5px 8px -4px rgba(0,0,0,0.2);
+    ${breakpoint('md')`
+    padding: ${Themes.paddings.tabletTop};
+  `}
     ${breakpoint('lg')`
+    padding: ${Themes.paddings.desktopTopNone};
     background:none;
     // display:flex;
     // flex-direction:row;
     justify-content:center;
     align-items:center;
-    padding:70px 0 55px 0;
     max-width:1366px;
     margin:0 auto;
     box-shadow: 0 0 0 0;
@@ -101,16 +106,16 @@ const Header__ImageDiv = styled.div`
 `
 const Header__Image = styled.img`
     ${breakpoint('md')`
-      margin-top: 40px;
+      // margin-top: 40px;
+      margin-bottom: 10%;
       transform: scale(0.9);
     `}
     ${breakpoint('lg')`
-    transform: scale(0.7);
-    width: 84%;
-    margin-bottom: 30%;
-    margin-right: 50%;
-    margin-left: -20%;
-    margin-top: -24%;
+      transform: scale(0.6);
+      width: 100%;
+      margin-top: -39%;
+      margin-left: -24%;
+
     `}
 `
 const Header__Content = styled.div`
@@ -130,7 +135,8 @@ const TopBgImg = styled.img`
     ${breakpoint('lg')`
       display:block;
       width:100vw;
-      height:580px;
+      // height:45%;
+      height: 80%;
       position:absolute;
       top:120;
     `}
@@ -150,9 +156,16 @@ const TitleDiv__Title = styled.div`
   margin-bottom:10%;
   ${breakpoint('lg')`
   display: block;
-    margin-top: 10%;
+    margin-top: 15%;
     margin-left: 62%;
+    margin-bottom: 5%;
     display:flex;
+  `}
+`
+const TitleDiv__Sm = styled.div`
+  ${breakpoint('md')`
+    display: flex;
+    flex-direction: column-reverse;
   `}
 `
 const TitleDiv__Text = styled.div`
@@ -178,20 +191,20 @@ const TitleDiv__Textsm = styled.div`
     display:block;
     font-size:${Themes.fontsize.h4};
     line-height:25px;
-    font-weight:${Themes.fontWeight.light};
+    font-weight:${Themes.fontWeight.regular};
     text-align:center;
     margin:0;
-    padding: 0 10% 4% 10%;
+    padding: 0 0 10% 0%;
     `}
     ${breakpoint('lg')`
-    font-size: 16px !important;
-    line-height: 25px;
+    font-size:${Themes.fontsize.p1};
+    font-weight:${Themes.fontWeight.regular};
+    display: block;
+    line-height: 26px;
     padding: 0 3%;
     text-align: left;
     margin-left: 59%;
-    margin-top: -63%;
-    margin-bottom: 20%;
-    width: 51%;
+    width: 43%;
 }
     `}
  `   
@@ -220,20 +233,21 @@ const Contents = styled.div`
     flex-direction:column;
     ${breakpoint('lg')`
       flex-direction:column-reverse;
+      padding:0;
     `}
 `
 const FormDiv = styled.div`
   ${breakpoint('lg')`
     z-index:1;
     width:787px;
-    margin:0 auto 100px auto;
+    margin: -142px auto 100px auto;
   `}
 `
 const Form = styled.div`
   height:auto;
   background-color:white;
     ${breakpoint('md')`
-      padding:60px 15%;
+      // padding:60px 15%;
     `}
     ${breakpoint('lg')`
       padding:60px 8%;

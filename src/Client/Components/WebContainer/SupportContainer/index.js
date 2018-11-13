@@ -108,24 +108,24 @@ const Support = styled.div`
     background-position:center top;
     background-repeat:no-repeat;
     background-size: 100% auto;
-    // padding:18% 8%;
     ${breakpoint('md')`
     background: url('${Section01Bg}');
     background-position:left top;
     background-repeat:no-repeat;
     background-size:100% 79%;  
-    padding:10% 10%;   
+    // padding:10% 10%;   
     `}
     ${breakpoint('lg')`
         background: url('${SupportSection01BgLg}');
         background-position:center top;
         background-repeat:no-repeat;
-        background-size:100% 55%;
+        background-size:100% 50%;
     `}
 `
 const Container = styled.div`
       padding: ${Themes.paddings.mobileTop};
     ${breakpoint('md')`
+      padding: ${Themes.paddings.tabletTop};
       // max-width:1366px;
       // display:grid;
       // grid-template-columns:40% 60%;
@@ -134,6 +134,7 @@ const Container = styled.div`
       flex-direction: column;
     `}
     ${breakpoint('lg')`
+        padding: 5% 10% 0 10%;
         flex-direction: row;
       `}
 `
@@ -171,10 +172,8 @@ const TopBgImg = styled.img`
   margin-left:22px;
     ${breakpoint('md')`
     margin:0 auto;
-    // margin-top: 100px;
-    // margin-left: 177px;
+    margin-top: -5%;
     transform: scale(1.5);
-    margin-top: 30px;
     margin-left: 45px;
     text-align:center;
     transform: scale(0.9);
@@ -184,12 +183,12 @@ const TopBgImg = styled.img`
     // margin-left: 76px;
     // text-align: center;
     // transform: scale(3.5);
-    margin-top: 91px;
+    margin-top: 157px;
     margin-left: 120px;
     text-align: center;
     -webkit-transform: scale(3.5);
     -ms-transform: scale(3.5);
-    transform: scale(2.9);
+    transform: scale(3.6);
     `}
 `
 const TitleDiv = styled.div`
@@ -197,10 +196,13 @@ const TitleDiv = styled.div`
     order:2;  
     display:flex;
     flex-direction:column;
+    margin-bottom: 10%;
   `}
   ${breakpoint('lg')`
-    margin:0 auto;
-    margin-left: 200px;
+    // margin:0 auto;
+    // margin-left: 200px;
+    margin-left: 260px;
+    width: 65%;
   `}
 `
 const TitleDiv__Title = styled.div`
@@ -209,9 +211,10 @@ const TitleDiv__Title = styled.div`
   margin-bottom:10%;
   ${breakpoint('md')`
     text-align:center;
-    margin:0px 20px 20px 0px; 
+    margin-bottom: 0 px;
   `}
   ${breakpoint('lg')`
+  text-align:left;
   padding:0 3%;
 `}
 `
@@ -223,13 +226,13 @@ const TitleDiv__Text = styled.div`
     font-size:${Themes.fontsize.h4};
     line-height:25px;
     font-weight:${Themes.fontWeight.regular};
-    text-align:center;
-    padding: 0 24px;
+    text-align:justify;
+    // padding: 0 24px;
   `}
   ${breakpoint('lg')`
-    font-size:${Themes.fontsize.p2} !important;
+    font-size:${Themes.fontsize.p1} !important;
     text-align:left;
-    line-height:25px;  
+    line-height:26px;  
     padding:0 3%;
   `}
 `
@@ -282,10 +285,11 @@ const Form = styled.div`
     ${breakpoint('lg')`
     // margin-top:30px;
     // padding: 30px 20% 30px 20%;
-    width: 45%
+    width: 60%
     background-color:white;
     box-shadow:0 0 10px rgba(0,0,0,0.2);
-    margin-top: 10%;
+    margin-top: -4%;
+    margin-bottom: 5%;
   `}
 `
 const InputDiv = styled.div`

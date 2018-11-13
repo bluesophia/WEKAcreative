@@ -73,6 +73,8 @@ const ArrowStyle = styled.img`
   right: ${props => props.right ? '-50px' : 'inherit'};
   `}
   ${breakpoint('lg')`
+  width:14px;
+  height:28px;
   left: ${props => props.left ? '-70px' : 'inherit'};  
   right: ${props => props.right ? '-70px' : 'inherit'};
 	`}
@@ -93,7 +95,7 @@ render () {
       {
         breakpoint: 1350,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true
         }

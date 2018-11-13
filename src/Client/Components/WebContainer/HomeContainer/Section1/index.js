@@ -22,8 +22,7 @@ class Section1 extends Component{
                     <Container>
                         <Section01__Image><MainImage src={mainImage}/></Section01__Image>
                         <Section01__TitleDiv>
-                            <StyledTitle>Accelerate your business processes through innovative 
-                            software design</StyledTitle>
+                            <StyledTitle>Accelerate your business <Br />processes through innovative <Br />software design</StyledTitle>
                             <Section01__Text>Harness the power of cloud-based custom software. Transform how you do business through systems designed with your stakeholders and processes in mind.
                             </Section01__Text>
                             <ButtonDiv>
@@ -38,7 +37,12 @@ class Section1 extends Component{
     }
 }
 /**** Section 01 ****/
-
+const Br = styled.br`
+    display: none;
+    ${breakpoint('md')`
+        diplay block;
+    `}
+`
 const Section01 = styled.div`
     margin:0;
     background-position:center top;
@@ -64,16 +68,12 @@ const Container = styled.div`
     align-items:center;
         ${breakpoint('md')`
             padding: ${Themes.paddings.mobileTopNone};
-            // padding: 10% 14% 0 14%;
-            // padding: 70px 8%;
-            // justify-content:space-between;
-            // align-items:center;
         `}
         ${breakpoint('lg')`
             flex-direction:row;
             max-width: 1366px;
             margin:0 auto;
-            padding: 70px 8% 30px 8%;
+            padding: 0 5% 0 5%;
         `}
 `
 const Section01__Image = styled.div`
@@ -92,8 +92,9 @@ const Section01__TitleDiv = styled.div`
     flex-direction:column;
     align-items:center;
     ${breakpoint('md')`
-        width:85%;
+        width:100%;
         align-items:flex-start;
+        
     `}
     ${breakpoint('lg')`
         height:250px;
@@ -106,11 +107,12 @@ const StyledTitle = styled.div`
         margin: 1em 0;
         text-align:center;
         ${breakpoint('md')`
+            font-size:${Themes.fontsize.D_h1};
             text-align:center;
             margin:0;
         `}
         ${breakpoint('lg')`
-            text-align:left;
+            text-align:center;
         `}
     `
 const Section01__Text = styled.div`
@@ -123,6 +125,7 @@ const Section01__Text = styled.div`
     line-height:26px;
     font-size:${Themes.fontsize.p1};
         ${breakpoint('md')`
+            display:none;
             display:flex;
             color:${Themes.colors.grey};
             font-weight:${Themes.fontWeight.regular};
@@ -130,6 +133,7 @@ const Section01__Text = styled.div`
         `}
         ${breakpoint('lg')`
             text-align: left;
+            display:none;
         `}
 `
 const ButtonDiv = styled.div`
@@ -139,8 +143,7 @@ const ButtonDiv = styled.div`
         margin: 0 auto;
     `}
     ${breakpoint('lg')`
-        width:70%;
-        margin-top: 30%;
+        width:60%;
         // margin-left:0;
     `}
 `

@@ -12,7 +12,7 @@ const BigTitle = css`
         font-size:${Themes.fontsize.h1};
         `}
         ${breakpoint('lg')`
-        font-size:${Themes.fontsize.h1};
+        font-size:${Themes.fontsize.D_h1};
         line-height:50px;
         `}
 `

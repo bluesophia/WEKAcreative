@@ -44,8 +44,7 @@ class CaseStudyScreen extends Component {
               </Section__Header01>
               {/* section2 */}
                   <Section02__TitleDiv>
-                    <Section02__Title1>Rug Doctor have been New Zealands go-to brand for keeping our homes clean 
-                      for over 38 years.
+                    <Section02__Title1>Rug Doctor have been New Zealands <Br2 />go-to brand for keeping our homes clean<Br2 />for over 38 years.
                     </Section02__Title1>
                     <YellowSpan />
                     <Section02__Text>Together we designed and built a software solution that would help Rug Doctor streamline their Customer hire experience and help them continue leading the way into the future.
@@ -89,7 +88,7 @@ class CaseStudyScreen extends Component {
                 </Section__Contents>
               </Section__Container>
               {/* section4 */}
-              <Section__Container>
+              <Section__Container2>
                 <Section__Contents>
                   <Section04__TitleDiv>
                       <Section04__Title>Browse more of <Br />our work</Section04__Title>
@@ -102,13 +101,13 @@ class CaseStudyScreen extends Component {
                         <Section04__Textsm>DEBi</Section04__Textsm>  
                       </Section__ImageDivsm>
                       <Section__ImageDivsm>
-                        <Section4__Image src={Toyota}/>
+                        <Section4__Image2 src={Toyota}/>
                         <Section04__Text>Removing friction from servicing</Section04__Text>  
                         <Section04__Textsm>Toyota NZ</Section04__Textsm> 
                       </Section__ImageDivsm> 
                     </Section__ImageDiv2>
                 </Section__Contents>
-              </Section__Container>
+              </Section__Container2>
             </Section>
           </Container>
       </ThemeProvider>
@@ -117,7 +116,20 @@ class CaseStudyScreen extends Component {
 }
 
 const Br = styled.br`
+  ${breakpoint('md')`
+      display: none;
+  `}
 `
+const Br2 = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:block;
+    `}
+    ${breakpoint('lg')`
+    display:block;
+    `}
+`
+
 const Container = styled.div`
     position:relative;
 `
@@ -126,8 +138,6 @@ const Section = styled.div`
   justify-content:center;
   flex-direction:column;
   margin-bottom: 50px;
-  ${breakpoint('md')`
-  `}
 `
 const Section__Header01 = styled.div`
   background:url(${SectionBg01}) no-repeat center top;
@@ -136,11 +146,14 @@ const Section__Header01 = styled.div`
   background-position: top right;
   ${breakpoint('md')`
     // padding:8% 0;
-    background-size:768px;
+    background-size:100%;
+    height:200px;
     background-position: top left;
   `}
   ${breakpoint('lg')`
     // padding:5% 10% 0 10%;
+    padding: 0;
+    height:400px;
     background-size:100% 100%;
   `}
 `
@@ -152,8 +165,6 @@ const Section__Header02 = styled.div`
     padding:8% 0;
   `}
   ${breakpoint('lg')`
-    padding:5% 10% 0 10%;
-    background-size:100% 330px;
   `}
 `
 const Section__HeaderContainer = styled.div`
@@ -171,10 +182,21 @@ const Section__HeaderContainer = styled.div`
   `}
 `
 const Section__Container = styled.div`
+  ${breakpoint('md')`
+    padding: ${Themes.paddings.talbet};
+  `}
   ${breakpoint('lg')`
     max-width:1366px;
-    padding:0 10%;
-    margin:0 auto;
+    padding: ${Themes.paddings.desktopTopNone};
+  `}
+`
+const Section__Container2 = styled.div`
+  ${breakpoint('md')`
+    padding: ${Themes.paddings.talbet};
+  `}
+  ${breakpoint('lg')`
+    max-width:1366px;
+    padding: ${Themes.paddings.desktop};
   `}
 `
 const Section__TitleDiv = styled.div`
@@ -183,8 +205,7 @@ const Section__TitleDiv = styled.div`
   ${breakpoint('md')`
   `}
   ${breakpoint('lg')`
-    padding:0;
-    margin-left:0;
+  padding-top: 15%;
   `}
 `
 const Section__Title = styled.div`
@@ -230,8 +251,7 @@ const Section__Titlesm = styled.div`
       margin-bottom:-140px;
      `}
      ${breakpoint('lg')`
-     display:block;
-     margin-bottom:-140px;
+     margin-bottom: 0;
      `}
 `
 const Section__ImageDiv2 = styled.div`  
@@ -245,7 +265,7 @@ const Section__ImageDiv2 = styled.div`
     ${breakpoint('lg')`
     display:flex;
     flex-direction: row;
-    margin-bottom:-140px;
+    margin-bottom:0px;
     `}
 `
 const Section__ImageDivsm = styled.div`
@@ -270,6 +290,8 @@ const Section__Image__tablet = styled.img`
     display: none;
     ${breakpoint('md')`
       display: block;
+      margin-top: 10%;
+      width: 100%;
     `}
 `
 const Section__Image2 = styled.img`
@@ -282,18 +304,24 @@ const Section__Image2 = styled.img`
 const Section4__Image = styled.img`
     transform: scale(0.8);
    ${breakpoint('md')`
+    transform: scale(0.9);
    `}
+`
+const Section4__Image2 = styled.img`
+    transform: scale(0.8);
+    ${breakpoint('md')`
+    transform: scale(0.9);
+    margin-bottom: 10px;
+    `}
 `
 const Section__Contents = styled.div`
    box-sizing:border-box;
    width:100%;
    margin:0 auto;
-    ${breakpoint('md')`
-    padding:30px 10% 100px 10%;
-     `}
+    // ${breakpoint('md')`
+    // padding: ${Themes.paddings.tablet};
+    //  `}
      ${breakpoint('lg')`
-     padding: 0;
-     margin:0 auto 0 0;
    `}
  `
 
@@ -302,19 +330,27 @@ const Section__Contents = styled.div`
     // padding: 10%;
     padding: ${Themes.paddings.mobileTop};
     // padding-bottom: 60px;
+    ${breakpoint('md')`
+    padding: ${Themes.paddings.tablet};
+     `}
     ${breakpoint('lg')`
+    padding: ${Themes.paddings.desktopTop};
         margin-left:auto;
-        padding: 10% 18%;
-        margin-bottom:100px;
+        // padding: 10% 18%;
+        // margin-bottom:100px;
     `}
 `
 const Section03__TitleDiv = styled.div`
     margin:0 auto;
     // padding: 0 0 3%;
     padding: ${Themes.paddings.mobile};
+    ${breakpoint('md')`
+    padding: ${Themes.paddings.tablet};
+     `}
     ${breakpoint('lg')`
+    padding: ${Themes.paddings.desktop};
         margin-left:auto;
-        margin-bottom:100px;
+        // margin-bottom:100px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -365,7 +401,12 @@ const Section03__Text = styled.div`
     ${Text};
     color:${Themes.colors.grey};
     text-align:justify;
+        ${breakpoint('md')`
+        margin-bottom: 0;
+        padding: 0 10%;
+        `}
         ${breakpoint('lg')`
+            margin-top:5%;
             padding: 0;
             font-size:${Themes.fontsize.p1}
             line-height:26px;
@@ -378,7 +419,7 @@ const Section04__Title = styled.div`
     font-size: 32px;
     line-height: 42px;
     ${breakpoint('lg')`
-        text-align:left;
+        text-align:center;
     `}
 `
 const Section04__Text = styled.div`
@@ -418,10 +459,14 @@ const Section02__Title = styled.div`
 
 const Section02__Text = styled.div`
     margin-top:9px;
+    // padding: 0 10%;
     ${Text};
     color:${Themes.colors.grey};
     text-align:justify;
+    ${breakpoint('md')`
+    `}
       ${breakpoint('lg')`
+      padding: 0 10%;
       font-size:${Themes.fontsize.p1}
       line-height:26px;
   `}

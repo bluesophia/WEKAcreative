@@ -23,7 +23,7 @@ class Section5 extends Component{
                         <Section05__TitleDiv>
                                 <Section05__Title>We can <Br />integrate with</Section05__Title>
                                 <YellowSpan />
-                                <Section05__Text>Our software experts are well placed to integrate with existing systems. These are some of our current integrations.
+                                <Section05__Text>Our software experts are well placed to integrate with existing systems. <Br2 />These are some of our current integrations.
                                 </Section05__Text>
                         </Section05__TitleDiv>
                         <Section05__Logos>
@@ -45,6 +45,15 @@ ${breakpoint('md')`
     display: none;
 `}
 `
+const Br2 = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:block;
+    `}
+    ${breakpoint('lg')`
+    display:block;
+    `}
+`
 const Section05 = styled.div`
     padding: ${Themes.paddings.mobile};
     padding-bottom: 50px;
@@ -56,12 +65,10 @@ const Section05 = styled.div`
     `}
     ${breakpoint('lg')`
         background-size: 100%;
+        padding: ${Themes.paddings.desktop};
     `}
 `
 const Section05__Div = styled.div`
-    ${breakpoint('lg')`
-        margin-top: 30px;
-    `}
 `
 const Section05__TitleDiv = styled.div`
     margin:0 auto;
@@ -83,10 +90,8 @@ const Section05__Text = styled.div`
     text-align:center;
         ${breakpoint('md')`
             margin-bottom: 10%;
-        `}
-        ${breakpoint('lg')`
-            font-size:${Themes.fontsize.p2}
-            line-height:20px;
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
         `}
 `
 
@@ -145,7 +150,7 @@ const Section05__Logo1 = styled.img`
     display: block;
     `}
     ${breakpoint('lg')`
-    transform: scale(0.8);
+    transform: scale(1);
     margin-top: 0;
     `}
 `

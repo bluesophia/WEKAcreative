@@ -39,7 +39,7 @@ class FeaturesCard extends Component {
 //     box-shadow : -2px 2px 4px rgba(50,50,93,0.23);
 // `
 const Section05__div = styled.div`
-    padding: 5% 6%;
+    // padding: 5% 6%;
 `
 const Section05__ImgDiv = styled.div`
     display: flex;
@@ -65,9 +65,10 @@ const Section05__Card = styled.div`
     box-sizing: border-box;
     `}
     ${breakpoint('lg')`
-        width:283px;
+        width: 180px;
         height:412px;
-    padding: 40px 15px 30px 15px;
+    // padding: 40px 10px 30px 10px;
+    padding: 40px 0 30px 0;
     box-sizing: border-box;
     `}
 `

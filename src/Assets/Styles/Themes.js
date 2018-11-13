@@ -9,9 +9,10 @@ const Themes = {
         mobileBottomMargin: '10% 10% 10% 10%',
         mobile:'15% 10% 0 10%',
         tabletTop: '10% 10% 0 10%',
-        tablet: '10% 10% 0 10%'
-        // tablet:
-        // desktop:
+        tablet: '10% 10% 0 10%',
+        desktopTop: '10% 10% 0 10%',
+        desktopTopNone: '0 10% 0 10%',
+        desktop: '10% 10% 0 10%'
     },
     colors: {
         blue:'#18225A',
@@ -43,7 +44,8 @@ const Themes = {
         p1: "18px",
         p2: "16px",
         p3: "14px",
-        p4: "11px"
+        p4: "11px",
+        D_h1: "32px"
     },
     fontWeight: {
         light:"300",
