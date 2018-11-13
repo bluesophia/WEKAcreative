@@ -18,7 +18,7 @@ import IconPeople from '../../../../Assets/Images/IconPeople.svg'
 //PhotoImages
 import HowWeCanHelpImg1 from '../../../../Assets/Images/HowwecanhelpImg1.png'
 
-class HideAndShowCard2 extends Component {
+class HideAndShowCard3 extends Component {
     render(){
         return(
             <Container>
@@ -57,7 +57,6 @@ const Container = styled.div`
     `}
     ${breakpoint('lg')`
         padding: 10% 0 0 0;
-        // background: ${Themes.colors.w_mint};
     `}
 `
 const Section01 = styled.div`
@@ -97,4 +96,4 @@ const Section03__ImgDiv = styled.div`
 `
 const Section03__Img = styled.img`
 `
-export default HideAndShowCard2;
+export default HideAndShowCard3;

@@ -78,7 +78,7 @@ const HideAndShowCard__TextDiv = styled.div`
     flex-direction: column;
 `
 const HideAndShowCard__Icon = styled.img`
-    width: 27px;
+    width: 30px;
     // height: 64px;
     margi-right: 10px;
     margin-right: 10px;
@@ -109,14 +109,23 @@ const HideAndShowCard__Card = styled.div`
     `}
 `
 const HideAndShowCard__CardTitle = styled.div`
-    color:${Themes.colors.black};
-    font-weight:${Themes.colors.black};
-    font-size:${Themes.fontsize.p2};
+    ${breakpoint('lg')`
+        color:${Themes.colors.black};   
+        font-weight:${Themes.fontWeight.black};
+        font-size:${Themes.fontsize.p1};
+        line-height:1.2;
+    `}
 `
 
 const HideAndShowCard__CardText = styled.div`
     color:${Themes.colors.grey};
     font-size:12px;
+    ${breakpoint('lg')`
+        color:${Themes.colors.grey};
+        font-size:12px;
+        font-size:${Themes.fontsize.p1};
+        line-height:1.5;
+    `}
     // text-align:center;
     line-height:16px;
     padding:10px;        
