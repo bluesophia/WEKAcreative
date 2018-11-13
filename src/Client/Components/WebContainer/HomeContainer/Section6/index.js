@@ -23,7 +23,7 @@ class Section6 extends Component{
                     <Section06__TitleDiv>
                         <Section06__Title>Our product suite</Section06__Title>
                         <YellowSpan />
-                        <Section06__Text>Looking for something quicker to implement? 
+                        <Section06__Text>Looking for something quicker to implement?<Br />
                             Explore some of our in-house solutions.</Section06__Text>
                     </Section06__TitleDiv>
                     <Section06__Div>
@@ -41,7 +41,15 @@ class Section6 extends Component{
         )
     }
 }
-
+const Br = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:block;
+    `}
+    ${breakpoint('lg')`
+    display:block;
+    `}
+`
 const Section06 = styled.div`
     padding: 0 10% 0 10%;
     ${breakpoint('md')`

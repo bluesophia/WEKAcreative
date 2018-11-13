@@ -96,7 +96,7 @@ const   Section03__Text = styled.div`
     margin-bottom: 30px;
     ${Text};
     color:${Themes.colors.grey};
-    text-align:justify;
+    text-align:center;
         ${breakpoint('md')`
             font-size:${Themes.fontsize.p1}
             line-height:26px;

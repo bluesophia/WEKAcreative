@@ -18,8 +18,11 @@ import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
 /** Components **/
 import Text from '../../../Common/Text';
+import MintSpan from '../../../Common/MintSpan';
 import YellowSpan from '../../../Common/YellowSpan';
 import FeaturesCarousel from '../../../Common/FeaturesCarousel';
+import Button01 from '../../../Common/Button/Button01';
+import { Link } from 'react-router-dom';
 
 const Shadow = css`
     box-shadow : 0 0 8px rgba(50, 50, 93, 0.23);
@@ -35,6 +38,19 @@ class Section2 extends Component{
                         <Section02__Text>We design software to service a variety of needs and 
                          help you work across <Br />a range of environments and platforms.</Section02__Text>
                         <FeaturesCarousel />
+                        <Section02__ReadmoreContainer>
+                            <Section02__Div>
+                                <Section02__Title>How we can help</Section02__Title>
+                                {/* <MintSpan /> */}
+                                <Section02__Text>We design software to service a variety of needs and 
+                                help you work across <Br />a range of environments and platforms.</Section02__Text>
+                                <ButtonDiv>
+                                    <ButtonLink to='/contact'>
+                                        <Button01 value={'Talk to us today'}/>
+                                    </ButtonLink>
+                                </ButtonDiv>
+                            </Section02__Div>
+                        </Section02__ReadmoreContainer>
                     </Section02__Container>
                 </Container>
             </Section02>
@@ -104,38 +120,7 @@ const Section02__Title = styled.div`
     ${breakpoint('lg')`
     `}
 `
-const Section02__Contents = styled.div`
-`
-const Section02__ContentDiv = styled.div`
-    margin:60px auto 0 auto;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-        ${breakpoint('lg')`
-        flex-direction:row;
-        // align-items:flex-start;
-        `}
-`
-const Section02__Image = styled.img`
-    width:169px;
-    height:auto;
-    margin-bottom:10px;
-`
-const Section02__Subtitle = styled.p`
-    margin-top:20px;
-    margin-bottom:0;
-    color:${Themes.colors.blue};
-    font-size:${Themes.fontsize.h3};
-    font-weight:${Themes.fontWeight.bold};
-    text-align:center;
-    padding:0;
-    ${breakpoint('lg')`
-      margin: 0 0 0 35px;   
-      line-height:30px;
-      text-align:left; 
-    `}
-`
+
 const Section02__Text = styled.div`
     margin-top:9px;
     margin-bottom: -10%;
@@ -152,6 +137,11 @@ const Section02__Text = styled.div`
             line-height:26px;
         `}
 `
+const Section02__ReadmoreContainer = styled.div`
+`
+const Section02__Div = styled.div`
+`
+
 const Section02_ImgText = styled.div`
     margin-top:9px;
     font-size:${Themes.fontsize.p2};
@@ -170,4 +160,20 @@ const Section02__RightDiv = styled.div`
         background:url(${HomeSection02Image}) no-repeat left bottom;
     `}
 `
+
+const ButtonDiv = styled.div`
+    width:64%;
+    ${breakpoint('md')`
+        // margin-left:-5px;
+        margin: 0 auto;
+    `}
+    ${breakpoint('lg')`
+        width:60%;
+        // margin-left:0;
+    `}
+`
+const ButtonLink = styled(Link)`
+        cursor:'pointer';
+`
+
 export default Section2;

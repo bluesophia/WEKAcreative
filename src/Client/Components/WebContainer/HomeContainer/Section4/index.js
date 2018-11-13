@@ -15,7 +15,8 @@ import Blockchain from '../../../../../Assets/Images/blockchain.svg';
 import ArgumentedReality from '../../../../../Assets/Images/argumentedreality.svg';
 import GPS from '../../../../../Assets/Images/gps.svg';
 import Automation from '../../../../../Assets/Images/automation.svg';
-import LeveragetheFuture from '../../../../../Assets/Images/LeveragetheFuture.png';
+// import LeveragetheFuture from '../../../../../Assets/Images/LeveragetheFuture.png';
+import LeveragetheFuture from '../../../../../Assets/Images/LeveragetheFuture.svg';
 import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
 /** Components **/
@@ -164,10 +165,14 @@ const Section04__Image = styled.img`
     margin-bottom:10px;
     ${breakpoint('md')`
         width: 100%;
-        transform: scale(1);
-        margin-bottom: 10%;
+        // transform: scale(1);
+        // margin-bottom: 10%;
+        transform: scale(2.2);
+        margin: 30% 0 60% 0;
         `}
     ${breakpoint('lg')`
+        transform: scale(3);
+        margin: 60% 0 100% 0;
     `}    
 `
 const Section04__Subtitle = styled.p`
