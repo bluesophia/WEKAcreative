@@ -18,10 +18,12 @@ import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
 /** Components **/
 import Text from '../../../Common/Text';
-import MintSpan from '../../../Common/MintSpan';
 import YellowSpan from '../../../Common/YellowSpan';
+import MintSpan from '../../../Common/MintSpan';
 import FeaturesCarousel from '../../../Common/FeaturesCarousel';
 import Button01 from '../../../Common/Button/Button01';
+import HideAndShowCard1 from '../../../Common/HideAndShow/HideAndShowCard1';
+import HideAndShowCard2 from '../../../Common/HideAndShow/HideAndShowCard2';
 import { Link } from 'react-router-dom';
 
 const Shadow = css`
@@ -38,12 +40,16 @@ class Section2 extends Component{
                         <Section02__Text>We design software to service a variety of needs and 
                          help you work across <Br />a range of environments and platforms.</Section02__Text>
                         <FeaturesCarousel />
+                        <HideAndShowCard2 
+                        title={["Harness the latest in web tech to tell", <Br />, "showcase your business"]} 
+                        text={["The first port of call for a customer wanting to engage with a business is online.",<Br />, "Make sure your web site captures the hearts and minds of those looking."]} 
+                        />
                         <Section02__ReadmoreContainer>
                             <Section02__Div>
                                 <Section02__Title>How we can help</Section02__Title>
-                                {/* <MintSpan /> */}
-                                <Section02__Text>We design software to service a variety of needs and 
-                                help you work across <Br />a range of environments and platforms.</Section02__Text>
+                                <MintSpan />
+                                <Section02__Text>Whether you are looking to replace paper-based processes, communicate with your team, <Br />interact with your customers, or revolutionise your business, we can help.</Section02__Text>
+                                <Section02__Text__Bold>Our mobile solutions are multi-platform, responsive, and function in a wide range of environments.</ Section02__Text__Bold>
                                 <ButtonDiv>
                                     <ButtonLink to='/contact'>
                                         <Button01 value={'Talk to us today'}/>
@@ -137,7 +143,23 @@ const Section02__Text = styled.div`
             line-height:26px;
         `}
 `
+
+const Section02__Text__Bold = styled.div`
+display: none;
+    ${breakpoint('md')`
+    display: none;
+    font-size:${Themes.fontsize.p1}
+    font-weight:${Themes.fontWeight.black}
+    line-height:26px;
+    margin-bottom: -10px;   
+    `}
+    ${breakpoint('lg')`
+    font-size:${Themes.fontsize.p1}
+    line-height:26px;
+    `}
+`
 const Section02__ReadmoreContainer = styled.div`
+display: none;
 `
 const Section02__Div = styled.div`
 `
@@ -168,7 +190,7 @@ const ButtonDiv = styled.div`
         margin: 0 auto;
     `}
     ${breakpoint('lg')`
-        width:60%;
+        width:40%;
         // margin-left:0;
     `}
 `

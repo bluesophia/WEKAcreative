@@ -10,7 +10,7 @@ class YellowSpan extends Component {
         return (
             <ThemeProvider theme={Themes}>
                     <div>
-                    <YellowSpanStyle />
+                    <YellowSpanStyle/>
                     </div>
             </ThemeProvider>
         );
@@ -18,8 +18,10 @@ class YellowSpan extends Component {
 }
 
 YellowSpan.propTypes = {
-    value: PropTypes.string
+    value: PropTypes.string,
   };
+
+
 const YellowSpanStyle = styled.span`
     background:${Themes.colors.w_orange};
     display:flex;

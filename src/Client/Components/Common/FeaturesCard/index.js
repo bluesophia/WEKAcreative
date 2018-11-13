@@ -8,14 +8,14 @@ import Themes from '../../../../Assets/Styles/Themes';
 
 class FeaturesCard extends Component {
             render () {
-                function hideAndshow() {
-                    const element = document.getElementById("yellowText");
-                    const p = document.querySelector("#p");  
-                    element.click(function(){
-                        alert ("hide");
-                        p.hide();
-                    });
-                }
+                // function hideAndshow() {
+                //     const element = document.getElementById("yellowText");
+                //     const p = document.querySelector("#p");  
+                //     element.click(function(){
+                //         alert ("hide");
+                //         p.hide();
+                //     });
+                // }
                 return(
                 <Section05__Card className="cardDisplay">
                     <Section05__CardCircle>
@@ -38,7 +38,7 @@ class FeaturesCard extends Component {
                         <Section05__Icon src={this.props.iconName4}/>
                         <Section05__CardText>{this.props.text4}</Section05__CardText>
                         </Section05__ImgDiv>
-                        <Section05__YellowText id="yellowText"onClick={hideAndshow}>Read More</Section05__YellowText>
+                        <Section05__YellowText id="yellowText">Read More</Section05__YellowText>
                        
                     </Section05__div>
                 </Section05__Card>

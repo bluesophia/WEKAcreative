@@ -39,9 +39,9 @@ class FooterContainer extends Component {
                     </Box>
                     <StyledLink__Div2>
                       <StyledLink to='/'>Home /</StyledLink>
-                      <StyledLink to='/about'> Our Work /</StyledLink>
-                      <StyledLink to='/support'> Services /</StyledLink>
-                      <StyledLink to='/blog'> Solutions /</StyledLink>
+                      <StyledLink to='/about'> About /</StyledLink>
+                      <StyledLink to='/support'> Support /</StyledLink>
+                      {/* <StyledLink to='/blog'> Solutions /</StyledLink> */}
                       <StyledLink to='/contact'> Contact Us</StyledLink>
                     </StyledLink__Div2>
                 {/* </FooterBox3> */}
@@ -52,9 +52,9 @@ class FooterContainer extends Component {
                     <FooterTitle>SITEMAP</FooterTitle>
                     <StyledLink__Div>
                       <StyledLink to='/'>Home</StyledLink>
-                      <StyledLink to='/about'>Our Work</StyledLink>
-                      <StyledLink to='/support'>Services</StyledLink>
-                      <StyledLink to='/blog'>Solutions</StyledLink>
+                      <StyledLink to='/about'>About</StyledLink>
+                      <StyledLink to='/support'>Support</StyledLink>
+                      {/* <StyledLink to='/blog'>Solutions</StyledLink> */}
                       <StyledLink to='/contact'>Contact Us</StyledLink>
                     </StyledLink__Div>
                     </FooterRightContainer>

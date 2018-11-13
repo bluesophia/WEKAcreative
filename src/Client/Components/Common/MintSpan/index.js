@@ -10,7 +10,7 @@ class MintSpan extends Component {
         return (
             <ThemeProvider theme={Themes}>
                     <div>
-                    <MintSpan />
+                    <MintSpanStyle />
                     </div>
             </ThemeProvider>
         );
@@ -18,10 +18,12 @@ class MintSpan extends Component {
 }
 
 MintSpan.propTypes = {
-    value: PropTypes.string
+    value: PropTypes.string,
   };
+
+
 const MintSpanStyle = styled.span`
-    background:${Themes.colors.w_mint};
+    background:#98D1AA;
     display:flex;
     width:108px; 
     color:white;

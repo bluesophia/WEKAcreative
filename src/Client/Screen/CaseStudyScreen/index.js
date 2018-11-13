@@ -5,7 +5,6 @@ import Themes from '../../../Assets/Styles/Themes';
 
 /** Components**/
 import BigTitle from '../../Components/Common/Title/BigTitle.js';
-import CaseStudyDropdownContainer from '../../Components/WebContainer/CaseStudyDropdownContainer';
 import YellowSpan from '../../Components/Common/YellowSpan';
 import Text from '../../Components/Common/Text';
 

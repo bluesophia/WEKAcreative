@@ -26,7 +26,7 @@ class HeaderContainer extends Component {
 						<StyledLink to='/'  className="navHome">Home</StyledLink>
 						<StyledLink to='/about'>About</StyledLink>
 						<StyledLink to='/support'>Support</StyledLink>
-						<StyledLink to='/casestudy'>Casestudy</StyledLink>
+						{/* <StyledLink to='/casestudy'>Casestudy</StyledLink> */}
 						<StyledLink to='/contact'>Contact Us</StyledLink>
 						<Box>
                            <Sns href="#">
