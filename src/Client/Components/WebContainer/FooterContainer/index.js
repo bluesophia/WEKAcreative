@@ -117,10 +117,11 @@ const Footer = styled.div`
   // align-items: space-between;
   font-family: Lato;
   background: ${Themes.colors.w_mint};
-  padding: 0 10%;
+  // padding: 0 10%;
   line-height:1.5em;
   ${breakpoint('md')`
-    // width: 100%;
+    // max-width: 768px;
+    padding: 0 10%;
   `}
   ${breakpoint('lg')`
   `}

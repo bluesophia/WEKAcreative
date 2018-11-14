@@ -9,13 +9,72 @@ import Text from '../../../Common/Text';
 import YellowSpan from '../../../Common/YellowSpan';
 import FeaturesCarousel from '../../../Common/FeaturesCarousel';
 
-/** Images **/
-import SomeofOurWorkPassafe from '../../../../../Assets/Images/SomeofOurWorkPassafe.svg'
-import SomeofOurWorkRugdoctor from '../../../../../Assets/Images/SomeofOurWorkRugdoctor.svg'
-import SomeofOurWorkMethTesting from '../../../../../Assets/Images/SomeofOurWorkMethTesting.svg'
-import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.svg'
+// images
+// import SomeofOurWorkPassafe from '../../../../../Assets/Images/SomeofOurWorkPassafe.svg';
+// import SomeofOurWorkRugdoctor from '../../../../Assets/Images/SomeofOurWorkRugdoctor.svg';
+// import SomeofOurWorkMethTesting from '../../../../../Assets/Images/SomeofOurWorkMethTesting.svg';
+import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.svg';
+const Images  = [
+    require("../../../../../Assets/Images/SomeofOurWorkPassafe.svg"),
+    require("../../../../../Assets/Images/SomeofOurWorkRugdoctor.svg"),
+    require("../../../../../Assets/Images/SomeofOurWorkMethTesting.svg"),
+    require("../../../../../Assets/Images/SomeofOurWorkToyota.svg"),
+]
 
-class Section3 extends Component{
+class Section3 extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            images: Images,
+            SomeofOurWorkPassafe: Images[0],
+            SomeofOurWorkRugdoctor: Images[1],
+            SomeofOurWorkMethTesting: Images[2],
+            SomeofOurWorkToyota: Images[3]
+
+        };
+        // this.handleMouseOver = this.handleMouseOver.bind(this);
+        this.handleMouseOver1 = this.handleMouseOver1.bind(this);
+        this.handleMouseOver2 = this.handleMouseOver2.bind(this);
+        this.handleMouseOver3 = this.handleMouseOver3.bind(this);
+        this.handleMouseOver4 = this.handleMouseOver4.bind(this);
+        this.handleMouseOut = this.handleMouseOut.bind(this);
+    }
+    // handleMouseOver() {
+    //     this.setState({
+    //         SomeofOurWorkPassafe: Images[3],
+    //         SomeofOurWorkRugdoctor: Images[2],
+    //         SomeofOurWorkMethTesting: Images[1],
+    //         SomeofOurWorkToyota: Images[0]
+    //     })
+    // }
+    handleMouseOut() {
+        this.setState({
+            SomeofOurWorkPassafe: Images[0],
+            SomeofOurWorkRugdoctor: Images[1],
+            SomeofOurWorkMethTesting: Images[2],
+            SomeofOurWorkToyota: Images[3]
+        })
+    }
+    handleMouseOver1() {
+        this.setState({
+            SomeofOurWorkPassafe: Images[3]
+        })
+    }
+    handleMouseOver2() {
+        this.setState({
+            SomeofOurWorkRugdoctor: Images[2]
+        })
+    }
+    handleMouseOver3() {
+        this.setState({
+            SomeofOurWorkMethTesting: Images[1]
+        })
+    }
+    handleMouseOver4() {
+        this.setState({
+            SomeofOurWorkToyota: Images[0]
+        })
+    }
     render(){
         return(
             <Section03>
@@ -27,12 +86,24 @@ class Section3 extends Component{
                 </Section03__Container>
                 <Section03__Container__image>
                     <Section03__Container__imageSm>   
-                        <Section03__Image src={SomeofOurWorkPassafe} />
-                        <Section03__Image src={SomeofOurWorkRugdoctor} />
+                        <Section03__Image src={this.state.SomeofOurWorkPassafe} 
+                            onMouseEnter={this.handleMouseOver1}
+                            onMouseLeave={this.handleMouseOut}
+                        />
+                        <Section03__Image src={this.state.SomeofOurWorkRugdoctor} 
+                            onMouseEnter={this.handleMouseOver2}
+                            onMouseLeave={this.handleMouseOut}
+                        />
                     </Section03__Container__imageSm> 
                     <Section03__Container__imageSm> 
-                        <Section03__Image src={SomeofOurWorkMethTesting} />
-                        <Section03__Image src={SomeofOurWorkToyota} />
+                        <Section03__Image src={this.state.SomeofOurWorkMethTesting} 
+                            onMouseOver={this.handleMouseOver3}
+                            onMouseOut={this.handleMouseOut}
+                        />
+                        <Section03__Image src={this.state.SomeofOurWorkToyota} 
+                            onMouseOver={this.handleMouseOver4}
+                            onMouseOut={this.handleMouseOut}
+                        />
                     </Section03__Container__imageSm> 
                 </Section03__Container__image>
             </Section03>
@@ -70,11 +141,11 @@ const Section03__Container__image = styled.div`
         padding-top: 8%;
         margin-bottom: 10%;
         position: relative;
-        transform: scale(1.4);
+        transform: scale(1.35);
     `}
     ${breakpoint('lg')`
         margin-bottom: 0;
-        transform: scale(1.8);
+        // transform: scale(1.8);
     `}
 `
 const Section03__Container__imageSm = styled.div`
@@ -83,6 +154,7 @@ const Section03__Container__imageSm = styled.div`
     justify-content: center;
     align-items: center;
     `}
+    
 `
 const Section03__Title = styled.div`
     ${BigTitle};
@@ -106,8 +178,13 @@ const   Section03__Text = styled.div`
             
         `}
 `
-
+const Section03__ImageDiv = styled.div`
+`
 const Section03__Image = styled.img`
-    margin: -2px 0;
+    // margin: -2px 0;
+    &:hover {
+        background: url('${SomeofOurWorkToyota}');
+    }
+   
 `
 export default Section3;

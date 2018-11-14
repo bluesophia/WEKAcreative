@@ -45,7 +45,7 @@ class Section2 extends Component{
                         <HideAndShowCard1 
                         title={["Transform your business with",<Br2 />,"the power of mobile"]}
                         text={["Whether you are looking to replace paper-based processes",<Br2 />,"communicate with your team",<Br />, "interact with your customers, or",<Br2 />,"revolutionise your business, we can help."]}
-                        />
+                        /> 
                         <HideAndShowCard2 
                         title={["Harness the latest in web tech ", <Br2 />, "to tell showcase your business"]} 
                         text={["The first port of call for a customer wanting to engage with", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
@@ -58,19 +58,6 @@ class Section2 extends Component{
                         title={"Tailor made for you"} 
                         text={["Sometimes the best solution is a bespoke solution.", <Br2 />,<Br />,"We can dive into the inner workings of you business to design and build software that fits you like a glove."]} 
                         />
-                        <Section02__ReadmoreContainer>
-                            <Section02__Div>
-                                <Section02__Title>How we can help</Section02__Title>
-                                <MintSpan />
-                                <Section02__Text>Whether you are looking to replace paper-based processes, communicate with your team, <Br />interact with your customers, or revolutionise your business, we can help.</Section02__Text>
-                                <Section02__Text__Bold>Our mobile solutions are multi-platform, responsive, and function in a wide range of environments.</ Section02__Text__Bold>
-                                <ButtonDiv>
-                                    <ButtonLink to='/contact'>
-                                        <Button01 value={'Talk to us today'}/>
-                                    </ButtonLink>
-                                </ButtonDiv>
-                            </Section02__Div>
-                        </Section02__ReadmoreContainer>
                     </Section02__Container>
                 </Container>
             </Section02>

@@ -98,7 +98,7 @@ const HideAndShowCard__Img = styled.img`
     width: 284px;
     `}
     ${breakpoint('lg')`
-        width: 377px;
+        // width: 377px;
     `}
 `
 const HideAndShowCard__TextDiv = styled.div`

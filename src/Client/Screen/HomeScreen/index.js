@@ -37,20 +37,16 @@ class HomeScreen extends Component{
         return(
             <ThemeProvider theme={Themes}>
                 <div>
-                    <Section0102>
-                        <Section01 />
-                        <Section02 />
-                    </Section0102>
+                    {/* <Section01 />
+                    <Section02 /> */}
                     <Section03 />
-                    <Section04 />
+                    {/* <Section04 />
                     <Section05 />
-                    <Section06 />
+                    <Section06 /> */}
                 </div>
            </ThemeProvider>
         )
     }
 }
-const Section0102 = styled.div`
-    // background-color:${Themes.colors.veryLightGrey};
-`
+
 export default HomeScreen;
