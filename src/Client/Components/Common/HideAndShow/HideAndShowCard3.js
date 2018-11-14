@@ -10,13 +10,13 @@ import BigTitle from '../../Common/Title/BigTitle';
 import HideAndShowCard from '../HideAndShowCard';
 
 //Images
-import IconGlobe from '../../../../Assets/Images/globe.svg'
-import IconEcommerce from '../../../../Assets/Images/ecommerce.svg'
-import IconHandShake from '../../../../Assets/Images/IconHandShake.svg'
-import IconPeople from '../../../../Assets/Images/IconPeople.svg'
+import IconLayers from '../../../../Assets/Images/IconLayers.svg'
+import IconData from '../../../../Assets/Images/IconData.svg'
+import IconPoint from '../../../../Assets/Images/IconPoint.svg'
+import IconSettings from '../../../../Assets/Images/IconSettings.svg'
 
 //PhotoImages
-import HowWeCanHelpImg1 from '../../../../Assets/Images/HowwecanhelpImg1.png'
+import HowWeCanHelpImg2 from '../../../../Assets/Images/howwecanhelpImg2.png'
 
 class HideAndShowCard3 extends Component {
     render(){
@@ -29,19 +29,19 @@ class HideAndShowCard3 extends Component {
                 </Section01>
                 <Section02>
                     <HideAndShowCard 
-                    iconName1 = {IconGlobe}
-                    iconName2 = {IconEcommerce}
-                    iconName3 = {IconHandShake}
-                    iconName4 = {IconPeople}
-                    title1 = "Highlight your brand story"
-                    title2 = "Enhance your e-commerce platform"
-                    title3 = "Inform, connect, and engage with your customer"
-                    title4 = "We can help engage customers by:"
-                    text1 = "Capturing data from the field"
-                    text2 = "Communicating with your mobile workforce"
-                    text3 = "Improving customer engagement"
-                    text4 = "Providing your workforce valuable company or product information"
-                    img = {HowWeCanHelpImg1}
+                    iconName1 = {IconLayers}
+                    iconName2 = {IconPoint}
+                    iconName3 = {IconData}
+                    iconName4 = {IconSettings}
+                    title1 = "Bridge the gaps between your existing platforms"
+                    title2 = "Provide a unified interface to your existing systems"
+                    title3 = "Reduce double-handling of data"
+                    title4 = "Automate your processes"
+                    text1 = {"If you already have systems in place for different functions, get them talking to one another to improve efficiencies."}
+                    text2 = {"Enhance your decision making by combining multiple dashboards into a single Interface, giving you a comprehensive overview of your business."}
+                    text3 = {"Simplify data entry. Enter data once and have your existing systems share the information through our customised backend solutions."}
+                    text4 = {["Remove the need to manually trigger your business processes by linking your systems together and automating interactions.", <Br />,<Br />, "We can help you integrate:",<Br />,<Br />,"Xero",<Br />,"Salesforce",<Br />,"Fleet Agent",<Br />,"Smart Payroll",<Br />,"And more…"]}
+                    img = {HowWeCanHelpImg2}
                     />
                 </Section02>
             </Container>
@@ -49,14 +49,16 @@ class HideAndShowCard3 extends Component {
     }
 }
 
+const Br = styled.br`
+`
 const Container = styled.div`
-    // padding: 0 10%;
-        padding: ${Themes.paddings.mobile};
+    display: none;
     ${breakpoint('md')`
-        padding: ${Themes.paddings.tablet};
+        display: block; 
+        padding: 10% 0 0 0;
     `}
     ${breakpoint('lg')`
-        padding: 10% 0 0 0;
+        // background: ${Themes.colors.w_mint};
     `}
 `
 const Section01 = styled.div`
@@ -69,7 +71,9 @@ const Section01__Title = styled.div`
     ${BigTitle};
     color:${Themes.colors.black};
     font-weight:${Themes.fontWeight.black};
-    ${breakpoint('lg')`
+    ${breakpoint('md')`
+    font-size:${Themes.fontsize.h4};  
+    line-height:1.2;  
     `}
 `
 const Section01__Text = styled.div`
@@ -79,21 +83,14 @@ const Section01__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('md')`
-            font-size:${Themes.fontsize.p1}
+            font-size:${Themes.fontsize.p2}
             line-height:26px;
-            margin-bottom: -10px;   
+            margin-bottom: 7%;   
         `}
         ${breakpoint('lg')`
-            font-size:${Themes.fontsize.p1}
+            font-size:${Themes.fontsize.p2}
             line-height:26px;
             margin-bottom: 5%;
         `}
-`
-const Section03 = styled.div`
-    margin:0 auto;
-`    
-const Section03__ImgDiv = styled.div`
-`
-const Section03__Img = styled.img`
 `
 export default HideAndShowCard3;

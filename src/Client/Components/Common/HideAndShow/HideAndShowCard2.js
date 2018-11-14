@@ -16,7 +16,7 @@ import IconHandShake from '../../../../Assets/Images/IconHandShake.svg'
 import IconPeople from '../../../../Assets/Images/IconPeople.svg'
 
 //PhotoImages
-import HowWeCanHelpImg1 from '../../../../Assets/Images/HowwecanhelpImg1.png'
+import HowWeCanHelpImg1 from '../../../../Assets/Images/howwecanhelpImg1.png'
 
 class HideAndShowCard2 extends Component {
     render(){
@@ -37,10 +37,10 @@ class HideAndShowCard2 extends Component {
                     title2 = "Enhance your e-commerce platform"
                     title3 = "Inform, connect, and engage with your customer"
                     title4 = "We can help engage customers by:"
-                    text1 = "Capturing data from the field"
-                    text2 = "Communicating with your mobile workforce"
-                    text3 = "Improving customer engagement"
-                    text4 = "Providing your workforce valuable company or product information"
+                    text1 = {"Share the story behind your business and your brand. Highlight your unique selling proposition and attract customers."}
+                    text2 = {"If online selling is the game connect with us to help enhance your e-commerce prowess."}
+                    text3 = {"Communicate with your customer, keep them interested, and share with them the latest developments in your business."}
+                    text4 = {["Enhance the user journey through your website Integration with digital marketing platforms Build on existing e-commerce platforms Customer data capture Site analytics", <Br />, "and more..."]}
                     img = {HowWeCanHelpImg1}
                     />
                 </Section02>
@@ -49,14 +49,15 @@ class HideAndShowCard2 extends Component {
     }
 }
 
+const Br = styled.br`
+`
 const Container = styled.div`
-    // padding: 0 10%;
-        padding: ${Themes.paddings.mobile};
+    display: none;
     ${breakpoint('md')`
-        padding: ${Themes.paddings.tablet};
+        display: block; 
+        padding: 10% 0 0 0;
     `}
     ${breakpoint('lg')`
-        padding: 10% 0 0 0;
         // background: ${Themes.colors.w_mint};
     `}
 `
@@ -70,7 +71,9 @@ const Section01__Title = styled.div`
     ${BigTitle};
     color:${Themes.colors.black};
     font-weight:${Themes.fontWeight.black};
-    ${breakpoint('lg')`
+    ${breakpoint('md')`
+    font-size:${Themes.fontsize.h4};  
+    line-height:1.2;  
     `}
 `
 const Section01__Text = styled.div`
@@ -80,12 +83,12 @@ const Section01__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('md')`
-            font-size:${Themes.fontsize.p1}
+            font-size:${Themes.fontsize.p2}
             line-height:26px;
-            margin-bottom: -10px;   
+            margin-bottom: 7%;   
         `}
         ${breakpoint('lg')`
-            font-size:${Themes.fontsize.p1}
+            font-size:${Themes.fontsize.p2}
             line-height:26px;
             margin-bottom: 5%;
         `}

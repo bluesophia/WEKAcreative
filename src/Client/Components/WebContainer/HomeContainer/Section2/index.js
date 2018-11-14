@@ -24,6 +24,8 @@ import FeaturesCarousel from '../../../Common/FeaturesCarousel';
 import Button01 from '../../../Common/Button/Button01';
 import HideAndShowCard1 from '../../../Common/HideAndShow/HideAndShowCard1';
 import HideAndShowCard2 from '../../../Common/HideAndShow/HideAndShowCard2';
+import HideAndShowCard3 from '../../../Common/HideAndShow/HideAndShowCard3';
+// import HideAndShowCard4 from '../../../Common/HideAndShow/HideAndShowCard4';
 import { Link } from 'react-router-dom';
 
 const Shadow = css`
@@ -41,9 +43,17 @@ class Section2 extends Component{
                          help you work across <Br />a range of environments and platforms.</Section02__Text>
                         <FeaturesCarousel />
                         <HideAndShowCard2 
-                        title={["Harness the latest in web tech to tell", <Br />, "showcase your business"]} 
-                        text={["The first port of call for a customer wanting to engage with a business is online.",<Br />, "Make sure your web site captures the hearts and minds of those looking."]} 
+                        title={["Harness the latest in web tech ", <Br2 />, "to tell", <Br />, "showcase your business"]} 
+                        text={["The first port of call for a customer wanting to engage with", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
                         />
+                        <HideAndShowCard3
+                        title={"Embrace the power of collaboration"} 
+                        text={["Multiple systems for multiple purposes? No problem.", <Br2 />,"Increase the efficiency of your existing systems by helping them communicate", <Br2 />," and share information."]} 
+                        />
+                        {/* <HideAndShowCard2 
+                        title={["Harness the latest in web tech ", <Br2 />, "to tell", <Br />, "showcase your business"]} 
+                        text={["The first port of call for a customer wanting to engage with", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
+                        /> */}
                         <Section02__ReadmoreContainer>
                             <Section02__Div>
                                 <Section02__Title>How we can help</Section02__Title>
@@ -69,10 +79,19 @@ class Section2 extends Component{
 const Br = styled.br`
     display:none;
     ${breakpoint('md')`
-    display:block;
+    display:none;
     `}
     ${breakpoint('lg')`
     display:block;
+    `}
+`
+const Br2 = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:block;
+    `}
+    ${breakpoint('lg')`
+    display:none;
     `}
 `
 const Section02 = styled.div`
