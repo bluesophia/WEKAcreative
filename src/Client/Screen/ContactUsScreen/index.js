@@ -10,17 +10,17 @@ import BigTitle from '../../Components/Common/Title/BigTitle';
 import TopBg from '../../../Assets/Images/contactUsBg.png';
 import CallUsIcon from '../../../Assets/Images/phone.png';
 
-import CompanyNameInput from '../../Components/Common/Input/CompanyNameInput';
+import PhoneNumberInput from '../../Components/Common/Input/PhoneNumberInput';
 import FullNameInput from '../../Components/Common/Input/FullNameInput';
 import EmailInput from '../../Components/Common/Input/EmailInput';
 import MessageInput from '../../Components/Common/Input/MessageInput';
 import Button01 from '../../Components/Common/Button/Button01';
 import Button02 from '../../Components/Common/Button/Button02';
-import MyMapComponent from './map';
+// import MyMapComponent from './map';
 
 /** Images **/
 import Bg from '../../../Assets/Images/ContactSection01Bg.png';
-import Image from '../../../Assets/Images/ContactSection01Image.png';
+import Image from '../../../Assets/Images/ContactSection01Image.svg';
 
 class ContactUsScreen extends Component {
   render(){
@@ -29,39 +29,24 @@ class ContactUsScreen extends Component {
         <Container>
           <TopBgImg src={Bg}/>
           <Header>
-            <Header__ImageDiv>
-              <Header__Image src={Image}/>
-            </Header__ImageDiv>
             <Header__Content>
             <TitleDiv>
               <TitleDiv__Title>Get In Touch</TitleDiv__Title>
-              <TitleDiv__Text>Get in touch with us today to find out how we can help your business
-                work smarter and more efficiently.</TitleDiv__Text>
+                <TitleDiv__Sm>
+                  <Header__Image src={Image}/>
+                  <TitleDiv__Textsm>Get in touch with us today to find out how we can help your business
+                  work smarter and more efficiently.</TitleDiv__Textsm>
+                </TitleDiv__Sm>
             </TitleDiv>
-            <CallUsDiv>
-              <Icon src={CallUsIcon} />
-              <CallUs>Call Us</CallUs>
-              <PhoneNo>0800-3279-36767</PhoneNo>
-            </CallUsDiv> 
             </Header__Content>
           </Header>
-          
           <Contents>
-            <MapDiv>
-              <MyMapComponent
-                isMarkerShown
-                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-p5WQ9NQSErSYZB-U2anOUNKEGzWh-hU&v=3.exp&libraries=geometry,drawing,places"
-                loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `100%` }} />}
-                mapElement={<div style={{ height: `100%` }} />}
-              />
-            </MapDiv>
             <FormDiv>
               <Form>
                 <InputDiv>
                   <InputDiv__Left>
-                    <CompanyNameInput />
                     <FullNameInput />
+                    <PhoneNumberInput />
                     <EmailInput />
                   </InputDiv__Left>
                   <InputDiv__Right>
@@ -82,39 +67,66 @@ class ContactUsScreen extends Component {
   }
 }
 const Container = styled.div`
-  background-color:${Themes.colors.veryLightGrey};
+  // background-color:${Themes.colors.veryLightGrey};
 `
 const Header = styled.div`
-  padding:60px 1em 40px 1em;
+  // padding:60px 1em 18px 1em;
+  padding: ${Themes.paddings.mobileTop};
   background:url(${Bg});
   background-size:100% 100%;
+  box-shadow: 0 5px 8px -4px rgba(0,0,0,0.2);
+    ${breakpoint('md')`
+    padding: ${Themes.paddings.tabletTop};
+  `}
     ${breakpoint('lg')`
+    padding: ${Themes.paddings.desktopTopNone};
     background:none;
-    display:flex;
-    flex-direction:row;
+    // display:flex;
+    // flex-direction:row;
     justify-content:center;
     align-items:center;
-    padding:70px 0 55px 0;
     max-width:1366px;
     margin:0 auto;
+    box-shadow: 0 0 0 0;
     `}
 `
 const Header__ImageDiv = styled.div`
-  display:none;
+  // display:none;
   z-index:1;
+  transform: scale(0.9);
+    ${breakpoint('md')`
+    display: flex;
+    flex-direction: column-reverse;
+  `}
     ${breakpoint('lg')`
-      display:block;
+      // display:block;
+      // // flex-direction: row;
+      // flex-direction: column-reverse;
     `}
 `
 const Header__Image = styled.img`
+    ${breakpoint('md')`
+      // margin-top: 40px;
+      margin-bottom: 10%;
+      transform: scale(0.9);
+    `}
+    ${breakpoint('lg')`
+      transform: scale(0.6);
+      width: 100%;
+      margin-top: -39%;
+      margin-left: -24%;
+
+    `}
 `
 const Header__Content = styled.div`
   display:flex;
   align-items:center;
   flex-direction:column;
   ${breakpoint('lg')`
-    align-items:flex-start;
-    margin-left:60px;
+    // align-items:flex-start;
+    // // margin-left:60px;
+    // display: grid;
+    // grid-template-rows:25% 75%;
   `}
 `
 
@@ -123,7 +135,7 @@ const TopBgImg = styled.img`
     ${breakpoint('lg')`
       display:block;
       width:100vw;
-      height:648px;
+      height:45%;
       position:absolute;
       top:120;
     `}
@@ -133,23 +145,30 @@ const TitleDiv = styled.div`
   flex-direction:column;
   z-index:1;
   ${breakpoint('lg')`
-    align-items:flex-start;
-    margin-bottom:100px;
+    // flex-direction: row;
+    // align-items:flex-start;
+    // flex-direction:row-reverse;
   `}
 `
 const TitleDiv__Title = styled.div`
   ${BigTitle};
-  color:white;
-  font-weight:${Themes.fontWeight.regular};
-  margin-bottom:10px;
+  margin-bottom:10%;
+  ${breakpoint('lg')`
+  display: block;
+    margin-top: 15%;
+    margin-left: 62%;
+    margin-bottom: 5%;
+    display:flex;
+  `}
+`
+const TitleDiv__Sm = styled.div`
   ${breakpoint('md')`
-    ${BigTitle};
-    font-weight:${Themes.fontWeight.regular};
-    color:white;
+    display: flex;
+    flex-direction: column-reverse;
   `}
 `
 const TitleDiv__Text = styled.div`
-  display:none;
+  // display:none;
   ${breakpoint('lg')`
     display:block;
     color:white;
@@ -159,6 +178,35 @@ const TitleDiv__Text = styled.div`
     width:470px;
   `}
 `
+const TitleDiv__Textsm = styled.div`
+    color:${Themes.colors.grey};
+    text-align: center;
+    font-size:${Themes.fontsize.h4};
+    padding: 4%;
+    margin-top:10%;
+    margin-bottom: 10%;
+    line-height:26px;
+    ${breakpoint('md')`
+    display:block;
+    font-size:${Themes.fontsize.h4};
+    line-height:25px;
+    font-weight:${Themes.fontWeight.regular};
+    text-align:center;
+    margin:0;
+    padding: 0 0 10% 0%;
+    `}
+    ${breakpoint('lg')`
+    font-size:${Themes.fontsize.p1};
+    font-weight:${Themes.fontWeight.regular};
+    display: block;
+    line-height: 26px;
+    padding: 0 3%;
+    text-align: left;
+    margin-left: 59%;
+    width: 43%;
+}
+    `}
+ `   
 const CallUsDiv = styled.div`
   display:flex;
   align-items:center;
@@ -178,31 +226,36 @@ const PhoneNo = styled.span`
   color:${Themes.colors.yellow};
 `
 const Contents = styled.div`
+    padding:${Themes.paddings.mobile};
     margin:0 auto;
     display:flex;
     flex-direction:column;
     ${breakpoint('lg')`
       flex-direction:column-reverse;
+      padding:0;
     `}
 `
 const FormDiv = styled.div`
   ${breakpoint('lg')`
     z-index:1;
-    width:1050px;
-    margin:0 auto 100px auto;
+    width:787px;
+    margin: -142px auto 100px auto;
   `}
 `
 const Form = styled.div`
   height:auto;
   background-color:white;
-  box-shadow:0 0 20px rgba(0,0,0,0.2);
-  padding:60px 8%;
     ${breakpoint('md')`
-      padding:60px 15%;
+      // padding:60px 15%;
     `}
     ${breakpoint('lg')`
       padding:60px 8%;
       border-radius:50px;
+
+    // margin-top:30px;
+    // padding: 30px 20% 30px 20%;
+    background-color:white;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
     `}
 `
 const InputDiv = styled.div`
@@ -215,7 +268,6 @@ const InputDiv__Left = styled.div`
   display:flex;
   flex-direction:column;
   ${breakpoint('lg')`
-  margin-bottom:50px;  
 `}
 `
 const InputDiv__Right = styled.div``
@@ -223,14 +275,15 @@ const ButtonDiv = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
+  margin-bottom: 10%;
   ${breakpoint('lg')`
     width:60%;  
     margin:0 auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
   `}
 `
 const Form__Text = styled.div`
-  margin:25px auto 10px auto;
-  color:${Themes.colors.blue};
+  margin:20px auto 20px auto;
+  color:${Themes.colors.black};
   font-size:${Themes.fontsize.p2};
   font-weight:${Themes.fontWeight.black};
 `

@@ -16,7 +16,6 @@ import Section03 from '../../Components/WebContainer/HomeContainer/Section3';
 import Section04 from '../../Components/WebContainer/HomeContainer/Section4';
 import Section05 from '../../Components/WebContainer/HomeContainer/Section5';
 import Section06 from '../../Components/WebContainer/HomeContainer/Section6';
-import Section07 from '../../Components/WebContainer/HomeContainer/Section7';
 
 injectGlobal`
   body{
@@ -46,13 +45,12 @@ class HomeScreen extends Component{
                     <Section04 />
                     <Section05 />
                     <Section06 />
-                    <Section07 />
                 </div>
            </ThemeProvider>
         )
     }
 }
 const Section0102 = styled.div`
-    background-color:${Themes.colors.veryLightGrey};
+    // background-color:${Themes.colors.veryLightGrey};
 `
 export default HomeScreen;

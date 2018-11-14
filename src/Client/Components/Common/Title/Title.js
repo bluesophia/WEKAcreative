@@ -6,7 +6,7 @@ const Title = css`
     text-align:center;
     font-size:${Themes.fontsize.h3};
     font-weight:${Themes.fontWeight.bold};
-    color:${Themes.colors.blue};
+    color:${Themes.colors.black};
         ${breakpoint('md')`
         font-size:${Themes.fontsize.h2};
         `}

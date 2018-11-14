@@ -15,25 +15,32 @@ class Button01 extends Component {
             </ThemeProvider>
         );
     }
-}
+}   
 
 Button01.propTypes = {
     value: PropTypes.string
   };
 const ButtonStyle = styled.button`
-    background:linear-gradient(${Themes.colors.yellow},${Themes.colors.orange});
+    background: rgba(255,255,255, 0);
     width:100%; 
     height:auto;
-    color:white;
-    font-size:20px;
-    border:0;
+    color:${Themes.colors.black};
+    font-weight:${Themes.fontWeight.black};
+    // text-shadow: 0 0 3px grey;
+    font-size:17px;
+    border:2px solid ${Themes.colors.black};
     margin:0 auto;
-    border-radius:50px;
+    // border-radius:50px;
     padding:11px 22px;
     letter-spacing:1px;
     outline: none;
+        ${breakpoint('md')`
+            font-size: 25px;
+            margin-top: 30px;
+        `}
         ${breakpoint('lg')`
             font-size:20px;
+            margin-top: 0;
         `}
 `
 const Text = styled.p`

@@ -5,8 +5,14 @@ import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../Assets/Styles/Themes';
 import { Link } from 'react-router-dom';
 import Logo from '../../../../Assets/Images/logo.svg';
+import LogoColor from '../../../../Assets/Images/logo_color.png';
 import Bg from '../../../../Assets/Images/header.png';
 import loginIcon from '../../../../Assets/Images/login.svg';
+import Menu from '../../../../Assets/Images/login.svg';
+import PropTypes from "prop-types";
+
+
+
 
 class HeaderContainer extends Component {
 	render(){
@@ -17,10 +23,10 @@ class HeaderContainer extends Component {
 				<LinkedLogo to='/'><LogoImg src={Logo}/></LinkedLogo>
 				<NavWide>
 					<WideDiv>
-						<StyledLink to='/'>Home</StyledLink>
+						<StyledLink to='/'  className="navHome">Home</StyledLink>
 						<StyledLink to='/about'>About</StyledLink>
 						<StyledLink to='/support'>Support</StyledLink>
-						<StyledLink to='/blog'>Casestudy</StyledLink>
+						{/* <StyledLink to='/casestudy'>Casestudy</StyledLink> */}
 						<StyledLink to='/contact'>Contact Us</StyledLink>
 						<Box>
                            <Sns href="#">
@@ -44,10 +50,10 @@ class HeaderContainer extends Component {
 				<NavNarrow>
 				<FontAwesomeIcon style={icon} icon='bars' onClick={this.burgerToggle} size="2x"/>
 					<NarrowLinks className="narrowLinks">
-						<NarrowStyledLink onClick={this.burgerToggle} to='/'>Home</NarrowStyledLink>
+						<NarrowStyledLink onClick={function(event){ this.burgerToggle; this.navColorChange}} to='/' className="navHome">Home</NarrowStyledLink>
 						<NarrowStyledLink onClick={this.burgerToggle} to='/about'>About</NarrowStyledLink>
-						<NarrowStyledLink onClick={this.burgerToggle} to='/support'>Support</NarrowStyledLink>
-						<NarrowStyledLink onClick={this.burgerToggle} to='/blog'>Casestudy</NarrowStyledLink>
+						<NarrowStyledLink onClick={this.burgerToggle} to='/support' >Support</NarrowStyledLink>
+						<NarrowStyledLink onClick={this.burgerToggle} to='/casestudy'>Casestudy</NarrowStyledLink>
 						<NarrowStyledLink onClick={this.burgerToggle} to='/contact'>Contact Us</NarrowStyledLink>
 						<Box>
                            <Sns href="https://www.facebook.com/EasyFormsNZ/?ref=aymt_homepage_panel">
@@ -83,13 +89,20 @@ class HeaderContainer extends Component {
 			linksEl.style.flexDirection = 'column';
 		}
 	}
+	navColorChange = () => {
+		let navHome = document.querySelector('.navHome');
+		if(navHome) {
+			document.querySelector('.navbar').style.backgroundColor="red";
+		}
+	}
 }
 
 const Nav = styled.div`
 	height:auto;
-	background-color: ${Themes.colors.white};
+	background-color: ${Themes.colors.w_mint};
 	overflow: hidden;
 	padding: 1.25em 10% 0.625em;
+	position: sticky;
 	a {
 		color: #707070;
 	};
@@ -97,7 +110,8 @@ const Nav = styled.div`
 		color: #FF9800;
 	}
 		${breakpoint('md')`
-			padding: 3.25em 10% 0.625em;
+			// padding: 3.25em 10% 0.625em;
+			padding: 3%;
 		`}
 	`
 const Container = styled.div`
@@ -125,6 +139,7 @@ const NavNarrow = styled.div`
  const NavWide = styled.div`
 	display: none;
 		@media (min-width: 768px) {
+			display:none;
 			display: flex;
 			justify-content:flex-end;
 		}
@@ -133,6 +148,7 @@ const NavNarrow = styled.div`
 const WideDiv = styled.div`
 display:flex;
 align-items: flex-end;
+
 `;
 const Box = styled.div`
     display: flex;
@@ -191,12 +207,24 @@ const LogoImg = styled.img`
 	width:30px;
 	float:left;
 	position:absolute;
+	${breakpoint('md')`
+		content: url(${LogoColor});
+		width:120px;
+	`}
 	${breakpoint('lg')`
-		width:160px;
+		content: url(${LogoColor});
+		width:100px;
 	`}
 `
 const LinkedLogo = styled(Link)`
 	height:32px;
+	${breakpoint('md')`
+		margin-top: -20px;
+		height:50px;
+	`}
+	${breakpoint('lg')`
+		margin-top: -40px;
+	`}
 `
 const icon = {
 	float:'right',
@@ -225,6 +253,10 @@ const NarrowLinks = styled.div`
 		position: static;
 		display: none;
 		margin: 3.5em 0 0;
+		${breakpoint('md')`
+		display: none;
+	`}
+		
 `;
 
 const NarrowStyledLink = styled(Link)`

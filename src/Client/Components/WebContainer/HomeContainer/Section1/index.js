@@ -7,8 +7,8 @@ import Button01 from '../../../Common/Button/Button01';
 import { Link } from 'react-router-dom';
 
 /** Images **/
-import HomeSection01BgSm from '../../../../../Assets/Images/HomeSection01BgSm.png';
 import HomeSection01BgMd from '../../../../../Assets/Images/HomeSection01BgMd.png';
+import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
 import mainImage from '../../../../../Assets/Images/mainImage.svg';
 
 /** components **/
@@ -22,14 +22,12 @@ class Section1 extends Component{
                     <Container>
                         <Section01__Image><MainImage src={mainImage}/></Section01__Image>
                         <Section01__TitleDiv>
-                            <StyledTitle>Job Management and WorkFlow Processes Made Easy</StyledTitle>
-                            <Section01__Text>We are a cloud-based solution offering end-to-end job 
-                                and workflow management software industry standard 
-                                health and safety management and much more.
+                            <StyledTitle>Accelerate your business <Br />processes through innovative <Br />software design</StyledTitle>
+                            <Section01__Text>Harness the power of cloud-based custom software. Transform how you do business through systems designed with your stakeholders and processes in mind.
                             </Section01__Text>
                             <ButtonDiv>
                                 <ButtonLink to='/contact'>
-                                    <Button01 value={'Contact our Software Experts'}/>
+                                    <Button01 value={'Contact us'}/>
                                 </ButtonLink>
                             </ButtonDiv>
                         </Section01__TitleDiv>
@@ -39,10 +37,14 @@ class Section1 extends Component{
     }
 }
 /**** Section 01 ****/
-
+const Br = styled.br`
+    display: none;
+    ${breakpoint('md')`
+        diplay block;
+    `}
+`
 const Section01 = styled.div`
     margin:0;
-    background: url('${HomeSection01BgSm}');
     background-position:center top;
     background-repeat:no-repeat;
     background-size:100% 100%;
@@ -50,31 +52,34 @@ const Section01 = styled.div`
         background: url('${HomeSection01BgMd}');
         background-position:center top;
         background-repeat:no-repeat;
+        background-size:120% 120%;
+    `}
+    ${breakpoint('lg')`
+        background: url('${HomeSection02BgMd}');
+        background-position:center top;
+        background-repeat:no-repeat;
         background-size:100% 100%;
     `}
 `
 const Container = styled.div`
-    padding:18% 5%;
+    padding: ${Themes.paddings.mobileTop};
     display:flex;
     flex-direction:column;
     align-items:center;
         ${breakpoint('md')`
-            padding: 70px 8%;
-            justify-content:space-between;
-            flex-direction:row;
-            align-items:flex-start;
+            padding: ${Themes.paddings.mobileTopNone};
         `}
         ${breakpoint('lg')`
+            flex-direction:row;
             max-width: 1366px;
             margin:0 auto;
-            padding: 70px 8% 30px 8%;
+            padding: 0 5% 0 5%;
         `}
 `
 const Section01__Image = styled.div`
     width:100%;
         ${breakpoint('md')`
-            margin-left:0;
-            width:90%;
+            transform: scale(0.9);
         `}
 `
 const MainImage = styled.img`
@@ -87,25 +92,27 @@ const Section01__TitleDiv = styled.div`
     flex-direction:column;
     align-items:center;
     ${breakpoint('md')`
-        width:85%;
+        width:100%;
         align-items:flex-start;
+        
     `}
     ${breakpoint('lg')`
-        margin-left:2em;
         height:250px;
     `}
 `;
 const StyledTitle = styled.div`
         ${BigTitle};
-        color:white;
+        color:${Themes.colors.black};
+        font-weight:${Themes.fontWeight.black};
         margin: 1em 0;
         text-align:center;
         ${breakpoint('md')`
-            text-align:left;
+            font-size:${Themes.fontsize.D_h1};
+            text-align:center;
             margin:0;
         `}
         ${breakpoint('lg')`
-            margin: 0 25% 0 0;
+            text-align:center;
         `}
     `
 const Section01__Text = styled.div`
@@ -118,19 +125,25 @@ const Section01__Text = styled.div`
     line-height:26px;
     font-size:${Themes.fontsize.p1};
         ${breakpoint('md')`
-            display:block;
+            display:none;
+            display:flex;
+            color:${Themes.colors.grey};
+            font-weight:${Themes.fontWeight.regular};
+            text-align: center;
         `}
         ${breakpoint('lg')`
-           margin: 20px 15% 20px 0;
+            text-align: left;
+            display:none;
         `}
 `
 const ButtonDiv = styled.div`
-    width:100%;
+    width:64%;
     ${breakpoint('md')`
-        margin-left:-5px;
+        // margin-left:-5px;
+        margin: 0 auto;
     `}
     ${breakpoint('lg')`
-        width:70%;
+        width:60%;
         // margin-left:0;
     `}
 `

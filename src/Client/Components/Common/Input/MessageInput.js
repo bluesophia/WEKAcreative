@@ -21,7 +21,7 @@ export default class MessageInput extends Component {
       <ThemeProvider theme={Themes}>
         <Container>
           <Label_Div>  
-          <Label>Let us know how we can help</Label><P>Required</P><br />
+          <Label>Message</Label><P>Required</P><br />
           </Label_Div>
             <Input
               value={this.state.value}
@@ -42,6 +42,10 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   margin-bottom:3em;
+  ${breakpoint('lg')`
+  margin-bottom: 10%;
+  `}
+
 `
 const Label_Div = styled.div`
   display: flex;
@@ -49,17 +53,19 @@ const Label_Div = styled.div`
 `
 const Label = styled.label`
   font-size: ${Themes.fontsize.p2}
-  font-weight: ${Themes.fontWeight.bold}
-  color: ${Themes.colors.blueLight};
-  `
+  font-weight: ${Themes.fontWeight.black}
+  color: ${Themes.colors.black};
+`
+
 const P = styled.p`
-  font-size: ${Themes.fontsize.p3};
-  font-weight: ${Themes.fontWeight.light};
-  color: ${Themes.colors.grey};
+  font-size: ${Themes.fontsize.p4};
+  font-weight: ${Themes.fontWeight.bold};
+  color: ${Themes.colors.w_red};
   margin: 0;
   margin-left: 10px;
   padding:0;
 `
+
 const Input = styled.textarea.attrs({
   maxlength: 500,
   rows:8

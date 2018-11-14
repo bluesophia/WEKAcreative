@@ -8,13 +8,25 @@ import BigTitle from '../../../Common/Title/BigTitle';
 /** Images **/
 import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
 import HomeSection02Image from '../../../../../Assets/Images/HomeSection02Image.png';
-import WhyUs01 from '../../../../../Assets/Images/whyicon01.png';
-import WhyUs02 from '../../../../../Assets/Images/whyicon02.png';
-import WhyUs03 from '../../../../../Assets/Images/whyicon03.png';
+import AI from '../../../../../Assets/Images/ai.svg';
+import MachineLearning from '../../../../../Assets/Images/machinelearning.svg';
+import Blockchain from '../../../../../Assets/Images/blockchain.svg';
+import ArgumentedReality from '../../../../../Assets/Images/argumentedreality.svg';
+import GPS from '../../../../../Assets/Images/gps.svg';
+import Automation from '../../../../../Assets/Images/automation.svg';
 import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
 /** Components **/
 import Text from '../../../Common/Text';
+import YellowSpan from '../../../Common/YellowSpan';
+import MintSpan from '../../../Common/MintSpan';
+import FeaturesCarousel from '../../../Common/FeaturesCarousel';
+import Button01 from '../../../Common/Button/Button01';
+import HideAndShowCard1 from '../../../Common/HideAndShow/HideAndShowCard1';
+import HideAndShowCard2 from '../../../Common/HideAndShow/HideAndShowCard2';
+import HideAndShowCard3 from '../../../Common/HideAndShow/HideAndShowCard3';
+// import HideAndShowCard4 from '../../../Common/HideAndShow/HideAndShowCard4';
+import { Link } from 'react-router-dom';
 
 const Shadow = css`
     box-shadow : 0 0 8px rgba(50, 50, 93, 0.23);
@@ -24,66 +36,87 @@ class Section2 extends Component{
         return(
             <Section02>
                 <Container>
-                    <Section02__LeftDiv>
-                        <Section02__TitleDiv>
-                            <Section02__Title>Why Easyforms?</Section02__Title>
-                        </Section02__TitleDiv>
-                        <Section02__Contents>
-                            <Section02__ContentDiv>
-                                <Section02__Image src={WhyUs01} />
-                                <div>
-                                    <Section02__Subtitle>Customised to your needs</Section02__Subtitle>
-                                    <Section02__Text>Our solutions can be designed 
-                                    specifically to your business needs. </Section02__Text>
-                                </div>
-                            </Section02__ContentDiv>
-                            <Section02__ContentDiv>
-                                <Section02__Image src={WhyUs02} />
-                                <div>
-                                    <Section02__Subtitle>Streamline your processes</Section02__Subtitle>
-                                    <Section02__Text>Our app-based solution means 
-                                    you can wave goodbye to stacks of paperwork, 
-                                    inefficiencies, double handling + much more.</Section02__Text>
-                                </div>
-                            </Section02__ContentDiv>
-                            <Section02__ContentDiv>
-                                <Section02__Image src={WhyUs03}/>
-                                <div>
-                                <Section02__Subtitle>User friendly designs</Section02__Subtitle>
-                                <Section02__Text>Our solutions are easy-to-use and user friendly.</Section02__Text>
-                                </div>
-                            </Section02__ContentDiv>
-                        </Section02__Contents>
-                    </Section02__LeftDiv>
+                    <Section02__Container>
+                        <Section02__Title>How we can help</Section02__Title>
+                        <YellowSpan />
+                        <Section02__Text>We design software to service a variety of needs and 
+                         help you work across <Br />a range of environments and platforms.</Section02__Text>
+                        <FeaturesCarousel />
+                        <HideAndShowCard2 
+                        title={["Harness the latest in web tech ", <Br2 />, "to tell", <Br />, "showcase your business"]} 
+                        text={["The first port of call for a customer wanting to engage with", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
+                        />
+                        <HideAndShowCard3
+                        title={"Embrace the power of collaboration"} 
+                        text={["Multiple systems for multiple purposes? No problem.", <Br2 />,"Increase the efficiency of your existing systems by helping them communicate", <Br2 />," and share information."]} 
+                        />
+                        {/* <HideAndShowCard2 
+                        title={["Harness the latest in web tech ", <Br2 />, "to tell", <Br />, "showcase your business"]} 
+                        text={["The first port of call for a customer wanting to engage with", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
+                        /> */}
+                        <Section02__ReadmoreContainer>
+                            <Section02__Div>
+                                <Section02__Title>How we can help</Section02__Title>
+                                <MintSpan />
+                                <Section02__Text>Whether you are looking to replace paper-based processes, communicate with your team, <Br />interact with your customers, or revolutionise your business, we can help.</Section02__Text>
+                                <Section02__Text__Bold>Our mobile solutions are multi-platform, responsive, and function in a wide range of environments.</ Section02__Text__Bold>
+                                <ButtonDiv>
+                                    <ButtonLink to='/contact'>
+                                        <Button01 value={'Talk to us today'}/>
+                                    </ButtonLink>
+                                </ButtonDiv>
+                            </Section02__Div>
+                        </Section02__ReadmoreContainer>
+                    </Section02__Container>
                 </Container>
-                <Section02__RightDiv>
-                </Section02__RightDiv>
             </Section02>
         )
     }
 }
 
-/**** Section 02 ****/
 
-const Section02 = styled.div`
-    padding: 18% 8% 60px;
+/**** Section 02 ****/
+const Br = styled.br`
+    display:none;
     ${breakpoint('md')`
-    padding: 60px 20%;
+    display:none;
     `}
     ${breakpoint('lg')`
-        padding:0;
-        background:url(${HomeSection02BgMd}) no-repeat right bottom;
-        background-size:100%;
-        height:768px;
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        grid-column-gap:40px;
+    display:block;
+    `}
+`
+const Br2 = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:block;
+    `}
+    ${breakpoint('lg')`
+    display:none;
+    `}
+`
+const Section02 = styled.div`
+    // padding: 0 10%;
+        padding: ${Themes.paddings.mobile};
+    ${breakpoint('md')`
+        padding: ${Themes.paddings.tablet};
+    `}
+    ${breakpoint('lg')`
+        padding:${Themes.paddings.desktop};
     `}
 `
 const Container = styled.div`
     margin:0 auto;
     ${breakpoint('lg')`
         margin:auto 0 auto auto;
+    `}
+`
+const Section02__Container = styled.div`
+    margin:0 auto;
+    ${breakpoint('sm')`
+    `}
+    ${breakpoint('md')`
+    `}
+    ${breakpoint('lg')`
     `}
 `
 const Section02__LeftDiv = styled.div`
@@ -98,6 +131,8 @@ const Section02__LeftDivContainer = styled.div`
 `
 const Section02__TitleDiv = styled.div`
     margin:0 auto;
+    padding: 10%;
+    padding-bottom: 0;
     ${breakpoint('lg')`
         margin-left:auto;
         margin-bottom:100px;
@@ -105,50 +140,55 @@ const Section02__TitleDiv = styled.div`
 `
 const Section02__Title = styled.div`
     ${BigTitle};
-    color:${Themes.colors.blue};
+    color:${Themes.colors.black};
+    font-weight:${Themes.fontWeight.black};
     ${breakpoint('lg')`
-        text-align:left;
     `}
 `
-const Section02__Contents = styled.div`
-`
-const Section02__ContentDiv = styled.div`
-    margin:60px auto 0 auto;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-        ${breakpoint('lg')`
-        flex-direction:row;
-        align-items:flex-start;
-        `}
-`
-const Section02__Image = styled.img`
-    width:60px;
-    height:auto;
-`
-const Section02__Subtitle = styled.p`
-    margin-top:20px;
-    margin-bottom:0;
-    color:${Themes.colors.blue};
-    font-size:${Themes.fontsize.h3};
-    font-weight:${Themes.fontWeight.bold};
-    text-align:center;
-    padding:0;
-    ${breakpoint('lg')`
-      margin: 0 0 0 35px;   
-      line-height:30px;
-      text-align:left; 
-    `}
-`
+
 const Section02__Text = styled.div`
     margin-top:9px;
+    margin-bottom: -10%;
     ${Text};
     color:${Themes.colors.grey};
     text-align:center;
+        ${breakpoint('md')`
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
+            margin-bottom: -10px;   
+        `}
         ${breakpoint('lg')`
-            text-align:left;
-            max-width:400px;
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
+        `}
+`
+
+const Section02__Text__Bold = styled.div`
+display: none;
+    ${breakpoint('md')`
+    display: none;
+    font-size:${Themes.fontsize.p1}
+    font-weight:${Themes.fontWeight.black}
+    line-height:26px;
+    margin-bottom: -10px;   
+    `}
+    ${breakpoint('lg')`
+    font-size:${Themes.fontsize.p1}
+    line-height:26px;
+    `}
+`
+const Section02__ReadmoreContainer = styled.div`
+display: none;
+`
+const Section02__Div = styled.div`
+`
+
+const Section02_ImgText = styled.div`
+    margin-top:9px;
+    font-size:${Themes.fontsize.p2};
+    color:${Themes.colors.black};
+    text-align:center;
+        ${breakpoint('lg')`
             margin: 9px 0 0 35px;
             font-size:${Themes.fontsize.p2}
             line-height:20px;
@@ -161,4 +201,20 @@ const Section02__RightDiv = styled.div`
         background:url(${HomeSection02Image}) no-repeat left bottom;
     `}
 `
+
+const ButtonDiv = styled.div`
+    width:64%;
+    ${breakpoint('md')`
+        // margin-left:-5px;
+        margin: 0 auto;
+    `}
+    ${breakpoint('lg')`
+        width:40%;
+        // margin-left:0;
+    `}
+`
+const ButtonLink = styled(Link)`
+        cursor:'pointer';
+`
+
 export default Section2;

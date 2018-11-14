@@ -21,13 +21,14 @@ export default class EmailInput extends Component {
       <ThemeProvider theme={Themes}>
       <Container>
       <Label_Div>  
-      <Label>Your Contact Email</Label><P>Required</P><br />
+      <Label>Email</Label><P>Required</P><br />
       </Label_Div> 
         <Input
           value={this.state.value}
           name="email"
           label="Email"
           onChange={this._handleChange}
+          placeholder="weka@gmail.com"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
           required
         />
@@ -43,7 +44,7 @@ const Container = styled.div`
   height: 100%;
   margin-bottom:50px;
   ${breakpoint('lg')`
-   margin-bottom:0px;
+   margin-bottom:10%;
   `}
 `
 const Label_Div = styled.div`
@@ -52,18 +53,18 @@ const Label_Div = styled.div`
 `
 const Label = styled.label`
   font-size: ${Themes.fontsize.p2}
-  font-weight: ${Themes.fontWeight.bold}
-  color: ${Themes.colors.blueLight};
-  `;
+  font-weight: ${Themes.fontWeight.black}
+  color: ${Themes.colors.black};
+  `
 
 const P = styled.p`
-  font-size: ${Themes.fontsize.p3};
-  font-weight: ${Themes.fontWeight.light};
-  color: ${Themes.colors.grey};
+  font-size: ${Themes.fontsize.p4};
+  font-weight: ${Themes.fontWeight.bold};
+  color: ${Themes.colors.w_red};
   margin: 0;
   margin-left: 10px;
   padding:0;
-`;
+`
 
 const Input = styled.input.attrs({
   type: 'Email',

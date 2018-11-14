@@ -6,6 +6,9 @@ import breakpoint from 'styled-components-breakpoint';
 import Logo from '../../../../Assets/Images/logo_color.png';
 import { Link } from 'react-router-dom';
 
+//component
+import Button03 from '../../../Components/Common/Button/Button03';
+
 class FooterContainer extends Component {
     render() {
       return (
@@ -13,33 +16,47 @@ class FooterContainer extends Component {
         <Footer>
           <Container>
             <FooterTop>
-              <FooterBox1>
+              <ButtonDiv>
+                <ButtonLink to='/contact'>
+                    <Button03 value={'Contact us'}/>
+                </ButtonLink>
+                </ButtonDiv>
+                <FooterBox1>
                 <FooterRightContainer>
                   {/* Logo & SNS */}
-                  <FooterBox3>
+                  {/* <FooterBox3> */}
                     <LogoImg src={Logo}/>
                     <Box>
                       <Sns href="#">
                           <FontAwesomeIcon icon={['fab', 'facebook-f']} size="2x" />
                       </Sns>
                       <Sns href="#">
-                          <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" />
+                          <FontAwesomeIcon icon={['fab', 'linkedin-in']} size="2x" />
                       </Sns>
                       <Sns href="#">
-                          <FontAwesomeIcon icon={['fab', 'linkedin-in']} size="2x" />
+                          <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
                     </Sns>
                     </Box>
-                </FooterBox3>
+                    <StyledLink__Div2>
+                      <StyledLink to='/'>Home /</StyledLink>
+                      <StyledLink to='/about'> About /</StyledLink>
+                      <StyledLink to='/support'> Support /</StyledLink>
+                      {/* <StyledLink to='/blog'> Solutions /</StyledLink> */}
+                      <StyledLink to='/contact'> Contact Us</StyledLink>
+                    </StyledLink__Div2>
+                {/* </FooterBox3> */}
                     <FooterRightContainer>
                     <FooterTitle>CONTACT US</FooterTitle>
                     <FooterText>09 234 2345</FooterText>
                     <FooterText>hello@wekacreative.co.nz</FooterText>
                     <FooterTitle>SITEMAP</FooterTitle>
-                    <StyledLink to='/'>Home</StyledLink>
-						        <StyledLink to='/about'>Our Work</StyledLink>
-						        <StyledLink to='/support'>Services</StyledLink>
-						        <StyledLink to='/blog'>Solutions</StyledLink>
-						        <StyledLink to='/contact'>Contact Us</StyledLink>
+                    <StyledLink__Div>
+                      <StyledLink to='/'>Home</StyledLink>
+                      <StyledLink to='/about'>About</StyledLink>
+                      <StyledLink to='/support'>Support</StyledLink>
+                      {/* <StyledLink to='/blog'>Solutions</StyledLink> */}
+                      <StyledLink to='/contact'>Contact Us</StyledLink>
+                    </StyledLink__Div>
                     </FooterRightContainer>
                     
                 </FooterRightContainer>
@@ -73,8 +90,12 @@ class FooterContainer extends Component {
       display: flex;
       justify-content: center;
       ${breakpoint('md')`
-      // justify-content: flex-start;
-  `};
+        float: right;
+        margin-top: -12%;
+      `};
+      ${breakpoint('lg')`
+      // justify-content: flex-end;
+      `};
   `;
   
   const Sns = styled.a`
@@ -83,21 +104,26 @@ class FooterContainer extends Component {
     padding: 1.5em 1.5em;
 
       ${breakpoint('md')`
-      padding: 0 0.5em;
+      padding: 0 1.1em;
       `};
       ${breakpoint('lg')`
-      padding: 0 0.8em;
+      padding: 0 1.5em;
       `};
   `;
 
 const Footer = styled.div`
-  height: 659px;
+  // height: 770px;
   // flex-direction: row;
   // align-items: space-between;
   font-family: Lato;
   background: ${Themes.colors.w_mint};
   padding: 0 10%;
   line-height:1.5em;
+  ${breakpoint('md')`
+    // width: 100%;
+  `}
+  ${breakpoint('lg')`
+  `}
 `;
 
 const Container = styled.div`
@@ -117,8 +143,11 @@ flex-direction: column;
   
   ${breakpoint('md')`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  padding-top: 0;
+  `};
+  ${breakpoint('lg')`
+  padding-top:none;
   `};
 `;
 
@@ -127,8 +156,10 @@ const FooterBox1 = styled.div`
 // flex-direction: column;
 
 ${breakpoint('md')`
-flex-direction: row;
-order:1;
+// flex-direction: row;
+`};
+${breakpoint('lg')`
+// flex-direction: row;
 `};
 `;
 
@@ -144,6 +175,7 @@ const FooterBox3 = FooterBox1.extend`
 ${breakpoint('md')`
 order:3;
 `};
+
 `;
 
 const FooterRightContainer = styled.div`
@@ -152,7 +184,11 @@ const FooterRightContainer = styled.div`
 text-align:center;
 
 ${breakpoint('md')`
-text-align:left;
+  text-align:left;
+`};
+${breakpoint('lg')`
+  float: left;
+  width: 100%;
 `};
 `;
 
@@ -164,16 +200,13 @@ margin: 0.5em 0 0.5em 0;
 
 color: ${Themes.colors.yellow};
 
-${breakpoint('md')`
-font-size: 0.8em;
-margin: 0 1em 0 0;
-text-align:left;
-  `};
-${breakpoint('lg')`
-margin: 0 1em 0 0;
-text-align:left;
-  `};
-`;
+  ${breakpoint('md')`
+  display: none;
+    `};
+  ${breakpoint('lg')`
+  display: none;
+    `};
+  `;
 
 const FooterTitleDisplay = FooterTitle.extend`
 display:none;
@@ -185,7 +218,11 @@ display: block;
 const LogoImg = styled.img`
 	width:176px;
 	// float:left;
-	position:relative;
+  position:relative;
+  ${breakpoint('md')`
+    display: flex;
+    margin-left: -21px;
+	`}
 	${breakpoint('lg')`
 		width:160px;
 	`}
@@ -197,12 +234,26 @@ const FooterText = styled.span`
   color: ${Themes.colors.grey};
   font-weight: ${Themes.fontWeight.light};
   line-height: 1.8;
+  ${breakpoint('md')`
+  font-size: 15px;
+  font-weight: ${Themes.fontWeight.regular};
+  `};
 `;
 
 const FooterTextAddress = FooterText.extend`
 padding-top: 1.25em;
 `;
-
+const StyledLink__Div = styled.div`
+  ${breakpoint('md')`
+  display: none;
+  `};
+`
+const StyledLink__Div2 = styled.div`
+  display: none;
+  ${breakpoint('md')`
+  display: flex;
+  `};
+`
 const StyledLink = styled(Link)`
   color: ${Themes.colors.grey};
   font-size: ${Themes.fontsize.h4};
@@ -210,6 +261,10 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   font-weight: ${Themes.fontWeight.light};
   line-height:1.8;
+  ${breakpoint('md')`
+  font-size: 15px;
+  font-weight: ${Themes.fontWeight.regular};
+  `};
 `;
 
 //footer bottom css
@@ -217,10 +272,11 @@ const FooterBottom = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 1.5em;
+  padding-bottom: 5%;
   text-align: center;
   ${breakpoint('md')`
-  flex-direction: row;
   justify-content: space-between;
+  text-align: left;
   `};
 `;
 
@@ -231,6 +287,27 @@ font-weight:${Themes.fontWeight.light};
 text-align: center;
 padding: 0;
 color: ${Themes.colors.grey};
+  ${breakpoint('md')`
+    text-align: left;
+    font-size: 15px;
+    font-weight: ${Themes.fontWeight.regular};
+      `}
 `;
+
+//button
+const ButtonDiv = styled.div`
+  transform: scale(0.9);
+  padding: 10%;
+    ${breakpoint('md')`
+      padding: 5% 10% 5% 10%;
+    `}
+    ${breakpoint('lg')`
+    `}
+`
+const ButtonLink = styled(Link)`
+        cursor:'pointer';
+
+`
+
 
 export default FooterContainer;

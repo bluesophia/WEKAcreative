@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import HomeScreen from './Client/Screen/HomeScreen';
 import AboutUsScreen from './Client/Screen/AboutUsScreen';
 import SupportScreen from './Client/Screen/SupportScreen';
-import BlogScreen from './Client/Screen/BlogScreen';
+import CaseStudyScreen from './Client/Screen/CaseStudyScreen';
 import ContactUsScreen from './Client/Screen/ContactUsScreen';
 import LoginScreen from './Client/Screen/LoginScreen';
 import RegisterScreen from './Client/Screen/RegisterScreen';
@@ -22,7 +22,7 @@ const Routes = () => (
       <Route exact path='/' component={HomeScreen}/>
       <Route path='/about' component={AboutUsScreen}/>
       <Route path='/support' component={SupportScreen}/>
-      <Route path='/blog' component={BlogScreen}/>
+      <Route path='/casestudy' component={CaseStudyScreen}/>
       <Route path='/contact' component={ContactUsScreen}/>
       <Route path='/login' component={LoginScreen}/>
       <Route path='/register' component={RegisterScreen}/>

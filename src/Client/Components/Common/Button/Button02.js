@@ -20,14 +20,14 @@ Button02.propTypes = {
     value: PropTypes.string
   };
 const ButtonStyle = styled.button`
-    border:2px solid ${Themes.colors.orange};
-    background:linear-gradient(#ffffff,#F0E0C5);
+    border:0;
+    background: ${Themes.colors.w_orange};
     width:100%;
     height:auto;
-    color:${Themes.colors.orange};
+    color:${Themes.colors.white};
     font-size:1em;
     font-weight:${Themes.fontWeight.bold};
-    border-radius:50px;
+    // border-radius:50px;
     padding-top:15px;
     padding-bottom:15px;
     letter-spacing:1px;
