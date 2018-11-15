@@ -29,6 +29,8 @@ import IconPoint from '../../../../Assets/Images/IconPoint.svg'
 import IconSettings from '../../../../Assets/Images/IconSettings.svg'
 import IconWeb from '../../../../Assets/Images/IconWeb.svg'
 
+//components
+import HideAndShowCard1 from '../../Common/HideAndShow/HideAndShowCard1';
 
 function ArrowRight(props) {
   const { onClick, className } = props;
@@ -81,7 +83,9 @@ const ArrowStyle = styled.img`
 `
 
 class FeaturesCarousel extends Component {
+  
 render () {
+  // const { showing } = this.state;
   var settings = {
     infinite: true,
     speed: 500,
@@ -128,6 +132,7 @@ render () {
   };
       return (
         <Slider {...settings}>
+            {/* <div style={{ display: (!showing ? 'block' : 'none' )}}>fdaffda</div> */}
             <FeaturesCard 
             image = {MobileApps}
             iconName1 = {IconData}
@@ -139,6 +144,12 @@ render () {
             text3 = "Improving customer engagement"
             text4 = "Providing your workforce valuable company or product information"
             />
+            {/* {this.state.showReply && 
+              <HideAndShowCard1
+              title={["Transform your business with",<Br2 />,"the power of mobile"]}
+              text={["Whether you are looking to replace paper-based processes",<Br2 />,"communicate with your team",<Br />, "interact with your customers, or",<Br2 />,"revolutionise your business, we can help."]}
+              /> 
+            } */}
             <FeaturesCard 
             image = {Websites}
             iconName1 = {IconInformation}
@@ -173,4 +184,22 @@ render () {
     }
   }
 
+  const Br = styled.br`
+  display:none;
+  ${breakpoint('md')`
+  display:none;
+  `}
+  ${breakpoint('lg')`
+  display:block;
+  `}
+  `
+  const Br2 = styled.br`
+  display:none;
+  ${breakpoint('md')`
+  display:block;
+  `}
+  ${breakpoint('lg')`
+  display:none;
+  `}
+  `
 export default FeaturesCarousel;

@@ -67,6 +67,8 @@ const Container = styled.div`
     `}
     ${breakpoint('lg')`
         // background: ${Themes.colors.w_mint};
+        width:700px;
+        margin-top: 30%;
     `}
 `
 const Section01 = styled.div`

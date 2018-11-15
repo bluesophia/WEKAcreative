@@ -5,8 +5,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Themes from '../../../../Assets/Styles/Themes';
 
 
+//components
+import HideAndShowCard1 from '../../Common/HideAndShow/HideAndShowCard1';
 
 class FeaturesCard extends Component {
+    constructor() {
+        super();
+        this.state= { 
+          showing : false
+        }
+      }
+      onClick(e){
+        e.preventDefault();
+        this.setState({showing: !this.state.showing})
+      }
             render () {
                 // function hideAndshow() {
                 //     const element = document.getElementById("yellowText");
@@ -38,8 +50,15 @@ class FeaturesCard extends Component {
                         <Section05__Icon src={this.props.iconName4}/>
                         <Section05__CardText>{this.props.text4}</Section05__CardText>
                         </Section05__ImgDiv>
-                        <Section05__YellowText id="yellowText">Read More</Section05__YellowText>
-                       
+                        <Section05__YellowText id="yellowText"
+                            onClick={this.onClick.bind(this)}
+                        >Read More</Section05__YellowText>
+                        {this.state.showing && 
+              <HideAndShowCard1
+              title={["Transform your business with",<Br2 />,"the power of mobile"]}
+              text={["Whether you are looking to replace paper-based processes",<Br2 />,"communicate with your team",<Br />, "interact with your customers, or",<Br2 />,"revolutionise your business, we can help."]}
+              /> 
+            }
                     </Section05__div>
                 </Section05__Card>
             )}
@@ -48,6 +67,24 @@ class FeaturesCard extends Component {
 // const Shadow = css`
 //     box-shadow : -2px 2px 4px rgba(50,50,93,0.23);
 // `
+const Br = styled.br`
+display:none;
+${breakpoint('md')`
+display:none;
+`}
+${breakpoint('lg')`
+display:block;
+`}
+`
+const Br2 = styled.br`
+display:none;
+${breakpoint('md')`
+display:block;
+`}
+${breakpoint('lg')`
+display:none;
+`}
+`
 const Section05__div = styled.div`
     // padding: 5% 6%;
 `
@@ -114,6 +151,7 @@ const Section05__CardText = styled.p`
 `
 const Section05__YellowText = styled.p`
     color: ${Themes.colors.orange};
+    cursor: pointer;
     font-size: 16px;    
     text-align: center;
     margin-top: -20px;
