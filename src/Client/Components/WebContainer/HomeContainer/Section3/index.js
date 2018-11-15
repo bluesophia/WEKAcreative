@@ -90,12 +90,12 @@ class Section3 extends Component {
                 <Section03__Container__image>
                     <Section03__Container__imageSm>   
                         <Section03__Image src={this.state.SomeofOurWorkPassafe} 
-                            onMouseEnter={this.handleMouseOver1}
-                            onMouseLeave={this.handleMouseOut}
+                            onMouseOver={this.handleMouseOver1}
+                            onMouseOut={this.handleMouseOut}
                         />
                         <Section03__Image src={this.state.SomeofOurWorkRugdoctor} 
-                            onMouseEnter={this.handleMouseOver2}
-                            onMouseLeave={this.handleMouseOut}
+                            onMouseOver={this.handleMouseOver2}
+                            onMouseOut={this.handleMouseOut}
                         />
                     </Section03__Container__imageSm> 
                     <Section03__Container__imageSm> 
@@ -144,7 +144,7 @@ const Section03__Container__image = styled.div`
         padding-top: 8%;
         margin-bottom: 10%;
         position: relative;
-        transform: scale(1.35);
+        // transform: scale(1.35);
     `}
     ${breakpoint('lg')`
         margin-bottom: 0;
@@ -184,10 +184,18 @@ const   Section03__Text = styled.div`
 const Section03__ImageDiv = styled.div`
 `
 const Section03__Image = styled.img`
+
     // margin: -2px 0;
     &:hover {
         background: url('${SomeofOurWorkToyota}');
     }
-   
+    ${breakpoint('md')`
+        width: 295px;
+    `}
+    ${breakpoint('lg')`
+    // transform: scale(1.5);
+    // margin: 0 0 10% 16%; 
+    width:585px;
+    `}
 `
 export default Section3;

@@ -76,7 +76,8 @@ const Section05__Card = styled.div`
     `}
     ${breakpoint('lg')`
         width: 180px;
-        height:412px;
+        height: auto;
+        // height:412px;
     // padding: 40px 10px 30px 10px;
     padding: 40px 0 30px 0;
     box-sizing: border-box;
