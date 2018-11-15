@@ -37,12 +37,12 @@ class HomeScreen extends Component{
         return(
             <ThemeProvider theme={Themes}>
                 <div>
-                    {/* <Section01 />
-                    <Section02 /> */}
+                    <Section01 />
+                    <Section02 />
                     <Section03 />
-                    {/* <Section04 />
+                    <Section04 />
                     <Section05 />
-                    <Section06 /> */}
+                    <Section06 />
                 </div>
            </ThemeProvider>
         )

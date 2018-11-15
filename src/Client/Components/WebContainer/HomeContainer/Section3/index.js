@@ -19,6 +19,9 @@ const Images  = [
     require("../../../../../Assets/Images/SomeofOurWorkRugdoctor.svg"),
     require("../../../../../Assets/Images/SomeofOurWorkMethTesting.svg"),
     require("../../../../../Assets/Images/SomeofOurWorkToyota.svg"),
+    require("../../../../../Assets/Images/SomeofOurWorkRugdoctor2.svg"),
+    require("../../../../../Assets/Images/SomeofOurWorkMethTesting3.svg"),
+    require("../../../../../Assets/Images/SomeofOurWorkToyota2.svg"),
 ]
 
 class Section3 extends Component {
@@ -57,22 +60,22 @@ class Section3 extends Component {
     }
     handleMouseOver1() {
         this.setState({
-            SomeofOurWorkPassafe: Images[3]
+            SomeofOurWorkPassafe: Images[4]
         })
     }
     handleMouseOver2() {
         this.setState({
-            SomeofOurWorkRugdoctor: Images[2]
+            SomeofOurWorkRugdoctor: Images[4]
         })
     }
     handleMouseOver3() {
         this.setState({
-            SomeofOurWorkMethTesting: Images[1]
+            SomeofOurWorkMethTesting: Images[5]
         })
     }
     handleMouseOver4() {
         this.setState({
-            SomeofOurWorkToyota: Images[0]
+            SomeofOurWorkToyota: Images[6]
         })
     }
     render(){
