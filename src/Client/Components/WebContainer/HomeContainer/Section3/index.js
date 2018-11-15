@@ -51,7 +51,7 @@ class Section3 extends Component {
     }
     handleMouseOver2() {
         this.setState({
-            SomeofOurWorkRugdoctor: Images[4]
+            SomeofOurWorkRugdoctor: Images[5]
         })
     }
     handleMouseOver3() {
@@ -113,7 +113,7 @@ const Section03 = styled.div`
     padding: 15% 10% 10% 10%;
     ${breakpoint('md')`
     padding: ${Themes.paddings.tablet};
-    margin-bottom: 150px;
+    margin-bottom: 10%;
     `}
     ${breakpoint('lg')`
         padding: ${Themes.paddings.desktop};
@@ -127,7 +127,7 @@ const Section03__Container__image = styled.div`
     ${breakpoint('sm')`
     `}
     ${breakpoint('md')`
-        padding-top: 8%;
+        // padding-top: 8%;
         margin-bottom: 10%;
         position: relative;
         // transform: scale(1.35);

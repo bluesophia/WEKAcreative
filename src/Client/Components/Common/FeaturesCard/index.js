@@ -39,7 +39,9 @@ class FeaturesCard extends Component {
                     <Section05__Icon src={this.props.iconName4}/>
                     <Section05__CardText>{this.props.text4}</Section05__CardText>
                     </Section05__ImgDiv>
+                    <Section05__TextDiv>
                     <Section05__YellowText onClick={()=>{this.props.onPress()}} id="yellowText">Read More</Section05__YellowText>
+                    </Section05__TextDiv>
                 </Section05__div>
             </Section05__Card>
         )}
@@ -67,11 +69,20 @@ display:none;
 `}
 `
 const Section05__div = styled.div`
-    // padding: 5% 6%;
+    // height: auto;
+    display: flex;
+    align-items: space-around;
+    flex-direction: column;
 `
 const Section05__ImgDiv = styled.div`
     display: flex;
     align-items: center;
+`
+const Section05__TextDiv = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
 `
 const Section05__Icon = styled.img`
     width: 27px;
@@ -87,17 +98,18 @@ const Section05__Card = styled.div`
     padding: 40px 15px 30px 15px;
     box-sizing: border-box;
     ${breakpoint('md')`
-        width:284px;
-        height:412px;
+        width:  px;
+        // height:412px;
+        height:420px;
     padding: 40px 15px 30px 15px;
     box-sizing: border-box;
     `}
     ${breakpoint('lg')`
-        width: 180px;
+        width: 190px;
         height: auto;
         // height:412px;
     // padding: 40px 10px 30px 10px;
-    padding: 40px 0 30px 0;
+    padding: 0;
     box-sizing: border-box;
     `}
 `
@@ -136,6 +148,20 @@ const Section05__YellowText = styled.p`
     font-size: 16px;    
     text-align: center;
     margin-top: -20px;
+    ${breakpoint('md')`
+    color: ${Themes.colors.orange};
+    cursor: pointer;
+    font-size: 16px;    
+    text-align: center;
+    margin-top: -10px;
+    `}
+    ${breakpoint('lg')`
+    color: ${Themes.colors.orange};
+    cursor: pointer;
+    font-size: 16px;    
+    text-align: center;
+    margin-top: -20px;
+    `}
 `
 
 export default FeaturesCard;

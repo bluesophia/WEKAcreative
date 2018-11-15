@@ -67,6 +67,9 @@ const Container = styled.div`
         background-image: linear-gradient(#F4FAF6, #FFF);
         margin-top:10%;
     `}
+    ${breakpoint('lg')`
+        margin-top:0;
+    `}
 `
 const Section01 = styled.div`
     margin:0 auto;

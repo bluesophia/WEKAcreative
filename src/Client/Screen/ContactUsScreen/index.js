@@ -135,7 +135,8 @@ const TopBgImg = styled.img`
     ${breakpoint('lg')`
       display:block;
       width:100vw;
-      height:45%;
+      // height:45%;
+      height: 73%;
       position:absolute;
       top:120;
     `}
