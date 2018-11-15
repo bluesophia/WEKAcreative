@@ -2,23 +2,17 @@ import React, { Component } from 'react';
 import styled, { css, ThemeProvider } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../../Assets/Styles/Themes';
-import HeaderLine from '../../../Common/HeaderLine';
 /** components **/
 import BigTitle from '../../../Common/Title/BigTitle';
 import Text from '../../../Common/Text';
 import YellowSpan from '../../../Common/YellowSpan';
-import FeaturesCarousel from '../../../Common/FeaturesCarousel';
-
-// images
-// import SomeofOurWorkPassafe from '../../../../../Assets/Images/SomeofOurWorkPassafe.svg';
-// import SomeofOurWorkRugdoctor from '../../../../Assets/Images/SomeofOurWorkRugdoctor.svg';
-// import SomeofOurWorkMethTesting from '../../../../../Assets/Images/SomeofOurWorkMethTesting.svg';
 import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.svg';
 const Images  = [
     require("../../../../../Assets/Images/SomeofOurWorkPassafe.svg"),
     require("../../../../../Assets/Images/SomeofOurWorkRugdoctor.svg"),
     require("../../../../../Assets/Images/SomeofOurWorkMethTesting.svg"),
     require("../../../../../Assets/Images/SomeofOurWorkToyota.svg"),
+    require("../../../../../Assets/Images/SomeofOurWorkPassafe2.svg"),
     require("../../../../../Assets/Images/SomeofOurWorkRugdoctor2.svg"),
     require("../../../../../Assets/Images/SomeofOurWorkMethTesting3.svg"),
     require("../../../../../Assets/Images/SomeofOurWorkToyota2.svg"),
@@ -42,14 +36,6 @@ class Section3 extends Component {
         this.handleMouseOver4 = this.handleMouseOver4.bind(this);
         this.handleMouseOut = this.handleMouseOut.bind(this);
     }
-    // handleMouseOver() {
-    //     this.setState({
-    //         SomeofOurWorkPassafe: Images[3],
-    //         SomeofOurWorkRugdoctor: Images[2],
-    //         SomeofOurWorkMethTesting: Images[1],
-    //         SomeofOurWorkToyota: Images[0]
-    //     })
-    // }
     handleMouseOut() {
         this.setState({
             SomeofOurWorkPassafe: Images[0],
@@ -70,12 +56,12 @@ class Section3 extends Component {
     }
     handleMouseOver3() {
         this.setState({
-            SomeofOurWorkMethTesting: Images[5]
+            SomeofOurWorkMethTesting: Images[6]
         })
     }
     handleMouseOver4() {
         this.setState({
-            SomeofOurWorkToyota: Images[6]
+            SomeofOurWorkToyota: Images[7]
         })
     }
     render(){
@@ -131,7 +117,7 @@ const Section03 = styled.div`
     `}
     ${breakpoint('lg')`
         padding: ${Themes.paddings.desktop};
-        margin-bottom: 20%;
+        // margin-bottom: 20%;
     `}
 `
 const Section03__Container = styled.div`
@@ -147,6 +133,7 @@ const Section03__Container__image = styled.div`
         // transform: scale(1.35);
     `}
     ${breakpoint('lg')`
+        padding-top: 0;
         margin-bottom: 0;
         // transform: scale(1.8);
     `}

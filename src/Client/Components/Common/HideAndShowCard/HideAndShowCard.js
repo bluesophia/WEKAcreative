@@ -38,6 +38,7 @@ class HideAndShowCard extends Component {
                         </HideAndShowCard__TextDiv>
                     </HideAndShowCard__ImgDiv>
                 </HideAndShowCard__div>
+                {/* Image */}
                 <HideAndShowCard2__div>
                     <HideAndShowCard2__ImgDiv>
                         <HideAndShowCard__Img src={this.props.img} />
@@ -80,10 +81,10 @@ const HideAndShowCard__ImgDiv = styled.div`
     display: flex;
     align-items: center;
     ${breakpoint('md')`
-        padding: 4% 0;
+        padding: 4% 10%;
     `}
     ${breakpoint('lg')`
-        padding: 4% 0;
+        padding: 4% 9%;
         // width: 60%;
     `}
 `
@@ -98,7 +99,7 @@ const HideAndShowCard__Img = styled.img`
     width: 284px;
     `}
     ${breakpoint('lg')`
-        // width: 377px;
+        width: 90%;
     `}
 `
 const HideAndShowCard__TextDiv = styled.div`
@@ -136,8 +137,8 @@ const HideAndShowCard__Card = styled.div`
 
     `}
     ${breakpoint('lg')`
-        width: 880px;
-        height:530px;
+        // width: 880px;
+        // height:530px;
         box-sizing: border-box;
     `}
 `

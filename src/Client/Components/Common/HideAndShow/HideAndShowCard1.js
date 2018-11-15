@@ -64,11 +64,8 @@ const Container = styled.div`
     ${breakpoint('md')`
         display: block; 
         padding: 10% 0 0 0;
-    `}
-    ${breakpoint('lg')`
-        // background: ${Themes.colors.w_mint};
-        width:700px;
-        margin-top: 30%;
+        background-image: linear-gradient(#F4FAF6, #FFF);
+        margin-top:10%;
     `}
 `
 const Section01 = styled.div`
@@ -76,12 +73,9 @@ const Section01 = styled.div`
 `    
 const Section02 = styled.div`
     margin:0 auto;
-    ${breakpoint('md')`
-        margin-bottom: 10%; 
-    `}
     ${breakpoint('lg')`
-        margin-top: 13%;
-        // margin-bottom: 10%; 
+        margin-bottom: 0; 
+        margin-top: -3%;
     `}
 `    
 const Section01__Title = styled.div`

@@ -31,6 +31,9 @@ import IconWeb from '../../../../Assets/Images/IconWeb.svg'
 
 //components
 import HideAndShowCard1 from '../../Common/HideAndShow/HideAndShowCard1';
+import HideAndShowCard2 from '../../Common/HideAndShow/HideAndShowCard2';
+import HideAndShowCard3 from '../../Common/HideAndShow/HideAndShowCard3';
+import HideAndShowCard4 from '../../Common/HideAndShow/HideAndShowCard4';
 
 function ArrowRight(props) {
   const { onClick, className } = props;
@@ -83,9 +86,42 @@ const ArrowStyle = styled.img`
 `
 
 class FeaturesCarousel extends Component {
-  
+  constructor() {
+    console.log('Features Constructor')
+    super();
+    this.state = { 
+      showing : false,
+      showing2 : false,
+      showing3 : false,
+      showing4 : false,
+      features: [
+        {
+          texts: ["Capturing data from the field",
+                  "Communicating with your mobile workforce"],
+          title: ["Harness the latest in web tech ", "to tell showcase your business"],
+
+
+        }
+      ]
+    }
+  }
+  _onItemClick = () => {
+    console.log ("Hi", this.state.showing);
+    this.setState({showing: !this.state.showing});
+  }
+  _onItemClick2 = () => {
+    console.log ("Hi", this.state.showing2);
+    this.setState({showing2: !this.state.showing2});
+  }
+  _onItemClick3 = () => {
+    console.log ("Hi", this.state.showing3);
+    this.setState({showing3: !this.state.showing3});
+  }
+  _onItemClick4 = () => {
+    console.log ("Hi", this.state.showing4);
+    this.setState({showing4: !this.state.showing4});
+  }
 render () {
-  // const { showing } = this.state;
   var settings = {
     infinite: true,
     speed: 500,
@@ -131,9 +167,10 @@ render () {
     ]
   };
       return (
+        <div>
         <Slider {...settings}>
-            {/* <div style={{ display: (!showing ? 'block' : 'none' )}}>fdaffda</div> */}
             <FeaturesCard 
+            onPress={this._onItemClick}
             image = {MobileApps}
             iconName1 = {IconData}
             iconName2 = {IconCommunication}
@@ -144,13 +181,8 @@ render () {
             text3 = "Improving customer engagement"
             text4 = "Providing your workforce valuable company or product information"
             />
-            {/* {this.state.showReply && 
-              <HideAndShowCard1
-              title={["Transform your business with",<Br2 />,"the power of mobile"]}
-              text={["Whether you are looking to replace paper-based processes",<Br2 />,"communicate with your team",<Br />, "interact with your customers, or",<Br2 />,"revolutionise your business, we can help."]}
-              /> 
-            } */}
             <FeaturesCard 
+            onPress={this._onItemClick2}
             image = {Websites}
             iconName1 = {IconInformation}
             iconName2 = {IconEcommerce}
@@ -160,6 +192,7 @@ render () {
             text3 = "Customer capture for marketing"
             />
             <FeaturesCard 
+            onPress={this._onItemClick3}
             image = {Integrations}
             iconName1 = {IconPeople}
             iconName2 = {IconPoint}
@@ -171,6 +204,7 @@ render () {
             text4 = "Automate your processes of data"
             />
             <FeaturesCard 
+            onPress={this._onItemClick4}
             image = {FullSolutions}
             iconName1 = {IconWeb}
             iconName2 = {IconBrain}
@@ -180,6 +214,26 @@ render () {
             text3 = "Software designed to to help lead your business forward "
             />
       </Slider>
+          {this.state.showing &&  <HideAndShowCard1 
+            title={["Transform your business with",<Br2 />,"the power of mobile"]}
+            text={["Whether you are looking to replace paper-based processes",<Br2 />,"communicate with your team",<Br />, "interact with your customers, or",<Br2 />,"revolutionise your business, we can help."]}
+          />}
+          {this.state.showing2 && 
+            <HideAndShowCard2 
+            title={["Harness the latest in web tech ", <Br2 />, "to showcase your business"]} 
+            text={["The first port of call for a customer wanting to engage with", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
+          />}
+          {this.state.showing3 && 
+            <HideAndShowCard3
+            title={"Embrace the power of collaboration"} 
+            text={["Multiple systems for multiple purposes? No problem.", <Br2 />,<Br />,"Increase the efficiency of your existing systems by helping them communicate", <Br2 />," and share information."]} 
+          />}    
+          {this.state.showing4 && 
+            <HideAndShowCard4 
+            title={"Tailor made for you"} 
+            text={["Sometimes the best solution is a bespoke solution.", <Br2 />,<Br />,"We can dive into the inner workings of you business to design and build software that fits you like a glove."]} 
+          />}
+          </div>
       );
     }
   }

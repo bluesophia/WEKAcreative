@@ -93,6 +93,9 @@ const Section05__Text = styled.div`
             font-size:${Themes.fontsize.p1}
             line-height:26px;
         `}
+        ${breakpoint('lg')`
+            margin-bottom: 4%;
+        `}
 `
 
 const Section05__Logos = styled.div`

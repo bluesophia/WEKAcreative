@@ -52,9 +52,8 @@ const Container = styled.div`
     ${breakpoint('md')`
         display: block; 
         padding: 10% 0 0 0;
-    `}
-    ${breakpoint('lg')`
-        // background: ${Themes.colors.w_mint};
+        background-image: linear-gradient(#F4FAF6, #FFF);
+        margin-top:10%;
     `}
 `
 const Section01 = styled.div`
@@ -81,7 +80,8 @@ const Section01__Text = styled.div`
         ${breakpoint('md')`
             font-size:${Themes.fontsize.p2}
             line-height:26px;
-            margin-bottom: 7%;   
+            margin-bottom: 7%; 
+            padding: 0 5%  
         `}
         ${breakpoint('lg')`
             font-size:${Themes.fontsize.p2}

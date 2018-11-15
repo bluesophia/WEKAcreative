@@ -42,22 +42,6 @@ class Section2 extends Component{
                         <Section02__Text>We design software to service a variety of needs and 
                          help you work across <Br />a range of environments and platforms.</Section02__Text>
                         <FeaturesCarousel />
-                        {/* <HideAndShowCard1 />
-                        title={["Transform your business with",<Br2 />,"the power of mobile"]}
-                        text={["Whether you are looking to replace paper-based processes",<Br2 />,"communicate with your team",<Br />, "interact with your customers, or",<Br2 />,"revolutionise your business, we can help."]}
-                        /> 
-                        <HideAndShowCard2 
-                        title={["Harness the latest in web tech ", <Br2 />, "to tell showcase your business"]} 
-                        text={["The first port of call for a customer wanting to engage with", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
-                        />
-                        <HideAndShowCard3
-                        title={"Embrace the power of collaboration"} 
-                        text={["Multiple systems for multiple purposes? No problem.", <Br2 />,<Br />,"Increase the efficiency of your existing systems by helping them communicate", <Br2 />," and share information."]} 
-                        />
-                        <HideAndShowCard4 
-                        title={"Tailor made for you"} 
-                        text={["Sometimes the best solution is a bespoke solution.", <Br2 />,<Br />,"We can dive into the inner workings of you business to design and build software that fits you like a glove."]} 
-                        /> */}
                     </Section02__Container>
                 </Container>
             </Section02>

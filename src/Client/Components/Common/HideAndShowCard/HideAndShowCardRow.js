@@ -84,8 +84,8 @@ const HideAndShowCard__Columndiv = styled.div`
         width: 100%;
     `}
     ${breakpoint('lg')`
-        padding-right: 0%;
-        margin-left: -4%;
+        // padding-right: 0%;
+        // margin-left: -4%;
     `}
 `
 const HideAndShowCard__ImgDiv = styled.div`
@@ -93,14 +93,11 @@ const HideAndShowCard__ImgDiv = styled.div`
     align-items: center;
     ${breakpoint('md')`
         // padding: 4% 0;
-        padding: 10% 10% 0% 10%;
+        padding: 10% 10% 0% 7%;
         flex-direction: row;
         align-self: normal;
     `}
     ${breakpoint('lg')`
-        padding: 10% 0 0 4%;
-        margin-bottom: 5%;
-        // width: 60%;
     `}
 `
 const HideAndShowCard2__ImgDiv = styled.div`
@@ -123,12 +120,13 @@ const HideAndShowCard__TextDiv = styled.div`
     display: flex;
     flex-direction: column;
     ${breakpoint('md')`
-        padding: 10px;
-        padding-right: 12%;
+        padding: 5% 10% 0 10%;
+        // padding-right: 12%;
     `}
     ${breakpoint('lg')`
-        margin-bottom: 18%;
-        padding-right:  14%;
+        width: 80%;
+        padding: 0;
+        padding-top: 5%;
     `}
 `
 const HideAndShowCard__Icon = styled.img`
@@ -161,8 +159,8 @@ const HideAndShowCard__Card = styled.div`
     // box-sizing: border-box;
     `}
     ${breakpoint('lg')`
-        width: 880px;
-        height:530px;
+        // width: 880px;
+        // height:530px;
         box-sizing: border-box;
     `}
 `
@@ -188,10 +186,7 @@ const HideAndShowCard__CardText = styled.div`
     ${breakpoint('lg')`
         font-size:11px;
         line-height:1.5;
-    `}
-    // text-align:center;
-    line-height:16px;
-    padding:10px;        
+    `}       
 `
 
 export default HideAndShowCardRow;

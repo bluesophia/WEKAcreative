@@ -7,6 +7,7 @@ import Themes from '../../../../Assets/Styles/Themes';
 
 //components
 import HideAndShowCard1 from '../../Common/HideAndShow/HideAndShowCard1';
+import HideAndShowCard2 from '../../Common/HideAndShow/HideAndShowCard2';
 
 class FeaturesCard extends Component {
     constructor() {
@@ -15,54 +16,34 @@ class FeaturesCard extends Component {
           showing : false
         }
       }
-      onClick(e){
-        e.preventDefault();
-        this.setState({showing: !this.state.showing})
-      }
-            render () {
-                // function hideAndshow() {
-                //     const element = document.getElementById("yellowText");
-                //     const p = document.querySelector("#p");  
-                //     element.click(function(){
-                //         alert ("hide");
-                //         p.hide();
-                //     });
-                // }
-                return(
-                <Section05__Card className="cardDisplay">
-                    <Section05__CardCircle>
-                        <Section05__TitleImage src={this.props.image} alt=''/>
-                    </Section05__CardCircle>
-                    <Section05__div>
-                        <Section05__ImgDiv>
-                        <Section05__Icon src={this.props.iconName1}/>
-                        <Section05__CardText>{this.props.text1}</Section05__CardText>
-                        </Section05__ImgDiv>
-                        <Section05__ImgDiv>
-                        <Section05__Icon src={this.props.iconName2}/>
-                        <Section05__CardText>{this.props.text2}</Section05__CardText>
-                        </Section05__ImgDiv>
-                        <Section05__ImgDiv>
-                        <Section05__Icon src={this.props.iconName3}/>
-                        <Section05__CardText>{this.props.text3}</Section05__CardText>
-                        </Section05__ImgDiv>
-                        <Section05__ImgDiv>
-                        <Section05__Icon src={this.props.iconName4}/>
-                        <Section05__CardText>{this.props.text4}</Section05__CardText>
-                        </Section05__ImgDiv>
-                        <Section05__YellowText id="yellowText"
-                            onClick={this.onClick.bind(this)}
-                        >Read More</Section05__YellowText>
-                        {this.state.showing && 
-              <HideAndShowCard1
-              title={["Transform your business with",<Br2 />,"the power of mobile"]}
-              text={["Whether you are looking to replace paper-based processes",<Br2 />,"communicate with your team",<Br />, "interact with your customers, or",<Br2 />,"revolutionise your business, we can help."]}
-              /> 
-            }
-                    </Section05__div>
-                </Section05__Card>
-            )}
-        };
+        render () {
+            return(
+            <Section05__Card className="cardDisplay" key={this.props.key}>
+                <Section05__CardCircle>
+                    <Section05__TitleImage src={this.props.image} alt=''/>
+                </Section05__CardCircle>
+                <Section05__div>
+                    <Section05__ImgDiv>
+                    <Section05__Icon src={this.props.iconName1}/>
+                    <Section05__CardText>{this.props.text1}</Section05__CardText>
+                    </Section05__ImgDiv>
+                    <Section05__ImgDiv>
+                    <Section05__Icon src={this.props.iconName2}/>
+                    <Section05__CardText>{this.props.text2}</Section05__CardText>
+                    </Section05__ImgDiv>
+                    <Section05__ImgDiv>
+                    <Section05__Icon src={this.props.iconName3}/>
+                    <Section05__CardText>{this.props.text3}</Section05__CardText>
+                    </Section05__ImgDiv>
+                    <Section05__ImgDiv>
+                    <Section05__Icon src={this.props.iconName4}/>
+                    <Section05__CardText>{this.props.text4}</Section05__CardText>
+                    </Section05__ImgDiv>
+                    <Section05__YellowText onClick={()=>{this.props.onPress()}} id="yellowText">Read More</Section05__YellowText>
+                </Section05__div>
+            </Section05__Card>
+        )}
+    };
 
 // const Shadow = css`
 //     box-shadow : -2px 2px 4px rgba(50,50,93,0.23);
