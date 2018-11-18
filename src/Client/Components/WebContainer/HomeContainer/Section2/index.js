@@ -48,8 +48,6 @@ class Section2 extends Component{
         )
     }
 }
-
-
 /**** Section 02 ****/
 const Br = styled.br`
     display:none;
