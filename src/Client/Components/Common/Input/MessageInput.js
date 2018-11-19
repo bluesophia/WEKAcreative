@@ -20,9 +20,9 @@ export default class MessageInput extends Component {
     return (
       <ThemeProvider theme={Themes}>
         <Container>
-          <Label_Div>  
+          <LabelDiv>  
           <Label>Message</Label><P>Required</P><br />
-          </Label_Div>
+          </LabelDiv>
             <Input
               value={this.state.value}
               name="text"
@@ -47,7 +47,7 @@ const Container = styled.div`
   `}
 
 `
-const Label_Div = styled.div`
+const LabelDiv = styled.div`
   display: flex;
   align-items: flex-end;
 `
@@ -68,9 +68,10 @@ const P = styled.p`
 
 const Input = styled.textarea.attrs({
   maxlength: 500,
-  rows:8
+  rows:8,
 })`
   box-sizing:border-box;
+  resize: none;
   width:100%;
   height:auto;
   background: none;

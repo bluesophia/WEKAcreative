@@ -20,9 +20,9 @@ export default class PhoneNumberInput extends Component {
     return (
       <ThemeProvider theme={Themes}>
       <Container>
-      <Label_Div>  
+      <LabelDiv>  
       <Label>Phone Number</Label><P>Required</P><br />
-      </Label_Div> 
+      </LabelDiv> 
         <Input
             type="tel"
             value={this.state.value}
@@ -48,7 +48,7 @@ const Container = styled.div`
    margin-bottom:10%;
   `}
 `
-const Label_Div = styled.div`
+const LabelDiv = styled.div`
   display: flex;
   align-items: flex-end;
 `
@@ -86,4 +86,15 @@ const Input = styled.input.attrs({
   ${breakpoint('lg')`
      width:70%;
   `}
+  ::placeholder {
+    color: #ccc;
+    opacity: 1; /* Firefox */
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
+  }
 `

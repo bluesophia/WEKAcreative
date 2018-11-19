@@ -1,4 +1,4 @@
-import styled, { injectGlobal, css, ThemeProvider } from 'styled-components';
+import { css } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../Assets/Styles/Themes';
 

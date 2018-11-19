@@ -91,18 +91,21 @@ const Section05__Icon = styled.img`
     margin-right: 10px;
 `
 const Section05__Card = styled.div`
+    // border : 1px solid #ccc;
     width:264px;
-    height:400px;
+    height:500px;
     margin: 30px auto;
     background-color:white;
     padding: 40px 15px 30px 15px;
     box-sizing: border-box;
+    margin-top: 20%;
     ${breakpoint('md')`
         width:  px;
         // height:412px;
         height:420px;
     padding: 40px 15px 30px 15px;
     box-sizing: border-box;
+    margin-top: 0;
     `}
     ${breakpoint('lg')`
         width: 190px;
@@ -143,6 +146,7 @@ const Section05__CardText = styled.p`
     padding:10px;        
 `
 const Section05__YellowText = styled.p`
+    display: none;
     color: ${Themes.colors.orange};
     cursor: pointer;
     font-size: 16px;    

@@ -124,11 +124,12 @@ const Section02__Text = styled.div`
     margin-bottom: -10%;
     ${Text};
     color:${Themes.colors.grey};
-    text-align:center;
+    text-align:left;
         ${breakpoint('md')`
             font-size:${Themes.fontsize.p1}
             line-height:26px;
-            margin-bottom: -10px;   
+            margin-bottom: -10px;  
+            text-align:center; 
         `}
         ${breakpoint('lg')`
             font-size:${Themes.fontsize.p1}

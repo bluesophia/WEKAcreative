@@ -23,7 +23,7 @@ class Section6 extends Component{
                     <Section06__TitleDiv>
                         <Section06__Title>Our product suite</Section06__Title>
                         <YellowSpan />
-                        <Section06__Text>Looking for something quicker to implement?<Br />
+                        <Section06__Text>Looking for something quicker to implement? <Br />
                             Explore some of our in-house solutions.</Section06__Text>
                     </Section06__TitleDiv>
                     <Section06__Div>
@@ -81,10 +81,11 @@ const Section06__Text = styled.div`
     margin-bottom: 10%;
     ${Text};
     color:${Themes.colors.grey};
-    text-align:center;
+    text-align:left;
         ${breakpoint('md')`
             font-size:${Themes.fontsize.p1}
             line-height:26px;
+            text-align:center;
         `}
 `
 

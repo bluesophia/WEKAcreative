@@ -33,6 +33,7 @@ const ButtonStyle = styled.button`
     letter-spacing:1px;
     outline: none;
     font-size:20px;
+    cursor: pointer;
     ${breakpoint('md')`
     `}
 `

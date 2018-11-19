@@ -79,4 +79,5 @@ const Input = styled.input.attrs({
   &:focus {
     outline: none;
   }
+  
 `

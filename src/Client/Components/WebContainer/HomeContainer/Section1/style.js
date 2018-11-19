@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../../Assets/Styles/Themes';
 import { Link } from 'react-router-dom';
@@ -6,10 +6,8 @@ import { Link } from 'react-router-dom';
 /** Images **/
 import HomeSection01BgMd from '../../../../../Assets/Images/HomeSection01BgMd.png';
 import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
-import mainImage from '../../../../../Assets/Images/mainImage.svg';
 
 /** components **/
-import Title from '../../../Common/Title/Title';
 import BigTitle from '../../../Common/Title/BigTitle';
 
 
@@ -82,7 +80,8 @@ export const StyledTitle = styled.div`
         color:${Themes.colors.black};
         font-weight:${Themes.fontWeight.black};
         margin: 1em 0;
-        text-align:center;
+        text-align:left;
+        margin-left: 10%;
         ${breakpoint('md')`
             font-size:${Themes.fontsize.D_h1};
             text-align:center;
@@ -103,7 +102,7 @@ export const Section01__Text = styled.div`
     font-size:${Themes.fontsize.p1};
         ${breakpoint('md')`
             display:none;
-            display:flex;
+            // display:flex;
             color:${Themes.colors.grey};
             font-weight:${Themes.fontWeight.regular};
             text-align: center;

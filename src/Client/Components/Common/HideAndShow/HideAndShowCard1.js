@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import styled, { css, ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import PropTypes from 'prop-types';
 import Themes from '../../../../Assets/Styles/Themes';
 
 //Components
@@ -106,12 +105,5 @@ const Section01__Text = styled.div`
             line-height:26px;
             margin-bottom: 5%;
         `}
-`
-const Section03 = styled.div`
-    margin:0 auto;
-`    
-const Section03__ImgDiv = styled.div`
-`
-const Section03__Img = styled.img`
 `
 export default HideAndShowCard1;

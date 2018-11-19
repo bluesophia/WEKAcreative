@@ -87,7 +87,6 @@ const ArrowStyle = styled.img`
 
 class FeaturesCarousel extends Component {
   constructor() {
-    console.log('Features Constructor')
     super();
     this.state = { 
       showing : false,
@@ -106,19 +105,15 @@ class FeaturesCarousel extends Component {
     }
   }
   _onItemClick = () => {
-    console.log ("Hi", this.state.showing);
     this.setState({showing: !this.state.showing});
   }
   _onItemClick2 = () => {
-    console.log ("Hi", this.state.showing2);
     this.setState({showing2: !this.state.showing2});
   }
   _onItemClick3 = () => {
-    console.log ("Hi", this.state.showing3);
     this.setState({showing3: !this.state.showing3});
   }
   _onItemClick4 = () => {
-    console.log ("Hi", this.state.showing4);
     this.setState({showing4: !this.state.showing4});
   }
 render () {
@@ -157,7 +152,7 @@ render () {
         }
       },
       {
-        breakpoint: 425,
+        breakpoint: 488,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -167,11 +162,11 @@ render () {
     ]
   };
       return (
-        <div>
+        <SliderDiv>
         <Slider {...settings}>
             <FeaturesCard 
             onPress={this._onItemClick}
-            image = {MobileApps}
+            // image = {MobileApps}
             iconName1 = {IconData}
             iconName2 = {IconCommunication}
             iconName3 = {IconHandShake}
@@ -183,7 +178,7 @@ render () {
             />
             <FeaturesCard 
             onPress={this._onItemClick2}
-            image = {Websites}
+            // image = {Websites}
             iconName1 = {IconInformation}
             iconName2 = {IconEcommerce}
             iconName3 = {IconPeople}
@@ -193,7 +188,7 @@ render () {
             />
             <FeaturesCard 
             onPress={this._onItemClick3}
-            image = {Integrations}
+            // image = {Integrations}
             iconName1 = {IconPeople}
             iconName2 = {IconPoint}
             iconName3 = {IconData}
@@ -205,7 +200,7 @@ render () {
             />
             <FeaturesCard 
             onPress={this._onItemClick4}
-            image = {FullSolutions}
+            // image = {FullSolutions}
             iconName1 = {IconWeb}
             iconName2 = {IconBrain}
             iconName3 = {IconHandShake}
@@ -233,11 +228,20 @@ render () {
             title={"Tailor made for you"} 
             text={["Sometimes the best solution is a bespoke solution.", <Br2 />,<Br />,"We can dive into the inner workings of you business to design and build software that fits you like a glove."]} 
           />}
-          </div>
+          </SliderDiv>
       );
     }
   }
-
+  // const Slider = styled.div`
+  // width: 300px;
+  // margin-left: 11%;
+  // `
+  const SliderDiv = styled.div`
+  ${breakpoint('lg')`
+    margin-top: 10%;
+  `}
+  `
+    
   const Br = styled.br`
   display:none;
   ${breakpoint('md')`

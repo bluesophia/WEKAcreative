@@ -220,6 +220,7 @@ const TitleDiv__Title = styled.div`
 `
 const TitleDiv__Text = styled.div`
   display:none;
+  text-align:left;
   ${breakpoint('md')`
     display:flex;
     color:${Themes.colors.grey};
@@ -238,7 +239,7 @@ const TitleDiv__Text = styled.div`
 `
 const TitleDiv__Textsm = styled.div`
     color:${Themes.colors.grey};
-    text-align: justify;
+    text-align: left;
     font-size:${Themes.fontsize.h4};
     // padding: 4%;
     line-height: 25px;

@@ -20,14 +20,14 @@ export default class CompanyNameInput extends Component {
     return (
       <ThemeProvider theme={Themes}>
       <Container>
-      <Label_Div>  
+      <LabelDiv>  
       <Label>Company Name</Label><P>Required</P><br />
-      </Label_Div> 
+      </LabelDiv> 
         <Input
           value={this.state.value}
           name="input-text"
           label="Company Name"
-          placeholder="WEKAcreative"
+          placeholder="wekacreative"
           onChange={this._handleChange}
         />
       </Container>
@@ -47,7 +47,7 @@ const Container = styled.div`
   margin-bottom: 10%;
   `}
 `
-const Label_Div = styled.div`
+const LabelDiv = styled.div`
   display: flex;
   align-items: flex-end;
 `
@@ -81,5 +81,16 @@ const Input = styled.input.attrs({
   margin-top: 10px;
   &:focus {
     outline: none;
+  }
+  ::placeholder {
+    color: #ccc;
+    opacity: 1; /* Firefox */
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
   }
 `

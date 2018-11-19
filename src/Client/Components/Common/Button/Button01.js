@@ -34,6 +34,7 @@ const ButtonStyle = styled.button`
     padding:11px 22px;
     letter-spacing:1px;
     outline: none;
+    cursor: pointer;
         ${breakpoint('md')`
             font-size: 25px;
             margin-top: 30px;
@@ -44,6 +45,7 @@ const ButtonStyle = styled.button`
         `}
 `
 const Text = styled.p`
+    cursor: 'pointer';
     margin:0;
     padding:0;
 `

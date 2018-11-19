@@ -181,7 +181,7 @@ const TitleDiv__Text = styled.div`
 `
 const TitleDiv__Textsm = styled.div`
     color:${Themes.colors.grey};
-    text-align: center;
+    text-align: left;
     font-size:${Themes.fontsize.h4};
     padding: 4%;
     margin-top:10%;
