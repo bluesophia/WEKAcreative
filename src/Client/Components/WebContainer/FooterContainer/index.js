@@ -27,7 +27,7 @@ import LinkButton from '../../../Components/Common/Button/LinkButton';
 
 class FooterContainer extends Component {
     _ScrollTop = () => {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0  );
     }
     render() {
       return (

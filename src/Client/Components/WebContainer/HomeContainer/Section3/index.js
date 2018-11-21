@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import styled, { css, ThemeProvider } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../../Assets/Styles/Themes';
+import posed from 'react-pose';
+import { tween } from "popmotion";
 /** components **/
 import BigTitle from '../../../Common/Title/BigTitle';
 import Text from '../../../Common/Text';
 import YellowSpan from '../../../Common/YellowSpan';
 import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.svg';
+import SomeofOurWorkRugdoctor from '../../../../../Assets/Images/SomeofOurWorkRugdoctor.svg';
 const Images  = [
     require("../../../../../Assets/Images/SomeofOurWorkPassafe.svg"),
     require("../../../../../Assets/Images/SomeofOurWorkRugdoctor.svg"),
@@ -26,7 +29,8 @@ class Section3 extends Component {
             SomeofOurWorkPassafe: Images[0],
             SomeofOurWorkRugdoctor: Images[1],
             SomeofOurWorkMethTesting: Images[2],
-            SomeofOurWorkToyota: Images[3]
+            SomeofOurWorkToyota: Images[3],
+            hovering: false
 
         };
         // this.handleMouseOver = this.handleMouseOver.bind(this);
@@ -65,6 +69,7 @@ class Section3 extends Component {
         })
     }
     render(){
+        console.log(this.state.hovering);
         return(
             <Section03>
                 <Section03__Container>
@@ -76,8 +81,11 @@ class Section3 extends Component {
                 <Section03__Container__image>
                     <Section03__Container__imageSm>   
                         <Section03__Image src={this.state.SomeofOurWorkPassafe} 
-                            onMouseOver={this.handleMouseOver1}
-                            onMouseOut={this.handleMouseOut}
+                            pose={this.state.hovering ? "hovered" : "idle"}
+                            onMouseEnter={() => this.setState({ hovering: true })}
+                            onMouseLeave={() => this.setState({ hovering: false })}
+                            // onMouseOver={this.handleMouseOver1}
+                            // onMouseOut={this.handleMouseOut}
                         />
                         <Section03__Image src={this.state.SomeofOurWorkRugdoctor} 
                             onMouseOver={this.handleMouseOver2}
@@ -93,6 +101,17 @@ class Section3 extends Component {
                             onMouseOver={this.handleMouseOver4}
                             onMouseOut={this.handleMouseOut}
                         />
+                        <StyledSquare
+                        src={this.state.SomeofOurWorkToyota} 
+          pose={this.state.hovering ? "hovered" : "idle"}
+          onMouseEnter={() => this.setState({ hovering: true })}
+          onMouseLeave={() => this.setState({ hovering: false })}
+        />
+        <StyledBox
+          pose={this.state.hovering ? "hovered" : "idle"}
+          onMouseEnter={() => this.setState({ hovering: true })}
+          onMouseLeave={() => this.setState({ hovering: false })}
+        />
                     </Section03__Container__imageSm> 
                 </Section03__Container__image>
             </Section03>
@@ -165,9 +184,6 @@ const   Section03__Text = styled.div`
             margin-bottom: 10%;
             text-align:center;
         `}
-        ${breakpoint('lg')`
-            
-        `}
 `
 const Section03__ImageDiv = styled.div`
 `
@@ -186,4 +202,52 @@ const Section03__Image = styled.img`
     width:585px;
     `}
 `
+const Square = posed.img({
+    idle: {
+      scale: 1,
+      opacity: 0.5,
+      transition: props => tween({ ...props, duration: 2000 }),
+    },
+    hovered: {
+      scale: 1,
+      opacity: 1,
+      transition: props => tween({ ...props, duration: 1000 })
+    }
+  });
+
+  
+  const StyledSquare = styled(Square)`
+  width: 100px;
+  height: 100px;
+  background: blue;
+`
+  
+
+
+const Box = posed.div({
+    hoverable: true,
+    pressable: true,
+    init: {
+      scale: 1,
+      opacity: 1,
+      boxShadow: '0px 0px 0px rgba(0,0,0,0)',
+      backgroundImage: `url(${SomeofOurWorkRugdoctor})`
+    },
+    hover: {
+      scale: 1.2,
+      opacity: 1,
+      boxShadow: '0px 5px 10px rgba(0,0,0,0.2)',
+      backgroundImage: `url(${SomeofOurWorkRugdoctor})`
+    },
+    press: {
+      scale: 1.1,
+      boxShadow: '0px 2px 5px rgba(0,0,0,0.1)',
+      backgroundImage: `url(${SomeofOurWorkRugdoctor})`
+    }
+  });
+  const StyledBox = styled(Box)`
+  width: 100px;
+  height: 100px;
+  background: url('${SomeofOurWorkToyota}');
+  `
 export default Section3;

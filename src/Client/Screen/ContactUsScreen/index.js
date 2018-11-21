@@ -56,7 +56,7 @@ class ContactUsScreen extends Component {
                 <ButtonDiv>
                   <Button01 value={'Contact Our Software Experts'}/>
                   <Form__Text>Or Try Our Software For Free</Form__Text>
-                  <Button02 value={'Experience EasyForms for yourself'}/>        
+                  <Button02 value={'Experience WEKACREATIVE for yourself'}/>        
                 </ButtonDiv>      
               </Form>
             </FormDiv>

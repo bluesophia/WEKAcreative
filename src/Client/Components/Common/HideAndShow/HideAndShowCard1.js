@@ -63,7 +63,7 @@ const Container = styled.div`
     ${breakpoint('md')`
         display: block; 
         padding: 10% 0 0 0;
-        background-image: linear-gradient(#F4FAF6, #FFF);
+        // background-image: linear-gradient(#F4FAF6, #FFF);
         margin-top:10%;
     `}
     ${breakpoint('lg')`

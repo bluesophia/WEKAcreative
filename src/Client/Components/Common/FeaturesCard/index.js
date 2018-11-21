@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Themes from '../../../../Assets/Styles/Themes';
+import {Section05__Card,
+    Section05__CardCircle,
+    Section05__TitleImage,
+    Section05__div,
+    Section05__ImgDiv,
+    Section05__Icon,
+    Section05__CardText,
+    Section05__TextDiv,
+    Section05__YellowText
+} from './style';
+import HideAndShowLayout from '../HideAndShow/HideAndShowLayout';
 
-
-//components
-import HideAndShowCard1 from '../../Common/HideAndShow/HideAndShowCard1';
-import HideAndShowCard2 from '../../Common/HideAndShow/HideAndShowCard2';
 
 class FeaturesCard extends Component {
     constructor() {
         super();
-        this.state= { 
-          showing : false
-        }
+        // this.state= { 
+        //   showing : false
+        // }
+        
       }
         render () {
+        
             return(
-            <Section05__Card className="cardDisplay" key={this.props.key}>
+            <Section05__Card className="cardDisplay" id={this.props.id} >
                 <Section05__CardCircle>
                     <Section05__TitleImage src={this.props.image} alt=''/>
                 </Section05__CardCircle>
@@ -40,132 +45,12 @@ class FeaturesCard extends Component {
                     <Section05__CardText>{this.props.text4}</Section05__CardText>
                     </Section05__ImgDiv>
                     <Section05__TextDiv>
-                    <Section05__YellowText onClick={()=>{this.props.onPress()}} id="yellowText">Read More</Section05__YellowText>
+                    <Section05__YellowText onClick={()=>{this.props.onPress(this)}} id="yellowText" >
+                    Read More</Section05__YellowText>
                     </Section05__TextDiv>
                 </Section05__div>
             </Section05__Card>
         )}
     };
-
-// const Shadow = css`
-//     box-shadow : -2px 2px 4px rgba(50,50,93,0.23);
-// `
-const Br = styled.br`
-display:none;
-${breakpoint('md')`
-display:none;
-`}
-${breakpoint('lg')`
-display:block;
-`}
-`
-const Br2 = styled.br`
-display:none;
-${breakpoint('md')`
-display:block;
-`}
-${breakpoint('lg')`
-display:none;
-`}
-`
-const Section05__div = styled.div`
-    // height: auto;
-    display: flex;
-    align-items: space-around;
-    flex-direction: column;
-`
-const Section05__ImgDiv = styled.div`
-    display: flex;
-    align-items: center;
-`
-const Section05__TextDiv = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10%;
-`
-const Section05__Icon = styled.img`
-    width: 27px;
-    // height: 64px;
-    margi-right: 10px;
-    margin-right: 10px;
-`
-const Section05__Card = styled.div`
-    // border : 1px solid #ccc;
-    width:264px;
-    height:500px;
-    margin: 30px auto;
-    background-color:white;
-    padding: 40px 15px 30px 15px;
-    box-sizing: border-box;
-    margin-top: 20%;
-    ${breakpoint('md')`
-        width:  px;
-        // height:412px;
-        height:420px;
-    padding: 40px 15px 30px 15px;
-    box-sizing: border-box;
-    margin-top: 0;
-    `}
-    ${breakpoint('lg')`
-        width: 190px;
-        height: auto;
-        // height:412px;
-    // padding: 40px 10px 30px 10px;
-    padding: 0;
-    box-sizing: border-box;
-    `}
-`
-const Section05__CardCircle = styled.div`
-    // width:87px;
-    // height:87px;
-    // border-radius:50%;
-    // margin:auto; 
-    // display:flex;
-    // justify-content:center;
-    // align-items:center;
-`
-const Section05__CardTitle = styled.p`
-    color:${Themes.colors.blue};
-    font-size:${Themes.fontsize.p1};
-    font-weight:${Themes.fontWeight.black};
-    text-align:center;
-    margin:20px 0 10px 0;
-    line-height:23px;
-    padding:0;
-`
-const Section05__TitleImage = styled.img`
-        // width: 100%;
-        // height: auto;
-`
-const Section05__CardText = styled.p`
-    color:${Themes.colors.grey};
-    font-size:12px;
-    // text-align:center;
-    line-height:16px;
-    padding:10px;        
-`
-const Section05__YellowText = styled.p`
-    display: none;
-    color: ${Themes.colors.orange};
-    cursor: pointer;
-    font-size: 16px;    
-    text-align: center;
-    margin-top: -20px;
-    ${breakpoint('md')`
-    color: ${Themes.colors.orange};
-    cursor: pointer;
-    font-size: 16px;    
-    text-align: center;
-    margin-top: -10px;
-    `}
-    ${breakpoint('lg')`
-    color: ${Themes.colors.orange};
-    cursor: pointer;
-    font-size: 16px;    
-    text-align: center;
-    margin-top: -20px;
-    `}
-`
 
 export default FeaturesCard;

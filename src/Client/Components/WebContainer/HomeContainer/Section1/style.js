@@ -81,7 +81,7 @@ export const StyledTitle = styled.div`
         font-weight:${Themes.fontWeight.black};
         margin: 1em 0;
         text-align:left;
-        margin-left: 10%;
+        margin-left: 10%;   
         ${breakpoint('md')`
             font-size:${Themes.fontsize.D_h1};
             text-align:center;

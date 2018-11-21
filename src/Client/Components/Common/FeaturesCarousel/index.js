@@ -34,6 +34,8 @@ import HideAndShowCard1 from '../../Common/HideAndShow/HideAndShowCard1';
 import HideAndShowCard2 from '../../Common/HideAndShow/HideAndShowCard2';
 import HideAndShowCard3 from '../../Common/HideAndShow/HideAndShowCard3';
 import HideAndShowCard4 from '../../Common/HideAndShow/HideAndShowCard4';
+import HideAndShowLayout from '../../Common/HideAndShow/HideAndShowLayout';
+
 
 function ArrowRight(props) {
   const { onClick, className } = props;
@@ -88,11 +90,21 @@ const ArrowStyle = styled.img`
 class FeaturesCarousel extends Component {
   constructor() {
     super();
+    this.FeaturesCard1 = React.createRef()
+    this.FeaturesCard2 = React.createRef()
+    this.FeaturesCard3 = React.createRef()
+    this.FeaturesCard4 = React.createRef()
+    // let card = this.refs.FeaturesCard1;
     this.state = { 
       showing : false,
       showing2 : false,
       showing3 : false,
       showing4 : false,
+      object2 : this.refs.FeaturesCard2,
+      // showing3 : false,
+      // showing4 : false,
+      id1: "FeaturesCard1",
+      FeaturesCarousel:'',
       features: [
         {
           texts: ["Capturing data from the field",
@@ -104,18 +116,33 @@ class FeaturesCarousel extends Component {
       ]
     }
   }
-  _onItemClick = () => {
-    this.setState({showing: !this.state.showing});
+  //Readmore onClick
+  _onItemClick = (e) => {
+    console.log('onItemClick',e.props.id );
+    // let wrapper = document.getElementById('feature_wrapper');
+    
+    // wrapper.style.transitionDelay = "2s";
+    // console.log('style',document.getElementById('feature_wrapper').style)
+    this.setState({
+      showing: !this.state.showing , 
+      FeaturesCarousel: e.props.id
+    });
+    // wrapper.style.height = '100%'
+    // console.log('onItemClick state',this.state );
+    // if(!this.state.showing) {
+    //   wrapper.style.height = '0';
+    // }
   }
-  _onItemClick2 = () => {
-    this.setState({showing2: !this.state.showing2});
-  }
-  _onItemClick3 = () => {
-    this.setState({showing3: !this.state.showing3});
-  }
-  _onItemClick4 = () => {
-    this.setState({showing4: !this.state.showing4});
-  }
+ 
+  // _onItemClick2 = () => {
+  //   this.setState({showing2: !this.state.showing2});
+  // }
+  // _onItemClick3 = () => {
+  //   this.setState({showing3: !this.state.showing3});
+  // }
+  // _onItemClick4 = () => {
+  //   this.setState({showing4: !this.state.showing4});
+  // }
 render () {
   var settings = {
     infinite: true,
@@ -165,7 +192,10 @@ render () {
         <SliderDiv>
         <Slider {...settings}>
             <FeaturesCard 
+            ref={this.FeaturesCard1}
+            id="FeaturesCard1"
             onPress={this._onItemClick}
+            active={this.state.FeaturesCarousel === 'FeaturesCard1' ? true : false}
             // image = {MobileApps}
             iconName1 = {IconData}
             iconName2 = {IconCommunication}
@@ -177,7 +207,11 @@ render () {
             text4 = "Providing your workforce valuable company or product information"
             />
             <FeaturesCard 
-            onPress={this._onItemClick2}
+            id="FeaturesCard2"
+            ref={this.FeaturesCard2}
+            value={this.state.value2}
+            onPress={this._onItemClick}
+            active={this.state.FeaturesCarousel === 'FeaturesCard2' ? true : false}
             // image = {Websites}
             iconName1 = {IconInformation}
             iconName2 = {IconEcommerce}
@@ -187,7 +221,10 @@ render () {
             text3 = "Customer capture for marketing"
             />
             <FeaturesCard 
-            onPress={this._onItemClick3}
+            id="FeaturesCard3"
+            ref={this.FeaturesCard3}
+            onPress={this._onItemClick}
+            active={this.state.FeaturesCarousel === 'FeaturesCard3' ? true : false}
             // image = {Integrations}
             iconName1 = {IconPeople}
             iconName2 = {IconPoint}
@@ -199,7 +236,11 @@ render () {
             text4 = "Automate your processes of data"
             />
             <FeaturesCard 
-            onPress={this._onItemClick4}
+            id="FeaturesCard4"
+            ref={this.FeaturesCard4}
+            value={this.state.value}
+            onPress={this._onItemClick}
+            active={this.state.FeaturesCarousel === 'FeaturesCard4' ? true : false}
             // image = {FullSolutions}
             iconName1 = {IconWeb}
             iconName2 = {IconBrain}
@@ -209,25 +250,12 @@ render () {
             text3 = "Software designed to to help lead your business forward "
             />
       </Slider>
-          {this.state.showing &&  <HideAndShowCard1 
-            title={["Transform your business with",<Br2 />,"the power of mobile"]}
-            text={["Whether you are looking to replace paper-based processes",<Br2 />,"communicate with your team",<Br />, "interact with your customers, or",<Br2 />,"revolutionise your business, we can help."]}
-          />}
-          {this.state.showing2 && 
-            <HideAndShowCard2 
-            title={["Harness the latest in web tech ", <Br2 />, "to showcase your business"]} 
-            text={["The first port of call for a customer wanting to engage with", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
-          />}
-          {this.state.showing3 && 
-            <HideAndShowCard3
-            title={"Embrace the power of collaboration"} 
-            text={["Multiple systems for multiple purposes? No problem.", <Br2 />,<Br />,"Increase the efficiency of your existing systems by helping them communicate", <Br2 />," and share information."]} 
-          />}    
-          {this.state.showing4 && 
-            <HideAndShowCard4 
-            title={"Tailor made for you"} 
-            text={["Sometimes the best solution is a bespoke solution.", <Br2 />,<Br />,"We can dive into the inner workings of you business to design and build software that fits you like a glove."]} 
-          />}
+            { this.state.showing &&  
+               <div id="feature_wrapper" style={feature_wrapper}>
+            <HideAndShowLayout active={this.state.FeaturesCarousel} />
+            </div>
+            }
+          
           </SliderDiv>
       );
     }
@@ -236,6 +264,18 @@ render () {
   // width: 300px;
   // margin-left: 11%;
   // `
+
+  const HideAndShowLayout_Wrapper = styled.div`
+    position: relative;
+  `
+
+  var feature_wrapper = {
+    // transition: 'all 5s',
+    background: "red",
+    transition: "width 2s",
+    zIndex: "0",
+    position: "relative"
+  }
   const SliderDiv = styled.div`
   ${breakpoint('lg')`
     margin-top: 10%;
