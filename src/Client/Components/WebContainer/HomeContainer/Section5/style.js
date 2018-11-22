@@ -38,6 +38,15 @@ export const Section05 = styled.div`
     `}
 `
 export const Section05__Div = styled.div`
+${breakpoint('md')`
+    max-width: 768px;
+    `}
+${breakpoint('lg')`
+    max-width: 1024px;
+    `}
+${breakpoint('xl')`
+    max-width: 1366px;
+    `}
 `
 export const Section05__TitleDiv = styled.div`
     margin:0 auto;
@@ -74,6 +83,7 @@ export const Section05__Logos = styled.div`
     margin:0 auto;
     ${breakpoint('lg')`
         flex-direction:column;
+        padding: 0 10% 0 10%;
     `}
 `
 export const Section05__LogosDiv01 = styled.div`

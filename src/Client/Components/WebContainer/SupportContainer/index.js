@@ -21,7 +21,8 @@ import {  CompanyNameInput,
           SupportTypeInput,
           FullNameInput }from '../../Common/Input';
 import Button01 from '../../Common/Button/Button01';
-
+/** Animation**/ 
+import ScrollAnimation from 'react-animate-on-scroll';
 const Title = css`
     color:${Themes.colors.blue};
     font-size:${Themes.fontsize.h2};
@@ -47,6 +48,7 @@ class SupportContainer extends Component{
     return(
         <ThemeProvider theme={Themes}>
           <Support>
+            <ScrollAnimation animateIn='fadeIn'>
               <Container>
                   {/* Image div */}
                   <Section01__Div>
@@ -88,6 +90,7 @@ class SupportContainer extends Component{
                   </FormDiv>
                   </Section02>
               </Container>
+              </ScrollAnimation>
             </Support>
           </ThemeProvider>
           )

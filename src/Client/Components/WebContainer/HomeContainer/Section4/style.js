@@ -5,6 +5,7 @@ import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 import Section04BgSm from '../../../../../Assets/Images/Section04BgSm.png';
 import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
 import BigTitle from '../../../Common/Title/BigTitle';
+import LeveragetheFuture2 from '../../../../../Assets/Images/LeveragetheFuture2.svg';
 
 /**** Section 04 ****/
 
@@ -110,10 +111,11 @@ export const Section04__Image = styled.img`
     margin: 80% 0 100% 0;
     `}
 `
-export const Section04__Image2 = styled.img`
+export const Section04__Image2 = styled.div`
     transform: scale(3.5);
     margin-top: 90%;
     margin-bottom: 65%;
+    background: url('${LeveragetheFuture2}');
     ${breakpoint('md')`
     display: none;
         `}

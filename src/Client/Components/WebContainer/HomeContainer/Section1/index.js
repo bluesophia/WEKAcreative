@@ -11,7 +11,9 @@ import {Br,
     ButtonDiv, 
     ButtonLink
 } from './style'
-
+/** Animation**/ 
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 /** Images **/
 import mainImage from '../../../../../Assets/Images/mainImage.svg';
 
@@ -20,6 +22,7 @@ class Section1 extends Component{
         return(
                <Section01>
                     <Container>
+                    <ScrollAnimation animateIn="fadeIn">
                         <Section01__Image><MainImage src={mainImage}/></Section01__Image>
                         <Section01__TitleDiv>
                             <StyledTitle>Accelerate your business <Br />processes through innovative <Br />software design</StyledTitle>
@@ -31,6 +34,7 @@ class Section1 extends Component{
                                 </ButtonLink>
                             </ButtonDiv>
                         </Section01__TitleDiv>
+                        </ScrollAnimation>
                     </Container>
                 </Section01>         
         )

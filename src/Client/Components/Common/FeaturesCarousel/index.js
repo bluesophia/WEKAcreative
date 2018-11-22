@@ -196,7 +196,7 @@ render () {
             id="FeaturesCard1"
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard1' ? true : false}
-            // image = {MobileApps}
+            image = {MobileApps}
             iconName1 = {IconData}
             iconName2 = {IconCommunication}
             iconName3 = {IconHandShake}
@@ -212,7 +212,7 @@ render () {
             value={this.state.value2}
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard2' ? true : false}
-            // image = {Websites}
+            image = {Websites}
             iconName1 = {IconInformation}
             iconName2 = {IconEcommerce}
             iconName3 = {IconPeople}
@@ -225,7 +225,7 @@ render () {
             ref={this.FeaturesCard3}
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard3' ? true : false}
-            // image = {Integrations}
+            image = {Integrations}
             iconName1 = {IconPeople}
             iconName2 = {IconPoint}
             iconName3 = {IconData}
@@ -241,7 +241,7 @@ render () {
             value={this.state.value}
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard4' ? true : false}
-            // image = {FullSolutions}
+            image = {FullSolutions}
             iconName1 = {IconWeb}
             iconName2 = {IconBrain}
             iconName3 = {IconHandShake}

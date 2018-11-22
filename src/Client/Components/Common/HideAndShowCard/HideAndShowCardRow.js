@@ -180,11 +180,14 @@ const HideAndShowCard__CardTitle = styled.div`
 const HideAndShowCard__CardText = styled.div`
     ${breakpoint('md')`
         color:${Themes.colors.grey};
-        font-size: 8px;
-        line-height:1.2;
+        // font-size: 8px;
+        // line-height:1.2;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 0 3% 0 3%;
     `}
     ${breakpoint('lg')`
-        font-size:11px;
+        font-size:12px;
         line-height:1.5;
     `}       
 `

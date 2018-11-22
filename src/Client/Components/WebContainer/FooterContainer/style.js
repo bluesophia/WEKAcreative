@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 export const Box = styled.div`
       display: flex;
       justify-content: center;
+      margin-left: -52px;
       ${breakpoint('md')`
         float: right;
         margin-top: -12%;
@@ -17,9 +18,10 @@ export const Box = styled.div`
   `  
 export const Sns = styled.a`
     color:${Themes.colors.grey};
-    font-size: 1em;
+    // font-size: 1em;
+    // padding: 1.5em 1.5em;
+    font-size: 0.9em;
     padding: 1.5em 1.5em;
-
       ${breakpoint('md')`
       padding: 0 1.1em;
       `};
@@ -77,12 +79,28 @@ ${breakpoint('lg')`
 `};
 `
 export const FooterBox3 = FooterBox1.extend`
+display: flex;
+justify-content: space-around;
+align-items: center;
 ${breakpoint('md')`
 order:3;
 `};
 `
 export const FooterRightContainer = styled.div`
+// text-align:center;
+${breakpoint('md')`
+  text-align:left;
+`};
+${breakpoint('lg')`
+  float: left;
+  width: 100%;
+`};
+`
+export const FooterBottomContainer = styled.div`
+display: flex;
 text-align:center;
+justify-content: space-around;
+flex-direction: row-reverse;
 ${breakpoint('md')`
   text-align:left;
 `};
@@ -94,7 +112,7 @@ ${breakpoint('lg')`
 export const FooterTitle = styled.div`
 font-size: ${Themes.fontsize.h4};
 font-weight: ${Themes.fontWeight.bold};
-text-align:center;
+text-align:left;
 margin: 0.5em 0 0.5em 0;
 color: ${Themes.colors.yellow};
   ${breakpoint('md')`
@@ -123,11 +141,12 @@ export const LogoImg = styled.img`
 	`}
 `;
 export const FooterText = styled.span`
-  font-size: ${Themes.fontsize.h4};
+  font-size: ${Themes.fontsize.p2};
   display:block;
   color: ${Themes.colors.grey};
   font-weight: ${Themes.fontWeight.light};
   line-height: 1.8;
+  text-align: left;
   ${breakpoint('md')`
   font-size: 15px;
   font-weight: ${Themes.fontWeight.regular};
@@ -137,6 +156,8 @@ export const FooterTextAddress = FooterText.extend`
 padding-top: 1.25em;
 `
 export const StyledLink__Div = styled.div`
+  display: flex;
+  flex-direction: column;
   ${breakpoint('md')`
   display: none;
   `};
@@ -149,11 +170,12 @@ export const StyledLink__Div2 = styled.div`
 `
 export const StyledLink = styled(Link)`
   color: ${Themes.colors.grey};
-  font-size: ${Themes.fontsize.h4};
+  font-size: ${Themes.fontsize.p2};
   display:block;
   text-decoration: none;
   font-weight: ${Themes.fontWeight.light};
   line-height:1.8;
+  text-align: left;
   ${breakpoint('md')`
   font-size: 15px;
   font-weight: ${Themes.fontWeight.regular};

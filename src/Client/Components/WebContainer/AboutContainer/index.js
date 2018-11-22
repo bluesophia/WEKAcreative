@@ -19,16 +19,19 @@ import { Section01,
 /** Images **/
 import mainImage from '../../../../Assets/Images/AboutSection01Image.svg';
 import mainImage2 from '../../../../Assets/Images/AboutSection01Image2.svg';
-
+/** Animation**/ 
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class AboutContainer extends Component {
   render(){
     return(
       <ThemeProvider theme={Themes}>   
       <div>
+      <ScrollAnimation animateIn='fadeIn'>
             <Section01>
             {/* <Section01__ImageTop><MainImageBackground src={mainImage2_1}/></Section01__ImageTop> */}
-              <Section01__Container>             
+              <Section01__Container>     
+              <ScrollAnimation animateIn='fadeIn'>        
                 <Section01__TitleDiv>
                     <Section01__Title>About Us</Section01__Title>
                     <Section01__Text>We deliver outstanding work experience to people who want to increase productivity, cost effectiveness and time saving for the work process. ‘WEKA CREATIVE’ supports the business to integrate management system, make easy and better working performance.
@@ -36,10 +39,12 @@ class AboutContainer extends Component {
                 </Section01__TitleDiv>
                 <Section01__Image><MainImage src={mainImage}/></Section01__Image>
                 <Section01__Image2><MainImage2 src={mainImage2}/></Section01__Image2> 
+                </ScrollAnimation>
               </Section01__Container>
             </Section01>
             <Section02>
               <Container>
+              <ScrollAnimation animateIn='fadeIn'>
                     <Section__Title>The Mission</Section__Title>
                     <Section__Text>
                         Who we are (3 ‘We’)<br />
@@ -47,10 +52,12 @@ class AboutContainer extends Component {
                         We are the decision makers to develop better business industry.<br />
                         We are the explorer to find new ideas and technology for support society. 
                     </Section__Text>
+                    </ScrollAnimation>
                 </Container>
             </Section02>
             <Section02>
               <Container>
+              <ScrollAnimation animateIn='fadeIn'>
                   <Section__Title>The Vision</Section__Title>
                   <Section__Text><b>Future Trend Setter</b><br />
                   <b><i>WEKA CREATIVE sails to undiscovered the ocean of technology.</i></b><br />
@@ -58,10 +65,12 @@ class AboutContainer extends Component {
                   ​<b>A standard digital consultant</b><br />
                   <b><i>WEKA CREATIVE will provide the guide how people are survived in unexpected future technology.</i></b><br />
                   ​​As we are digital agency in the society, WEKA CREATIVE will deliver an advise and right way guide to expand the range of strategy and foresight. We are focusing deep understanding and being sensitive on human behaviour to find out the hustling in life.</Section__Text>
+              </ScrollAnimation>
               </Container>
             </Section02>
             <Section03>
               <Container>
+              <ScrollAnimation animateIn='fadeIn'>
                   <Section__Title>Core Value</Section__Title>
                   <Section__Text><b>Human First</b><br />
                   WEKA CREATIVE is always looking for people who have a talent in every fields. This is priority of what we are considering. We know that people can change the society with brilliant ideas and what they are believing.
@@ -69,8 +78,10 @@ class AboutContainer extends Component {
                   ​<b>​Be different</b><br />
                   WEKA CREATIVE believe that ‘Be different’ mindset bring creativity, outstanding performance and customer satisfaction. We are putting effort to get out of box and think other ways.
                   </Section__Text>
+                  </ScrollAnimation>
               </Container>
             </Section03>
+            </ScrollAnimation>
       </div>
     </ThemeProvider>
     )

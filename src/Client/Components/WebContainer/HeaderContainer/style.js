@@ -3,7 +3,7 @@ import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../Assets/Styles/Themes';
 import { Link } from 'react-router-dom';
 import LogoColor from '../../../../Assets/Images/logo_color.png';
-
+import loginIcon2 from '../../../../Assets/Images/login2.svg';
 
 export const Nav = styled.div`
 	height:auto;
@@ -77,7 +77,7 @@ export const Sns = styled.a`
 	font-size: 1em;
 	padding: 1em;
 	${breakpoint('md')`
-		padding: 1em 0.5em;
+		padding: 1em 1em;
 		// &:last-child {
 		// 	padding: 1em 0 1em 0.5em;
 		// }
@@ -92,6 +92,9 @@ export const Sns = styled.a`
 export const Login = styled.a`
 	color: ${Themes.colors.white};
 	padding: 0 0.5em 0 0;
+	//color
+	position:relative;
+	display: inline-block;
 	${breakpoint('md')`
 			padding: 0 0.2em 0 0;
 		`}
@@ -103,12 +106,23 @@ export const LoginIcon = styled.img`
 	width:21px;
 	height:21px;
 	vertical-align:middle;
-	${breakpoint('md')`
-		vertical-align:sub;
-	`}	
-	${NarrowLinks}:hover & {
-		fill: ${Themes.colors.yellow};
-	}
+	
+	// &:hover {
+	// 	display:none;
+	// }
+	// ${breakpoint('md')`
+	// 	vertical-align:sub;
+	// `}	
+	// ${NarrowLinks}:hover & {
+	// 	fill: ${Themes.colors.yellow};
+	// }
+`
+export const LoginIcon2 = styled.img`
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
 `
 export const LogoImg = styled.img`
 	width:81px;
@@ -117,11 +131,13 @@ export const LogoImg = styled.img`
 	margin-top: -3%;
 	${breakpoint('md')`
 		content: url(${LogoColor});
-		width:120px;
+		width:100px;
+		margin-top: 0;
 	`}
 	${breakpoint('lg')`
 		content: url(${LogoColor});
 		width:100px;
+		margin-top: 1.6%;
 	`}
 `
 export const LinkedLogo = styled(Link)`

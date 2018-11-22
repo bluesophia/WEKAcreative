@@ -35,6 +35,10 @@ const ButtonStyle = styled.button`
     letter-spacing:1px;
     outline: none;
     cursor: pointer;
+    &:hover {
+        color: ${Themes.colors.orange}
+        border:2px solid ${Themes.colors.orange};
+    }
         ${breakpoint('md')`
             font-size: 25px;
             margin-top: 30px;

@@ -31,10 +31,13 @@ export const Section05__ImgDiv = styled.div`
     align-items: center;
 `
 export const Section05__TextDiv = styled.div`
+    display:none;
+    ${breakpoint('md')`
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 10%;
+    `}
 `
 export const Section05__Icon = styled.img`
     width: 27px;

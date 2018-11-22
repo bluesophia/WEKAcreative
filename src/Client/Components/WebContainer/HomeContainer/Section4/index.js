@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 import {Section04,
     Container,
@@ -33,6 +35,7 @@ class Section4 extends Component{
     render(){
         return(
             <Section04>
+                <ScrollAnimation animateIn='fadeIn'>
                 <Container>
                     <Section04__LeftDiv>
                         <Section04__TitleDiv>
@@ -82,13 +85,14 @@ class Section4 extends Component{
                                 </div>
                             </Section04__ContentDiv>  
                             </Section04__Wrap> */}
-                            <Section04__Image2 src={LeveragetheFuture2} />
+                            <Section04__Image2/>
                         </Section04__Contents>
                         <Section04__Contents2>
                                 <Section04__Image src={LeveragetheFuture} />
                         </Section04__Contents2>
                     </Section04__LeftDiv>
                 </Container>
+                </ScrollAnimation>
             </Section04>
         )
     }

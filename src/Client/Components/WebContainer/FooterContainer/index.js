@@ -21,9 +21,13 @@ import { Footer,
   StyledLink__Div2,
   StyledLink,
   ButtonDiv, 
-  ButtonLink
+  ButtonLink,
+  FooterBox3,
+  FooterBottomContainer
 } from './style';
 import LinkButton from '../../../Components/Common/Button/LinkButton';
+/**** Animation ****/
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class FooterContainer extends Component {
     _ScrollTop = () => {
@@ -33,6 +37,7 @@ class FooterContainer extends Component {
       return (
         <ThemeProvider theme={Themes}> 
         <Footer>
+          <ScrollAnimation animateIn='fadeIn'>
           <Container>
             <FooterTop>
               <ButtonDiv>
@@ -43,7 +48,7 @@ class FooterContainer extends Component {
                 <FooterBox1>
                 <FooterRightContainer>
                   {/* Logo & SNS */}
-                  {/* <FooterBox3> */}
+                  <FooterBox3>
                     <LogoImg src={Logo}/>
                     <Box>
                       <Sns href="#">
@@ -63,20 +68,22 @@ class FooterContainer extends Component {
                       {/* <StyledLink to='/blog'> Solutions /</StyledLink> */}
                       <StyledLink to='/contact'> Contact Us</StyledLink>
                     </StyledLink__Div2>
-                {/* </FooterBox3> */}
-                    <FooterRightContainer>
+                </FooterBox3>
+                    <FooterBottomContainer>
+                    <StyledLink__Div>
                     <FooterTitle>CONTACT US</FooterTitle>
                     <FooterText>09 234 2345</FooterText>
                     <FooterText>hello@wekacreative.co.nz</FooterText>
-                    <FooterTitle>SITEMAP</FooterTitle>
+                    </StyledLink__Div>
                     <StyledLink__Div>
+                    <FooterTitle>SITEMAP</FooterTitle>
                       <StyledLink to='/' onClick={this._ScrollTop}>Home</StyledLink>
                       <StyledLink to='/about' onClick={this._ScrollTop}>About</StyledLink>
                       <StyledLink to='/support' onClick={this._ScrollTop}>Support</StyledLink>
                       {/* <StyledLink to='/blog'>Solutions</StyledLink> */}
                       <StyledLink to='/contact' onClick={this._ScrollTop}>Contact Us</StyledLink>
                     </StyledLink__Div>
-                    </FooterRightContainer>
+                    </FooterBottomContainer>
                     
                 </FooterRightContainer>
               </FooterBox1>
@@ -98,6 +105,7 @@ class FooterContainer extends Component {
                 <FooterBottomText>ⓒ2018 wekacreative.co.nz</FooterBottomText>
             </FooterBottom>
           </Container>
+          </ScrollAnimation>
         </Footer>
         </ThemeProvider> 
       );

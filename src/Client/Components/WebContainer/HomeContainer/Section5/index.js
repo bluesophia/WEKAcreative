@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import Themes from '../../../../../Assets/Styles/Themes';
 import YellowSpan from '../../../Common/YellowSpan';
+import ScrollAnimation from 'react-animate-on-scroll';
 import {Section05,
     Section05__Div,
     Section05__TitleDiv,
@@ -23,6 +24,7 @@ class Section5 extends Component{
         return(
             <ThemeProvider theme={Themes}>
                 <Section05>
+                <ScrollAnimation animateIn='fadeIn'>
                     <Section05__Div>
                         <Section05__TitleDiv>
                                 <Section05__Title>We can <Br />integrate with</Section05__Title>
@@ -36,7 +38,8 @@ class Section5 extends Component{
                                 <Section05__Logo1 src={LogosLg}/>
                             </Section05__LogosDiv01>
                         </Section05__Logos>
-                    </Section05__Div>    
+                    </Section05__Div> 
+                    </ScrollAnimation>  
                 </Section05>
             </ThemeProvider>
         )

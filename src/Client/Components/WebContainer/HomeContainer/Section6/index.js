@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled, { css, ThemeProvider } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../../Assets/Styles/Themes';
+/** Animation **/
+import ScrollAnimation from 'react-animate-on-scroll';
 
 /** components **/
 import CardCarousel from '../../../Common/CardCarousel';
@@ -20,6 +22,7 @@ class Section6 extends Component{
         return(
             <ThemeProvider theme={Themes}>
                 <Section06>
+                <ScrollAnimation animateIn='fadeIn'>
                     <Section06__TitleDiv>
                         <Section06__Title>Our product suite</Section06__Title>
                         <YellowSpan />
@@ -36,6 +39,7 @@ class Section6 extends Component{
                             <Seciton06__Image2 src={OurProductSiteScops2}/>
                         </Section06__Div__Image2>
                     </Section06__Div>
+                    </ScrollAnimation>
                 </Section06>
             </ThemeProvider>
         )

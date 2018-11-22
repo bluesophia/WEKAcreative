@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Themes from '../../../../Assets/Styles/Themes';
 import LogoColor from '../../../../Assets/Images/logo_color.png';
 import loginIcon from '../../../../Assets/Images/login.svg';
+import loginIcon2 from '../../../../Assets/Images/login2.svg';
+
 import { Nav,
 	Container,
 	LinkedLogo,
@@ -12,9 +14,10 @@ import { Nav,
 	WideDiv,
 	StyledLink,
 	Box,
-	Sns,
+	Sns,	
 	Login,
 	LoginIcon,
+	LoginIcon2,
 	NavNarrow,
 	icon,
 	NarrowLinks,
@@ -48,7 +51,7 @@ class HeaderContainer extends Component {
                        </Box>
 					   <StyledLink onClick={this.burgerToggle} to='/login'>
 						   <Login>
-						   		<LoginIcon src={loginIcon} /> 
+						   		<LoginIcon src={loginIcon}/> 
 							</Login>
 							Login
 						</StyledLink>
