@@ -94,7 +94,7 @@ const Section06__Text = styled.div`
 `
 
 const Section06__Div = styled.div`
-    
+    transform: scale(0.9);
     max-width:1366px;
 `
 const Section06__Div__Image1 = styled.div`
@@ -121,7 +121,7 @@ const Section06__Div__Image2 = styled.div`
 `
 
 const Seciton06__Image = styled.img`
-    margin-bottom: 15%;
+    margin-bottom: 25%;
 `
 const Seciton06__Image2 = styled.img`
     padding: 10%;

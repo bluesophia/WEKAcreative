@@ -9,21 +9,27 @@ export const Box = styled.div`
       justify-content: center;
       margin-left: -52px;
       ${breakpoint('md')`
-        float: right;
-        margin-top: -12%;
+        // float: right;
       `};
       ${breakpoint('lg')`
       // justify-content: flex-end;
+      margin-left: 0;
+      margin-top: 10%;
       `};
   `  
 export const Sns = styled.a`
     color:${Themes.colors.grey};
     // font-size: 1em;
     // padding: 1.5em 1.5em;
-    font-size: 0.9em;
-    padding: 1.5em 1.5em;
+    font-size: 0.8em;
+    padding: 1.5em 1.9em;
+    &:hover {
+      color:${Themes.colors.orange};
+    }
       ${breakpoint('md')`
-      padding: 0 1.1em;
+      // padding: 0 1.1em;
+    //   font-size: 0.8em;
+    // padding: 1.5em 1.9em;
       `};
       ${breakpoint('lg')`
       padding: 0 1.5em;
@@ -39,7 +45,7 @@ export const Footer = styled.div`
   line-height:1.5em;
   ${breakpoint('md')`
     // max-width: 768px;
-    padding: 0 10%;
+    // padding: 0 10%;
   `}
   ${breakpoint('lg')`
   `}
@@ -59,12 +65,12 @@ padding-top: 30px;
 flex-direction: column;
   
   ${breakpoint('md')`
-  display: flex;
-  justify-content: space-between;
-  padding-top: 0;
+  // display: flex;
+  // justify-content: space-between;
+  // padding-top: 0;
   `};
   ${breakpoint('lg')`
-  padding-top:none;
+  padding-top:0;
   `};
 `
 export const FooterBox1 = styled.div`
@@ -82,18 +88,33 @@ export const FooterBox3 = FooterBox1.extend`
 display: flex;
 justify-content: space-around;
 align-items: center;
+margin-bottom: 10%;
 ${breakpoint('md')`
 order:3;
+margin-bottom: 0;
 `};
+${breakpoint('lg')`
+display: flex;
+flex-direction: column;
+margin-right: 160px;
+`}
 `
 export const FooterRightContainer = styled.div`
 // text-align:center;
 ${breakpoint('md')`
-  text-align:left;
+  // text-align:left;
 `};
 ${breakpoint('lg')`
+  // float: left;
+  // width: 100%;
+  display: flex;
   float: left;
   width: 100%;
+  flex-direction: row-reverse;
+  // justify-content: space-around;
+  margin-left: -4%;
+  max-width: 1215px;
+
 `};
 `
 export const FooterBottomContainer = styled.div`
@@ -102,11 +123,12 @@ text-align:center;
 justify-content: space-around;
 flex-direction: row-reverse;
 ${breakpoint('md')`
-  text-align:left;
+  // text-align:left;
 `};
 ${breakpoint('lg')`
-  float: left;
-  width: 100%;
+  // float: left;
+  // width: 100%;
+  margin-left: -10px;
 `};
 `
 export const FooterTitle = styled.div`
@@ -116,28 +138,30 @@ text-align:left;
 margin: 0.5em 0 0.5em 0;
 color: ${Themes.colors.yellow};
   ${breakpoint('md')`
-  display: none;
+  // display: none;
     `};
   ${breakpoint('lg')`
-  display: none;
     `};
   `
 export const FooterTitleDisplay = FooterTitle.extend`
 display:none;
 ${breakpoint('md')`
-display: block;
+// display: block;
 `};
 `
 export const LogoImg = styled.img`
-	width:176px;
+	// width:176px;
 	// float:left;
   position:relative;
+  width: 131px;
+  margin-left: -3%;
   ${breakpoint('md')`
-    display: flex;
-    margin-left: -21px;
+    // display: flex;
+    // margin-left: -21px;
 	`}
 	${breakpoint('lg')`
-		width:160px;
+    width:160px;
+    margin-left: 0;
 	`}
 `;
 export const FooterText = styled.span`
@@ -159,16 +183,19 @@ export const StyledLink__Div = styled.div`
   display: flex;
   flex-direction: column;
   ${breakpoint('md')`
-  display: none;
+  // display: none;
   `};
+  ${breakpoint('lg')`
+  // margin: 0px 53% 0 4%;
+  margin-right: 130px;
+  `}
 `
 export const StyledLink__Div2 = styled.div`
   display: none;
   ${breakpoint('md')`
-  display: flex;
   `};
 `
-export const StyledLink = styled(Link)`
+export const  StyledLink = styled(Link)`
   color: ${Themes.colors.grey};
   font-size: ${Themes.fontsize.p2};
   display:block;
@@ -176,6 +203,9 @@ export const StyledLink = styled(Link)`
   font-weight: ${Themes.fontWeight.light};
   line-height:1.8;
   text-align: left;
+  &:hover {
+    color: ${Themes.colors.orange};
+  }
   ${breakpoint('md')`
   font-size: 15px;
   font-weight: ${Themes.fontWeight.regular};
@@ -201,9 +231,9 @@ text-align: center;
 padding: 0;
 color: ${Themes.colors.grey};
   ${breakpoint('md')`
-    text-align: left;
+    // text-align: left;
     font-size: 15px;
-    font-weight: ${Themes.fontWeight.regular};
+    // font-weight: ${Themes.fontWeight.regular};
       `}
 `
 //button
@@ -220,5 +250,12 @@ export const ButtonDiv = styled.div`
 export const ButtonLink = styled(Link)`
         cursor:'pointer';
 
+`
+
+export const StyledLink__Div__Hidden = styled.div`
+  display: none;
+  ${breakpoint('lg')`
+    display:
+  `}
 `
 

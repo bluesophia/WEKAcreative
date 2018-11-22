@@ -88,11 +88,12 @@ export const Section02__Text = styled.div`
     margin-bottom: -10%;
     ${Text};
     color:${Themes.colors.grey};
-    text-align:left;
+    // text-align:left;
+    text-align: justify;
         ${breakpoint('md')`
             font-size:${Themes.fontsize.p1}
             line-height:26px;
-            margin-bottom: -10px;  
+            margin-bottom: 4%;  
             text-align:center; 
         `}
         ${breakpoint('lg')`

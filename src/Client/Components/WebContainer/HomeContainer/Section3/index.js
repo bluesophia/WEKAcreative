@@ -92,7 +92,7 @@ class Section3 extends Component {
                 <Section03__Container>
                     <Section03__Title>Some of our work</Section03__Title>
                     <YellowSpan />
-                    <Section03__Text>Big or small it doesn’t matter - the companies we support have fantastic people and ideas to guide them. <Br />Big or small it doesn’t matter - the companies we support have fantastic people and ideas to guide them.
+                    <Section03__Text>Big or small it doesn’t matter <Br />- the companies we support have fantastic people and ideas to guide them.
                     </Section03__Text>
                 </Section03__Container>
                 <Section03__Container__image>

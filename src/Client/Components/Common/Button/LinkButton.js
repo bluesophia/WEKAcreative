@@ -42,7 +42,7 @@ const ButtonStyle = styled.button`
     }
         ${breakpoint('md')`
             font-size: 25px;
-            margin-top: 30px;
+            // margin-top: 30px;
             width: 50%;
             margin-left: 25%;
         `}
