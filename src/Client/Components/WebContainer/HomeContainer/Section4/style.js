@@ -19,7 +19,7 @@ import LeveragetheFuture2 from '../../../../../Assets/Images/LeveragetheFuture2.
         padding: ${Themes.paddings.tablet};
     `}
     ${breakpoint('lg')`
-        // background-size:100%;
+        background-size:100%;
         // height:768px;
         padding: ${Themes.paddings.desktop};
     `}

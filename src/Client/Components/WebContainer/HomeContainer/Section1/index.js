@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button01 from '../../../Common/Button/Button01';
 import {Br, 
+    Br2,
     Container, 
     Section01, 
     Section01__Image, 
@@ -21,11 +22,11 @@ class Section1 extends Component{
     render(){
         return(
                <Section01>
+                   <ScrollAnimation animateIn="fadeIn">
                     <Container>
-                    <ScrollAnimation animateIn="fadeIn">
                         <Section01__Image><MainImage src={mainImage}/></Section01__Image>
                         <Section01__TitleDiv>
-                            <StyledTitle>Accelerate your business <Br />processes through innovative <Br />software design</StyledTitle>
+                            <StyledTitle>Accelerate your business <Br />processes<Br2 /> through innovative <Br />software design</StyledTitle>
                             <Section01__Text>Harness the power of cloud-based custom software. Transform how you do business through systems designed with your stakeholders and processes in mind.
                             </Section01__Text>
                             <ButtonDiv>
@@ -34,8 +35,8 @@ class Section1 extends Component{
                                 </ButtonLink>
                             </ButtonDiv>
                         </Section01__TitleDiv>
-                        </ScrollAnimation>
                     </Container>
+                    </ScrollAnimation>
                 </Section01>         
         )
     }

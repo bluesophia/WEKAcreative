@@ -64,7 +64,7 @@ class HeaderContainer extends Component {
 						<NarrowStyledLink onClick={this.burgerToggle} to='/'>Home</NarrowStyledLink>
 						<NarrowStyledLink onClick={this.burgerToggle} to='/about'>About</NarrowStyledLink>
 						<NarrowStyledLink onClick={this.burgerToggle} to='/support' >Support</NarrowStyledLink>
-						<NarrowStyledLink onClick={this.burgerToggle} to='/casestudy'>Casestudy</NarrowStyledLink>
+						{/* <NarrowStyledLink onClick={this.burgerToggle} to='/casestudy'>Casestudy</NarrowStyledLink> */}
 						<NarrowStyledLink onClick={this.burgerToggle} to='/contact'>Contact Us</NarrowStyledLink>
 						<Box>
                            <Sns href="https://www.facebook.com/EasyFormsNZ/?ref=aymt_homepage_panel">

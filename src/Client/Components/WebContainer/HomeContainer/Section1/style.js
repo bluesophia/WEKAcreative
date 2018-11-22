@@ -15,7 +15,19 @@ import BigTitle from '../../../Common/Title/BigTitle';
 export const Br = styled.br`
     display: none;
     ${breakpoint('md')`
-        diplay block;
+        display: none;
+    `}
+    ${breakpoint('lg')`
+        display: block;
+    `}
+`
+export const Br2 = styled.br`
+    display: none;
+    ${breakpoint('md')`
+        display: block;
+    `}
+    ${breakpoint('lg')`
+        display: none;
     `}
 `
 export const Section01 = styled.div`
@@ -54,7 +66,10 @@ export const Container = styled.div`
 export const Section01__Image = styled.div`
     width:100%;
         ${breakpoint('md')`
-            transform: scale(0.9);
+            transform: scale(0.8);
+        `}
+        ${breakpoint('lg')`
+            // transform: scale(1);
         `}
 `
 export const MainImage = styled.img`
@@ -68,11 +83,17 @@ export const Section01__TitleDiv = styled.div`
     align-items:center;
     ${breakpoint('md')`
         width:100%;
-        align-items:flex-start;
+        // align-items:flex-start;
+        align-items: center;
+        
         
     `}
     ${breakpoint('lg')`
         height:250px;
+        align-items:center;
+    `}
+    ${breakpoint('xl')`
+        margin-top: -6%;
     `}
 `;
 export const StyledTitle = styled.div`
@@ -86,9 +107,19 @@ export const StyledTitle = styled.div`
             font-size:${Themes.fontsize.D_h1};
             text-align:center;
             margin:0;
+            line-height: 1.7;
         `}
         ${breakpoint('lg')`
             text-align:center;
+            max-width: 1300px;
+        `}
+        ${breakpoint('xl')`
+            font-size: 38px;
+            line-height: 1.5;
+            /* margin-top: -10%; */
+            text-align: center;
+            margin: 0;
+            margin-left: 14%;
         `}
     `
 export const Section01__Text = styled.div`
@@ -121,6 +152,10 @@ export const ButtonDiv = styled.div`
     ${breakpoint('lg')`
         width:60%;
         // margin-left:0;
+    `}
+    ${breakpoint('xl')`
+        margin-left: 29%;
+        margin-top: 10%;
     `}
 `
 export const ButtonLink = styled(Link)`
