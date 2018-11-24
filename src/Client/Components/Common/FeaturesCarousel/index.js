@@ -13,9 +13,15 @@ import Slider from "react-slick";
 
 //images
 import MobileApps from '../../../../Assets/Images/MobileApps.svg'
+import MobileApps2 from '../../../../Assets/Images/MobileApps2.svg'
+// import MobileApps3 from '../../../../Assets/Images/MobileApps3.svg'
+// import MobileApps4 from '../../../../Assets/Images/MobileApps4.svg'
 import Websites from '../../../../Assets/Images/Websites.svg'
+import Websites2 from '../../../../Assets/Images/Websites2.svg'
 import Integrations from '../../../../Assets/Images/Integrations.svg'
 import FullSolutions from '../../../../Assets/Images/FullSolutions.svg'
+import Integrations2 from '../../../../Assets/Images/Integrations2.svg'
+import FullSolutions2 from '../../../../Assets/Images/FullSolutions2.svg'
 
 //icons
 import IconBrain from '../../../../Assets/Images/IconBrain.svg'
@@ -173,9 +179,25 @@ render () {
         }
       },
       {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots:false
+        }
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
+          dots:false
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
           dots:false
         }
@@ -198,7 +220,7 @@ render () {
             id="FeaturesCard1"
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard1' ? true : false}
-            image = {MobileApps}
+            image = {MobileApps2}
             iconName1 = {IconData}
             iconName2 = {IconCommunication}
             iconName3 = {IconHandShake}
@@ -214,7 +236,7 @@ render () {
             value={this.state.value2}
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard2' ? true : false}
-            image = {Websites}
+            image = {Websites2}
             iconName1 = {IconInformation}
             iconName2 = {IconEcommerce}
             iconName3 = {IconPeople}
@@ -227,7 +249,7 @@ render () {
             ref={this.FeaturesCard3}
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard3' ? true : false}
-            image = {Integrations}
+            image = {Integrations2}
             iconName1 = {IconPeople}
             iconName2 = {IconPoint}
             iconName3 = {IconData}
@@ -243,7 +265,7 @@ render () {
             value={this.state.value}
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard4' ? true : false}
-            image = {FullSolutions}
+            image = {FullSolutions2}
             iconName1 = {IconWeb}
             iconName2 = {IconBrain}
             iconName3 = {IconHandShake}
@@ -267,20 +289,24 @@ render () {
   // margin-left: 11%;
   // `
 
+  
+
   const HideAndShowLayout_Wrapper = styled.div`
     position: relative;
   `
 
   var feature_wrapper = {
     // transition: 'all 5s',
-    background: "red",
+    background: "#fff",
     transition: "width 2s",
     zIndex: "0",
     position: "relative"
   }
   const SliderDiv = styled.div`
   ${breakpoint('lg')`
-    margin-top: 10%;
+    // margin-top: 10%;
+    margin: 0 auto;
+    max-width: 1366px;
   `}
   `
     

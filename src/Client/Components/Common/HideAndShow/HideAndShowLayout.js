@@ -14,6 +14,9 @@ import Themes from '../../../../Assets/Styles/Themes';
 //Components
 import BigTitle from '../../Common/Title/BigTitle';
 
+/** Animation**/ 
+import ScrollAnimation from 'react-animate-on-scroll';
+
 class HideAndShowLayout extends Component {
     constructor() {
         super();
@@ -21,6 +24,7 @@ class HideAndShowLayout extends Component {
     render(){
         // console.log('layout props ',this.props.active);
         return(
+            <ScrollAnimation animateIn='fadeIn'>
             <Container id="feature_wrap">
                 <Section01 >
                 { this.props.active === 'FeaturesCard1' ? (<HideAndShowCard1 
@@ -41,6 +45,7 @@ class HideAndShowLayout extends Component {
                 />) : null}
                 </Section01>
             </Container>
+            </ScrollAnimation>
         )
     }
 }

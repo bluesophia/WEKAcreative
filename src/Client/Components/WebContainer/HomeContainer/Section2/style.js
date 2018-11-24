@@ -34,8 +34,10 @@ export const Br2 = styled.br`
 export const Section02 = styled.div`
     // padding: 0 10%;
         padding: ${Themes.paddings.mobile};
+        margin-bottom: -10%;
     ${breakpoint('md')`
         padding: ${Themes.paddings.tablet};
+        margin-bottom: 0;
     `}
     ${breakpoint('lg')`
         padding:${Themes.paddings.desktop};
@@ -85,7 +87,7 @@ export const Section02__Title = styled.div`
 
 export const Section02__Text = styled.div`
     margin-top:9px;
-    margin-bottom: -10%;
+    margin-bottom: -12%;
     ${Text};
     color:${Themes.colors.grey};
     // text-align:left;

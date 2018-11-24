@@ -7,13 +7,13 @@ import Themes from '../../../../../Assets/Styles/Themes';
 /** components **/
 import BigTitle from '../../../Common/Title/BigTitle';
 import Text from '../../../Common/Text';
-import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.svg';
+import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.png';
 import SomeofOurWorkToyota2 from '../../../../../Assets/Images/SomeofOurWorkToyota2.svg';
 import SomeofOurWorkMethTesting3 from '../../../../../Assets/Images/SomeofOurWorkMethTesting3.svg';
-import SomeofOurWorkMethTesting from '../../../../../Assets/Images/SomeofOurWorkMethTesting.svg';
-import SomeofOurWorkRugdoctor from '../../../../../Assets/Images/SomeofOurWorkRugdoctor.svg';
+import SomeofOurWorkMethTesting from '../../../../../Assets/Images/SomeofOurWorkMethTesting.png';
+import SomeofOurWorkRugdoctor from '../../../../../Assets/Images/SomeofOurWorkRugdoctor.png';
 import SomeofOurWorkRugdoctor2 from '../../../../../Assets/Images/SomeofOurWorkRugdoctor2.svg';
-import SomeofOurWorkPassafe from '../../../../../Assets/Images/SomeofOurWorkPassafe.svg';
+import SomeofOurWorkPassafe from '../../../../../Assets/Images/SomeofOurWorkPassafe.png';
 import SomeofOurWorkPassafe2 from '../../../../../Assets/Images/SomeofOurWorkPassafe2.svg';
 // import AnimationBox from '../../../../Function/AnimationBox';
 

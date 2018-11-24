@@ -13,6 +13,8 @@ import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 import YellowSpan from '../../../Common/YellowSpan';
 import FeaturesCarousel from '../../../Common/FeaturesCarousel';
 
+
+
 class Section2 extends Component{
     render(){
         return(

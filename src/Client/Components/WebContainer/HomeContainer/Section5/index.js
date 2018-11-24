@@ -17,7 +17,9 @@ import {Section05,
 } from './style';
 /** Logos **/
 import LogosSm from '../../../../../Assets/Images/LogosSm.svg';
+import LogosSm2 from '../../../../../Assets/Images/LogosSm2.png';
 import LogosLg from '../../../../../Assets/Images/LogosLg.svg';
+import LogosLg2 from '../../../../../Assets/Images/LogosLg2.svg';
 
 class Section5 extends Component{
     render(){
@@ -34,8 +36,8 @@ class Section5 extends Component{
                         </Section05__TitleDiv>
                         <Section05__Logos>
                             <Section05__LogosDiv01>
-                                <Section05__Logo src={LogosSm}/>
-                                <Section05__Logo1 src={LogosLg}/>
+                                <Section05__Logo src={LogosSm2}/>
+                                <Section05__Logo1 src={LogosLg2}/>
                             </Section05__LogosDiv01>
                         </Section05__Logos>
                     </Section05__Div> 

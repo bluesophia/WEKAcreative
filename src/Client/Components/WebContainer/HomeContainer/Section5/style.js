@@ -24,7 +24,7 @@ export const Br2 = styled.br`
 `
 export const Section05 = styled.div`
     padding: ${Themes.paddings.mobile};
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
     ${breakpoint('md')`
         background:url(${HomeSection05BgMd}) no-repeat;
         background-size: 100%;
@@ -34,7 +34,8 @@ export const Section05 = styled.div`
     `}
     ${breakpoint('lg')`
         background-size: 100%;
-        padding: ${Themes.paddings.desktop};
+        // padding: ${Themes.paddings.desktop};
+        padding: 10% 10% 10% 10%;
     `}
 `
 export const Section05__Div = styled.div`
@@ -89,7 +90,7 @@ export const Section05__Logos = styled.div`
 export const Section05__LogosDiv01 = styled.div`
     display:flex;
     flex-direction:column;
-    margin-bottom: 10%;
+    // margin-bottom: 10%;
         ${breakpoint('lg')`
             flex-direction:row;
             align-items:center;
@@ -104,16 +105,17 @@ export const Section05__LogosDiv02 = styled.div`
         `}
 `
 export const Section05__Logo = styled.img`
-    width:100%;
-    height:auto;
-    margin:0 auto;
+    // width:100%;
+    // height:auto;
+    // margin:0 auto;
     // margin-top: 120px; 
     // transform: scale(2);
-    margin-top: 140%;
-    transform: scale(2.5);
-    margin-bottom: 25%;
+    margin-top: 10%;
+    // transform: scale(2.5);
+    // margin-bottom: 45%;
+    height: 400px;
     ${breakpoint('sm')`
-        width:146px;
+        // width:146px;
     `}
     ${breakpoint('md')`
         display: none;

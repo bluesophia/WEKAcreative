@@ -4,7 +4,8 @@ import breakpoint from 'styled-components-breakpoint';
 
 const BigTitle = css`
     text-align:center;
-    font-size:${Themes.fontsize.h2};
+    // font-size:${Themes.fontsize.h2};
+    font-size:28px;
     line-height:40px;
     font-weight:${Themes.fontWeight.black};
     color:${Themes.colors.black};

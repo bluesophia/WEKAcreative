@@ -23,7 +23,8 @@ import { Footer,
   ButtonDiv, 
   ButtonLink,
   FooterBox3,
-  FooterBottomContainer
+  FooterBottomContainer,
+  StyledLink__Div__Hidden
 } from './style';
 import LinkButton from '../../../Components/Common/Button/LinkButton';
 /**** Animation ****/
@@ -70,11 +71,14 @@ class FooterContainer extends Component {
                     </StyledLink__Div2>
                 </FooterBox3>
                     <FooterBottomContainer>
+                    {/* <StyledLink__Div__Hidden> */}
                     <StyledLink__Div>
                     <FooterTitle>CONTACT US</FooterTitle>
                     <FooterText>09 234 2345</FooterText>
                     <FooterText>hello@wekacreative.co.nz</FooterText>
                     </StyledLink__Div>
+                    {/* </StyledLink__Div__Hidden>
+                    <StyledLink__Div__Hidden> */}
                     <StyledLink__Div>
                     <FooterTitle>SITEMAP</FooterTitle>
                       <StyledLink to='/' onClick={this._ScrollTop}>Home</StyledLink>
@@ -83,6 +87,7 @@ class FooterContainer extends Component {
                       {/* <StyledLink to='/blog'>Solutions</StyledLink> */}
                       <StyledLink to='/contact' onClick={this._ScrollTop}>Contact Us</StyledLink>
                     </StyledLink__Div>
+                    {/* </StyledLink__Div__Hidden> */}
                     </FooterBottomContainer>
                     
                 </FooterRightContainer>

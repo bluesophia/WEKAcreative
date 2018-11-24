@@ -85,7 +85,7 @@ class Section4 extends Component{
                                 </div>
                             </Section04__ContentDiv>  
                             </Section04__Wrap> */}
-                            <Section04__Image2/>
+                            <Section04__Image2  src={LeveragetheFuture2}/>
                         </Section04__Contents>
                         <Section04__Contents2>
                                 <Section04__Image src={LeveragetheFuture} />

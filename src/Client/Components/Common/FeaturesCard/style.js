@@ -25,6 +25,10 @@ export const Section05__div = styled.div`
     display: flex;
     align-items: space-around;
     flex-direction: column;
+    padding: 10%;
+    ${breakpoint('md')`
+        padding: 10%;
+    `}
 `
 export const Section05__ImgDiv = styled.div`
     display: flex;
@@ -40,37 +44,74 @@ export const Section05__TextDiv = styled.div`
     `}
 `
 export const Section05__Icon = styled.img`
-    width: 27px;
+    // width: 27px;
+    width: 22px;
     // height: 64px;
     margi-right: 10px;
     margin-right: 10px;
 `
 export const Section05__Card = styled.div`
-    // border : 1px solid #ccc;
+    border : 1px solid #ccc;
+    // background-color: ${Themes.colors.w_lightOrange}
     width:264px;
-    height:500px;
-    margin: 30px auto;
-    background-color:white;
-    padding: 40px 15px 30px 15px;
+    // height:500px;
+    height: auto;
+    margin: 0 auto;
+    background-color:$;
+    // padding: 40px 15px 30px 15px;
     box-sizing: border-box;
     margin-top: 20%;
     ${breakpoint('md')`
         width:  px;
         // height:412px;
         height:420px;
-    padding: 40px 15px 30px 15px;
+    // padding: 40px 15px 30px 15px;
     box-sizing: border-box;
-    margin-top: 0;
+    margin-top: 20%;
+    max-width: 768px;
     `}
     ${breakpoint('lg')`
-        width: 190px;
-        height: auto;
+        width: 200px;
+        // height: auto;
+        height:400px;
+    // padding: 40px 10px 30px 10px;
+    padding: 0;
+    box-sizing: border-box;
+    // margin-bottom: 30%;
+    `}
+    ${breakpoint('lg2')`
+        width: 230px;
+        // height: auto;
+        height:400px;
+    // padding: 40px 10px 30px 10px;
+    padding: 0;
+    box-sizing: border-box;
+    // margin-bottom: 30%;
+    `}
+    ${breakpoint('xl')`
+        // width: 190px;
+        width: 266px;
+        height: 430px;
         // height:412px;
     // padding: 40px 10px 30px 10px;
     padding: 0;
     box-sizing: border-box;
+    // margin-bottom: 30%;
     `}
+    // ${breakpoint('xxl')`
+    //     // width: 190px;
+    //     width: 350px;
+    //     height: 430px;
+    //     // height:412px;
+    // // padding: 40px 10px 30px 10px;
+    // padding: 0;
+    // box-sizing: border-box;
+    // // margin-bottom: 30%;
+    // `}
 `
+export const Section05__TitleImage__Div = styled.div`
+    background: ${Themes.colors.w_orange};
+    `
 export const Section05__CardCircle = styled.div`
     // width:87px;
     // height:87px;
@@ -93,12 +134,26 @@ export const Section05__TitleImage = styled.img`
         // width: 100%;
         // height: auto;
 `
+export const Section05__TitleImage3 = styled.img`
+        display: hidden;
+        ${breakpoint('md')`
+        display: block;
+        `}
+`
+export const Section05__TitleImage4 = styled.img`
+        display: hidden;
+        ${breakpoint('lg')`
+        display: block;
+        `}
+`
 export const Section05__CardText = styled.p`
     color:${Themes.colors.grey};
     font-size:12px;
     // text-align:center;
     line-height:16px;
     padding:10px;        
+    margin-top: 0;
+    margin-bottom: 0;
 `
 export const Section05__YellowText = styled.p`
     display: none;

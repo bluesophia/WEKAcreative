@@ -10,6 +10,7 @@ import AboutSectionBglg from '../../../../Assets/Images/AboutSectionBglg.svg';
 import mainImage3 from '../../../../Assets/Images/AboutSection01Image3.svg';
 
 /** components **/
+
 import BigTitle from '../../Common/Title/BigTitle';
 
 export const Section01 = styled.div`
@@ -88,8 +89,9 @@ export const Section01__Image2 = styled.div`
         `}
         ${breakpoint('lg')`
           content: url(${mainImage3});
-          transform: scale(2);
+          transform: scale(2.3);
           margin-right: 10%;
+          margin-top: 100px;
         `}
 `
 export const MainImage2 = styled.img`
@@ -112,7 +114,7 @@ export const Section01__TitleDiv = styled.div`
       width:100%;
     `}
     ${breakpoint('lg')`
-      margin-top:50px;
+      // margin-top:50px;
       align-items:flex-start;
       justify-content:flex-start;
     `}
@@ -180,4 +182,14 @@ export const Section__Text = styled.div`
     // text-align:left;
     text-align: justify;
   `}
+`
+
+export const Br = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:none;
+    `}
+    ${breakpoint('lg')`
+    display:block;
+    `}
 `

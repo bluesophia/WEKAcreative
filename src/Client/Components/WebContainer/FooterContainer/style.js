@@ -20,9 +20,9 @@ export const Box = styled.div`
 export const Sns = styled.a`
     color:${Themes.colors.grey};
     // font-size: 1em;
-    // padding: 1.5em 1.5em;
+    padding: 1.5em 1.5em;
     font-size: 0.8em;
-    padding: 1.5em 1.9em;
+    // padding: 1.5em 1.9em;
     &:hover {
       color:${Themes.colors.orange};
     }
@@ -61,13 +61,16 @@ export const Container = styled.div`
 `
 //footer top css
 export const FooterTop = styled.div`
-padding-top: 30px;
+// padding-top: 30px;
+padding: 30px;
 flex-direction: column;
   
   ${breakpoint('md')`
   // display: flex;
   // justify-content: space-between;
   // padding-top: 0;
+  padding: 0;
+  padding-top: 30px;
   `};
   ${breakpoint('lg')`
   padding-top:0;
@@ -153,8 +156,10 @@ export const LogoImg = styled.img`
 	// width:176px;
 	// float:left;
   position:relative;
-  width: 131px;
+  // width: 131px;
+  width: 109px;
   margin-left: -3%;
+  margin-right: 10px;
   ${breakpoint('md')`
     // display: flex;
     // margin-left: -21px;

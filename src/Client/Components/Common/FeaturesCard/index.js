@@ -7,7 +7,8 @@ import {Section05__Card,
     Section05__Icon,
     Section05__CardText,
     Section05__TextDiv,
-    Section05__YellowText
+    Section05__YellowText,
+    Section05__TitleImage__Div
 } from './style';
 import HideAndShowLayout from '../HideAndShow/HideAndShowLayout';
 

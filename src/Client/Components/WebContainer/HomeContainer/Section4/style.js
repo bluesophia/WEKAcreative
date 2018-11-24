@@ -111,11 +111,16 @@ export const Section04__Image = styled.img`
     margin: 80% 0 100% 0;
     `}
 `
-export const Section04__Image2 = styled.div`
-    transform: scale(3.5);
-    margin-top: 90%;
-    margin-bottom: 65%;
-    background: url('${LeveragetheFuture2}');
+export const Section04__Image2 = styled.img`
+    // transform: scale(3.5);
+    height: 510px;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    // margin-top: 70%;
+    // margin-bottom: 60%;
+    // margin-top: 80%;
+    // margin-bottom: 70%;
+    // background: url('${LeveragetheFuture2}');
     ${breakpoint('md')`
     display: none;
         `}
