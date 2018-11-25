@@ -7,13 +7,13 @@ import Themes from '../../../../../Assets/Styles/Themes';
 /** components **/
 import BigTitle from '../../../Common/Title/BigTitle';
 import Text from '../../../Common/Text';
-import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.png';
+import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.svg';
 import SomeofOurWorkToyota2 from '../../../../../Assets/Images/SomeofOurWorkToyota2.svg';
 import SomeofOurWorkMethTesting3 from '../../../../../Assets/Images/SomeofOurWorkMethTesting3.svg';
-import SomeofOurWorkMethTesting from '../../../../../Assets/Images/SomeofOurWorkMethTesting.png';
-import SomeofOurWorkRugdoctor from '../../../../../Assets/Images/SomeofOurWorkRugdoctor.png';
+import SomeofOurWorkMethTesting from '../../../../../Assets/Images/SomeofOurWorkMethTesting.svg';
+import SomeofOurWorkRugdoctor from '../../../../../Assets/Images/SomeofOurWorkRugdoctor.svg';
 import SomeofOurWorkRugdoctor2 from '../../../../../Assets/Images/SomeofOurWorkRugdoctor2.svg';
-import SomeofOurWorkPassafe from '../../../../../Assets/Images/SomeofOurWorkPassafe.png';
+import SomeofOurWorkPassafe from '../../../../../Assets/Images/SomeofOurWorkPassafe.svg';
 import SomeofOurWorkPassafe2 from '../../../../../Assets/Images/SomeofOurWorkPassafe2.svg';
 // import AnimationBox from '../../../../Function/AnimationBox';
 
@@ -32,6 +32,9 @@ export const Section03 = styled.div`
     ${breakpoint('md')`
     padding: ${Themes.paddings.tablet};
     margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     `}
     ${breakpoint('lg')`
         padding: ${Themes.paddings.desktop};
@@ -64,6 +67,13 @@ export const Section03__Container__imageSm = styled.div`
     display:flex;
     // justify-content: center;
     // align-items: center;
+    // margin-bottom: 1%;
+    `}
+    ${breakpoint('lg')`
+    display:flex;
+    // justify-content: center;
+    // align-items: center;
+    // margin-bottom: 1%;
     `}
     
 `
@@ -104,12 +114,25 @@ export const Section03__ImageDiv = styled.div`
 //     width:585px;
 //     `}
 // `
+
 export const Section03__Image1 = styled.div`
-    width: 100%;
-    height: 199px;
-    // height: 250px;
+    // width: 340px;
+    height: 228px;
     background: url('${SomeofOurWorkPassafe2}');
-    background-size: cover;
+    background-size: 100% 100%;
+    ${breakpoint('sm')`
+    // width: 340px;
+    // height: 256px;
+    width: 100%;
+        // height: 197px;
+        margin-left: -1px;
+    `}
+    ${breakpoint('sm2')`
+    // width: 340px;
+    height: 256px;
+        height: 197px;
+        margin-left: -1px;
+    `}
     ${breakpoint('md')`
         // width: 295px;
         width: 455px;
@@ -125,11 +148,24 @@ export const Section03__Image1 = styled.div`
     `}
 `
 export const Section03__Image2 = styled.div`
-width: 100%;
-// height: 250px;
-height: 199px;
+// width: 340px;
+// height: 259px;
     background: url('${SomeofOurWorkRugdoctor2}');
-    background-size: cover;
+    background-size: 100% 100%;
+    width: 100%;
+    ${breakpoint('sm')`
+    // width: 340px;
+    // height: 256px;
+    width: 100%;
+        // height: 197px;
+        margin-left: -1px;
+    `}
+    ${breakpoint('sm2')`
+    // width: 340px;
+    height: 256px;
+        height: 197px;
+        margin-left: -1px;
+    `}
     ${breakpoint('md')`
         // width: 295px;
         width: 455px;
@@ -144,11 +180,24 @@ height: 199px;
     `}
 `
 export const Section03__Image3 = styled.div`
+// width: 340px;
+// 
 width: 100%;
-// height: 250px;
-height: 199px;
     background: url('${SomeofOurWorkMethTesting3}');
-    background-size: cover;
+    background-size: 100% 100%;
+    ${breakpoint('sm')`
+    // width: 340px;
+    // height: 256px;
+    width: 100%;
+        // height: 197px;
+        margin-left: -1px;
+    `}
+    ${breakpoint('sm2')`
+    // width: 340px;
+    height: 256px;
+        height: 197px;
+        margin-left: -1px;
+    `}
     ${breakpoint('md')`
         // width: 295px;
         width: 455px;
@@ -164,11 +213,23 @@ height: 199px;
     `}
 `
 export const Section03__Image4 = styled.div`
-width: 100%;
-// height: 250px;
-height: 199px;
+// width: 340px;
+//  width: 100%;
     background: url('${SomeofOurWorkToyota2}');
-    background-size: cover;
+    background-size: 100% 100%;
+${breakpoint('sm')`
+    // width: 340px;
+    // height: 256px;
+    width: 100%;
+        // height: 197px;
+        margin-left: -1px;
+    `}
+    ${breakpoint('sm2')`
+    // width: 340px;
+    height: 256px;
+        height: 197px;
+        margin-left: -1px;
+    `}
     ${breakpoint('md')`
         width: 455px;
         height: 197px;
@@ -238,7 +299,8 @@ export const AnimationBox1 = styled.div`
     width: 100%;
     // background: #000;
     background: url('${SomeofOurWorkPassafe}');
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     // transform: scaleX(${(props) => props.scaleX});
     transform-origin: top;
 `
@@ -247,7 +309,8 @@ export const AnimationBox2 = styled.div`
     width: 100%;
     // background: #000;
     background: url('${SomeofOurWorkRugdoctor}');
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     // transform: scaleX(${(props) => props.scaleX});
     transform-origin: top;
 `
@@ -256,7 +319,8 @@ export const AnimationBox3 = styled.div`
     width: 100%;
     // background: #000;
     background: url('${SomeofOurWorkMethTesting}');
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     // transform: scaleX(${(props) => props.scaleX});
     transform-origin: top;
 `
@@ -265,7 +329,8 @@ export const AnimationBox4 = styled.div`
     width: 100%;
     // background: #000;
     background: url('${SomeofOurWorkToyota}');
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     // transform: scaleX(${(props) => props.scaleX});
     transform-origin: top;
 `

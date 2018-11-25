@@ -187,7 +187,7 @@ const HideAndShowCard__CardText = styled.div`
         padding: 0 3% 0 3%;
     `}
     ${breakpoint('lg')`
-        font-size:12px;
+        font-size:14px;
         line-height:1.5;
     `}       
 `

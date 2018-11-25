@@ -303,8 +303,10 @@ render () {
     position: "relative"
   }
   const SliderDiv = styled.div`
+  margin-bottom: 10%;
   ${breakpoint('lg')`
     // margin-top: 10%;
+    margin-bottom: 0
     margin: 0 auto;
     max-width: 1366px;
   `}

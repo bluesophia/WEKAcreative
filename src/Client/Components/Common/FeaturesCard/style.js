@@ -77,7 +77,7 @@ export const Section05__Card = styled.div`
     // padding: 40px 10px 30px 10px;
     padding: 0;
     box-sizing: border-box;
-    // margin-bottom: 30%;
+    margin-bottom: 10%;
     `}
     ${breakpoint('lg2')`
         width: 230px;
@@ -113,13 +113,6 @@ export const Section05__TitleImage__Div = styled.div`
     background: ${Themes.colors.w_orange};
     `
 export const Section05__CardCircle = styled.div`
-    // width:87px;
-    // height:87px;
-    // border-radius:50%;
-    // margin:auto; 
-    // display:flex;
-    // justify-content:center;
-    // align-items:center;
 `
 export const Section05__CardTitle = styled.p`
     color:${Themes.colors.blue};
@@ -133,6 +126,7 @@ export const Section05__CardTitle = styled.p`
 export const Section05__TitleImage = styled.img`
         // width: 100%;
         // height: auto;
+        margin-top: -1px;
 `
 export const Section05__TitleImage3 = styled.img`
         display: hidden;
@@ -175,6 +169,6 @@ export const Section05__YellowText = styled.p`
     cursor: pointer;
     font-size: 16px;    
     text-align: center;
-    margin-top: -20px;
+    // margin-top: -20px;
     `}
 `

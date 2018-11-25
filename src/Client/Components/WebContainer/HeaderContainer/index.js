@@ -38,7 +38,7 @@ class HeaderContainer extends Component {
 						<StyledLink to='/support'>Support</StyledLink>
 						{/* <StyledLink to='/casestudy'>Casestudy</StyledLink> */}
 						<StyledLink to='/contact'>Contact Us</StyledLink>
-						<Box>
+						{/* <Box>
                            <Sns href="#">
                                <FontAwesomeIcon icon={['fab', 'facebook-f']} />
                            </Sns>
@@ -54,7 +54,7 @@ class HeaderContainer extends Component {
 						   		<LoginIcon src={loginIcon}/> 
 							</Login>
 							Login
-						</StyledLink>
+						</StyledLink> */}
 					</WideDiv>
 				</NavWide>
 				<NavNarrow>
@@ -66,7 +66,7 @@ class HeaderContainer extends Component {
 						<NarrowStyledLink onClick={this.burgerToggle} to='/support' >Support</NarrowStyledLink>
 						{/* <NarrowStyledLink onClick={this.burgerToggle} to='/casestudy'>Casestudy</NarrowStyledLink> */}
 						<NarrowStyledLink onClick={this.burgerToggle} to='/contact'>Contact Us</NarrowStyledLink>
-						<Box>
+						{/* <Box>
                            <Sns href="https://www.facebook.com/EasyFormsNZ/?ref=aymt_homepage_panel">
                                <FontAwesomeIcon icon={['fab', 'facebook-f']} />
                            </Sns>
@@ -76,13 +76,13 @@ class HeaderContainer extends Component {
                            <Sns href="https://www.linkedin.com/company/easy-forms/">
                                <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
                            </Sns>
-                       </Box>
-					   <NarrowStyledLink onClick={this.burgerToggle} to='/login'>
+                       </Box> */}
+					   {/* <NarrowStyledLink onClick={this.burgerToggle} to='/login'>
 						   <Login>
 						   		<LoginIcon src={loginIcon} /> 
 							</Login>
 							Login
-						</NarrowStyledLink>
+						</NarrowStyledLink> */}
 					</NarrowLinks>
 				</NavNarrow>
 				</Container>

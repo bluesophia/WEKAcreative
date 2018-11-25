@@ -6,6 +6,9 @@ import {Section02,
     Section02__Container,
     Br
 } from './style';
+ /** Animation**/ 
+import ScrollAnimation from 'react-animate-on-scroll';
+
 /** Images **/
 import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
@@ -18,6 +21,7 @@ import FeaturesCarousel from '../../../Common/FeaturesCarousel';
 class Section2 extends Component{
     render(){
         return(
+            <ScrollAnimation animateIn="fadeIn">
             <Section02>
                 <Container>
                     <Section02__Container>
@@ -29,6 +33,7 @@ class Section2 extends Component{
                     </Section02__Container>
                 </Container>
             </Section02>
+            </ScrollAnimation>
         )
     }
 }
