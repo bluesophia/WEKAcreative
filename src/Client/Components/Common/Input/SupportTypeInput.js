@@ -82,4 +82,15 @@ const Input = styled.textarea.attrs({
   &:focus {
     outline: none;
   }
+  ::placeholder {
+    color: #ccc;
+    opacity: 1; /* Firefox */
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
+  }
 `

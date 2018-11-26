@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Themes from '../../../../../Assets/Styles/Themes';
 import Button01 from '../../../Common/Button/Button01';
-import { Link } from 'react-router-dom';
-
+import {Br, 
+    Br2,
+    Container, 
+    Section01, 
+    Section01__Image, 
+    MainImage, 
+    Section01__TitleDiv, 
+    StyledTitle, 
+    Section01__Text,
+    ButtonDiv, 
+    ButtonLink
+} from './style'
+/** Animation**/ 
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 /** Images **/
-import HomeSection01BgMd from '../../../../../Assets/Images/HomeSection01BgMd.png';
-import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
 import mainImage from '../../../../../Assets/Images/mainImage.svg';
-
-/** components **/
-import Title from '../../../Common/Title/Title';
-import BigTitle from '../../../Common/Title/BigTitle';
 
 class Section1 extends Component{
     render(){
         return(
                <Section01>
+                   <ScrollAnimation animateIn="fadeIn">
                     <Container>
                         <Section01__Image><MainImage src={mainImage}/></Section01__Image>
                         <Section01__TitleDiv>
-                            <StyledTitle>Accelerate your business <Br />processes through innovative <Br />software design</StyledTitle>
+                            <StyledTitle>Accelerate your business <Br />processes<Br2 /> through innovative <Br />software design</StyledTitle>
                             <Section01__Text>Harness the power of cloud-based custom software. Transform how you do business through systems designed with your stakeholders and processes in mind.
                             </Section01__Text>
                             <ButtonDiv>
@@ -32,134 +36,10 @@ class Section1 extends Component{
                             </ButtonDiv>
                         </Section01__TitleDiv>
                     </Container>
+                    </ScrollAnimation>
                 </Section01>         
         )
     }
 }
-/**** Section 01 ****/
-const Br = styled.br`
-    display: none;
-    ${breakpoint('md')`
-        diplay block;
-    `}
-`
-const Section01 = styled.div`
-    margin:0;
-    background-position:center top;
-    background-repeat:no-repeat;
-    background-size:100% 100%;
-    ${breakpoint('md')`
-        background: url('${HomeSection01BgMd}');
-        background-position:center top;
-        background-repeat:no-repeat;
-        background-size:120% 120%;
-    `}
-    ${breakpoint('lg')`
-        background: url('${HomeSection02BgMd}');
-        background-position:center top;
-        background-repeat:no-repeat;
-        background-size:100% 100%;
-    `}
-`
-const Container = styled.div`
-    padding: ${Themes.paddings.mobileTop};
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-        ${breakpoint('md')`
-            padding: ${Themes.paddings.mobileTopNone};
-        `}
-        ${breakpoint('lg')`
-            flex-direction:row;
-            max-width: 1366px;
-            margin:0 auto;
-            padding: 0 5% 0 5%;
-        `}
-`
-const Section01__Image = styled.div`
-    width:100%;
-        ${breakpoint('md')`
-            transform: scale(0.9);
-        `}
-`
-const MainImage = styled.img`
-    width:inherit;
-    height:auto;
-`
-const Section01__TitleDiv = styled.div`
-    display:flex;
-    justify-content:space-between;
-    flex-direction:column;
-    align-items:center;
-    ${breakpoint('md')`
-        width:100%;
-        align-items:flex-start;
-        
-    `}
-    ${breakpoint('lg')`
-        height:250px;
-    `}
-`;
-const StyledTitle = styled.div`
-        ${BigTitle};
-        color:${Themes.colors.black};
-        font-weight:${Themes.fontWeight.black};
-        margin: 1em 0;
-        text-align:center;
-        ${breakpoint('md')`
-            font-size:${Themes.fontsize.D_h1};
-            text-align:center;
-            margin:0;
-        `}
-        ${breakpoint('lg')`
-            text-align:center;
-        `}
-    `
-const Section01__Text = styled.div`
-    display:none;
-    font-weight:${Themes.fontWeight.light};
-    color:${Themes.colors.veryLightGrey};
-    text-align:left;
-    margin-top:20px;
-    margin-bottom:20px;
-    line-height:26px;
-    font-size:${Themes.fontsize.p1};
-        ${breakpoint('md')`
-            display:none;
-            display:flex;
-            color:${Themes.colors.grey};
-            font-weight:${Themes.fontWeight.regular};
-            text-align: center;
-        `}
-        ${breakpoint('lg')`
-            text-align: left;
-            display:none;
-        `}
-`
-const ButtonDiv = styled.div`
-    width:64%;
-    ${breakpoint('md')`
-        // margin-left:-5px;
-        margin: 0 auto;
-    `}
-    ${breakpoint('lg')`
-        width:60%;
-        // margin-left:0;
-    `}
-`
-const ButtonLink = styled(Link)`
-        cursor:'pointer';
-`
-
-const SubTitle = styled.p`
-        font-size:${Themes.fontsize.h3};
-        color:${Themes.colors.white};
-        text-align:center;
-        font-weight:${Themes.fontWeight.regular};
-        margin-top:60px;
-            ${breakpoint('lg')`
-            text-align:right;
-        `}
-    `
 
 export default Section1;

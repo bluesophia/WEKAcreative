@@ -5,18 +5,17 @@ import PropTypes from 'prop-types';
 import Themes from '../../../../Assets/Styles/Themes';
 
 //Components
-import MintSpan from '../../Common/MintSpan';
-import BigTitle from '../../Common/Title/BigTitle';
-import HideAndShowCard from '../HideAndShowCard';
+import MintSpan from '../MintSpan';
+import BigTitle from '../Title/BigTitle';
+import HideAndShowCard from '../HideAndShowCard/HideAndShowCard';
 
 //Images
-import IconGlobe from '../../../../Assets/Images/globe.svg'
-import IconEcommerce from '../../../../Assets/Images/ecommerce.svg'
-import IconHandShake from '../../../../Assets/Images/IconHandShake.svg'
-import IconPeople from '../../../../Assets/Images/IconPeople.svg'
+import IconCustomize from '../../../../Assets/Images/IconCustomize.svg'
+import IconUserdesign from '../../../../Assets/Images/IconUserdesign.svg'
+import IconConnect from '../../../../Assets/Images/IconConnect.svg'
 
 //PhotoImages
-import HowWeCanHelpImg1 from '../../../../Assets/Images/HowwecanhelpImg1.png'
+import HowWeCanHelpImg3 from '../../../../Assets/Images/howwecanhelpImg3.png'
 
 class HideAndShowCard4 extends Component {
     render(){
@@ -29,19 +28,16 @@ class HideAndShowCard4 extends Component {
                 </Section01>
                 <Section02>
                     <HideAndShowCard 
-                    iconName1 = {IconGlobe}
-                    iconName2 = {IconEcommerce}
-                    iconName3 = {IconHandShake}
-                    iconName4 = {IconPeople}
-                    title1 = "Highlight your brand story"
-                    title2 = "Enhance your e-commerce platform"
-                    title3 = "Inform, connect, and engage with your customer"
-                    title4 = "We can help engage customers by:"
-                    text1 = "Capturing data from the field"
-                    text2 = "Communicating with your mobile workforce"
-                    text3 = "Improving customer engagement"
-                    text4 = "Providing your workforce valuable company or product information"
-                    img = {HowWeCanHelpImg1}
+                    iconName1 = {IconCustomize}
+                    iconName2 = {IconUserdesign}
+                    iconName3 = {IconConnect}
+                    title1 = "Customised specifically for your business needsplatforms"
+                    title2 = "Designed with your stakeholders in mind"
+                    title3 = "Connect the dots between mobile, web, and existing platforms"
+                    text1 = {"Your processes drive our development. We will engage with your team to understand your business and map out the best solution."}
+                    text2 = {"Deliver an experience that matters. User-centric design puts your stakeholders at the forefront of our development philosophy."}
+                    text3 = {["In an increasingly connected world, it is important to have systems that function in multiple environments. Provide a seamless user experience across all business touch points.", <Br />,<Br />, "Here are a few of our solutions:",<Br />,<Br />,"Redefining service - Toyota",<Br />,"Redefining service - Toyota",<Br />,"Redefining service - Toyota",<Br />,"Redefining service - Toyota"]}
+                    img = {HowWeCanHelpImg3}
                     />
                 </Section02>
             </Container>
@@ -49,14 +45,18 @@ class HideAndShowCard4 extends Component {
     }
 }
 
+const Br = styled.br`
+`
 const Container = styled.div`
-    // padding: 0 10%;
-        padding: ${Themes.paddings.mobile};
+    display: none;
     ${breakpoint('md')`
-        padding: ${Themes.paddings.tablet};
+        display: block; 
+        padding: 10% 0 0 0;
+        // background-image: linear-gradient(#F4FAF6, #FFF);
+        margin-top:10%;
     `}
     ${breakpoint('lg')`
-        padding: 10% 0 0 0;
+        margin-top:0;
     `}
 `
 const Section01 = styled.div`
@@ -69,7 +69,9 @@ const Section01__Title = styled.div`
     ${BigTitle};
     color:${Themes.colors.black};
     font-weight:${Themes.fontWeight.black};
-    ${breakpoint('lg')`
+    ${breakpoint('md')`
+    font-size:${Themes.fontsize.h3};  
+    line-height:1.2;  
     `}
 `
 const Section01__Text = styled.div`
@@ -79,21 +81,15 @@ const Section01__Text = styled.div`
     color:${Themes.colors.grey};
     text-align:center;
         ${breakpoint('md')`
-            font-size:${Themes.fontsize.p1}
+            font-size:${Themes.fontsize.p2}
             line-height:26px;
-            margin-bottom: -10px;   
+            margin-bottom: 7%; 
+            padding: 0 5%  
         `}
         ${breakpoint('lg')`
-            font-size:${Themes.fontsize.p1}
+            font-size:${Themes.fontsize.p2}
             line-height:26px;
             margin-bottom: 5%;
         `}
-`
-const Section03 = styled.div`
-    margin:0 auto;
-`    
-const Section03__ImgDiv = styled.div`
-`
-const Section03__Img = styled.img`
 `
 export default HideAndShowCard4;

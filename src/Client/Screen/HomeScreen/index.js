@@ -8,7 +8,6 @@ import Title from '../../Components/Common/Title/Title';
 
 
 /** Images **/
-import HomeSection01BgSm from '../../../Assets/Images/HomeSection01BgSm.svg';
 
 import Section01 from '../../Components/WebContainer/HomeContainer/Section1';
 import Section02 from '../../Components/WebContainer/HomeContainer/Section2';
@@ -37,10 +36,8 @@ class HomeScreen extends Component{
         return(
             <ThemeProvider theme={Themes}>
                 <div>
-                    <Section0102>
-                        <Section01 />
-                        <Section02 />
-                    </Section0102>
+                    <Section01 />
+                    <Section02 />
                     <Section03 />
                     <Section04 />
                     <Section05 />
@@ -50,7 +47,5 @@ class HomeScreen extends Component{
         )
     }
 }
-const Section0102 = styled.div`
-    // background-color:${Themes.colors.veryLightGrey};
-`
+
 export default HomeScreen;

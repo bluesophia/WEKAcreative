@@ -7,15 +7,15 @@ import FeaturesCard from '../FeaturesCard';
 import ArrowRightIcon from '../../../../Assets/Images/arrowRight.svg';
 import ArrowLeftIcon from '../../../../Assets/Images/arrowLeft.svg';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Themes from '../../../../Assets/Styles/Themes';
 import Slider from "react-slick";
 
 //images
-import MobileApps from '../../../../Assets/Images/MobileApps.svg'
-import Websites from '../../../../Assets/Images/Websites.svg'
-import Integrations from '../../../../Assets/Images/Integrations.svg'
-import FullSolutions from '../../../../Assets/Images/FullSolutions.svg'
+import MobileApps2 from '../../../../Assets/Images/MobileApps2.svg'
+// import MobileApps3 from '../../../../Assets/Images/MobileApps3.svg'
+// import MobileApps4 from '../../../../Assets/Images/MobileApps4.svg'
+import Websites2 from '../../../../Assets/Images/Websites2.svg'
+import Integrations2 from '../../../../Assets/Images/Integrations2.svg'
+import FullSolutions2 from '../../../../Assets/Images/FullSolutions2.svg'
 
 //icons
 import IconBrain from '../../../../Assets/Images/IconBrain.svg'
@@ -28,6 +28,13 @@ import IconPeople from '../../../../Assets/Images/IconPeople.svg'
 import IconPoint from '../../../../Assets/Images/IconPoint.svg'
 import IconSettings from '../../../../Assets/Images/IconSettings.svg'
 import IconWeb from '../../../../Assets/Images/IconWeb.svg'
+
+//components
+import HideAndShowCard1 from '../../Common/HideAndShow/HideAndShowCard1';
+import HideAndShowCard2 from '../../Common/HideAndShow/HideAndShowCard2';
+import HideAndShowCard3 from '../../Common/HideAndShow/HideAndShowCard3';
+import HideAndShowCard4 from '../../Common/HideAndShow/HideAndShowCard4';
+import HideAndShowLayout from '../../Common/HideAndShow/HideAndShowLayout';
 
 
 function ArrowRight(props) {
@@ -65,12 +72,14 @@ const ArrowStyle = styled.img`
   height:28px;
   left: ${props => props.left ? '-10px' : 'inherit'};  
   right: ${props => props.right ? '-10px' : 'inherit'};
+  z-index: 1;
   `}
   ${breakpoint('md')`
   width:14px;
   height:28px;
   left: ${props => props.left ? '-50px' : 'inherit'};    
   right: ${props => props.right ? '-50px' : 'inherit'};
+  z-index: 1;
   `}
   ${breakpoint('lg')`
   width:14px;
@@ -81,6 +90,61 @@ const ArrowStyle = styled.img`
 `
 
 class FeaturesCarousel extends Component {
+  constructor() {
+    super();
+    this.FeaturesCard1 = React.createRef()
+    this.FeaturesCard2 = React.createRef()
+    this.FeaturesCard3 = React.createRef()
+    this.FeaturesCard4 = React.createRef()
+    // let card = this.refs.FeaturesCard1;
+    this.state = { 
+      showing : false,
+      showing2 : false,
+      showing3 : false,
+      showing4 : false,
+      object2 : this.refs.FeaturesCard2,
+      // showing3 : false,
+      // showing4 : false,
+      id1: "FeaturesCard1",
+      FeaturesCarousel:'',
+      features: [
+        {
+          texts: ["Capturing data from the field",
+                  "Communicating with your mobile workforce"],
+          title: ["Harness the latest in web tech ", "to tell showcase your business"],
+
+
+        }
+      ]
+    }
+  }
+  //Readmore onClick
+  _onItemClick = (e) => {
+    console.log('onItemClick',e.props.id );
+    // let wrapper = document.getElementById('feature_wrapper');
+    
+    // wrapper.style.transitionDelay = "2s";
+    // console.log('style',document.getElementById('feature_wrapper').style)
+    this.setState({
+      showing: !this.state.showing , 
+      FeaturesCarousel: e.props.id
+    });
+    // wrapper.style.height = '100%'
+    // console.log('onItemClick state',this.state );
+    // if(!this.state.showing) {
+    //   wrapper.style.height = '0';
+    // }
+  }
+ 
+  // _onItemClick2 = () => {
+  //   this.setState({showing2: !this.state.showing2});
+  // }
+  // _onItemClick3 = () => {
+  //   this.setState({showing3: !this.state.showing3});
+  // }
+  // _onItemClick4 = () => {
+  //   this.setState({showing4: !this.state.showing4});
+  // }
 render () {
   var settings = {
     infinite: true,
@@ -109,6 +173,14 @@ render () {
         }
       },
       {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots:false
+        }
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
@@ -117,7 +189,15 @@ render () {
         }
       },
       {
-        breakpoint: 375,
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots:false
+        }
+      },
+      {
+        breakpoint: 488,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -127,9 +207,14 @@ render () {
     ]
   };
       return (
+        <SliderDiv>
         <Slider {...settings}>
             <FeaturesCard 
-            image = {MobileApps}
+            ref={this.FeaturesCard1}
+            id="FeaturesCard1"
+            onPress={this._onItemClick}
+            active={this.state.FeaturesCarousel === 'FeaturesCard1' ? true : false}
+            image = {MobileApps2}
             iconName1 = {IconData}
             iconName2 = {IconCommunication}
             iconName3 = {IconHandShake}
@@ -140,7 +225,12 @@ render () {
             text4 = "Providing your workforce valuable company or product information"
             />
             <FeaturesCard 
-            image = {Websites}
+            id="FeaturesCard2"
+            ref={this.FeaturesCard2}
+            value={this.state.value2}
+            onPress={this._onItemClick}
+            active={this.state.FeaturesCarousel === 'FeaturesCard2' ? true : false}
+            image = {Websites2}
             iconName1 = {IconInformation}
             iconName2 = {IconEcommerce}
             iconName3 = {IconPeople}
@@ -149,7 +239,11 @@ render () {
             text3 = "Customer capture for marketing"
             />
             <FeaturesCard 
-            image = {Integrations}
+            id="FeaturesCard3"
+            ref={this.FeaturesCard3}
+            onPress={this._onItemClick}
+            active={this.state.FeaturesCarousel === 'FeaturesCard3' ? true : false}
+            image = {Integrations2}
             iconName1 = {IconPeople}
             iconName2 = {IconPoint}
             iconName3 = {IconData}
@@ -160,7 +254,12 @@ render () {
             text4 = "Automate your processes of data"
             />
             <FeaturesCard 
-            image = {FullSolutions}
+            id="FeaturesCard4"
+            ref={this.FeaturesCard4}
+            value={this.state.value}
+            onPress={this._onItemClick}
+            active={this.state.FeaturesCarousel === 'FeaturesCard4' ? true : false}
+            image = {FullSolutions2}
             iconName1 = {IconWeb}
             iconName2 = {IconBrain}
             iconName3 = {IconHandShake}
@@ -169,8 +268,60 @@ render () {
             text3 = "Software designed to to help lead your business forward "
             />
       </Slider>
+            { this.state.showing &&  
+               <div id="feature_wrapper" style={feature_wrapper}>
+            <HideAndShowLayout active={this.state.FeaturesCarousel} />
+            </div>
+            }
+          
+          </SliderDiv>
       );
     }
   }
+  // const Slider = styled.div`
+  // width: 300px;
+  // margin-left: 11%;
+  // `
 
+  
+
+  const HideAndShowLayout_Wrapper = styled.div`
+    position: relative;
+  `
+
+  var feature_wrapper = {
+    // transition: 'all 5s',
+    background: "#fff",
+    transition: "width 2s",
+    zIndex: "0",
+    position: "relative"
+  }
+  const SliderDiv = styled.div`
+  margin-bottom: 10%;
+  ${breakpoint('lg')`
+    // margin-top: 10%;
+    margin-bottom: 0
+    margin: 0 auto;
+    max-width: 1366px;
+  `}
+  `
+    
+  const Br = styled.br`
+  display:none;
+  ${breakpoint('md')`
+  display:none;
+  `}
+  ${breakpoint('lg')`
+  display:block;
+  `}
+  `
+  const Br2 = styled.br`
+  display:none;
+  ${breakpoint('md')`
+  display:block;
+  `}
+  ${breakpoint('lg')`
+  display:none;
+  `}
+  `
 export default FeaturesCarousel;

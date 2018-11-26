@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import styled, { css, ThemeProvider } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../../Assets/Styles/Themes';
+/** Animation **/
+import ScrollAnimation from 'react-animate-on-scroll';
 
 /** components **/
-import CardCarousel from '../../../Common/CardCarousel';
 import BigTitle from '../../../Common/Title/BigTitle';
 import Text from '../../../Common/Text';
 import YellowSpan from '../../../Common/YellowSpan';
@@ -20,10 +21,11 @@ class Section6 extends Component{
         return(
             <ThemeProvider theme={Themes}>
                 <Section06>
+                <ScrollAnimation animateIn='fadeIn'>
                     <Section06__TitleDiv>
                         <Section06__Title>Our product suite</Section06__Title>
                         <YellowSpan />
-                        <Section06__Text>Looking for something quicker to implement?<Br />
+                        <Section06__Text>Looking for something quicker to implement? <Br />
                             Explore some of our in-house solutions.</Section06__Text>
                     </Section06__TitleDiv>
                     <Section06__Div>
@@ -36,6 +38,7 @@ class Section6 extends Component{
                             <Seciton06__Image2 src={OurProductSiteScops2}/>
                         </Section06__Div__Image2>
                     </Section06__Div>
+                    </ScrollAnimation>
                 </Section06>
             </ThemeProvider>
         )
@@ -81,15 +84,16 @@ const Section06__Text = styled.div`
     margin-bottom: 10%;
     ${Text};
     color:${Themes.colors.grey};
-    text-align:center;
+    text-align:left;
         ${breakpoint('md')`
             font-size:${Themes.fontsize.p1}
             line-height:26px;
+            text-align:center;
         `}
 `
 
 const Section06__Div = styled.div`
-    
+    transform: scale(0.9);
     max-width:1366px;
 `
 const Section06__Div__Image1 = styled.div`
@@ -116,7 +120,7 @@ const Section06__Div__Image2 = styled.div`
 `
 
 const Seciton06__Image = styled.img`
-    margin-bottom: 15%;
+    margin-bottom: 25%;
 `
 const Seciton06__Image2 = styled.img`
     padding: 10%;
@@ -124,9 +128,6 @@ const Seciton06__Image2 = styled.img`
     padding: 10%;
     padding-top: 0;
     `}
-`
-const StyledCarousel = styled(CardCarousel)`
-    margin:0 auto;
 `
 const CarouselDiv = styled.div`
     margin:0 auto;

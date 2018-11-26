@@ -9,12 +9,11 @@ import YellowSpan from '../../Components/Common/YellowSpan';
 import Text from '../../Components/Common/Text';
 
 /** Images **/
-import SectionBg01 from '../../../Assets/Images/BlogSection01Bg.jpg';
-import SectionBg02 from '../../../Assets/Images/BlogSection02Bg.png';
-import Image01 from '../../../Assets/Images/BlogSection01Image.png';
+// import SectionBg01 from '../../../Assets/Images/BlogSection01Bg.jpg';
+// import SectionBg02 from '../../../Assets/Images/BlogSection02Bg.png';
+// import Image01 from '../../../Assets/Images/BlogSection01Image.png';
 import Challenge from '../../../Assets/Images/challenge.svg';
 import Solution from '../../../Assets/Images/solution.svg';
-import SolutionTablet from '../../../Assets/Images/casestudy_solution.jpg';
 import Solution2 from '../../../Assets/Images/solution2.svg';
 import Result from '../../../Assets/Images/result.svg';
 import Result2 from '../../../Assets/Images/result2.svg';
@@ -37,7 +36,7 @@ class CaseStudyScreen extends Component {
                     <Section__Title>A seamless hiring experience</Section__Title>
                   </Section__TitleDiv>
                   <Section__ImageDiv>
-                    <Section__Image src={Image01}/>
+                    {/* <Section__Image src={Image01}/> */}
                   </Section__ImageDiv>
                 </Section__HeaderContainer>
               </Section__Header01>
@@ -65,7 +64,6 @@ class CaseStudyScreen extends Component {
                       <Section02__Title2>The solution</Section02__Title2>
                       <YellowSpan />
                       <Section__Image src={Solution}/>
-                      <Section__Image__tablet src={SolutionTablet}/>
                       <Section03__Text>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam malesuada bibendum arcu vitae elementum curabitur. Ultricies mi eget mauris pharetra et ultrices. A iaculis at erat pellentesque. Semper eget duis at tellus at urna condimentum mattis. 
                       Dignissim diam quis enim lobortis. Sed libero enim sed faucibus turpis in eu. In hendrerit gravida rutrum quisque non. Sed vulputate odio ut enim blandit. Risus sed vulputate odio ut enim blandit volutpat maecenas. Vel fringilla est ullamcorper eget. Egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices. Sed faucibus turpis in eu. Tempor nec feugiat nisl pretium fusce.
@@ -139,7 +137,6 @@ const Section = styled.div`
   margin-bottom: 50px;
 `
 const Section__Header01 = styled.div`
-  background:url(${SectionBg01}) no-repeat center top;
   background-size:444px 260px;
   padding:18% 0;
   background-position: top right;
@@ -157,7 +154,6 @@ const Section__Header01 = styled.div`
   `}
 `
 const Section__Header02 = styled.div`
-  background:url(${SectionBg02}) no-repeat center top;
   background-size:cover;
   padding:18% 0;
   ${breakpoint('md')`

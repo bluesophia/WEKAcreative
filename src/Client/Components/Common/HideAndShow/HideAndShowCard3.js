@@ -7,7 +7,7 @@ import Themes from '../../../../Assets/Styles/Themes';
 //Components
 import MintSpan from '../../Common/MintSpan';
 import BigTitle from '../../Common/Title/BigTitle';
-import HideAndShowCard from '../HideAndShowCard';
+import HideAndShowCard from '../HideAndShowCard/HideAndShowCard';
 
 //Images
 import IconLayers from '../../../../Assets/Images/IconLayers.svg'
@@ -56,9 +56,11 @@ const Container = styled.div`
     ${breakpoint('md')`
         display: block; 
         padding: 10% 0 0 0;
+        // background-image: linear-gradient(#F4FAF6, #FFF);
+        margin-top:10%;
     `}
     ${breakpoint('lg')`
-        // background: ${Themes.colors.w_mint};
+        margin-top:0;
     `}
 `
 const Section01 = styled.div`
@@ -72,7 +74,7 @@ const Section01__Title = styled.div`
     color:${Themes.colors.black};
     font-weight:${Themes.fontWeight.black};
     ${breakpoint('md')`
-    font-size:${Themes.fontsize.h4};  
+    font-size:${Themes.fontsize.h3};  
     line-height:1.2;  
     `}
 `
