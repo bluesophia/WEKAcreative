@@ -59,7 +59,7 @@ class AboutContainer extends Component {
             <ScrollAnimation animateIn='fadeIn'>
             <Section02>
               <Container>
-                  <Section__Title>The <br />Vision</Section__Title>
+                  <Section__Title>The <Br />Vision</Section__Title>
                   <Section__Text><b>Future Trend Setter</b><br />
                   <b><i>WEKA CREATIVE sails to undiscovered the ocean of technology.</i></b><br />
                   We will become the pioneer of future technology and provide things to people have no experience yet. We will discover the potentials and opportunities around us so that WEKA CREATIVE become a leader in technology industries.<br /><br />

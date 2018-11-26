@@ -28,7 +28,8 @@ export const Section01 = styled.div`
   ${breakpoint('lg')`
       background: url('${AboutSectionBglg}');
       background-repeat:no-repeat;
-      // background-size:100% 114%; 
+      width: 124%;
+      // background-size:107% 109%; 
   `}
 `
 export const MainImageBackground = styled.img`
@@ -43,11 +44,12 @@ export const Section01__Container = styled.div`
           padding:10% 17%;
       `}
       ${breakpoint('lg')`
-          max-width: 1366px;
+          max-width: 1400px;
           margin:0 auto;
           padding:5% 10% 10%;
           align-items:flex-start; 
           flex-direction:row;
+
       `}
 `
 export const Section01__ImageTop = styled.div`
@@ -89,8 +91,14 @@ export const Section01__Image2 = styled.div`
         `}
         ${breakpoint('lg')`
           content: url(${mainImage3});
+          transform: scale(2.1);
+          max-width: 500px;
+          margin-right: 27%;
+          margin-top: 100px;
+        `}
+        ${breakpoint('xl')`
           transform: scale(2.3);
-          margin-right: 10%;
+          margin-right: 40%;
           margin-top: 100px;
         `}
 `

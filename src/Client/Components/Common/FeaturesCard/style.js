@@ -29,6 +29,9 @@ export const Section05__div = styled.div`
     ${breakpoint('md')`
         padding: 10%;
     `}
+    ${breakpoint('lg')`
+        padding: 5%;
+    `}
 `
 export const Section05__ImgDiv = styled.div`
     display: flex;
@@ -71,7 +74,7 @@ export const Section05__Card = styled.div`
     max-width: 768px;
     `}
     ${breakpoint('lg')`
-        width: 200px;
+        width: 190px;
         // height: auto;
         height:400px;
     // padding: 40px 10px 30px 10px;
@@ -90,7 +93,7 @@ export const Section05__Card = styled.div`
     `}
     ${breakpoint('xl')`
         // width: 190px;
-        width: 266px;
+        // width: 266px;
         height: 430px;
         // height:412px;
     // padding: 40px 10px 30px 10px;

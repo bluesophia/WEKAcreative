@@ -16,6 +16,15 @@ import CardHover from '../../../Common/CardHover';
  /** Animation**/ 
  import ScrollAnimation from 'react-animate-on-scroll';
 
+/** Image **/
+import SomeofOurWorkPassafe from '../../../../../Assets/Images/SomeofOurWorkPassafe.svg';
+import SomeofOurWorkPassafe2 from '../../../../../Assets/Images/SomeofOurWorkPassafe2.png';
+import SomeofOurWorkRugdoctor from '../../../../../Assets/Images/SomeofOurWorkRugdoctor.svg';
+import SomeofOurWorkRugdoctor2 from '../../../../../Assets/Images/SomeofOurWorkRugdoctor2.png';
+import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.svg';
+import SomeofOurWorkToyota2 from '../../../../../Assets/Images/SomeofOurWorkToyota2.png';
+import SomeofOurWorkMethTesting from '../../../../../Assets/Images/SomeofOurWorkMethTesting.svg';
+import SomeofOurWorkMethTesting2 from '../../../../../Assets/Images/SomeofOurWorkMethTesting3.jpg';
 
 
 
@@ -31,12 +40,24 @@ class Section3 extends Component {
                 </Section03__Container>
                 <Section03__Container__image>
                 <Section03__Container__imageSm>  
-                    <CardHover />
-                    <CardHover />
+                    <CardHover 
+                        image={SomeofOurWorkPassafe}
+                        hoverImage={SomeofOurWorkPassafe2}
+                    />
+                    <CardHover 
+                        image={SomeofOurWorkRugdoctor}
+                        hoverImage={SomeofOurWorkRugdoctor2}
+                    />
                     </Section03__Container__imageSm>  
                     <Section03__Container__imageSm>      
-                    <CardHover />
-                    <CardHover />
+                    <CardHover 
+                        image={SomeofOurWorkMethTesting}
+                        hoverImage={SomeofOurWorkMethTesting2}
+                    />
+                    <CardHover 
+                        image={SomeofOurWorkToyota}
+                        hoverImage={SomeofOurWorkToyota2}
+                    />
                 </Section03__Container__imageSm>  
                 </Section03__Container__image>
             </Section03>

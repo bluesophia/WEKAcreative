@@ -8,7 +8,6 @@ import BigTitle from '../../Common/Title/BigTitle.js';
 
 /** Images **/
 import HomeSection02BgSm from '../../../../Assets/Images/HomeSection02BgSm.svg';
-import SupportSection01BgLg from '../../../../Assets/Images/SupportSection01BgLg.png';
 import Section01Bg from '../../../../Assets/Images/AboutSectionBgMd.png';
 
 
@@ -35,7 +34,6 @@ export const Support = styled.div`
     // padding:10% 10%;   
     `}
     ${breakpoint('lg')`
-        background: url('${SupportSection01BgLg}');
         background-position:center top;
         background-repeat:no-repeat;
         background-size:100% 50%;

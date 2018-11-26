@@ -7,19 +7,13 @@ import FeaturesCard from '../FeaturesCard';
 import ArrowRightIcon from '../../../../Assets/Images/arrowRight.svg';
 import ArrowLeftIcon from '../../../../Assets/Images/arrowLeft.svg';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Themes from '../../../../Assets/Styles/Themes';
 import Slider from "react-slick";
 
 //images
-import MobileApps from '../../../../Assets/Images/MobileApps.svg'
 import MobileApps2 from '../../../../Assets/Images/MobileApps2.svg'
 // import MobileApps3 from '../../../../Assets/Images/MobileApps3.svg'
 // import MobileApps4 from '../../../../Assets/Images/MobileApps4.svg'
-import Websites from '../../../../Assets/Images/Websites.svg'
 import Websites2 from '../../../../Assets/Images/Websites2.svg'
-import Integrations from '../../../../Assets/Images/Integrations.svg'
-import FullSolutions from '../../../../Assets/Images/FullSolutions.svg'
 import Integrations2 from '../../../../Assets/Images/Integrations2.svg'
 import FullSolutions2 from '../../../../Assets/Images/FullSolutions2.svg'
 

@@ -6,7 +6,6 @@ import Themes from '../../../../../Assets/Styles/Themes';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 /** components **/
-import CardCarousel from '../../../Common/CardCarousel';
 import BigTitle from '../../../Common/Title/BigTitle';
 import Text from '../../../Common/Text';
 import YellowSpan from '../../../Common/YellowSpan';
@@ -129,9 +128,6 @@ const Seciton06__Image2 = styled.img`
     padding: 10%;
     padding-top: 0;
     `}
-`
-const StyledCarousel = styled(CardCarousel)`
-    margin:0 auto;
 `
 const CarouselDiv = styled.div`
     margin:0 auto;

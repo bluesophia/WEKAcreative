@@ -4,7 +4,7 @@ import Themes from '../../../../../Assets/Styles/Themes';
 import BigTitle from '../../../Common/Title/BigTitle';
 
 /** Images **/
-import HomeSection02Image from '../../../../../Assets/Images/HomeSection02Image.png';
+// import HomeSection02Image from '../../../../../Assets/Images/HomeSection02Image.png';
 import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
 /** Components **/
@@ -139,7 +139,7 @@ export const Section02__RightDiv = styled.div`
     display:none;
     ${breakpoint('lg')`
         display:block;
-        background:url(${HomeSection02Image}) no-repeat left bottom;
+        
     `}
 `
 

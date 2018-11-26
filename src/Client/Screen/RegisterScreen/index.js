@@ -8,7 +8,6 @@ import Text from '../../Components/Common/Text';
 import { Link } from 'react-router-dom';
 
 /** Images **/
-import BgMd from '../../../Assets/Images/SupportSection01Bg.png';
 import BgSm from '../../../Assets/Images/HomeSection01BgSm.png';
 
 /** components **/
@@ -104,7 +103,6 @@ const Section = styled.div`
     background-color:${Themes.colors.veryLightGrey};
     padding:70px 8%;
     ${breakpoint('md')`
-        background: url('${BgMd}');
         background-position:left top;
         background-repeat:no-repeat;
         background-size:100% 50%;

@@ -126,16 +126,17 @@ export const Section03__Image1 = styled.img`
     // background-size: 100% 100%;
     width: 100%;
     transition: opacity 200ms ease-in;
-    &:hover {
-        opacity: 0;
-    }
+    
     ${breakpoint('md')`
     width: 300px;
     height: 199px;
+    &:hover {
+        opacity: 0;
+    }
     `}
     ${breakpoint('lg')`
-    width: 454px;
-    height: 303px;
+    width: 405px;
+    height: 267px;
     margin-left: 0;    
     `}
 `
@@ -167,9 +168,9 @@ export const Section03__Image1__Hover = styled.img`
     height: 205px;
     width: 100%;
     margin-bottom: 1%;
-    // background: url('${SomeofOurWorkPassafe2}');
-    // background-size: 100% 100%;
+    display: none;
     ${breakpoint('md')`
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -179,7 +180,6 @@ export const Section03__Image1__Hover = styled.img`
     width: 300px;
     height: 199px;
     margin-bottom: 0;
-    // margin-bottom: 2%;
   `}
   ${breakpoint('lg')`
     position: absolute;
@@ -188,8 +188,11 @@ export const Section03__Image1__Hover = styled.img`
     right: 0;
     overflow: hidden;
     z-index: -1;
-    width: 454px;
-    height: 303px;
+    // width: 405px;
+    // height: 267px;
+    width: 399px;
+    height: 265px;
+    margin-left: 3px
   `}
 `
 

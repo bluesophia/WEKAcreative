@@ -38,7 +38,7 @@ class HeaderContainer extends Component {
 						<StyledLink to='/support'>Support</StyledLink>
 						{/* <StyledLink to='/casestudy'>Casestudy</StyledLink> */}
 						<StyledLink to='/contact'>Contact Us</StyledLink>
-						{/* <Box>
+						<Box>
                            <Sns href="#">
                                <FontAwesomeIcon icon={['fab', 'facebook-f']} />
                            </Sns>
@@ -49,7 +49,7 @@ class HeaderContainer extends Component {
                                <FontAwesomeIcon icon={['fab', 'instagram']} size="md" />
                            </Sns>
                        </Box>
-					   <StyledLink onClick={this.burgerToggle} to='/login'>
+					   {/* <StyledLink onClick={this.burgerToggle} to='/login'>
 						   <Login>
 						   		<LoginIcon src={loginIcon}/> 
 							</Login>

@@ -6,8 +6,6 @@ import Text from '../../Components/Common/Text';
 import { Link } from 'react-router-dom';
 
 /** Images **/
-import BgMd from '../../../Assets/Images/SupportSection01Bg.png';
-import BgSm from '../../../Assets/Images/HomeSection01BgSm.png';
 
 /** components **/
 import Title from '../../Components/Common/Title/Title';

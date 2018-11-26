@@ -8,7 +8,6 @@ import Title from '../../Components/Common/Title/Title';
 
 
 /** Images **/
-import HomeSection01BgSm from '../../../Assets/Images/HomeSection01BgSm.svg';
 
 import Section01 from '../../Components/WebContainer/HomeContainer/Section1';
 import Section02 from '../../Components/WebContainer/HomeContainer/Section2';

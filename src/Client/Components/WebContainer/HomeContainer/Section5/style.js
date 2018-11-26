@@ -130,8 +130,8 @@ export const Section05__Logo1 = styled.img`
     width:100%;
     height:auto;
     margin:0 auto;
-    margin-top: 30%;
-    transform: scale(2.3);
+    margin-top: 10%;
+    transform: scale(1.7);
     z-index: -1;
     display: block;
     `}
