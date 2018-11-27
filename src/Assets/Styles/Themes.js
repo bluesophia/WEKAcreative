@@ -59,6 +59,7 @@ const Themes = {
     breakpoints: { 
         xs: 0,
         sm: 488,
+        sm2: 700,
         md: 768,
         lg: 1000,
         lg2: 1200,

@@ -52,7 +52,7 @@ class AboutContainer extends Component {
                         We are the professional digital consultant and agency.<br />
                         We are the decision makers to develop better business industry.<br />
                         We are the explorer to find new ideas and technology for support society. 
-                    </Section__Text>
+                    </Section__Text>s
                 </Container>
             </Section02>
             </ScrollAnimation>
