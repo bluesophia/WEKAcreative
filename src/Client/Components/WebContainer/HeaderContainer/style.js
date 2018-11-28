@@ -3,7 +3,6 @@ import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../Assets/Styles/Themes';
 import { Link } from 'react-router-dom';
 import LogoColor from '../../../../Assets/Images/logo_color.png';
-import loginIcon2 from '../../../../Assets/Images/login2.svg';
 
 export const Nav = styled.div`
 	height:auto;

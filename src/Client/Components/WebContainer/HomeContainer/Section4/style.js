@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../../Assets/Styles/Themes';
-import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 import Section04BgSm from '../../../../../Assets/Images/Section04BgSm.png';
 import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
 import BigTitle from '../../../Common/Title/BigTitle';
 import LeveragetheFuture2 from '../../../../../Assets/Images/LeveragetheFuture2.svg';
+import Text from '../../../Common/Text';
 
 /**** Section 04 ****/
 
