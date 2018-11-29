@@ -26,7 +26,6 @@ import PhoneNumberInput from '../../../Components/Common/Input/PhoneNumberInput'
 import FullNameInput from '../../../Components/Common/Input/FullNameInput';
 import EmailInput from '../../../Components/Common/Input/EmailInput';
 import MessageInput from '../../../Components/Common/Input/MessageInput';
-import Button01 from '../../../Components/Common/Button/Button01';
 import Button02 from '../../../Components/Common/Button/Button02';
 
 /** Animation**/ 
@@ -73,9 +72,7 @@ class ContactusContainer extends Component {
                   </InputDiv__Right>
                 </InputDiv>
                 <ButtonDiv>
-                  <Button01 value={'Contact Our Software Experts'}/>
-                  <Form__Text>Or Try Our Software For Free</Form__Text>
-                  <Button02 value={'Experience WEKACREATIVE for yourself'}/>        
+                  <Button02 value={'Contact Our Software Experts'}/>        
                 </ButtonDiv>      
               </Form>
             </FormDiv>
