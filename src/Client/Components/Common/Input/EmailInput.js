@@ -28,7 +28,6 @@ export default class EmailInput extends Component {
           name="email"
           label="Email"
           onChange={this._handleChange}
-          placeholder="weka@gmail.com"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
           required
         />

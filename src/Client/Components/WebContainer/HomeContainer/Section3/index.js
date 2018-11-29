@@ -32,6 +32,7 @@ class Section3 extends Component {
     render(){
         return(
             <Section03>
+                <ScrollAnimation animateIn='fadeIn'>
                 <Section03__Container>
                     <Section03__Title>Some of our work</Section03__Title>
                     <YellowSpan />
@@ -60,6 +61,7 @@ class Section3 extends Component {
                     />
                 </Section03__Container__imageSm>  
                 </Section03__Container__image>
+                </ScrollAnimation>
             </Section03>
            
         )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import Themes from '../../../../../Assets/Styles/Themes';
 import YellowSpan from '../../../Common/YellowSpan';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -16,9 +16,7 @@ import {Section05,
     Section05__Logo1
 } from './style';
 /** Logos **/
-import LogosSm from '../../../../../Assets/Images/LogosSm.svg';
 import LogosSm2 from '../../../../../Assets/Images/LogosSm2.png';
-import LogosLg from '../../../../../Assets/Images/LogosLg.svg';
 import LogosLg2 from '../../../../../Assets/Images/LogosLg2.svg';
 
 class Section5 extends Component{

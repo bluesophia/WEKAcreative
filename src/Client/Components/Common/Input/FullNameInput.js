@@ -27,7 +27,6 @@ export default class FullNameInput extends Component {
           value={this.state.value}
           name="input-text"
           label="Company Name"
-          placeholder="Sophia"
           onChange={this._handleChange}
         />
       </Container>
