@@ -121,6 +121,22 @@ export const Section01__Image2 = styled.div`
           
         `}
 `
+export const Section01__Image3 = styled.img`
+display: none;
+ ${breakpoint('md')`
+ display: block;
+ padding: 5% 10% 0 10%;
+ width: 80%;
+        `}
+`
+
+export const Section01__Image4 = styled.img`
+padding: 5% 10% 10% 10%;
+width: 80%;
+ ${breakpoint('md')`
+ display: none;
+        `}
+`
 export const MainImage2 = styled.img`
     display: none;
     ${breakpoint('md')`
@@ -184,6 +200,9 @@ export const Section01__Text = styled.div`
     `}
 `
 export const Section02 = styled.div`
+${breakpoint('md')`
+      padding: 5% 0 10% 0;
+    `}
 `
 export const Section03 = styled.div`
   background-color:${Themes.colors.w_lightOrange};
@@ -210,7 +229,7 @@ export const Section__Text = styled.div`
   ${Text};
   font-size:${Themes.fontsize.p3};
   line-height:23px;
-  text-align: justify;
+  text-align: center;
   ${breakpoint('lg')`
     // text-align:left;
     text-align: justify;
@@ -225,4 +244,57 @@ export const Br = styled.br`
     ${breakpoint('lg')`
     display:block;
     `}
+`
+export const Br2 = styled.br`
+    ${breakpoint('md')`
+    display:none;
+    `}
+    ${breakpoint('lg')`
+    display:none;
+    `}
+`
+export const Section02__Container = styled.div`
+    margin:0 auto;
+    margin-top: 10%;
+    // padding-bottom: 10%;
+    ${breakpoint('sm')`
+    `}
+    ${breakpoint('md')`
+    padding-bottom: 0%;
+    `}
+    ${breakpoint('lg')`
+    margin-top: 0;
+    `}
+`
+export const Section02__Title = styled.div`
+    ${BigTitle};
+    color:${Themes.colors.black};
+    font-weight:${Themes.fontWeight.black};
+    ${breakpoint('lg')`
+    `}
+`
+
+export const Section02__Text = styled.div`
+    // margin-top:9px;
+    // margin-bottom: 10%;
+    padding: 5% 10% 0 10%;
+    ${Text};
+    font-size: 20px;
+    color:${Themes.colors.grey};
+    // text-align:left;
+    text-align: center;
+        ${breakpoint('md')`
+            padding: 5% 10% 0 10%;
+            font-size: 28px;
+            line-height:50px;
+            margin-bottom: 4%;  
+            text-align:center; 
+        `}
+        ${breakpoint('lg')`
+            font-size: 28px;
+            line-height:26px;
+            padding: 5% 10% 0 10%;
+            font-size: 28px;
+            margin-bottom: 5%;
+        `}
 `

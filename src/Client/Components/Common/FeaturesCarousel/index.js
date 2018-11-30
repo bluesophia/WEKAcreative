@@ -302,7 +302,7 @@ render () {
     // margin-top: 10%;
     margin-bottom: 0
     margin: 0 auto;
-    max-width: 1366px;
+    max-width: 980px;
   `}
   `
     

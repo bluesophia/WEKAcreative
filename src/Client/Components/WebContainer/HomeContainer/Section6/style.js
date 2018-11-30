@@ -19,9 +19,18 @@ export const Section06 = styled.div`
     padding: 0 10% 0 10%;
     ${breakpoint('md')`
         padding: ${Themes.paddings.tablet};
+        display: flex;
+        justify-content: center;
     `}
     ${breakpoint('lg')`
         padding: 10% 10% 3% 10%;
+        display: flex;
+        justify-content: center;
+    `}
+    ${breakpoint('xl')`
+        padding: 5% 10% 3% 10%;
+        display: flex;
+        justify-content: center;
     `}
 `
 export const Section06__TitleDiv = styled.div`

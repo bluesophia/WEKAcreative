@@ -3,23 +3,28 @@ import { ThemeProvider } from 'styled-components';
 import Themes from '../../../../Assets/Styles/Themes';
 import { Section01,
   Br,
+  Br2,
   Section01__Container,
   Section01__TitleDiv,
   Section01__Title,
   Section01__Text,
   Section01__Image,
-  MainImage,
   Section01__Image2,
+  Section01__Image3,
+  Section01__Image4,
+  MainImage,
+  MainImage2,
   Section02,
-  Container,
-  Section__Title,
-  Section__Text,
-  Section03,
-  MainImage2
+  Section02__Title,
+  Section02__Text,
+  Section02__Container
 } from './style';
 /** Images **/
 import mainImage from '../../../../Assets/Images/AboutSection01Image.svg';
 import mainImage2 from '../../../../Assets/Images/AboutSection01Image2.svg';
+import YellowSpan from '../../Common/YellowSpan';
+import Ourvision from '../../../../Assets/Images/ourvision.svg';
+import Ourvision2 from '../../../../Assets/Images/ourvision2.svg';
 /** Animation**/ 
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -50,31 +55,20 @@ class AboutContainer extends Component {
             </Section01>
             <ScrollAnimation animateIn='fadeIn'>
             <Section02>
-              <Container>
-                    <Section__Title>The <Br />Mission</Section__Title>
-                    <Section__Text>
-                        Who we are (3 ‘We’)<br />
-                        We are the professional digital consultant and agency.<br />
-                        We are the decision makers to develop better business industry.<br />
-                        We are the explorer to find new ideas and technology for support society. 
-                    </Section__Text>
-                </Container>
+            <Section02__Container>
+                        <Section02__Title>Our Vision</Section02__Title>
+                        <YellowSpan />
+                        <Section02__Text>To empower enterprises through <Br2 />people-centered software solutions.</Section02__Text>
+            </Section02__Container>
+            <Section02__Container>
+                        <Section02__Title>Our Core Values</Section02__Title>
+                        <YellowSpan />
+                        <Section01__Image3 src={Ourvision}/>
+                        <Section01__Image4 src={Ourvision2}/>
+            </Section02__Container>
             </Section02>
             </ScrollAnimation>
-            <ScrollAnimation animateIn='fadeIn'>
-            <Section02>
-              <Container>
-                  <Section__Title>The <Br />Vision</Section__Title>
-                  <Section__Text><b>Future Trend Setter</b><br />
-                  <b><i>WEKA CREATIVE sails to undiscovered the ocean of technology.</i></b><br />
-                  We will become the pioneer of future technology and provide things to people have no experience yet. We will discover the potentials and opportunities around us so that WEKA CREATIVE become a leader in technology industries.<br /><br />
-                  ​<b>A standard digital consultant</b><br />
-                  <b><i>WEKA CREATIVE will provide the guide how people are survived in unexpected future technology.</i></b><br />
-                  ​​As we are digital agency in the society, WEKA CREATIVE will deliver an advise and right way guide to expand the range of strategy and foresight. We are focusing deep understanding and being sensitive on human behaviour to find out the hustling in life.</Section__Text>
-              </Container>
-            </Section02>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn='fadeIn'>
+            {/* <ScrollAnimation animateIn='fadeIn'>
             <Section03>
               <Container>
                   <Section__Title>Core <Br />Value</Section__Title>
@@ -86,7 +80,7 @@ class AboutContainer extends Component {
                   </Section__Text>
               </Container>
             </Section03>
-            </ScrollAnimation>
+            </ScrollAnimation> */}
             </ScrollAnimation>
       </div>
     </ThemeProvider>

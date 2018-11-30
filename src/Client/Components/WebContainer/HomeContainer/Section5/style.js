@@ -34,8 +34,15 @@ export const Section05 = styled.div`
     `}
     ${breakpoint('lg')`
         background-size: 100%;
+        display: flex;
+        justify-content: center;
         // padding: ${Themes.paddings.desktop};
         padding: 10% 10% 10% 10%;
+    `}
+    ${breakpoint('xl')`
+        background-size: 100%;
+        // padding: ${Themes.paddings.desktop};
+        padding: 5% 10% 10% 10%;
     `}
 `
 export const Section05__Div = styled.div`
@@ -75,6 +82,9 @@ export const Section05__Text = styled.div`
         `}
         ${breakpoint('lg')`
             margin-bottom: 4%;
+        `}
+        ${breakpoint('xl')`
+            margin-bottom: 5%;
         `}
 `
 export const Section05__Logos = styled.div`
@@ -138,5 +148,9 @@ export const Section05__Logo1 = styled.img`
     ${breakpoint('lg')`
     transform: scale(1);
     margin-top: 0;
+    `}
+    ${breakpoint('xl')`
+    transform: scale(1.5);
+    margin-top: 10%;
     `}
 `

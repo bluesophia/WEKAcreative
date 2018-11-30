@@ -58,7 +58,7 @@ export const Container = styled.div`
         `}
         ${breakpoint('lg')`
             flex-direction:row;
-            max-width: 1366px;
+            max-width: 1137px;
             margin:0 auto;
             padding: 0 5% 0 5%;
         `}

@@ -23,6 +23,11 @@ import Text from '../../../Common/Text';
         // height:768px;
         padding: ${Themes.paddings.desktop};
     `}
+    ${breakpoint('xl')`
+        background-size:100%;
+        // height:768px;
+        padding: 5% 10% 0 10%;
+    `}
 `
 export const Container = styled.div`
     margin:0 auto;

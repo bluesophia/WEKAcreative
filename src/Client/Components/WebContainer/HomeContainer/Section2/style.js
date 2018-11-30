@@ -98,6 +98,11 @@ export const Section02__Text = styled.div`
             font-size:${Themes.fontsize.p1}
             line-height:26px;
         `}
+        ${breakpoint('lg')`
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
+            margin-bottom: 1%; 
+        `}
 `
 
 export const Section02__Text__Bold = styled.div`

@@ -40,6 +40,10 @@ export const Section03 = styled.div`
         padding: ${Themes.paddings.desktop};
         // margin-bottom: 20%;
     `}
+    ${breakpoint('xl')`
+        padding: 5% 10% 0 10%;
+        margin-bottom: 5%;
+    `}
 `
 export const Section03__Container = styled.div`
 `
@@ -95,6 +99,9 @@ export const   Section03__Text = styled.div`
             line-height:26px;
             margin-bottom: 10%;
             text-align:center;
+        `}
+        ${breakpoint('xl')`
+            margin-bottom: 5%;
         `}
 `
 export const Section03__ImageDiv = styled.div`
