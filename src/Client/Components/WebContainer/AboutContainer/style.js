@@ -29,13 +29,13 @@ export const Section01 = styled.div`
   ${breakpoint('lg')`
       background: url('${AboutSectionBglg}');
       background-repeat:no-repeat;
-      width: 124%;
+      background-size: cover;
       // background-size:107% 109%; 
   `}
   ${breakpoint('xl')`
       background: url('${AboutSectionBgxlg}');
       background-repeat:no-repeat;
-      background-size: 100%;
+      background-size: cover;
   `}
 `
 export const MainImageBackground = styled.img`
@@ -101,15 +101,21 @@ export const Section01__Image2 = styled.div`
           // max-width: 500px;
           // margin-right: 27%;
           // margin-top: 100px;
+          // transform: scale(2.3);
+          // max-width: 500px;
+          // margin-right: 36%;
+          // padding-left: 8%;
+          // margin-top: 120px;
           transform: scale(2.7);
           max-width: 500px;
-          margin-right: 36%;
-          padding-left: 7%;
-          margin-top: 100px;
+          margin-right: 20%;
+          padding-left: 8%;
+          margin-top: 120px;
         `}
         ${breakpoint('xl')`
+          max-width: 1000px;
           transform: scale(2.7);
-          margin-right: 45%;
+          // margin-right: 45%;
           margin-top: 100px;
 
           
@@ -166,6 +172,12 @@ export const Section01__Text = styled.div`
     `}
     ${breakpoint('lg')`
       max-width: 400px;
+      font-size:${Themes.fontsize.p1} !important;
+      line-height:28px !important; 
+      text-align: left; 
+    `}
+    ${breakpoint('xl')`
+      max-width: 460px;
       font-size:${Themes.fontsize.p1} !important;
       line-height:28px !important; 
       text-align: left; 

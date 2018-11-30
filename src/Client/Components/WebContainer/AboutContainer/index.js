@@ -35,7 +35,12 @@ class AboutContainer extends Component {
               <Section01__Container>     
                 <Section01__TitleDiv>
                     <Section01__Title>About Us</Section01__Title>
-                    <Section01__Text>We deliver outstanding work experience to people who want to increase productivity, cost effectiveness and time saving for the work process. ‘WEKA CREATIVE’ supports the business to integrate management system, make easy and better working performance.
+                    <Section01__Text>
+                      At Weka Creative we believe good design puts people in the centre of processes. empowering them to do
+                      better and achieve more. Through applying design competency, our software solutions aim to support enterprises by:<br/><br/>
+                      - Demystifying process complexity<br/>
+                      - Creating the right tools, and<br/>
+                      - Delivering value for their stakeholders
                     </Section01__Text>
                 </Section01__TitleDiv>
                 <Section01__Image><MainImage src={mainImage}/></Section01__Image>
