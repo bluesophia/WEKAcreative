@@ -75,7 +75,8 @@ export const TitleDiv__Title = styled.div`
   margin-bottom:10%;
   ${breakpoint('lg')`
     display: block;
-    margin-top: 15%;
+    // margin-top: 15%;
+    margin-top: 10%;
     margin-left: 62%;
     margin-bottom: 5%;
     display:flex;
@@ -157,7 +158,8 @@ export const FormDiv = styled.div`
   ${breakpoint('lg')`
     z-index:1;
     width:787px;
-    margin: -142px auto 100px auto;
+    // margin: -142px auto 100px auto;
+    margin: -166px auto 100px auto;
   `}
 `
 export const Form = styled.div`

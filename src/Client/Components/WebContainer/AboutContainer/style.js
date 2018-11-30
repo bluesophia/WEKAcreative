@@ -8,6 +8,7 @@ import AboutSectionBgMd from '../../../../Assets/Images/AboutSectionBgMd.png';
 import HomeSection01BgSm from '../../../../Assets/Images/HomeSection01BgSm.png';
 import AboutSectionBglg from '../../../../Assets/Images/AboutSectionBglg.svg';
 import mainImage3 from '../../../../Assets/Images/AboutSection01Image3.svg';
+import AboutSectionBgxlg from '../../../../Assets/Images/AboutSectionBgxlg.png';
 
 /** components **/
 
@@ -30,6 +31,11 @@ export const Section01 = styled.div`
       background-repeat:no-repeat;
       width: 124%;
       // background-size:107% 109%; 
+  `}
+  ${breakpoint('xl')`
+      background: url('${AboutSectionBgxlg}');
+      background-repeat:no-repeat;
+      background-size: 100%;
   `}
 `
 export const MainImageBackground = styled.img`
@@ -91,15 +97,22 @@ export const Section01__Image2 = styled.div`
         `}
         ${breakpoint('lg')`
           content: url(${mainImage3});
-          transform: scale(2.1);
+          // transform: scale(2.1);
+          // max-width: 500px;
+          // margin-right: 27%;
+          // margin-top: 100px;
+          transform: scale(2.7);
           max-width: 500px;
-          margin-right: 27%;
+          margin-right: 36%;
+          padding-left: 7%;
           margin-top: 100px;
         `}
         ${breakpoint('xl')`
-          transform: scale(2.3);
-          margin-right: 40%;
+          transform: scale(2.7);
+          margin-right: 45%;
           margin-top: 100px;
+
+          
         `}
 `
 export const MainImage2 = styled.img`
