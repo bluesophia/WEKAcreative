@@ -99,6 +99,9 @@ export const Seciton06__Image2 = styled.img`
     padding: 10%;
     padding-top: 0;
     `}
+    ${breakpoint('lg')`
+    padding: 10%;
+    `}
 `
 export const CarouselDiv = styled.div`
     margin:0 auto;

@@ -49,7 +49,7 @@ class HideAndShowCardRow extends Component {
 const HideAndShowCard__div = styled.div`
     ${breakpoint('md')`
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -58,23 +58,7 @@ const HideAndShowCard__div = styled.div`
         width: 100%;
     `}
 `
-const HideAndShowCard__Bottomdiv = styled.div`
-    ${breakpoint('md')`
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        // padding-right: 6%;
-        // padding-left: 5%;
-        padding-right: 3%;
-        width: 100%;
-    `}
-    ${breakpoint('lg')`
-        // padding-right: 0%;
-        // padding-left: 5%;
-        margin-top: 42%;
-        width: 100%;
-    `}
-`
+
 const HideAndShowCard__Columndiv = styled.div`
     ${breakpoint('md')`
         display: flex;
@@ -168,7 +152,8 @@ const HideAndShowCard__CardTitle = styled.div`
     ${breakpoint('md')`
         color:${Themes.colors.black};   
         font-weight:${Themes.fontWeight.black};
-        font-size: 11px;
+        // font-size: 11px;
+        font-size: 14px;
         line-height:1.2;
     `}
     ${breakpoint('lg')`

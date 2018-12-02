@@ -26,6 +26,15 @@ export const Br = styled.br`
     display:block;
     `}
 `
+export const Br2 = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:block;
+    `}
+    ${breakpoint('lg')`
+    display:none;
+    `}
+`
 export const Section03 = styled.div`
     // padding: ${Themes.paddings.mobile};
     padding: 15% 10% 10% 10%;
@@ -69,7 +78,7 @@ export const Section03__Container__image = styled.div`
 export const Section03__Container__imageSm = styled.div`
     ${breakpoint('md')`
     display:flex;
-    // justify-content: center;
+    justify-content: center;
     // align-items: center;
     // margin-bottom: 1%;
     `}

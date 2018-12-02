@@ -32,7 +32,7 @@ class HideAndShowCard2 extends Component {
                     iconName1 = {IconGlobe}
                     iconName2 = {IconEcommerce}
                     iconName3 = {IconHandShake}
-                    iconName4 = {IconPeople}
+                    // iconName4 = {IconPeople}
                     title1 = "Highlight your brand story"
                     title2 = "Enhance your e-commerce platform"
                     title3 = "Inform, connect, and engage with your customer"
@@ -40,7 +40,7 @@ class HideAndShowCard2 extends Component {
                     text1 = {"Share the story behind your business and your brand. Highlight your unique selling proposition and attract customers."}
                     text2 = {"If online selling is the game connect with us to help enhance your e-commerce prowess."}
                     text3 = {"Communicate with your customer, keep them interested, and share with them the latest developments in your business."}
-                    text4 = {["Enhance the user journey through your website Integration with digital marketing platforms Build on existing e-commerce platforms Customer data capture Site analytics", <Br />, "and more..."]}
+                    text4 = {["- Enhance the user journey through your website",<Br />,"- Integration with digital marketing platforms", <Br />, "- Build on existing e-commerce platforms", <Br />, "- Customer data capture Site analytics", <Br />, "And more..."]}
                     img = {HowWeCanHelpImg1}
                     />
                 </Section02>

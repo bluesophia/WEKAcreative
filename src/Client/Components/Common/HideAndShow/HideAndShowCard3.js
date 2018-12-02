@@ -40,7 +40,7 @@ class HideAndShowCard3 extends Component {
                     text1 = {"If you already have systems in place for different functions, get them talking to one another to improve efficiencies."}
                     text2 = {"Enhance your decision making by combining multiple dashboards into a single Interface, giving you a comprehensive overview of your business."}
                     text3 = {"Simplify data entry. Enter data once and have your existing systems share the information through our customised backend solutions."}
-                    text4 = {["Remove the need to manually trigger your business processes by linking your systems together and automating interactions.", <Br />,<Br />, "We can help you integrate:",<Br />,<Br />,"Xero",<Br />,"Salesforce",<Br />,"Fleet Agent",<Br />,"Smart Payroll",<Br />,"And more…"]}
+                    text4 = {["Remove the need to manually trigger your business processes by linking your systems together and automating interactions."]}
                     img = {HowWeCanHelpImg2}
                     />
                 </Section02>

@@ -28,12 +28,13 @@ class HideAndShowLayout extends Component {
             <Container id="feature_wrap">
                 <Section01 >
                 { this.props.active === 'FeaturesCard1' ? (<HideAndShowCard1 
-                    title={["Transform your business with",<Br2 />,"the power of mobile"]}
-                    text={["Whether you are looking to replace paper-based processes",<Br2 />,"communicate with your team",<Br />, "interact with your customers, or",<Br2 />,"revolutionise your business, we can help."]}
+                    title={["Transform your business with",<Br2 />," the power of mobile"]}
+                    text={["Whether you are looking to replace paper-based processes,",<Br2 />," communicate with your team, interact with your customers, or ",<Br2 />,"revolutionise your business, we can help."]}
+                    text2={<b>Our mobile solutions are multi-platform, responsive, and function<Br2 />in a wide range of environments.</b>}
                 />) : null}
                 { this.props.active === 'FeaturesCard2' ? (<HideAndShowCard2 
                     title={["Harness the latest in web tech ", <Br2 />, "to showcase your business"]} 
-                    text={["The first port of call for a customer wanting to engage with", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
+                    text={["The first port of call for a customer wanting to engage with ", <Br2 />, "a business is online.",<Br />, "Make sure your web site captures the hearts and ", <Br2 />, "minds of those looking."]} 
                 />) : null}
                 { this.props.active === 'FeaturesCard3' ? (<HideAndShowCard3 
                     title={"Embrace the power of collaboration"} 
@@ -41,7 +42,7 @@ class HideAndShowLayout extends Component {
                 />) : null}
                 { this.props.active === 'FeaturesCard4' ? (<HideAndShowCard4 
                     title={"Tailor made for you"} 
-                    text={["Sometimes the best solution is a bespoke solution.", <Br2 />,<Br />,"We can dive into the inner workings of you business to design and build software that fits you like a glove."]} 
+                    text={["Sometimes the best solution is a bespoke solution.", <Br2 />,<Br />,"We can dive into the inner workings of your business to design and build software that fits you like a glove."]} 
                 />) : null}
                 </Section01>
             </Container>
@@ -52,6 +53,13 @@ class HideAndShowLayout extends Component {
 
 
 const Br = styled.br`
+display:none;
+${breakpoint('md')`
+display:none;
+`}
+${breakpoint('lg')`
+display:block;
+`}
 `
 const Br2 = styled.br`
 display:none;

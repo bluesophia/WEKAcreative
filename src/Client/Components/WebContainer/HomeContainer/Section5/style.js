@@ -94,7 +94,7 @@ export const Section05__Logos = styled.div`
     margin:0 auto;
     ${breakpoint('lg')`
         flex-direction:column;
-        padding: 0 10% 0 10%;
+        padding: 10% 10% 0 10%;
     `}
 `
 export const Section05__LogosDiv01 = styled.div`
@@ -146,7 +146,7 @@ export const Section05__Logo1 = styled.img`
     display: block;
     `}
     ${breakpoint('lg')`
-    transform: scale(1);
+    transform: scale(1.5);
     margin-top: 0;
     `}
     ${breakpoint('xl')`
