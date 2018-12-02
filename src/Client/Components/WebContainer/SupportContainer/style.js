@@ -36,7 +36,8 @@ export const Support = styled.div`
     ${breakpoint('lg')`
         background-position:center top;
         background-repeat:no-repeat;
-        background-size:100% 50%;
+        // background-size:100% 50%;
+        background-size:100% 80%;
     `}
 `
 export const Container = styled.div`
@@ -98,15 +99,14 @@ export const TopBgImg = styled.img`
     transform: scale(1.5);
     margin-left: 45px;
     text-align:center;
-    transform: scale(0.9);
+    // transform: scale(0.9);
+    transform: scale(0.7);
   `}
     ${breakpoint('lg')`
-    // margin-top: 91px;
-    // margin-left: 76px;
-    // text-align: center;
-    // transform: scale(3.5);
-    margin-top: 157px;
-    margin-left: 120px;
+    // margin-top: 157px;
+    // margin-left: 120px;
+    margin-top: 100px;
+    margin-left: 90px;
     text-align: center;
     -webkit-transform: scale(3.5);
     -ms-transform: scale(3.5);
@@ -118,12 +118,13 @@ export const TitleDiv = styled.div`
     order:2;  
     display:flex;
     flex-direction:column;
-    margin-bottom: 10%;
+    // margin-bottom: 10%;
   `}
   ${breakpoint('lg')`
+ margin-bottom: 10%;
     // margin:0 auto;
     // margin-left: 200px;
-    margin-left: 260px;
+    margin-left: 300px;
     width: 65%;
   `}
 `
@@ -191,11 +192,11 @@ export const FormDiv = styled.div`
     margin:0;
     `}
       ${breakpoint('lg')`
-        // grid-column:unset;
         margin: 0;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        max-width: 1000px;
     `}
 `
 export const Form = styled.div`
@@ -211,7 +212,7 @@ export const Form = styled.div`
     width: 60%
     background-color:white;
     box-shadow:0 0 10px rgba(0,0,0,0.2);
-    margin-top: -4%;
+    // margin-top: -4%;
     margin-bottom: 5%;
   `}
 `

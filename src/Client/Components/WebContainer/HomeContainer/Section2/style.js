@@ -3,10 +3,6 @@ import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../../Assets/Styles/Themes';
 import BigTitle from '../../../Common/Title/BigTitle';
 
-/** Images **/
-// import HomeSection02Image from '../../../../../Assets/Images/HomeSection02Image.png';
-import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
-
 /** Components **/
 import Text from '../../../Common/Text'
 import { Link } from 'react-router-dom';
@@ -101,6 +97,11 @@ export const Section02__Text = styled.div`
         ${breakpoint('lg')`
             font-size:${Themes.fontsize.p1}
             line-height:26px;
+        `}
+        ${breakpoint('lg')`
+            font-size:${Themes.fontsize.p1}
+            line-height:26px;
+            margin-bottom: 1%; 
         `}
 `
 

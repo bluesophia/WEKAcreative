@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import styled, { css, ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import PropTypes from 'prop-types';
 import Themes from '../../../../Assets/Styles/Themes';
 
 //Components
@@ -31,12 +30,12 @@ class HideAndShowCard4 extends Component {
                     iconName1 = {IconCustomize}
                     iconName2 = {IconUserdesign}
                     iconName3 = {IconConnect}
-                    title1 = "Customised specifically for your business needsplatforms"
+                    title1 = "Customised specifically for your business needs"
                     title2 = "Designed with your stakeholders in mind"
                     title3 = "Connect the dots between mobile, web, and existing platforms"
                     text1 = {"Your processes drive our development. We will engage with your team to understand your business and map out the best solution."}
                     text2 = {"Deliver an experience that matters. User-centric design puts your stakeholders at the forefront of our development philosophy."}
-                    text3 = {["In an increasingly connected world, it is important to have systems that function in multiple environments. Provide a seamless user experience across all business touch points.", <Br />,<Br />, "Here are a few of our solutions:",<Br />,<Br />,"Redefining service - Toyota",<Br />,"Redefining service - Toyota",<Br />,"Redefining service - Toyota",<Br />,"Redefining service - Toyota"]}
+                    text3 = {["In an increasingly connected world, it is important to have systems that function in multiple environments. Provide a seamless user experience across all business touch points."]}
                     img = {HowWeCanHelpImg3}
                     />
                 </Section02>
@@ -45,8 +44,6 @@ class HideAndShowCard4 extends Component {
     }
 }
 
-const Br = styled.br`
-`
 const Container = styled.div`
     display: none;
     ${breakpoint('md')`

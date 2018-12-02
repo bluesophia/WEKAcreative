@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react'
 import styled, { ThemeProvider } from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../Assets/Styles/Themes';
 
 export default class PasswordInput extends Component {

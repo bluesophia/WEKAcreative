@@ -8,7 +8,8 @@ import {Section05__Card,
     Section05__CardText,
     Section05__TextDiv,
     Section05__YellowText,
-    Section05__TitleImage__Div
+    Section05__TitleImage__Div,
+    Section05__TextDiv2
 } from './style';
 import HideAndShowLayout from '../HideAndShow/HideAndShowLayout';
 
@@ -28,6 +29,7 @@ class FeaturesCard extends Component {
                 <Section05__CardCircle>
                     <Section05__TitleImage src={this.props.image} alt=''/>
                 </Section05__CardCircle>
+                <Section05__TextDiv2>
                 <Section05__div>
                     <Section05__ImgDiv>
                     <Section05__Icon src={this.props.iconName1}/>
@@ -45,11 +47,12 @@ class FeaturesCard extends Component {
                     <Section05__Icon src={this.props.iconName4}/>
                     <Section05__CardText>{this.props.text4}</Section05__CardText>
                     </Section05__ImgDiv>
-                    <Section05__TextDiv>
-                    <Section05__YellowText onClick={()=>{this.props.onPress(this)}} id="yellowText" >
-                    Read More</Section05__YellowText>
-                    </Section05__TextDiv>
                 </Section05__div>
+                <Section05__TextDiv>
+                <Section05__YellowText onClick={()=>{this.props.onPress(this)}} id="yellowText" >
+                    Read More</Section05__YellowText>
+                </Section05__TextDiv>
+                </Section05__TextDiv2>
             </Section05__Card>
         )}
     };

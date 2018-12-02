@@ -26,6 +26,15 @@ export const Br = styled.br`
     display:block;
     `}
 `
+export const Br2 = styled.br`
+    display:none;
+    ${breakpoint('md')`
+    display:block;
+    `}
+    ${breakpoint('lg')`
+    display:none;
+    `}
+`
 export const Section03 = styled.div`
     // padding: ${Themes.paddings.mobile};
     padding: 15% 10% 10% 10%;
@@ -39,6 +48,10 @@ export const Section03 = styled.div`
     ${breakpoint('lg')`
         padding: ${Themes.paddings.desktop};
         // margin-bottom: 20%;
+    `}
+    ${breakpoint('xl')`
+        padding: 5% 10% 0 10%;
+        margin-bottom: 5%;
     `}
 `
 export const Section03__Container = styled.div`
@@ -65,7 +78,7 @@ export const Section03__Container__image = styled.div`
 export const Section03__Container__imageSm = styled.div`
     ${breakpoint('md')`
     display:flex;
-    // justify-content: center;
+    justify-content: center;
     // align-items: center;
     // margin-bottom: 1%;
     `}
@@ -95,6 +108,9 @@ export const   Section03__Text = styled.div`
             line-height:26px;
             margin-bottom: 10%;
             text-align:center;
+        `}
+        ${breakpoint('xl')`
+            margin-bottom: 5%;
         `}
 `
 export const Section03__ImageDiv = styled.div`

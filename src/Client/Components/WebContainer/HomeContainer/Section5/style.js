@@ -34,8 +34,15 @@ export const Section05 = styled.div`
     `}
     ${breakpoint('lg')`
         background-size: 100%;
+        display: flex;
+        justify-content: center;
         // padding: ${Themes.paddings.desktop};
         padding: 10% 10% 10% 10%;
+    `}
+    ${breakpoint('xl')`
+        background-size: 100%;
+        // padding: ${Themes.paddings.desktop};
+        padding: 5% 10% 10% 10%;
     `}
 `
 export const Section05__Div = styled.div`
@@ -76,15 +83,24 @@ export const Section05__Text = styled.div`
         ${breakpoint('lg')`
             margin-bottom: 4%;
         `}
+        ${breakpoint('xl')`
+            margin-bottom: 5%;
+        `}
 `
 export const Section05__Logos = styled.div`
     display:flex;
     justify-content:space-around;
     // padding-top:50px;
     margin:0 auto;
-    ${breakpoint('lg')`
+    margin-bottom: 10%;
+    ${breakpoint('md')`
+        margin-bottom: 0;
         flex-direction:column;
         padding: 0 10% 0 10%;
+    `}
+    ${breakpoint('lg')`
+        flex-direction:column;
+        padding: 10% 10% 0 10%;
     `}
 `
 export const Section05__LogosDiv01 = styled.div`
@@ -130,13 +146,16 @@ export const Section05__Logo1 = styled.img`
     width:100%;
     height:auto;
     margin:0 auto;
-    margin-top: 10%;
-    transform: scale(1.7);
+    transform: scale(1);
     z-index: -1;
     display: block;
     `}
     ${breakpoint('lg')`
-    transform: scale(1);
+    transform: scale(1.5);
     margin-top: 0;
+    `}
+    ${breakpoint('xl')`
+    transform: scale(1.5);
+    margin-top: 10%;
     `}
 `

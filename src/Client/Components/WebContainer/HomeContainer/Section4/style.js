@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../../Assets/Styles/Themes';
-import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 import Section04BgSm from '../../../../../Assets/Images/Section04BgSm.png';
 import HomeSection02BgMd from '../../../../../Assets/Images/HomeSection02BgMd.png';
 import BigTitle from '../../../Common/Title/BigTitle';
 import LeveragetheFuture2 from '../../../../../Assets/Images/LeveragetheFuture2.svg';
+import Text from '../../../Common/Text';
 
 /**** Section 04 ****/
 
@@ -22,6 +22,11 @@ import LeveragetheFuture2 from '../../../../../Assets/Images/LeveragetheFuture2.
         background-size:100%;
         // height:768px;
         padding: ${Themes.paddings.desktop};
+    `}
+    ${breakpoint('xl')`
+        background-size:100%;
+        // height:768px;
+        padding: 5% 10% 0 10%;
     `}
 `
 export const Container = styled.div`

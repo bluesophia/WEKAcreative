@@ -30,7 +30,7 @@ import {  CompanyNameInput,
           PhoneNumberInput,
           SupportTypeInput,
           FullNameInput }from '../../Common/Input';
-import Button01 from '../../Common/Button/Button01';
+import Button02 from '../../Common/Button/Button02';
 /** Animation**/ 
 import ScrollAnimation from 'react-animate-on-scroll';
 const Title = css`
@@ -67,9 +67,7 @@ class SupportContainer extends Component{
                       <TitleDiv__Title>Submit <Br />a support ticket</TitleDiv__Title>
                       <TitleDiv__Text>Please complete the form below which will direct your request to the appropriate member of the team. 
                         This ensures greater efficiency around response times and also ensures processes are followed.
-                        <br /><br />
-                        We aim to respond to support requests within 24 hours on regular business days, however, 
-                        depending on the scale of your request this could take slightly longer.</TitleDiv__Text>
+                        </TitleDiv__Text>
                     </TitleDiv>
                   </Section01>
                   <ImageDiv>
@@ -94,7 +92,7 @@ class SupportContainer extends Component{
                         </InputDiv__Left>
                       </InputDiv>
                       <ButtonDiv>
-                        <Button01 value="SUBMIT"/>
+                        <Button02 value="SUBMIT"/>
                       </ButtonDiv>      
                     </Form>
                   </FormDiv>

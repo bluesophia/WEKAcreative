@@ -2,6 +2,18 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../Assets/Styles/Themes';
 
+export const Section05__TextDiv2 = styled.div`
+${breakpoint('md')`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+`}
+${breakpoint('lg')`
+    height: 300px;
+`}
+
+`
 export const Br = styled.br`
 display:none;
 ${breakpoint('md')`
@@ -30,7 +42,7 @@ export const Section05__div = styled.div`
         padding: 10%;
     `}
     ${breakpoint('lg')`
-        padding: 5%;
+        padding: 10%;
     `}
 `
 export const Section05__ImgDiv = styled.div`
@@ -47,11 +59,15 @@ export const Section05__TextDiv = styled.div`
     `}
 `
 export const Section05__Icon = styled.img`
-    // width: 27px;
     width: 22px;
-    // height: 64px;
-    margi-right: 10px;
     margin-right: 10px;
+    ${breakpoint('lg')`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin-top: 10%;
+    margin-right: 0;
+    `}
 `
 export const Section05__Card = styled.div`
     border : 1px solid #ccc;

@@ -5,7 +5,7 @@ import Themes from '../../../Assets/Styles/Themes';
 import Text from '../../Components/Common/Text';
 import { Link } from 'react-router-dom';
 
-/** Images **/
+/** Images **/  
 
 /** components **/
 import Title from '../../Components/Common/Title/Title';

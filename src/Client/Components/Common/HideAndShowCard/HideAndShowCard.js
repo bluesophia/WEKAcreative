@@ -56,11 +56,11 @@ const HideAndShowCard__div = styled.div`
         flex-direction: column;
         // padding-right: 6%;
         // padding-left: 5%;
-        padding-right: 3%;
+        // padding-right: 3%;
         width: 100%;
     `}
     ${breakpoint('lg')`
-        // padding-right: 0%;
+        padding-right: 0%;
         // padding-left: 5%;
         width: 100%;
     `}
@@ -159,7 +159,8 @@ const HideAndShowCard__CardTitle = styled.div`
 const HideAndShowCard__CardText = styled.div`
     ${breakpoint('md')`
         color:${Themes.colors.grey};
-        font-size: 8px;
+        // font-size: 8px;
+        font-size: 12px;
         line-height:1.2;
     `}
     ${breakpoint('lg')`

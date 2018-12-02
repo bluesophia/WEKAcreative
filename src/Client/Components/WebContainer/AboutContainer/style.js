@@ -8,6 +8,7 @@ import AboutSectionBgMd from '../../../../Assets/Images/AboutSectionBgMd.png';
 import HomeSection01BgSm from '../../../../Assets/Images/HomeSection01BgSm.png';
 import AboutSectionBglg from '../../../../Assets/Images/AboutSectionBglg.svg';
 import mainImage3 from '../../../../Assets/Images/AboutSection01Image3.svg';
+import AboutSectionBgxlg from '../../../../Assets/Images/AboutSectionBgxlg.png';
 
 /** components **/
 
@@ -28,8 +29,13 @@ export const Section01 = styled.div`
   ${breakpoint('lg')`
       background: url('${AboutSectionBglg}');
       background-repeat:no-repeat;
-      width: 124%;
+      background-size: cover;
       // background-size:107% 109%; 
+  `}
+  ${breakpoint('xl')`
+      background: url('${AboutSectionBgxlg}');
+      background-repeat:no-repeat;
+      background-size: cover;
   `}
 `
 export const MainImageBackground = styled.img`
@@ -91,15 +97,44 @@ export const Section01__Image2 = styled.div`
         `}
         ${breakpoint('lg')`
           content: url(${mainImage3});
-          transform: scale(2.1);
+          // transform: scale(2.1);
+          // max-width: 500px;
+          // margin-right: 27%;
+          // margin-top: 100px;
+          // transform: scale(2.3);
+          // max-width: 500px;
+          // margin-right: 36%;
+          // padding-left: 8%;
+          // margin-top: 120px;
+          transform: scale(2.7);
           max-width: 500px;
-          margin-right: 27%;
-          margin-top: 100px;
+          margin-right: 20%;
+          padding-left: 8%;
+          margin-top: 120px;
         `}
         ${breakpoint('xl')`
-          transform: scale(2.3);
-          margin-right: 40%;
+          max-width: 1000px;
+          transform: scale(2.7);
+          // margin-right: 45%;
           margin-top: 100px;
+
+          
+        `}
+`
+export const Section01__Image3 = styled.img`
+display: none;
+ ${breakpoint('md')`
+ display: block;
+ padding: 5% 10% 0 10%;
+ width: 80%;
+        `}
+`
+
+export const Section01__Image4 = styled.img`
+padding: 5% 10% 10% 10%;
+width: 80%;
+ ${breakpoint('md')`
+ display: none;
         `}
 `
 export const MainImage2 = styled.img`
@@ -157,8 +192,17 @@ export const Section01__Text = styled.div`
       line-height:28px !important; 
       text-align: left; 
     `}
+    ${breakpoint('xl')`
+      max-width: 460px;
+      font-size:${Themes.fontsize.p1} !important;
+      line-height:28px !important; 
+      text-align: left; 
+    `}
 `
 export const Section02 = styled.div`
+${breakpoint('md')`
+      padding: 5% 0 10% 0;
+    `}
 `
 export const Section03 = styled.div`
   background-color:${Themes.colors.w_lightOrange};
@@ -185,7 +229,7 @@ export const Section__Text = styled.div`
   ${Text};
   font-size:${Themes.fontsize.p3};
   line-height:23px;
-  text-align: justify;
+  text-align: center;
   ${breakpoint('lg')`
     // text-align:left;
     text-align: justify;
@@ -200,4 +244,57 @@ export const Br = styled.br`
     ${breakpoint('lg')`
     display:block;
     `}
+`
+export const Br2 = styled.br`
+    ${breakpoint('md')`
+    display:none;
+    `}
+    ${breakpoint('lg')`
+    display:none;
+    `}
+`
+export const Section02__Container = styled.div`
+    margin:0 auto;
+    margin-top: 10%;
+    // padding-bottom: 10%;
+    ${breakpoint('sm')`
+    `}
+    ${breakpoint('md')`
+    padding-bottom: 0%;
+    `}
+    ${breakpoint('lg')`
+    margin-top: 0;
+    `}
+`
+export const Section02__Title = styled.div`
+    ${BigTitle};
+    color:${Themes.colors.black};
+    font-weight:${Themes.fontWeight.black};
+    ${breakpoint('lg')`
+    `}
+`
+
+export const Section02__Text = styled.div`
+    // margin-top:9px;
+    // margin-bottom: 10%;
+    padding: 5% 10% 0 10%;
+    ${Text};
+    font-size: 20px;
+    color:${Themes.colors.grey};
+    // text-align:left;
+    text-align: center;
+        ${breakpoint('md')`
+            padding: 5% 10% 0 10%;
+            font-size: 28px;
+            line-height:50px;
+            margin-bottom: 4%;  
+            text-align:center; 
+        `}
+        ${breakpoint('lg')`
+            font-size: 28px;
+            line-height:26px;
+            padding: 5% 10% 0 10%;
+            font-size: 28px;
+            margin-bottom: 5%;
+        `}
 `

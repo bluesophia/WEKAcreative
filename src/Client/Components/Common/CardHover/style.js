@@ -129,7 +129,7 @@ export const Section03__Image1 = styled.img`
     
     ${breakpoint('md')`
     width: 300px;
-    height: 199px;
+    height: 200px;
     &:hover {
         opacity: 0;
     }
@@ -178,7 +178,7 @@ export const Section03__Image1__Hover = styled.img`
     overflow: hidden;
     z-index: -1;
     width: 300px;
-    height: 199px;
+    height: 200px;
     margin-bottom: 0;
   `}
   ${breakpoint('lg')`

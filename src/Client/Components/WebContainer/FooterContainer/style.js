@@ -62,7 +62,7 @@ export const Container = styled.div`
 //footer top css
 export const FooterTop = styled.div`
 // padding-top: 30px;
-padding: 30px;
+// padding: 30px;
 flex-direction: column;
   
   ${breakpoint('md')`
@@ -91,7 +91,8 @@ export const FooterBox3 = FooterBox1.extend`
 display: flex;
 justify-content: space-around;
 align-items: center;
-margin-bottom: 10%;
+// margin-bottom: 10%;
+margin-bottom: 3%;
 ${breakpoint('md')`
 order:3;
 margin-bottom: 0;
@@ -142,6 +143,11 @@ margin: 0.5em 0 0.5em 0;
 color: ${Themes.colors.yellow};
   ${breakpoint('md')`
   // display: none;
+  font-size: ${Themes.fontsize.h4};
+font-weight: ${Themes.fontWeight.bold};
+text-align:left;
+margin: 0.5em 0 0.5em 0;
+color: ${Themes.colors.yellow};
     `};
   ${breakpoint('lg')`
     `};
@@ -179,6 +185,7 @@ export const FooterText = styled.span`
   ${breakpoint('md')`
   font-size: 15px;
   font-weight: ${Themes.fontWeight.regular};
+  text-align: left;
   `};
 `
 export const FooterTextAddress = FooterText.extend`
@@ -214,6 +221,7 @@ export const  StyledLink = styled(Link)`
   ${breakpoint('md')`
   font-size: 15px;
   font-weight: ${Themes.fontWeight.regular};
+  text-align: left;
   `};
 `
 //footer bottom css
@@ -245,6 +253,7 @@ color: ${Themes.colors.grey};
 export const ButtonDiv = styled.div`
   transform: scale(0.9);
   padding: 10%;
+  padding-bottom: 5%;
   cursor: 'pointer';
     ${breakpoint('md')`
       padding: 5% 10% 5% 10%;

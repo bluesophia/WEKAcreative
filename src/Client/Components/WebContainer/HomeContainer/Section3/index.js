@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Section03,
     Section03__Container,
     Br,
+    Br2,
     Section03__Title,
     Section03__Text,
     Section03__Container__image,
@@ -32,10 +33,11 @@ class Section3 extends Component {
     render(){
         return(
             <Section03>
+                <ScrollAnimation animateIn='fadeIn'>
                 <Section03__Container>
-                    <Section03__Title>Some of our work</Section03__Title>
+                    <Section03__Title>What have we been up to?</Section03__Title>
                     <YellowSpan />
-                    <Section03__Text>Big or small it doesn’t matter <Br />- the companies we support have fantastic people and ideas to guide them.
+                    <Section03__Text>Big or small it doesn’t matter. <Br />The companies we support have fantastic people and ideas <Br2 />to guide them.
                     </Section03__Text>
                 </Section03__Container>
                 <Section03__Container__image>
@@ -60,6 +62,7 @@ class Section3 extends Component {
                     />
                 </Section03__Container__imageSm>  
                 </Section03__Container__image>
+                </ScrollAnimation>
             </Section03>
            
         )

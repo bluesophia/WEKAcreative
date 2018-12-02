@@ -3,7 +3,6 @@ import breakpoint from 'styled-components-breakpoint';
 import Themes from '../../../../Assets/Styles/Themes';
 import { Link } from 'react-router-dom';
 import LogoColor from '../../../../Assets/Images/logo_color.png';
-import loginIcon2 from '../../../../Assets/Images/login2.svg';
 
 export const Nav = styled.div`
 	height:auto;
@@ -136,8 +135,9 @@ export const LogoImg = styled.img`
 	`}
 	${breakpoint('lg')`
 		content: url(${LogoColor});
-		width:100px;
-		margin-top: 1.6%;
+		// width:100px;
+		width: 140px;
+		// margin-top: 1.6%;
 	`}
 `
 export const LinkedLogo = styled(Link)`

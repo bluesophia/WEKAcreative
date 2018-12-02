@@ -29,7 +29,6 @@ export default class PhoneNumberInput extends Component {
             name="phone"
             label="phone"
             onChange={this._handleChange}
-            placeholder="09-234-2345"
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             required
         />

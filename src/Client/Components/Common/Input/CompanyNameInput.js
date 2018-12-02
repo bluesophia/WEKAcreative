@@ -27,7 +27,6 @@ export default class CompanyNameInput extends Component {
           value={this.state.value}
           name="input-text"
           label="Company Name"
-          placeholder="wekacreative"
           onChange={this._handleChange}
         />
       </Container>
