@@ -135,8 +135,9 @@ export const LogoImg = styled.img`
 	`}
 	${breakpoint('lg')`
 		content: url(${LogoColor});
-		width:100px;
-		margin-top: 1.6%;
+		// width:100px;
+		width: 140px;
+		// margin-top: 1.6%;
 	`}
 `
 export const LinkedLogo = styled(Link)`

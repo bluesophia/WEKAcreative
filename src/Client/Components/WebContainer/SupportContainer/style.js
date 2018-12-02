@@ -99,7 +99,8 @@ export const TopBgImg = styled.img`
     transform: scale(1.5);
     margin-left: 45px;
     text-align:center;
-    transform: scale(0.9);
+    // transform: scale(0.9);
+    transform: scale(0.7);
   `}
     ${breakpoint('lg')`
     // margin-top: 157px;
@@ -117,9 +118,10 @@ export const TitleDiv = styled.div`
     order:2;  
     display:flex;
     flex-direction:column;
-    margin-bottom: 10%;
+    // margin-bottom: 10%;
   `}
   ${breakpoint('lg')`
+ margin-bottom: 10%;
     // margin:0 auto;
     // margin-left: 200px;
     margin-left: 300px;
