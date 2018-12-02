@@ -25,7 +25,7 @@ class Section2 extends Component{
             <Section02>
                 <Container>
                     <Section02__Container>
-                        <Section02__Title>How we can help</Section02__Title>
+                        <Section02__Title>How can we help your business?</Section02__Title>
                         <YellowSpan />
                         <Section02__Text>We design software to service a variety of needs and 
                          help you work across <Br />a range of environments and platforms.</Section02__Text>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import styled, { css, ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import PropTypes from 'prop-types';
 import Themes from '../../../../Assets/Styles/Themes';
 
 //Components
@@ -13,7 +12,6 @@ import HideAndShowCard from '../HideAndShowCard/HideAndShowCard';
 import IconGlobe from '../../../../Assets/Images/globe.svg'
 import IconEcommerce from '../../../../Assets/Images/ecommerce.svg'
 import IconHandShake from '../../../../Assets/Images/IconHandShake.svg'
-import IconPeople from '../../../../Assets/Images/IconPeople.svg'
 
 //PhotoImages
 import HowWeCanHelpImg1 from '../../../../Assets/Images/howwecanhelpImg1.png'
@@ -95,12 +93,5 @@ const Section01__Text = styled.div`
             line-height:26px;
             margin-bottom: 5%;
         `}
-`
-const Section03 = styled.div`
-    margin:0 auto;
-`    
-const Section03__ImgDiv = styled.div`
-`
-const Section03__Img = styled.img`
 `
 export default HideAndShowCard2;

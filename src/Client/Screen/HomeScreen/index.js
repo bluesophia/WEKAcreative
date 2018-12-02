@@ -20,7 +20,7 @@ class HomeScreen extends Component{
                     <Section03 />
                     <Section04 />
                     <Section05 />
-                    <Section06 />
+                    {/* <Section06 /> */}
                 </div>
            </ThemeProvider>
         )

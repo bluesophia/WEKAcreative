@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
-
+import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 
 //Components
 import HideAndShowCard1 from '../HideAndShow/HideAndShowCard1';
 import HideAndShowCard2 from '../HideAndShow/HideAndShowCard2';
 import HideAndShowCard3 from '../HideAndShow/HideAndShowCard3';
 import HideAndShowCard4 from '../HideAndShow/HideAndShowCard4';
-
-import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
-import Themes from '../../../../Assets/Styles/Themes';
-
-//Components
-import BigTitle from '../../Common/Title/BigTitle';
 
 /** Animation**/ 
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -84,38 +78,5 @@ const Container = styled.div`
 const Section01 = styled.div`
     margin:0 auto;
 `    
-const Section02 = styled.div`
-    margin:0 auto;
-    ${breakpoint('lg')`
-        margin-bottom: 0; 
-        margin-top: -3%;
-    `}
-`    
-const Section01__Title = styled.div`
-    ${BigTitle};
-    color:${Themes.colors.black};
-    font-weight:${Themes.fontWeight.black};
-    ${breakpoint('md')`
-    font-size:${Themes.fontsize.h3};  
-    line-height:1.2;  
-    `}
-`
-const Section01__Text = styled.div`
-    margin-top:9px;
-    margin-bottom: -10%;
-    ${Text};
-    color:${Themes.colors.grey};
-    text-align:center;
-        ${breakpoint('md')`
-            font-size:${Themes.fontsize.p2}
-            line-height:26px;
-            margin-bottom: 2%;   
-        `}
-        ${breakpoint('lg')`
-            font-size:${Themes.fontsize.p2}
-            line-height:26px;
-            margin-bottom: 5%;
-        `}
-`
 
 export default HideAndShowLayout;

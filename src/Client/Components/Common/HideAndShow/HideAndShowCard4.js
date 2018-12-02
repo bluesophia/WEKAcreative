@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import styled, { css, ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import PropTypes from 'prop-types';
 import Themes from '../../../../Assets/Styles/Themes';
 
 //Components
@@ -45,8 +44,6 @@ class HideAndShowCard4 extends Component {
     }
 }
 
-const Br = styled.br`
-`
 const Container = styled.div`
     display: none;
     ${breakpoint('md')`

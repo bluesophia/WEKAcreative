@@ -35,7 +35,7 @@ class Section6 extends Component{
                         <Section06__Title>Our product suite</Section06__Title>
                         <YellowSpan />
                         <Section06__Text>Looking for something quicker to implement? <Br />
-                            Explore some of our in-house solutions.</Section06__Text>
+                            Talk to us about our in-house solutions.</Section06__Text>
                     </Section06__TitleDiv>
                     <Section06__Div>
                         <Section06__Div__Image1>

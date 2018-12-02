@@ -27,7 +27,7 @@ class Section5 extends Component{
                 <ScrollAnimation animateIn='fadeIn'>
                     <Section05__Div>
                         <Section05__TitleDiv>
-                                <Section05__Title>We can <Br />integrate with</Section05__Title>
+                                <Section05__Title>Need to reduce friction in your business?</Section05__Title>
                                 <YellowSpan />
                                 <Section05__Text>Our software experts are well placed to integrate with existing systems. <Br2 />These are some of our current integrations.
                                 </Section05__Text>

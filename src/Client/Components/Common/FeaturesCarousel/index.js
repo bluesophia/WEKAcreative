@@ -10,12 +10,12 @@ import ArrowLeftIcon from '../../../../Assets/Images/arrowLeft.svg';
 import Slider from "react-slick";
 
 //images
-import MobileApps2 from '../../../../Assets/Images/MobileApps2.svg'
-// import MobileApps3 from '../../../../Assets/Images/MobileApps3.svg'
+// import MobileApps2 from '../../../../Assets/Images/MobileApps2.svg'
+import MobileApps3 from '../../../../Assets/Images/MobileApps3.svg'
 // import MobileApps4 from '../../../../Assets/Images/MobileApps4.svg'
-import Websites2 from '../../../../Assets/Images/Websites2.svg'
+import Websites from '../../../../Assets/Images/Websites.svg'
 import Integrations2 from '../../../../Assets/Images/Integrations2.svg'
-import FullSolutions2 from '../../../../Assets/Images/FullSolutions2.svg'
+import FullSolutions from '../../../../Assets/Images/FullSolutions.svg'
 
 //icons
 import IconBrain from '../../../../Assets/Images/IconBrain.svg'
@@ -28,12 +28,10 @@ import IconPeople from '../../../../Assets/Images/IconPeople.svg'
 import IconPoint from '../../../../Assets/Images/IconPoint.svg'
 import IconSettings from '../../../../Assets/Images/IconSettings.svg'
 import IconWeb from '../../../../Assets/Images/IconWeb.svg'
+import IconGlobe from '../../../../Assets/Images/globe.svg'
+import IconUserdesign from '../../../../Assets/Images/IconUserdesign.svg'
 
 //components
-import HideAndShowCard1 from '../../Common/HideAndShow/HideAndShowCard1';
-import HideAndShowCard2 from '../../Common/HideAndShow/HideAndShowCard2';
-import HideAndShowCard3 from '../../Common/HideAndShow/HideAndShowCard3';
-import HideAndShowCard4 from '../../Common/HideAndShow/HideAndShowCard4';
 import HideAndShowLayout from '../../Common/HideAndShow/HideAndShowLayout';
 
 
@@ -214,15 +212,15 @@ render () {
             id="FeaturesCard1"
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard1' ? true : false}
-            image = {MobileApps2}
+            image = {MobileApps3}
             iconName1 = {IconData}
             iconName2 = {IconCommunication}
-            iconName3 = {IconHandShake}
-            iconName4 = {IconInformation}
+            iconName3 = {IconInformation}
+            iconName4 = {IconHandShake}
             text1 = "Capturing data from the field"
-            text2 = "Communicating with your mobile workforce"
-            text3 = "Improving customer engagement"
-            text4 = "Providing your workforce valuable company or product information"
+            text2 = "Communicate with your team"
+            text3 = "Improve access to key information"
+            text4 = "Increase customer engagement"
             />
             <FeaturesCard 
             id="FeaturesCard2"
@@ -230,13 +228,13 @@ render () {
             value={this.state.value2}
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard2' ? true : false}
-            image = {Websites2}
-            iconName1 = {IconInformation}
+            image = {Websites}
+            iconName1 = {IconUserdesign}
             iconName2 = {IconEcommerce}
             iconName3 = {IconPeople}
-            text1 = "Informative sites to promote your brand"
-            text2 = "E-commerce sites"
-            text3 = "Customer capture for marketing"
+            text1 = "Highlight your brand story"
+            text2 = "Enhance your e-commerce platform"
+            text3 = "Inform, connect, and engage with your customer"
             />
             <FeaturesCard 
             id="FeaturesCard3"
@@ -248,10 +246,10 @@ render () {
             iconName2 = {IconPoint}
             iconName3 = {IconData}
             iconName4 = {IconSettings}
-            text1 = "Get your current software solutions communicating with each other"
-            text2 = "Provide a unified interface for your existing software"
+            text1 = "Bridge the gaps between your existing platforms"
+            text2 = "Provide a unified interface to your exsiting systems"
             text3 = "Reduce double-handling of data"
-            text4 = "Automate your processes of data"
+            text4 = "Automate your processes"
             />
             <FeaturesCard 
             id="FeaturesCard4"
@@ -259,13 +257,13 @@ render () {
             value={this.state.value}
             onPress={this._onItemClick}
             active={this.state.FeaturesCarousel === 'FeaturesCard4' ? true : false}
-            image = {FullSolutions2}
+            image = {FullSolutions}
             iconName1 = {IconWeb}
             iconName2 = {IconBrain}
-            iconName3 = {IconHandShake}
-            text1 = "Mobile apps with an office based web portal"
-            text2 = "Everything designed specifically for your business processes"
-            text3 = "Software designed to to help lead your business forward "
+            iconName3 = {IconGlobe}
+            text1 = "Customised specifically for your business needs"
+            text2 = "Designed with your stakeholders in mind"
+            text3 = "Connect the dots between Mobile, web, and exsiting platforms"
             />
       </Slider>
             { this.state.showing &&  

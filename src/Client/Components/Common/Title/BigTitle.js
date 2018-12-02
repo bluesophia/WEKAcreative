@@ -10,7 +10,7 @@ const BigTitle = css`
     font-weight:${Themes.fontWeight.black};
     color:${Themes.colors.black};
         ${breakpoint('md')`
-        font-size:${Themes.fontsize.h1};
+        font-size:${Themes.fontsize.h2};
         `}
         ${breakpoint('lg')`
         font-size:${Themes.fontsize.D_h1};
