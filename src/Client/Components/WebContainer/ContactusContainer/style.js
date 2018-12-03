@@ -36,8 +36,10 @@ export const Header__ImageDiv = styled.div`
     ${breakpoint('lg')`
     `}
 `
+
 export const Header__Image = styled.img`
     ${breakpoint('md')`
+      display: block;
       margin-bottom: 10%;
       transform: scale(0.9);
     `}

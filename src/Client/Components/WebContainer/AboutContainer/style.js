@@ -180,15 +180,15 @@ export const Section01__Text = styled.div`
     ${breakpoint('md')`
       display:flex;
       ${Text};
-      font-size:${Themes.fontsize.p2} !important;
-      line-height:22px !important;
+      font-size:${Themes.fontsize.h4} !important;
+      line-height:27px !important;
       color:${Themes.colors.grey};
       font-weight:${Themes.fontWeight.regular};
       text-align: justify;
     `}
     ${breakpoint('lg')`
       max-width: 400px;
-      font-size:${Themes.fontsize.p1} !important;
+      font-size:${Themes.fontsize.p2} !important;
       line-height:28px !important; 
       text-align: left; 
     `}

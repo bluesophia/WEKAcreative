@@ -5,6 +5,7 @@ import Themes from '../../../../Assets/Styles/Themes';
 import {Container,
   Header,
   Header__Image,
+  Header__Image2,
   Header__Content,
   TopBgImg,
   TitleDiv,
@@ -18,7 +19,9 @@ import {Container,
   InputDiv__Left,
   InputDiv__Right,
   ButtonDiv,
-  Form__Text
+  Form__Text,
+  
+
 } from './style'
 
 /** Components **/

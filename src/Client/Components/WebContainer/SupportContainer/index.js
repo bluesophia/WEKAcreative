@@ -9,6 +9,7 @@ import {Br,
   Section02,
   ImageDiv,
   TopBgImg,
+  TopBgImg2,  
   TitleDiv,
   TitleDiv__Title,
   TitleDiv__Text,
@@ -19,10 +20,12 @@ import {Br,
   InputDiv__Left,
   InputDiv__Right,
   ButtonDiv,
-  Form__Text
+  Form__Text,
+  Section01__Image
 } from './style'
 /** Images **/
-import Image from '../../../../Assets/Images/SupportSection01Image.svg';
+// import Image from '../../../../Assets/Images/SupportSection01Imagesm.svg';
+import Image2 from '../../../../Assets/Images/SupportSection01Image.svg';
 
 import {  CompanyNameInput,
           EmailInput,
@@ -71,7 +74,10 @@ class SupportContainer extends Component{
                     </TitleDiv>
                   </Section01>
                   <ImageDiv>
+                  <Section01__Image>
                     <TopBgImg src={Image}/>
+                    <TopBgImg2 src={Image2}/>
+                  </Section01__Image>  
                     <TitleDiv__Textsm>Please complete the form below which will direct 
                         your request to the appropriate member of the team. <Br />This ensures greater efficiency around response times and 
                         also ensures processes are followed.</TitleDiv__Textsm>

@@ -35,6 +35,15 @@ export const Br2 = styled.br`
     display:none;
     `}
 `
+export const Br3 = styled.br`
+    display:block;
+    ${breakpoint('md')`
+    display:none;
+    `}
+    ${breakpoint('lg')`
+    display:none;
+    `}
+`
 export const Section03 = styled.div`
     // padding: ${Themes.paddings.mobile};
     padding: 15% 10% 10% 10%;
