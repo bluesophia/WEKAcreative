@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Themes from '../../../../Assets/Styles/Themes';
-import breakpoint from 'styled-components-breakpoint';
 import Logo from '../../../../Assets/Images/logo_color.png';
-import { Link } from 'react-router-dom';
 import { Footer,
   Container, 
   FooterTop,
@@ -74,8 +72,9 @@ class FooterContainer extends Component {
                     {/* <StyledLink__Div__Hidden> */}
                     <StyledLink__Div>
                     <FooterTitle>CONTACT US</FooterTitle>
-                    <FooterText>09 234 2345</FooterText>
-                    <FooterText>hello@wekacreative.co.nz</FooterText>
+                    <FooterText>027 200 2921</FooterText>
+                    <FooterText><a href="mailto:hello@wekacreative.co.nz">hello@wekacreative.co.nz</a></FooterText>
+                    {/* <FooterText><a href="mailto:support@wekacreative.co.nz">support@wekacreative.co.nz</a></FooterText> */}
                     </StyledLink__Div>
                     {/* </StyledLink__Div__Hidden>
                     <StyledLink__Div__Hidden> */}
