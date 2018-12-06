@@ -64,7 +64,7 @@ const P = styled.p`
 `;
 
 const Input = styled.input.attrs({
-  type: 'text',
+  type: 'text'
 })`
   box-sizing:border-box;
   width:100%;

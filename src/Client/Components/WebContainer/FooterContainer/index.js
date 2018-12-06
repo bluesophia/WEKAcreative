@@ -66,6 +66,7 @@ class FooterContainer extends Component {
                       <StyledLink to='/support'> Support /</StyledLink>
                       {/* <StyledLink to='/blog'> Solutions /</StyledLink> */}
                       <StyledLink to='/contact'> Contact Us</StyledLink>
+                      <StyledLink to='/privacy' onClick={this._ScrollTop}>Privacy Statement</StyledLink>
                     </StyledLink__Div2>
                 </FooterBox3>
                     <FooterBottomContainer>
@@ -85,6 +86,7 @@ class FooterContainer extends Component {
                       <StyledLink to='/support' onClick={this._ScrollTop}>Support</StyledLink>
                       {/* <StyledLink to='/blog'>Solutions</StyledLink> */}
                       <StyledLink to='/contact' onClick={this._ScrollTop}>Contact Us</StyledLink>
+                      <a href="http://wekacreative.co.nz/privacy">Privacy Statement</a>
                     </StyledLink__Div>
                     {/* </StyledLink__Div__Hidden> */}
                     </FooterBottomContainer>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 import Themes from '../../../../Assets/Styles/Themes';
+import axios from 'axios';
 /** Style **/ 
 import {Container,
   Header,
@@ -39,6 +40,31 @@ import Bg from '../../../../Assets/Images/ContactSection01Bg.png';
 import Image from '../../../../Assets/Images/ContactSection01Image.svg';
 
 class ContactusContainer extends Component {
+  handleSubmit(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    axios({
+      method: "POST",
+      url:"http://localhost:3000/send",
+      data: {
+        name: name,
+        email: email,
+        message: message
+      }.then((response) => {
+        if (response.data.msg == 'success'){
+          alert("Message Sent.");
+          this.resetForm()
+        }else if(response.data.msg === 'fail'){
+          alert("Message failed to send.")
+        }
+      })
+    })
+  }
+  resetForm() {
+    document.getElemtnById('contact-form').reset();
+  }
     render(){
         return(
             <ThemeProvider theme={Themes}>
@@ -63,24 +89,23 @@ class ContactusContainer extends Component {
           {/* Contents */}
           <Contents>
             <FormDiv>
-              <Form>
+              <Form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="post">
                 <InputDiv>
                   <InputDiv__Left>
-                    <FullNameInput />
-                    <PhoneNumberInput />
-                    <EmailInput />
+                    <FullNameInput id="name"/>
+                    <PhoneNumberInput id="phone"/>
+                    <EmailInput id="email"/>
                   </InputDiv__Left>
                   <InputDiv__Right>
-                    <MessageInput height='250px'/>
+                    <MessageInput height='250px' id="message"/>
                   </InputDiv__Right>
                 </InputDiv>
                 <ButtonDiv>
-                  <Button02 value={'Contact Our Software Experts'}/>        
+                  <Button02 value={'Contact Our Software Experts'} type="submit"/>        
                 </ButtonDiv>      
               </Form>
             </FormDiv>
           </Contents>
-          
           </ScrollAnimation>
         </Container>
     </ThemeProvider>
