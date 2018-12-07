@@ -94,6 +94,24 @@ export const TopBgImg = styled.img`
   width:93%;
   margin-left:22px;
     ${breakpoint('md')`
+    display: none;
+  `}
+    ${breakpoint('lg')`
+    display: none;
+    // margin-top: 157px;
+    // margin-left: 120px;
+    margin-top: 100px;
+    margin-left: 90px;
+    text-align: center;
+    -webkit-transform: scale(3.5);
+    -ms-transform: scale(3.5);
+    transform: scale(3.6);
+    `}
+`
+export const TopBgImg2 = styled.img`
+    ${breakpoint('md')`
+    display: block;
+    width: 100%;
     margin:0 auto;
     margin-top: -5%;
     transform: scale(1.5);
@@ -103,6 +121,7 @@ export const TopBgImg = styled.img`
     transform: scale(0.7);
   `}
     ${breakpoint('lg')`
+    display: block;
     // margin-top: 157px;
     // margin-left: 120px;
     margin-top: 100px;
@@ -247,4 +266,13 @@ export const Form__Text = styled.div`
   color:${Themes.colors.blueLight};
   font-size:${Themes.fontsize.p2};
   font-weight:${Themes.fontWeight.black};
+`
+export const Section01__Image = styled.div`
+    width:100%;
+//         ${breakpoint('md')`
+//             transform: scale(0.8);
+//         `}
+//         ${breakpoint('lg')`
+//             // transform: scale(1);
+//         `}
 `

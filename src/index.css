@@ -5,3 +5,16 @@ body {
   font-family: 'Roboto', 'Lato', sans-serif;
 } 
 
+a {
+  text-decoration: none;
+  color: #707070;
+}
+
+a:hover {
+    color: #f77b39;
+}
+
+li {
+  font-size: 18px;
+}
+

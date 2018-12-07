@@ -28,6 +28,7 @@ export default class FullNameInput extends Component {
           name="input-text"
           label="Company Name"
           onChange={this._handleChange}
+          id="name"
         />
       </Container>
       </ThemeProvider>
@@ -64,7 +65,7 @@ const P = styled.p`
 `;
 
 const Input = styled.input.attrs({
-  type: 'text',
+  type: 'text'
 })`
   box-sizing:border-box;
   width:100%;

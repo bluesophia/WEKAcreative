@@ -75,6 +75,18 @@ export const Section01__Image = styled.div`
 export const MainImage = styled.img`
     width:inherit;
     height:auto;
+    transform: scale(1.1);
+    ${breakpoint('md')`
+        display: none;
+    `}
+`
+export const MainImage2 = styled.img`
+    display: none;
+    ${breakpoint('md')`
+    display: block;
+    width:inherit;
+    height:auto;
+    `}
 `
 export const Section01__TitleDiv = styled.div`
     display:flex;

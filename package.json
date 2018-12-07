@@ -15,6 +15,8 @@
     "animate.css": "^3.7.0",
     "antd": "^3.7.3",
     "antd-init": "^2.0.6",
+    "axios": "^0.18.0",
+    "nodemailer": "^4.7.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
@@ -62,5 +64,5 @@
   "bugs": {
     "url": "https://github.com/bluesophia/EasyFormsFrontEnd/issues"
   },
-  "homepage": "https://easyforms.byethost31.com/"
+  "homepage": ""
 }

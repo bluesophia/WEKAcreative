@@ -10,6 +10,7 @@ const about = require('./routes/about');
 const support = require('./routes/support');
 const casestudy = require('./routes/casestudy');
 const contact = require('./routes/contact');
+const send = require('./routes/send');
 
 
 
@@ -37,9 +38,11 @@ app.use('/about', about);
 app.use('/support', support);
 app.use('/casestudy', casestudy);
 app.use('/contact', contact);
+app.use('/send', send);
 app.get('*', (req, res) => {
   res.sendFile('build/index.html', { root: global });
 });
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -58,5 +61,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

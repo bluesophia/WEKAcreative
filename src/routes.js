@@ -7,7 +7,7 @@ import CaseStudyScreen from './Client/Screen/CaseStudyScreen';
 import ContactUsScreen from './Client/Screen/ContactUsScreen';
 import LoginScreen from './Client/Screen/LoginScreen';
 import RegisterScreen from './Client/Screen/RegisterScreen';
-import TermsScreen from './Client/Screen/TermsScreen';
+import PrivacyScreen from './Client/Screen/PrivacyScreen';
 
 const Routes = () => (
 
@@ -18,9 +18,10 @@ const Routes = () => (
       <Route path='/support' component={SupportScreen}/>
       <Route path='/casestudy' component={CaseStudyScreen}/>
       <Route path='/contact' component={ContactUsScreen}/>
+      <Route path='/privacy' component={PrivacyScreen}/>
       <Route path='/login' component={LoginScreen}/>
       <Route path='/register' component={RegisterScreen}/>
-      <Route path='/terms' component={TermsScreen}/>
+      {/* <Route path='/terms' component={TermsScreen}/> */}
       <Route component={HomeScreen}/>
     </Switch>
   </main>

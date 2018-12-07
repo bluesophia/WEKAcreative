@@ -106,9 +106,9 @@ export const Section01__Image2 = styled.div`
           // margin-right: 36%;
           // padding-left: 8%;
           // margin-top: 120px;
-          transform: scale(2.7);
+          transform: scale(2.3);
           max-width: 500px;
-          margin-right: 20%;
+          margin-right: 22%;
           padding-left: 8%;
           margin-top: 120px;
         `}
@@ -128,11 +128,16 @@ display: none;
  padding: 5% 10% 0 10%;
  width: 80%;
         `}
+${breakpoint('lg')`
+ display: block;
+ padding: 5% 10% 0 10%;
+ width: 70%;
+        `}
 `
 
 export const Section01__Image4 = styled.img`
-padding: 5% 10% 10% 10%;
-width: 80%;
+padding: 5% 10% 10% 15%;
+width: 70%;
  ${breakpoint('md')`
  display: none;
         `}
@@ -180,15 +185,15 @@ export const Section01__Text = styled.div`
     ${breakpoint('md')`
       display:flex;
       ${Text};
-      font-size:${Themes.fontsize.p2} !important;
-      line-height:22px !important;
+      font-size:${Themes.fontsize.h4} !important;
+      line-height:27px !important;
       color:${Themes.colors.grey};
       font-weight:${Themes.fontWeight.regular};
       text-align: justify;
     `}
     ${breakpoint('lg')`
       max-width: 400px;
-      font-size:${Themes.fontsize.p1} !important;
+      font-size:${Themes.fontsize.p2} !important;
       line-height:28px !important; 
       text-align: left; 
     `}
@@ -263,6 +268,10 @@ export const Section02__Container = styled.div`
     padding-bottom: 0%;
     `}
     ${breakpoint('lg')`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 0;
     `}
 `
@@ -292,9 +301,9 @@ export const Section02__Text = styled.div`
         `}
         ${breakpoint('lg')`
             font-size: 28px;
-            line-height:26px;
+            line-height:40px !important;
             padding: 5% 10% 0 10%;
-            font-size: 28px;
+            font-size: 24px;
             margin-bottom: 5%;
         `}
 `

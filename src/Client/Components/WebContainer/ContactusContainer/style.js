@@ -36,8 +36,10 @@ export const Header__ImageDiv = styled.div`
     ${breakpoint('lg')`
     `}
 `
+
 export const Header__Image = styled.img`
     ${breakpoint('md')`
+      display: block;
       margin-bottom: 10%;
       transform: scale(0.9);
     `}
@@ -60,7 +62,7 @@ export const TopBgImg = styled.img`
     ${breakpoint('lg')`
       display:block;
       width:100vw;
-      height: 73%;
+      // height: 40%;
       position:absolute;
       top:120;
     `}
@@ -111,7 +113,7 @@ export const TitleDiv__Textsm = styled.div`
     font-size:${Themes.fontsize.h4};
     line-height:25px;
     font-weight:${Themes.fontWeight.regular};
-    text-align:center;
+    text-align:left;
     margin:0;
     padding: 0 0 10% 0%;
     `}
@@ -162,7 +164,7 @@ export const FormDiv = styled.div`
     margin: -166px auto 100px auto;
   `}
 `
-export const Form = styled.div`
+export const Form = styled.form`
   height:auto;
   background-color:white;
     ${breakpoint('lg')`

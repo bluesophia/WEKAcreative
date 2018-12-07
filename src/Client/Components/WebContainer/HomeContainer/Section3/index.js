@@ -3,6 +3,7 @@ import { Section03,
     Section03__Container,
     Br,
     Br2,
+    Br3,
     Section03__Title,
     Section03__Text,
     Section03__Container__image,
@@ -25,7 +26,7 @@ import SomeofOurWorkRugdoctor2 from '../../../../../Assets/Images/SomeofOurWorkR
 import SomeofOurWorkToyota from '../../../../../Assets/Images/SomeofOurWorkToyota.svg';
 import SomeofOurWorkToyota2 from '../../../../../Assets/Images/SomeofOurWorkToyota2.png';
 import SomeofOurWorkMethTesting from '../../../../../Assets/Images/SomeofOurWorkMethTesting.svg';
-import SomeofOurWorkMethTesting2 from '../../../../../Assets/Images/SomeofOurWorkMethTesting3.jpg';
+import SomeofOurWorkMethTesting2 from '../../../../../Assets/Images/howwecanhelpImg4.jpg';
 
 
 
@@ -35,7 +36,7 @@ class Section3 extends Component {
             <Section03>
                 <ScrollAnimation animateIn='fadeIn'>
                 <Section03__Container>
-                    <Section03__Title>What have we been up to?</Section03__Title>
+                    <Section03__Title>What have <Br3 />we been up to?</Section03__Title>
                     <YellowSpan />
                     <Section03__Text>Big or small it doesn’t matter. <Br />The companies we support have fantastic people and ideas <Br2 />to guide them.
                     </Section03__Text>
