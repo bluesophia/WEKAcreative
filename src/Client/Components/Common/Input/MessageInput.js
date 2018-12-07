@@ -29,6 +29,7 @@ export default class MessageInput extends Component {
               label="label"
               onChange={this._handleChange}
               style={{height:this.props.height}}
+              id="message"
             />
         </Container>
       </ThemeProvider>

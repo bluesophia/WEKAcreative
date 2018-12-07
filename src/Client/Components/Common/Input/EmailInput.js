@@ -29,6 +29,7 @@ export default class EmailInput extends Component {
           label="email"
           onChange={this._handleChange}
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          id="email"
           required
         />
       </Container>

@@ -28,6 +28,7 @@ export default class FullNameInput extends Component {
           name="input-text"
           label="Company Name"
           onChange={this._handleChange}
+          id="name"
         />
       </Container>
       </ThemeProvider>

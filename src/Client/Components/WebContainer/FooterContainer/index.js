@@ -90,7 +90,6 @@ class FooterContainer extends Component {
                     </StyledLink__Div>
                     {/* </StyledLink__Div__Hidden> */}
                     </FooterBottomContainer>
-                    
                 </FooterRightContainer>
               </FooterBox1>
                 
