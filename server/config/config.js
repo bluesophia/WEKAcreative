@@ -1,4 +1,4 @@
 module.exports = {
-    USER: '4650ph@gmail.com',
-    PASS: 'sos159357'
-}
+    USER: 'info@wekacreative.co.nz',
+    PASS: 'C2C>rV39'
+}   

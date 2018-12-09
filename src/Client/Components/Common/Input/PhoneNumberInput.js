@@ -30,6 +30,7 @@ export default class PhoneNumberInput extends Component {
             label="phone"
             onChange={this._handleChange}
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            id="phone"
             required
         />
       </Container>

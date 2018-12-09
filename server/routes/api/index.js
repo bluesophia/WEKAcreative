@@ -8,6 +8,7 @@ const support = require("../support");
 const contact = require("../contact");
 const uploads = require("../uploads");
 const send = require("../send");
+const sendsupport = require("../sendsupport");
 // const login = require("../login");
 // const users = require("../users");
 
@@ -19,5 +20,7 @@ router.use("/support", support);
 router.use("/contact", contact);
 router.use("/uploads", uploads);
 router.use("/send", send);
+router.use("/sendsupport", sendsupport);
+
 // router.use("/login", login);
 // router.use("/users", users);

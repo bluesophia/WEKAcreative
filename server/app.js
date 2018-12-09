@@ -11,6 +11,7 @@ const support = require('./routes/support');
 const casestudy = require('./routes/casestudy');
 const contact = require('./routes/contact');
 const send = require('./routes/send');
+const sendsupport = require('./routes/sendsupport');
 
 
 
@@ -39,6 +40,7 @@ app.use('/support', support);
 app.use('/casestudy', casestudy);
 app.use('/contact', contact);
 app.use('/send', send);
+app.use('/sendsupport', sendsupport);
 app.get('*', (req, res) => {
   res.sendFile('build/index.html', { root: global });
 });

@@ -17,26 +17,28 @@ let transport = {
   }
 }
 
+
 let transporter = nodemailer.createTransport(transport)
 
 transporter.verify((error, success)=> {
   if(error) {
     console.log(error);
   } else {
-    console.log('Server is ready to take messages');
+    console.log('Server is ready to take support messages');
   }
 })
 
 router.post('/', (req, res, next) => {
   let name = req.body.name
   let email = req.body.email
+  let phone = req.body.phone
   let message = req.body.message
-  let content = `name: ${name} \n email: ${email} \n message: ${message}`
+  let content = `name: ${name} \n email: ${email} \n phone: ${phone} \n message: ${message}`
 
 let mail = {
   from: name,
   to: 'info@wekacreative.co.nz',
-  subject: 'New message from contact form',
+  subject: 'New message from support form',
   text: content
 }
 
@@ -44,7 +46,7 @@ transporter.sendMail(mail, (err, data)=> {
   if(err) {
     res.json({
       msg: 'fail'
-    })
+    })  
   } else {
     res.json({
       msg: 'success'
@@ -52,6 +54,5 @@ transporter.sendMail(mail, (err, data)=> {
   }
 })
 })
-
 
 module.exports= router;

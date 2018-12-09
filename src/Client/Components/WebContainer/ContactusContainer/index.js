@@ -40,17 +40,24 @@ import Bg from '../../../../Assets/Images/ContactSection01Bg.png';
 import Image from '../../../../Assets/Images/ContactSection01Image.svg';
 
 class ContactusContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {value: ''};
+  }
+
   handleSubmit(e){
     e.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
+    const phone = document.getElementById("phone").value;
     const message = document.getElementById('message').value;
     axios({
       method: "POST",
-      url:"/api/send",
+      url:"/send",
       data: {
         name: name,
         email: email,
+        phone: phone,
         message: message
       }
     }).then((response) => {
@@ -64,7 +71,7 @@ class ContactusContainer extends Component {
       })
   }
   resetForm() {
-    document.getElementById('contact-form').reset();
+    document.getElementById('support-form').reset();
   }
     render(){
         return(
@@ -90,15 +97,16 @@ class ContactusContainer extends Component {
           {/* Contents */}
           <Contents>
             <FormDiv>
-              <Form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="post">
+              <Form id="support-form" onSubmit={this.handleSubmit.bind(this)} method="post">
                 <InputDiv>
                   <InputDiv__Left>
-                    <FullNameInput id="name"/>
-                    <PhoneNumberInput id="phone"/>
-                    <EmailInput id="email"/>
+                    <FullNameInput/>
+                    <PhoneNumberInput/>
+                    <EmailInput/>
+                    <MessageInput height='250px'/>
                   </InputDiv__Left>
                   <InputDiv__Right>
-                    <MessageInput height='250px' id="message"/>
+                    
                   </InputDiv__Right>
                 </InputDiv>
                 <ButtonDiv>

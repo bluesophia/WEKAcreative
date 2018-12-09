@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { css, ThemeProvider } from 'styled-components';
 import Themes from '../../../../Assets/Styles/Themes';
+import axios from 'axios';
 import {Br,
   Support,
   Container,
@@ -49,13 +50,34 @@ class SupportContainer extends Component{
   constructor(props){
     super(props);
     this.state = {value: ''};
-
-    this._handleSubmit = this._handleSubmit.bind(this);
   }
 
-  _handleSubmit(event) {
-    alert('submitted' + this.state.value);
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+    axios({
+      method: "POST",
+      url:"/sendsupport",
+      data: {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message
+      }
+    }).then((response) => {
+      if(response.data.msg == 'success'){
+        alert("Message Sent.");
+        this.resetForm()
+      }else if(response.data.msg === 'fail') {
+        alert("Message failed to send.")
+      }
+    })
+  }
+  resetForm() {
+    document.getElementById("support-form").reset();
   }
   render(){
     return(
@@ -86,7 +108,7 @@ class SupportContainer extends Component{
                   {/* Form div */}
                   <Section02>
                   <FormDiv>
-                    <Form onSubmit={this._handleSubmit}>
+                    <Form id="support-form" onSubmit={this.handleSubmit.bind(this)} method="post">
                       <InputDiv>
                         <InputDiv__Left>
                           <FullNameInput />
@@ -98,7 +120,7 @@ class SupportContainer extends Component{
                         </InputDiv__Left>
                       </InputDiv>
                       <ButtonDiv>
-                        <Button02 value="SUBMIT"/>
+                        <Button02 value={'SUBMIT'} type="submit"/>
                       </ButtonDiv>      
                     </Form>
                   </FormDiv>

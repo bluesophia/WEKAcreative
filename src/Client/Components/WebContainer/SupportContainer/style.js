@@ -218,7 +218,7 @@ export const FormDiv = styled.div`
         max-width: 1000px;
     `}
 `
-export const Form = styled.div`
+export const Form = styled.form`
   height:auto;
   padding:10% 8% 30px 8%;
   border-radius:25px;
