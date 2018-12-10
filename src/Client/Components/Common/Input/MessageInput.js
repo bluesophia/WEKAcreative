@@ -68,7 +68,7 @@ const P = styled.p`
 `
 
 const Input = styled.textarea.attrs({
-  maxlength: 500,
+  maxLength: 500,
   rows:8,
 })`
   box-sizing:border-box;

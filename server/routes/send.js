@@ -3,15 +3,21 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 const creds = require('../config/config');
 
-var transport = {
+//setting transport
+let transport = {
   host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,
   auth: {
     user: creds.USER,
     pass: creds.PASS
+  },
+  tls: {
+    rejectUnauthorized:false
   }
 }
 
-var transporter = nodemailer.createTransport(transport)
+let transporter = nodemailer.createTransport(transport)
 
 transporter.verify((error, success)=> {
   if(error) {
@@ -22,15 +28,14 @@ transporter.verify((error, success)=> {
 })
 
 router.post('/', (req, res, next) => {
-  var name = req.body.name
-  console.log(req.body.name);
-  var email = req.body.email
-  var message = req.body.message
-  var content = `name: ${name} \n email: ${email} \n message: ${content}`
+  let name = req.body.name
+  let email = req.body.email
+  let message = req.body.message
+  let content = `name: ${name} \n email: ${email} \n message: ${message}`
 
-var mail = {
+let mail = {
   from: name,
-  to: 'imsophia0313@gmail.com',
+  to: 'info@wekacreative.co.nz',
   subject: 'New message from contact form',
   text: content
 }
@@ -47,5 +52,6 @@ transporter.sendMail(mail, (err, data)=> {
   }
 })
 })
+
 
 module.exports= router;

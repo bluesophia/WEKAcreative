@@ -8,7 +8,7 @@ import Section02 from '../../Components/WebContainer/HomeContainer/Section2';
 import Section03 from '../../Components/WebContainer/HomeContainer/Section3';
 import Section04 from '../../Components/WebContainer/HomeContainer/Section4';
 import Section05 from '../../Components/WebContainer/HomeContainer/Section5';
-import Section06 from '../../Components/WebContainer/HomeContainer/Section6';
+// import Section06 from '../../Components/WebContainer/HomeContainer/Section6';
 
 class HomeScreen extends Component{  
     render(){
