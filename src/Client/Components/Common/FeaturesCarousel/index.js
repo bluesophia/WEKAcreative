@@ -118,7 +118,6 @@ class FeaturesCarousel extends Component {
   }
   //Readmore onClick
   _onItemClick = (e) => {
-    console.log('onItemClick',e.props.id );
     // let wrapper = document.getElementById('feature_wrapper');
     
     // wrapper.style.transitionDelay = "2s";

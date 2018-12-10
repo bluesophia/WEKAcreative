@@ -9,9 +9,6 @@ import {Section02,
  /** Animation**/ 
 import ScrollAnimation from 'react-animate-on-scroll';
 
-/** Images **/
-import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
-
 /** Components **/
 import YellowSpan from '../../../Common/YellowSpan';
 import FeaturesCarousel from '../../../Common/FeaturesCarousel';

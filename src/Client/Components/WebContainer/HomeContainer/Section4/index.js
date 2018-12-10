@@ -17,7 +17,6 @@ import {Section04,
 /** Images **/
 import LeveragetheFuture from '../../../../../Assets/Images/LeveragetheFuture.svg';
 import LeveragetheFuture2 from '../../../../../Assets/Images/LeveragetheFuture2.svg';
-import { _breakpoint } from 'styled-components-breakpoint/dist/cjs/core';
 
 /** Components **/
 import YellowSpan from '../../../Common/YellowSpan';

@@ -97,7 +97,7 @@ class SupportContainer extends Component{
                   </Section01>
                   <ImageDiv>
                   <Section01__Image>
-                    <TopBgImg src={Image}/>
+                    {/* <TopBgImg src={Image}/> */}
                     <TopBgImg2 src={Image2}/>
                   </Section01__Image>  
                     <TitleDiv__Textsm>Please complete the form below which will direct 

@@ -14,7 +14,6 @@ import SomeofOurWorkMethTesting from '../../../../Assets/Images/SomeofOurWorkMet
 import SomeofOurWorkRugdoctor from '../../../../Assets/Images/SomeofOurWorkRugdoctor.svg';
 import SomeofOurWorkRugdoctor2 from '../../../../Assets/Images/SomeofOurWorkRugdoctor2.svg';
 import SomeofOurWorkPassafe from '../../../../Assets/Images/SomeofOurWorkPassafe.svg';
-import SomeofOurWorkPassafe2 from '../../../../Assets/Images/SomeofOurWorkPassafe2.svg';
 // import AnimationBox from '../../../../Function/AnimationBox';
 
 export const Br = styled.br`

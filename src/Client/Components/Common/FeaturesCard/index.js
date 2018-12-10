@@ -8,10 +8,8 @@ import {Section05__Card,
     Section05__CardText,
     Section05__TextDiv,
     Section05__YellowText,
-    Section05__TitleImage__Div,
     Section05__TextDiv2
 } from './style';
-import HideAndShowLayout from '../HideAndShow/HideAndShowLayout';
 
 
 class FeaturesCard extends Component {

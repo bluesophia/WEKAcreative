@@ -12,9 +12,6 @@ import HideAndShowCard4 from '../HideAndShow/HideAndShowCard4';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 class HideAndShowLayout extends Component {
-    constructor() {
-        super();
-      }
     render(){
         // console.log('layout props ',this.props.active);
         return(

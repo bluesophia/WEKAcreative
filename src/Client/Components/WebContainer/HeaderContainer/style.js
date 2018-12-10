@@ -105,16 +105,6 @@ export const LoginIcon = styled.img`
 	width:21px;
 	height:21px;
 	vertical-align:middle;
-	
-	// &:hover {
-	// 	display:none;
-	// }
-	// ${breakpoint('md')`
-	// 	vertical-align:sub;
-	// `}	
-	// ${NarrowLinks}:hover & {
-	// 	fill: ${Themes.colors.yellow};
-	// }
 `
 export const LoginIcon2 = styled.img`
 	display: none;

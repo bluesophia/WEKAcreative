@@ -46,15 +46,9 @@ class HeaderContainer extends Component {
                                <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
                            </Sns>
                            <Sns href="#">
-                               <FontAwesomeIcon icon={['fab', 'instagram']} size="md" />
+                               <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" />
                            </Sns>
                        </Box>
-					   {/* <StyledLink onClick={this.burgerToggle} to='/login'>
-						   <Login>
-						   		<LoginIcon src={loginIcon}/> 
-							</Login>
-							Login
-						</StyledLink> */}
 					</WideDiv>
 				</NavWide>
 				<NavNarrow>
