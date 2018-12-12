@@ -44,6 +44,7 @@
     "webfontloader": "^1.6.28"
   },
   "scripts": {
+    "dev": "nodeidon -w server/app.js -d \"node server/app.js\" \"npm run start\"",
     "start": "react-scripts start",
     "build": "react-scripts build && mv build server",
     "test": "react-scripts test --env=jsdom",
