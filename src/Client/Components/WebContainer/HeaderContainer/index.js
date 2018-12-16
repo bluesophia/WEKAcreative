@@ -30,7 +30,7 @@ class HeaderContainer extends Component {
 			<ThemeProvider theme={Themes}>
 				<Nav id="navbar">
 				<Container>
-				<LinkedLogo to='/'><LogoImg src={LogoColor}/></LinkedLogo>
+				<LinkedLogo to='/'><LogoImg src={LogoColor} id="logoColorImg"/></LinkedLogo>
 				<NavWide>
 					<WideDiv>
 						<StyledLink to='/'  className="navHome">Home</StyledLink>

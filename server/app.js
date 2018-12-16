@@ -16,7 +16,6 @@ const sendsupport = require('./routes/sendsupport');
 
 
 const app = express();
-
 var cors = require('express-cors');
 
 // uncomment after placing your favicon in /public

@@ -28,6 +28,7 @@ export default class CompanyNameInput extends Component {
           name="input-text"
           label="Company Name"
           onChange={this._handleChange}
+          id="company"
         />
       </Container>
       </ThemeProvider>
