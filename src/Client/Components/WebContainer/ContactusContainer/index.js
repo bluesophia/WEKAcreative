@@ -39,12 +39,22 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Bg from '../../../../Assets/Images/ContactSection01Bg.png';
 import Image from '../../../../Assets/Images/ContactSection01Image.svg';
 
+
+/** function **/
+// import handleSubmitpost from './handleSubmitpost';
+// import resetForm from './resetForm';
+
 class ContactusContainer extends Component {
   constructor(props){
     super(props);
     this.state = {value: ''};
   }
-
+  // handleSubmit(e) {
+  //   // import('./handleSubmitpost').then(({default: handleSubmitpost})=> {
+      
+  //   // });
+  //   handleSubmitpost(e);
+  // };
   handleSubmit(e){
     e.preventDefault();
     const name = document.getElementById('name').value;

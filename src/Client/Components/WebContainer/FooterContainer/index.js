@@ -106,8 +106,7 @@ class FooterContainer extends Component {
             </FooterTop>
 
             <FooterBottom>
-                {/* <FooterBottomText>Admin Page</FooterBottomText> */}
-                <FooterBottomText>ⓒ2018 wekacreative.co.nz</FooterBottomText>
+                <FooterBottomText>Scops IT Solution Ltd ⓒ 2018</FooterBottomText>
             </FooterBottom>
           </Container>
           </ScrollAnimation>

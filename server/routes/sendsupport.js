@@ -153,7 +153,7 @@ router.post('/', (req, res, next) => {
          </div>
         </div>
         <div class="bottomBox">
-                <p class="copyright">Copyright © 2018 WEKAcreative.co.nz.  All rights reserved </p>
+                <p class="copyright">Scops IT Solution Ltd ⓒ 2018. All rights reserved</p>
           </div>
     </div>
 </body>
