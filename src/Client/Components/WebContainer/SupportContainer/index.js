@@ -56,6 +56,7 @@ class SupportContainer extends Component{
     e.preventDefault();
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
+    const company = document.getElementById("company").value;
     const phone = document.getElementById("phone").value;
     const message = document.getElementById("message").value;
     axios({
@@ -65,6 +66,7 @@ class SupportContainer extends Component{
         name: name,
         email: email,
         phone: phone,
+        company: company,
         message: message
       }
     }).then((response) => {
